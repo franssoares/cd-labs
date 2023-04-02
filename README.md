@@ -1,1 +1,1 @@
-# cd-labs
+# Laboratório de Circuitos Digitais
