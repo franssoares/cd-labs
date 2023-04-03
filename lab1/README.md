@@ -6,3 +6,9 @@
 - Fazer o teste da porta `AND` e simular utilizando VHDL.
 - Desenvolver um código para que seja possível testar todas as propriedades,
 postulados e `leis de Morgan`.
+
+## Mapeamento da metodologia
+
+<img src = ".\q1\assets\fluxograma.png" width = "900px" alig/>
+
+[visualizar](./q1/assets/fluxograma.PNG)
