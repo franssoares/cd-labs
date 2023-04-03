@@ -5,6 +5,7 @@
 *.autosave
 *.a
 #*.pdf
+*.tcl
 *.core
 *.moc
 *.o

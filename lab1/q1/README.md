@@ -51,4 +51,4 @@ end architecture main;
 
 <img src = ".\assets\wave_or_gate.jpg" width = "1000px" alig/>
 
-[visualizar](./waveform_or_gate.tcl)
+[visualizar](./waveform_or_gate.vhd)
