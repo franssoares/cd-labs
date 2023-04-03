@@ -9,6 +9,6 @@ postulados e `leis de Morgan`.
 
 ## Mapeamento da metodologia
 
-<img src = ".\q1\assets\fluxograma.png" width = "900px" alig/>
+<img src = ".\q1\assets\fluxograma.jpg" width = "900px" alig/>
 
-[visualizar](./q1/assets/fluxograma.PNG)
+[visualizar](./q1/assets/fluxograma.jpg)
