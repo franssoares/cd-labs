@@ -31,3 +31,6 @@ $ git push origin dev
     ``` 
     $ git pull origin dev
     ```
+---
+#### Licença
+Esse repositório é [MIT License](https://github.com/franssoares/cd-labs/tree/dev).
