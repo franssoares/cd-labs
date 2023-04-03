@@ -5,12 +5,12 @@ Desenvolver a porta `AND` utilizando VHDL e simular atraves do software Quartus,
 
 ### Especificação: Porta OR
 
-| $~~~~~$A$~~~~~$  |$~~~~~$B$~~~~~$  |$~~~~~$Z = A + B$~~~~~$  |
-|--------------|---------------------|-------------------------|
-|$~~~~~$0  |$~~~~~$0  |$~~~~~$$~~~~~$0  |
-|$~~~~~$1  |$~~~~~$0  |$~~~~~$$~~~~~$1  |
-|$~~~~~$0  |$~~~~~$1  |$~~~~~$$~~~~~$1  |
-|$~~~~~$1  |$~~~~~$1  |$~~~~~$$~~~~~$1  |
+| A | B | Z = A + B |
+|---|---|---|
+|0  |0  |0  |
+|1  |0  |1  |
+|0  |1  |1  |
+|1  |1  |1  |
 
 [visualizar](./assets/tabela_or.csv)
 
@@ -51,4 +51,4 @@ end architecture main;
 
 <img src = ".\assets\wave_or_gate.jpg" width = "1000px" alig/>
 
-[visualizar](.\waveform_or_gate.tcl)
+[visualizar](./waveform_or_gate.tcl)
