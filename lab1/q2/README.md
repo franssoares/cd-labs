@@ -5,7 +5,7 @@ Fazer o teste da porta `AND` e simular utilizando VHDL.
 
 ### Especificação: Porta AND
 
-| A | B | Z = A + B |
+| A | B | Z = A . B |
 |---|---|---|
 |0  |0  |0  |
 |1  |0  |0  |
