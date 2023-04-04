@@ -15,10 +15,10 @@
     **Git**:
     ```
     $ git init
-    $ git clone <link do repositório> ou $git  
-    .
-    .
-    .
+    $ git clone <link do repositório>  
+                    .
+                    .
+                    .
     $ git checkout dev
     ```
     Depois que suas mudanças estiverem feitas localmente, faça:
