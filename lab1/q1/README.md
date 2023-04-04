@@ -19,7 +19,6 @@ Desenvolver a porta `AND` utilizando VHDL e simular atraves do software Quartus,
 ```vhdl 
 
 library ieee; --biblioteca
-use ieee_std_logic_1164.all; --pacotes
 
 --entidade
 entity or_gate is 
