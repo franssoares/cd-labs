@@ -40,7 +40,7 @@ end architecture main;
 
 - ##### RTL Viewer -> Schematics
 
-<img src = "./assets/RTL_or_gate.png" width = "1000px" alig/>
+<img src = "./assets/or_gate.png" width = "1000px" alig/>
 
 [download](./assets/RTL_or_gate.pdf) 
 
@@ -50,4 +50,4 @@ end architecture main;
 
 <img src = ".\assets\wave_or_gate.jpg" width = "1000px" alig/>
 
-[visualizar](./waveform_or_gate.vhd)
+[visualizar](./waveform_and_gate.vhd)
