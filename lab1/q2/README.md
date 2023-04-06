@@ -46,3 +46,6 @@ end architecture main;
 ### Simulador VHDL: ModelSim
 
 - ##### Wave -> Signals
+<img src = "./assets/wave_and_gate.jpg" width = "1000px" alig/>
+
+[visualizar](./assets/wave_and_gate.jpg)
