@@ -38,7 +38,9 @@ end architecture main;
 ### Ferramentas de Síntese: Quartus II
 
 - ##### RTL Viewer -> Schematics
+<img src = "./assets/and_gate.png" width = "1000px" alig/>
 
+[download](./assets/RTL_and_gate.pdf) 
 
 
 ### Simulador VHDL: ModelSim
