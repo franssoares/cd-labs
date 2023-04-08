@@ -1,7 +1,7 @@
 # Questão 1 - Porta OR
 ----
 
-Desenvolver a porta `AND` utilizando VHDL e simular atraves do software Quartus, da Intel.
+Desenvolver a porta `OR` utilizando VHDL e simular atraves do software Quartus, da Intel.
 
 ### Especificação: Porta OR
 

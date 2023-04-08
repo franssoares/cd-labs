@@ -1,7 +1,7 @@
 # Questão 2 - Porta AND
 ----
 
-Fazer o teste da porta `AND` e simular utilizando VHDL.
+Fazer o teste da porta `AND` e simular atraves do software Quartus, da Intel.
 
 ### Especificação: Porta AND
 
