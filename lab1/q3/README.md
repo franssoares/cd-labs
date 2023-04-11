@@ -119,15 +119,15 @@ end architecture main;
 
 - ##### RTL Viewer -> Schematics
 
-<img src = "./assets/or_gate.png" width = "1000px" alig/>
+<img src = "./assets/RTL_View_op_booleanas.png" width = "1000px" alig/>
 
-[download](./assets/RTL_or_gate.pdf) 
+[download](./assets/RTL_View_op_booleanas.pdf) 
 
 ### Simulador VHDL: ModelSim
 
 - ##### Wave -> Signals
 
-<img src = ".\assets\op_booleanas.png" width = "1000px" alig/>
+<img src = ".\assets\wave_op_booleanas.png" width = "1000px" alig/>
 
 [visualizar](./waveform_op_booleanas.vhd)
 
@@ -170,15 +170,15 @@ end architecture main;
 
 - ##### RTL Viewer -> Schematics
 
-<img src = "./assets/or_gate.png" width = "1000px" alig/>
+<img src = "./assets/RTL_View_postulados.png" width = "1000px" alig/>
 
-[download](./assets/RTL_or_gate.pdf) 
+[download](./assets/RTL_View_postulados.pdf) 
 
 ### Simulador VHDL: ModelSim
 
 - ##### Wave -> Signals
 
-<img src = ".\assets\postulados.png" width = "1000px" alig/>
+<img src = ".\assets\wave_postulados.png" width = "1000px" alig/>
 
 [visualizar](./waveform_postulados.vhd)
 
@@ -226,9 +226,9 @@ end architecture main;
 
 - ##### RTL Viewer -> Schematics
 
-<img src = "./assets/.png" width = "1000px" alig/>
+<img src = "./assets/RTL_View_de_morgan.png" width = "1000px" alig/>
 
-[download](./assets/RTL_or_gate.pdf) 
+[download](./assets/RTL_View_de_morgan.pdf)
 
 ### Simulador VHDL: ModelSim
 
