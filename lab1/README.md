@@ -9,6 +9,6 @@
 
 ## Mapeamento da metodologia
 
-<img src = ".\q1\assets\fluxograma.jpg" width = "720px" alig/>
+<img src = ".\q1\assets\fluxograma.png" width = "1000px" alig/>
 
-[visualizar](./q1/assets/fluxograma.jpg)
+[visualizar](./q1/assets/fluxograma.png)
