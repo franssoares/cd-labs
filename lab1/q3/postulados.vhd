@@ -1,3 +1,6 @@
+library ieee; --biblioteca
+
+--entidade
 entity postulados is
     port (
         a: in bit;
@@ -5,9 +8,10 @@ entity postulados is
     );
 end postulados;
 
+--arquitetura
 architecture main of postulados is
-begin
-         x <= a or '0';
-         y <= a and '1';
-         z <= not(not(a));
+    begin
+        x <= a or '0';
+        y <= a and '1';
+        z <= not(not(a));
 end architecture main;

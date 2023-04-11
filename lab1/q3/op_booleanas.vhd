@@ -1,3 +1,6 @@
+library ieee; --biblioteca
+
+--entidade
 entity op_booleanas is
     port (
         a, b, c: in bit;
@@ -5,28 +8,28 @@ entity op_booleanas is
     );
 end op_booleanas;
 
+--arquitetura
 architecture main of op_booleanas is
-begin
-         --Comutativa
+    begin
+        --(Comutativa)
             --Adicao
-         o <= a or b;
-         p <= b or a;
+        o <= a or b;
+        p <= b or a;
             --Multiplicacao
-         q <= a and b;
-         r <= b and a;s
-         --Associativa
+        q <= a and b;
+        r <= b and a;
+         --(Associativa)
             --Adicao
-         s <= a or (b or c);
-         t <= (a or b) or c;
+        s <= a or (b or c);
+        t <= (a or b) or c;
             --Multiplicacao
-         u <= a and (b and c);
-         v <= (a and b) and c;
-         --Distributiva
+        u <= a and (b and c);
+        v <= (a and b) and c;
+        --(Distributiva)
             --Adicao
-         w <= a and (b or c);
-         x <= (a and b) or (a and c);
+        w <= a and (b or c);
+        x <= (a and b) or (a and c);
             --Multiplicacao      
-         y <= a or (b and c);
-         z <= (a or b) and (a or c);
-         
+        y <= a or (b and c);
+        z <= (a or b) and (a or c);
 end architecture main;
