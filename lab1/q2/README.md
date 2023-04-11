@@ -6,7 +6,7 @@ Fazer o teste da porta `AND` e simular atraves do software Quartus, da Intel.
 ### Especificação: Porta AND
 
 | A | B | Z = A . B |
-|---|---|---|
+|---|---|:---:|
 |0  |0  |0  |
 |1  |0  |0  |
 |0  |1  |0  |
