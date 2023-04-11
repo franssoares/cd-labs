@@ -234,6 +234,6 @@ end architecture main;
 
 - ##### Wave -> Signals
 
-<img src = ".\assets\postulados.png" width = "1000px" alig/>
+<img src = ".\assets\wave_de_morgan.png" width = "1000px" alig/>
 
 [visualizar](./waveform_de_morgan.vhd)
