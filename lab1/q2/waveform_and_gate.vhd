@@ -1,8 +1,8 @@
 LIBRARY ieee  ; 
 LIBRARY std  ; 
-USE ieee.std_logic_1164.all  ; 
-USE ieee.std_logic_textio.all  ; 
-USE ieee.std_logic_unsigned.all  ; 
+USE ieee.bit_1164.all  ; 
+USE ieee.bit_textio.all  ; 
+USE ieee.bit_unsigned.all  ; 
 USE std.textio.all  ; 
 ENTITY \waveform_and_gate.vhd\  IS 
 END ; 
