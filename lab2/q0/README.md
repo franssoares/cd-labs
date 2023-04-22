@@ -65,7 +65,7 @@ Representando o circuito na forma de portas lógicas
 
 <img src = ".\assets\RTL_waveform_simulation.png" width = "1200px" height = "250px" alig/>
 
-[visualizar](./Waveform.vwf)
+[visualizar](https://github.com/franssoares/cd-labs/blob/dev/lab2/q0/assets/RTL_waveform_simulation.png)
 
 ### Descrição do código: VHDL
 Descrevendo o circuito em VHDL e simulando utilizando o Quartus/Modelsim.
@@ -196,7 +196,7 @@ begin
     );
 end architecture RTL;
 ```
-[visualizar](./circuito_contador_1s.vhd)
+[ver código](./circuito_contador_1s.vhd)
 
 ### Ferramentas de Síntese: Quartus II
 
@@ -212,4 +212,5 @@ end architecture RTL;
 
 <img src = ".\assets\RTL_waveform_simulation_with_components.png" width = "1200px" height = "300px" alig/>
 
-[visualizar](./circuito_contador_1s.vwf)
+[visualizar](https://github.com/franssoares/cd-labs/blob/dev/lab2/q0/assets/RTL_waveform_simulation_with_components.png) 
+[ver código](./assets/circuito_contador_1s.vwf)

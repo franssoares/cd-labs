@@ -32,4 +32,4 @@ represente o circuito simplificado).
 
 <img src = "/lab1/q1/assets/fluxograma.png" width = "780px" height = "700px" alig/>
 
-[visualizar](./lab1/q1/assets/fluxograma.png)
+[visualizar](https://github.com/franssoares/cd-labs/blob/dev/lab1/q1/assets/fluxograma.png)
