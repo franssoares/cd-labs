@@ -6,7 +6,7 @@ Desenvolver a porta `OR` utilizando VHDL e simular atraves do software Quartus, 
 ### Especificação: Porta OR
 
 | A | B | Z = A + B |
-|---|---|:---:|
+|:---:|:---:|:---:|
 |0  |0  |0  |
 |1  |0  |1  |
 |0  |1  |1  |
