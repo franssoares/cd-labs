@@ -6,11 +6,11 @@ Vamos projetar um circuito que conta o número de bits iguais a 1 presente em tr
 
 > **Exemplo**:
 > -  Se a entrada for ABC = 111, então a saída deve produzir o número 3 em binário, ou seja: 
-$\newline S1S2 = 11$
+$\\ S1S2 = 11$
 > - Se a entrada for 100, então a saída deve produzir o número 1 em binário, ou seja:
-$\newline S1S2 = 01$
+$\\ S1S2 = 01$
 > -  Se a entrada for 000, então a saída deve produzir o número 0 em binário, ou seja: 
-$\newline S1S2 = 00$
+$\\ S1S2 = 00$
 
 O número de 1’s nas entradas pode variar de 0 a 3. Assim, uma saída com dois bitsé o suficiente. Um circuito contador de 1’s pode ser útil em diversas situações, como, por exemplo estacionamentos em que sensores, localizados na parte superior das vagas e conectados a sinais luminosos, informam aos motoristas o número de vagas disponíveis em um andar específico.
 
