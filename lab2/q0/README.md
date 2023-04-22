@@ -31,14 +31,20 @@ A construção de um circuito contador de 1's envolve várias etapas sequenciais
 
 - **Equação Booleana do circuito**
     Através da utilização da técnica de soma de minitermos, é possível obter:
-    ${\newline} {S_1(A,B,C) = 𝐴'⋅𝐵⋅𝐶 + 𝐴⋅𝐵'⋅𝐶 + 𝐴⋅𝐵⋅𝐶' + 𝐴⋅𝐵⋅𝐶} \newline$
+    
+    &nbsp;
+    Definindo a saída $S_1$:
+    ${S_1(A,B,C) = 𝐴'⋅𝐵⋅𝐶 + 𝐴⋅𝐵'⋅𝐶 + 𝐴⋅𝐵⋅𝐶' + 𝐴⋅𝐵⋅𝐶}$
+    &nbsp;
+    Definindo a saída $S_2$:
     ${𝑆_2(A,B,C) = 𝐴'⋅𝐵'⋅𝐶+𝐴'⋅𝐵⋅𝐶' + 𝐴⋅𝐵'·𝐶'+ 𝐴⋅𝐵⋅𝐶} \newline$
     ${\newline}$
 
     - **Simplificação da equação Booleana do circuito**
         Por meio da aplicação de teoremas, postulados e propriedades, é possível obter:
+
         &nbsp;
-        $\rightarrow {S_1(A,B,C) = 𝐴⋅𝐵 + 𝐴⋅𝐶 + 𝐵⋅𝐶}//$ [dedução 1](.pdf)
+        $\rightarrow {S_1(A,B,C) = 𝐴⋅𝐵 + 𝐴⋅𝐶 + 𝐵⋅𝐶 } / /$[  dedução 1](.pdf)
 
         &nbsp;
         $\rightarrow {𝑆_2(A,B,C) = 𝐴'⋅𝐵'⋅𝐶+𝐴'⋅𝐵⋅𝐶' + 𝐴⋅𝐵'·𝐶'+ 𝐴⋅𝐵⋅𝐶}$
