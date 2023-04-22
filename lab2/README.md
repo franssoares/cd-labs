@@ -19,7 +19,7 @@ O número de 1’s nas entradas pode variar de 0 a 3. Assim, uma saída com dois
 - Montar a tabela verdade do circuito, explicitando quais são as entradas e quais são as saídas e todas as possibilidades que o circuito lógico pode vale.
 - Simplificar as equações usando postulados e identidades Booleana:
 > ${\newline}$
-    > **$𝑆1 = 𝐴'⋅𝐵⋅𝐶 + 𝐴⋅𝐵'⋅𝐶 + 𝐴⋅𝐵⋅𝐶' + 𝐴⋅𝐵⋅𝐶 \newline$**
+    > **$𝑆1 = 𝐴'⋅𝐵⋅𝐶 + 𝐴⋅𝐵'⋅𝐶 + 𝐴⋅𝐵⋅𝐶' + 𝐴⋅𝐵⋅𝐶 \\$**
     > **$𝑆2 = 𝐴'⋅𝐵'⋅𝐶+𝐴'⋅𝐵⋅𝐶' + 𝐴⋅𝐵'·𝐶'+ 𝐴⋅𝐵⋅𝐶$**
  ${\newline}$
 - Representar os circuitos na forma de portas lógicas (caso simplifique a equação,
