@@ -1,5 +1,7 @@
 # Etapa 1 - Multiplexadores
 
+---
+
 ### Multiplexador 2x1 
 - #### Descrição comportamental
 ``` vhdl
@@ -202,4 +204,5 @@ end architecture RTL;
 - #### Quartus Simulator
 
 <img src = ".\assets\mux4x1_para_2x1\mux_4x1_2x1_componente_simula.png"  alig/>
+
 ---
