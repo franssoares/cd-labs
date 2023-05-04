@@ -4,12 +4,6 @@
 
 #### Especificação: Decodificador BCD 4X7
 
-<style>
-    img{
-        max-width: 100%;
-        height: auto;
-    }
-</style>
 
 <img src="./assets/tabela_verdade_bcd.png" align="center"/>
 
