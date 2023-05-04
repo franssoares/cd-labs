@@ -26,11 +26,11 @@ end architecture RTL;
 ```
 - #### RTL Viwer
 
-<img src = ".\assets\mux2x1_comportamento\mux_2x1_com.png" width = "1200px" height = "250px" alig/>
+<img src = ".\assets\mux2x1_comportamento\mux_2x1_com.png" width = "720px" height = "300px" alig/>
 
 - #### Quartus Simulator
 
-<img src = ".\assets\mux2x1_comportamento\mux_2x1_com_simula.png" width = "1200px" height = "250px" alig/>
+<img src = ".\assets\mux2x1_comportamento\mux_2x1_com_simula.png"  alig/>
 
 - #### Descrição por portas lógicas
 
@@ -57,11 +57,11 @@ end architecture RTL;
 ```
 - #### RTL Viwer
 
-<img src = ".\assets\mux2x1_portas_logicas\mux_2x1_port.png" width = "1200px" height = "250px" alig/>
+<img src = ".\assets\mux2x1_portas_logicas\mux_2x1_port.png" width = "720px" height = "300px" alig/>
 
 - #### Quartus Simulator
 
-<img src = ".\assets\mux2x1_portas_logicas\mux_2x1_port_simula.png" width = "1200px" height = "250px" alig/>
+<img src = ".\assets\mux2x1_portas_logicas\mux_2x1_port_simula.png" alig/>
 
 ---
 
@@ -96,11 +96,11 @@ end architecture RTL;
 ```
 - #### RTL Viwer
 
-<img src = ".\assets\mux4x1_comportamento\mux_4x1_comp.png" width = "1200px" height = "250px" alig/>
+<img src = ".\assets\mux4x1_comportamento\mux_4x1_comp.png" alig/>
 
 - #### Quartus Simulator
 
-<img src = ".\assets\mux4x1_comportamento\mux_4x1_comp_simula.png" width = "1200px" height = "250px" alig/>
+<img src = ".\assets\mux4x1_comportamento\mux_4x1_comp_simula.png"  alig/>
 
 ---
 
@@ -197,9 +197,9 @@ end architecture RTL;
 ```
 - #### RTL Viwer
 
-<img src = ".\assets\mux4x1_para_2x1\mux_4x1_2x1_componente.png" width = "1200px" height = "250px" alig/>
+<img src = ".\assets\mux4x1_para_2x1\mux_4x1_2x1_componente.png" width = "1200px" height = "600px" alig/>
 
 - #### Quartus Simulator
 
-<img src = ".\assets\mux4x1_para_2x1\mux_4x1_2x1_componente_simula.png" width = "1200px" height = "250px" alig/>
+<img src = ".\assets\mux4x1_para_2x1\mux_4x1_2x1_componente_simula.png"  alig/>
 ---
