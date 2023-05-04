@@ -3,6 +3,7 @@
 ---
 
 #### Especificação: Decodificador BCD 4X7
+
 <style>
     img{
         max-width: 100%;
