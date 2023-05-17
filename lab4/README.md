@@ -41,3 +41,4 @@ comportamental.
 <img src = "/lab1/q1/assets/fluxograma.png" width = "780px" height = "700px" alig/>
 
 [visualizar](https://github.com/franssoares/cd-labs/blob/dev/lab1/q1/assets/fluxograma.png)
+
