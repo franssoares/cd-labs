@@ -16,13 +16,12 @@ registradores.
 baseado em latches D. Utilize componentes que contenham latches de 1 bit. <br />
 > d) Utilizando a linguagem VHDL, desenvolva um registrador de quatro bits,
 baseado em flip-flops D. Utilize componentes que contenham flip-flops de 1
-bit. <br />
+bit.
 
 2) Contadores:
 > a) Implemente um contador crescente de 4 bits que conte até sua última
 contagem e retorne ao seu valor inicial. Adicione o sinal indicativo de término
-de contagem: tc=1 quando o contador atingir 1111 e tc=0 caso contrário.
-
+de contagem: tc=1 quando o contador atingir 1111 e tc=0 caso contrário. <br />
 > b) Implemente um contador decrescente de 4 bits. Adicione o sinal indicativo de
 término de contagem: tc=1 quando o contador atingir 0000 e tc=0 caso
 contrário.
@@ -31,10 +30,8 @@ contrário.
 > a) Implemente um banco de registradores 4x8, baseado na Figura 13. Siga as
 seguintes instruções:
 >> i) Desconsidere o fênomeno de fanout (ou seja, não é necessário
-implementar o driver simples, de uma entrada e uma saída).
-
->> ii) Utilize flip-flops para formar os registradores.
-
+implementar o driver simples, de uma entrada e uma saída). <br />
+>> ii) Utilize flip-flops para formar os registradores. <br />
 >> iii) Implemente os drivers de três estados usando descrição
 comportamental.
 
