@@ -22,20 +22,21 @@ baseado em flip-flops D. Utilize componentes que contenham flip-flops de 1
 bit.
 
 2) Contadores:
->a) Implemente um contador crescente de 4 bits que conte até sua última
+> a) Implemente um contador crescente de 4 bits que conte até sua última
 contagem e retorne ao seu valor inicial. Adicione o sinal indicativo de término
 de contagem: tc=1 quando o contador atingir 1111 e tc=0 caso contrário.
-b) Implemente um contador decrescente de 4 bits. Adicione o sinal indicativo de
+
+> b) Implemente um contador decrescente de 4 bits. Adicione o sinal indicativo de
 término de contagem: tc=1 quando o contador atingir 0000 e tc=0 caso
 contrário.
 
 3) Bancos de registradores:
->a) Implemente um banco de registradores 4x8, baseado na Figura 13. Siga as
+> a) Implemente um banco de registradores 4x8, baseado na Figura 13. Siga as
 seguintes instruções:
-i) Desconsidere o fênomeno de fanout (ou seja, não é necessário
+>> i) Desconsidere o fênomeno de fanout (ou seja, não é necessário
 implementar o driver simples, de uma entrada e uma saída).
-ii) Utilize flip-flops para formar os registradores.
-iii) Implemente os drivers de três estados usando descrição
+>> ii) Utilize flip-flops para formar os registradores.
+>> iii) Implemente os drivers de três estados usando descrição
 comportamental.
 
 
