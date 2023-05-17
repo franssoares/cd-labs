@@ -35,7 +35,9 @@ contrário.
 seguintes instruções:
 >> i) Desconsidere o fênomeno de fanout (ou seja, não é necessário
 implementar o driver simples, de uma entrada e uma saída).
+
 >> ii) Utilize flip-flops para formar os registradores.
+
 >> iii) Implemente os drivers de três estados usando descrição
 comportamental.
 
