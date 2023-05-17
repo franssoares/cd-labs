@@ -4,9 +4,7 @@
 
 1. Experimentar a descrição em VHDL de registradores, contadores e bancos de
 registradores.
-
 2. Reforçar os conceitos de latches, flip-flops, registradores e contadores assíncronos e síncronos.
-
 3. Pôr em prática conceitos aprendidos na disciplina Circuitos Digitais - Teoria.
 
 ### Atividades
