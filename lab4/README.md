@@ -11,9 +11,12 @@ registradores.
 
 1) Registradores:
 > a) Utilizando a linguagem VHDL, crie um latch D para 1 Bit.
+
 > b) Utilizando a linguagem VHDL, desenvolva um flip-flop D para 1 bit.
+
 > c) Utilizando a linguagem VHDL, desenvolva um registrador de quatro bits,
 baseado em latches D. Utilize componentes que contenham latches de 1 bit.
+
 > d) Utilizando a linguagem VHDL, desenvolva um registrador de quatro bits,
 baseado em flip-flops D. Utilize componentes que contenham flip-flops de 1
 bit.
