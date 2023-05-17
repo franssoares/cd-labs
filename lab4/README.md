@@ -1,4 +1,4 @@
-# Laboratório 4 - Registradires, contadores e banco de registradores
+# Laboratório 4 - Registradores, contadores e banco de registradores
 
 ### Objetivos
 
