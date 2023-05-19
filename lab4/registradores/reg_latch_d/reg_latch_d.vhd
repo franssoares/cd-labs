@@ -6,7 +6,7 @@ USE ieee.std_logic_1164.all;
 ENTITY reg_latch_d IS
   PORT(
     D_reg : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-	 clk_reg : IN STD_LOGIC;
+	clk_reg : IN STD_LOGIC;
     Q_reg, Q_bar_reg : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
   );
 END ENTITY reg_latch_d;
@@ -18,7 +18,7 @@ ARCHITECTURE behav OF reg_latch_d IS
     COMPONENT latchd_comp is
         PORT(
             D, clk : IN  STD_LOGIC;
-				Q, Q_bar : OUT  STD_LOGIC
+			Q, Q_bar : OUT  STD_LOGIC
         );
     END COMPONENT latchd_comp;
 
