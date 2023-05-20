@@ -1,8 +1,8 @@
-# Banco de Registradores
+# Especificação: Banco de registradores 4x8 
 
 ---
-## Especificação: Banco de registradores 4x8 
-- #### Descrição: RF em VHDL
+
+- #### Descrição: BR em VHDL
 **Obs:** as componentes do codigo abaixo podem ser vistar na pasta componentes. 
 ``` vhdl
 -- Biblioteca

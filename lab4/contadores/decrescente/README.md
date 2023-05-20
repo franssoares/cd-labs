@@ -1,3 +1,10 @@
+# Especificação: Contador Decrescente
+
+---
+
+- #### Descrição: Contador crescente de 4-bit em VHDL
+
+``` vhdl
 -- Biblioteca
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
@@ -40,3 +47,13 @@ BEGIN
 		q <= qv;
 	END PROCESS;
 END ARCHITECTURE main;
+```
+- #### RTL Viewer
+
+<img src = ".\assets\rtl_contador_decrescente.png" alig/>
+
+- #### Quartus Simulator VWF
+
+<img src = ".\assets\waveform_contador_decrescente.png"  alig/>
+
+---
