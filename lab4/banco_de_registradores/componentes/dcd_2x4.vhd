@@ -3,15 +3,15 @@ LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 
 -- Entidade
-ENTITY dcd_2x8 IS
+ENTITY dcd_2x4 IS
 	PORT(
 		i0, i1, en : IN STD_LOGIC;
 		d : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
 	);
-END ENTITY dcd_2x8;
+END ENTITY dcd_2x4;
 
 -- Arquitetura
-ARCHITECTURE behav OF dcd_2x8 IS
+ARCHITECTURE behav OF dcd_2x4 IS
 
 -- Comportamento
 BEGIN

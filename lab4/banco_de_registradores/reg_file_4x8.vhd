@@ -17,7 +17,7 @@ END ENTITY reg_file_4x8;
 ARCHITECTURE RTL OF reg_file_4x8 IS
 
 	-- Fios
-	SIGNAL dcd_2x8_wires : STD_LOGIC_VECTOR(3 DOWNTO 0);
+	SIGNAL dcd_2x4_wires : STD_LOGIC_VECTOR(3 DOWNTO 0);
 	SIGNAL reg0_ffd_8_wires : STD_LOGIC_VECTOR(7 DOWNTO 0);
 	SIGNAL reg1_ffd_8_wires : STD_LOGIC_VECTOR(7 DOWNTO 0);
 	SIGNAL reg2_ffd_8_wires : STD_LOGIC_VECTOR(7 DOWNTO 0);
@@ -26,12 +26,12 @@ ARCHITECTURE RTL OF reg_file_4x8 IS
 
 	-- Componentes
 	-- 1) Decodificador
-	COMPONENT dcd_2x8 IS
+	COMPONENT dcd_2x4 IS
 		PORT(
 			i0, i1, en : IN STD_LOGIC;
 			d : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
 		);
-	END COMPONENT dcd_2x8;
+	END COMPONENT dcd_2x4;
 
 	-- 2) Registrador ffd
 	COMPONENT reg_ffd_8 IS
@@ -56,19 +56,19 @@ ARCHITECTURE RTL OF reg_file_4x8 IS
 BEGIN
 
 	-- Decodificador 1
-	dcd1: dcd_2x8
+	dcd1: dcd_2x4
 		PORT MAP(
 			i0 => w_addr(0),
 			i1 => w_addr(1),
 			en => w_en,
-			d => dcd_2x8_wires
+			d => dcd_2x4_wires
 	);
 
 	-- Registradores
 	reg0_ffd_8 : reg_ffd_8
 		PORT MAP(
 			d_data => w_data,
-			load => dcd_2x8_wires(0),
+			load => dcd_2x4_wires(0),
 			clk => clk,
 			q_data => reg0_ffd_8_wires
 	);
@@ -76,7 +76,7 @@ BEGIN
 	reg1_ffd_8 : reg_ffd_8
 		PORT MAP(
 			d_data => w_data,
-			load => dcd_2x8_wires(1),
+			load => dcd_2x4_wires(1),
 			clk => clk,
 			q_data => reg1_ffd_8_wires
 	);
@@ -84,7 +84,7 @@ BEGIN
 	reg2_ffd_8 : reg_ffd_8
 		PORT MAP(
 			d_data => w_data,
-			load => dcd_2x8_wires(2),
+			load => dcd_2x4_wires(2),
 			clk => clk,
 			q_data => reg2_ffd_8_wires
 	);
@@ -92,13 +92,13 @@ BEGIN
 	reg3_ffd_8 : reg_ffd_8
 		PORT MAP(
 			d_data => w_data,
-			load => dcd_2x8_wires(3),
+			load => dcd_2x4_wires(3),
 			clk => clk,
 			q_data => reg3_ffd_8_wires
 	);
 
 	-- Decodificador 2
-	dcd2: dcd_2x8
+	dcd2: dcd_2x4
 		PORT MAP(
 			i0 => r_addr(0),
 			i1 => r_addr(1),
