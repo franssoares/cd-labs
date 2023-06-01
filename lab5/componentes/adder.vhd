@@ -14,6 +14,7 @@ ENTITY adder IS
 	PORT(
 		A, B : IN STD_LOGIC_VECTOR(tam DOWNTO 0);
 		sub : IN STD_LOGIC;
+		co : OUT STD_LOGIC;
 		S : OUT STD_LOGIC_VECTOR(tam DOWNTO 0)
 	);
 	
@@ -70,7 +71,7 @@ BEGIN
 		b => mux_m_wires,
 		cin => sub,
 		s => S,
-		co => open
+		co => co
 	);
 
 END ARCHITECTURE comp;

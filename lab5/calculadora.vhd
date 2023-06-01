@@ -30,7 +30,8 @@ ARCHITECTURE comp OF calculadora IS
 		PORT(
 			A, B : IN STD_LOGIC_VECTOR(tam DOWNTO 0);
 			sub : IN STD_LOGIC;
-			S : OUT STD_LOGIC_VECTOR(5 DOWNTO 0)
+			co : OUT STD_LOGIC;
+			S : OUT STD_LOGIC_VECTOR(tam DOWNTO 0)
 		);
 	END COMPONENT adder;
 	
@@ -55,6 +56,7 @@ BEGIN
 		A => A,
 		B => B,
 		sub => f,
+		co => open, -- NOT USED: Variável interna da componente não utilizada
 		S => out_adder
 	);
 	
