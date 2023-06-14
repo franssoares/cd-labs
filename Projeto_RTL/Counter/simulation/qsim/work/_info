@@ -1,0 +1,157 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1\Projeto_RTL\Counter\simulation\qsim
+vcounter
+Z1 !s100 7OJMG4DbX4Cg6IHlia>1^1
+Z2 IOoEzXmMhWKGe>iEgII6gM2
+Z3 V;Z>Ej7FBDN_eRAf>N7Xa52
+Z4 dC:\altera\13.0sp1\Projeto_RTL\Counter\simulation\qsim
+Z5 w1686714778
+Z6 8counter.vo
+Z7 Fcounter.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|counter.vo|
+Z10 o-work work -O0
+Z11 !s108 1686714778.658000
+Z12 !s107 counter.vo|
+!i10b 1
+!s85 0
+!s101 -O0
+vcounter_vlg_check_tst
+Z13 Ic>^hhMcU`Le36F75Bgb:A2
+Z14 VW`a=PR0[VZ`XUNILMO^:^2
+R4
+Z15 w1686714777
+Z16 8counter.vt
+Z17 Fcounter.vt
+L0 61
+R8
+r1
+31
+Z18 !s108 1686714778.706000
+Z19 !s107 counter.vt|
+Z20 !s90 -work|work|counter.vt|
+R10
+Z21 !s100 ce6B:c4?P2;K_:XOkZjBL2
+!i10b 1
+!s85 0
+!s101 -O0
+vcounter_vlg_sample_tst
+Z22 !s100 57R6Xh8CQS69D[:2_`kkU1
+Z23 I4jFS;;J5gR7`LzUC>PB<E2
+Z24 V2nKN7AJahmX@4PXDCD^oF3
+R4
+R15
+R16
+R17
+L0 29
+R8
+r1
+31
+R18
+R19
+R20
+R10
+!i10b 1
+!s85 0
+!s101 -O0
+vcounter_vlg_vec_tst
+Z25 II`L<61SgOjQlaU[4M?YQU1
+Z26 V@9OC]=hZZe;4GTW8>c1jE1
+R4
+R15
+R16
+R17
+Z27 L0 555
+R8
+r1
+31
+R18
+R19
+R20
+R10
+Z28 !s100 R^^ncVneQUoNkf^KQ38MD0
+!i10b 1
+!s85 0
+!s101 -O0
+vtimer
+Z29 !s100 K_kj3T<nf`4X<XbEnNchY0
+Z30 I@zZ7Zg<Xd^mmZW?S@ecC[0
+Z31 VZS<@ldbi3coZ>l4<3V[QB2
+R4
+Z32 w1686722350
+R6
+R7
+L0 31
+R8
+r1
+31
+R9
+R10
+!i10b 1
+!s85 0
+Z33 !s108 1686722351.014000
+R12
+!s101 -O0
+vtimer_vlg_check_tst
+!i10b 1
+Z34 !s100 0aMWiC;AifCGJmL9jgY<Z3
+Z35 Ik`MUV9k6Haa4]UAoREInT0
+Z36 V0J0HQ<Q13ZUbIXi<EGUOk3
+R4
+R32
+R16
+R17
+L0 59
+R8
+r1
+!s85 0
+31
+Z37 !s108 1686722351.061000
+Z38 !s107 counter.vt|
+R20
+!s101 -O0
+R10
+vtimer_vlg_sample_tst
+!i10b 1
+Z39 !s100 3GNogVJFPT>_]8Ho63W9z2
+Z40 I>D7:a@FPj[`=lh;X9e_el2
+Z41 Vz`Hm7LKOJB=_9SU>m3R4O1
+R4
+R32
+R16
+R17
+L0 29
+R8
+r1
+!s85 0
+31
+R37
+R38
+R20
+!s101 -O0
+R10
+vtimer_vlg_vec_tst
+!i10b 1
+!s100 `4C?O1naTojc<`zUY<6Tg0
+If2PVRBFbnc_AUN@zYnH;Y2
+Z42 VAl?cbDe7`4Fcm]j;8m6Cc1
+R4
+R32
+R16
+R17
+Z43 L0 558
+R8
+r1
+!s85 0
+31
+R37
+R38
+R20
+!s101 -O0
+R10
