@@ -5,6 +5,7 @@
 
 ## Componentes do grupo:
 - Franklin Luiz Soares do Nascimento Filho
+- Juscelino Pereira de Araújo
 - Niedson Fernando Dantas Fernandes
 - Poliana Ellen de Araújo
 - Vinicíus Costa Bulhões
