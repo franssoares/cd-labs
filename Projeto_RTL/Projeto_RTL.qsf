@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE EP2C35F672C6
-set_global_assignment -name TOP_LEVEL_ENTITY timer
+set_global_assignment -name TOP_LEVEL_ENTITY calculadora
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "23:44:40  JUNE 15, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
@@ -50,6 +50,17 @@ set_global_assignment -name SIMULATION_MODE FUNCTIONAL
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/altera/13.0sp1/Projeto_RTL/Waveform3.vwf"
+set_global_assignment -name VHDL_FILE Somador_subtrator/Multiplexadores/mux_2x1_22.vhd
+set_global_assignment -name VHDL_FILE Somador_subtrator/Registradores/reg_1x22.vhd
+set_global_assignment -name VHDL_FILE Somador_subtrator/Registradores/ffd.vhd
+set_global_assignment -name VHDL_FILE Somador_subtrator/Somadores/sum_sub.vhd
+set_global_assignment -name VHDL_FILE Somador_subtrator/Somadores/full_adder_6.vhd
+set_global_assignment -name VHDL_FILE Somador_subtrator/Somadores/full_adder.vhd
+set_global_assignment -name VHDL_FILE Somador_subtrator/Somadores/adder.vhd
+set_global_assignment -name VHDL_FILE Somador_subtrator/calculadora.vhd
 set_global_assignment -name VHDL_FILE Timer/Contadores/Relogio/Dias/counter_days_5.vhd
 set_global_assignment -name VHDL_FILE Timer/timer.vhd
 set_global_assignment -name VHDL_FILE "Timer/Registradores/Registrador 1x6/reg_1x6.vhd"
@@ -81,14 +92,11 @@ set_global_assignment -name VHDL_FILE "Banco de registreadores/Banco de registra
 set_global_assignment -name VHDL_FILE "Banco de registreadores/Banco de registradores 1x8/Driver de 3 estados/tri_states_driver.vhd"
 set_global_assignment -name VHDL_FILE "Banco de registreadores/Banco de registradores 1x8/Decodificador/decoder_3x8.vhd"
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
-set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
-set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name VECTOR_WAVEFORM_FILE Timer/Contadores/Relogio/Dias/Waveform.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform3.vwf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform3.vwf
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/altera/13.0sp1/Projeto_RTL/Waveform3.vwf"
