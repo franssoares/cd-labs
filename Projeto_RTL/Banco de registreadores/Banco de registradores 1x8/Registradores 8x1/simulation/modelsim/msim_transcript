@@ -1,0 +1,98 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do reg_8x1_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/altera/13.0sp1/Projeto_RTL/Timer/Registradores/Registrador 1x6/reg_1x6.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg_1x6
+# -- Compiling architecture comp of reg_1x6
+# vcom -93 -work work {C:/altera/13.0sp1/Projeto_RTL/Timer/Registradores/Registrador 1x6/Flip Flop tipo D/ffd_6.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ffd_6
+# -- Compiling architecture behav of ffd_6
+# vcom -93 -work work {C:/altera/13.0sp1/Projeto_RTL/Timer/Multiplexador/mux_2x1_6.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity mux_2x1_6
+# -- Compiling architecture behav of mux_2x1_6
+# vcom -93 -work work {C:/altera/13.0sp1/Projeto_RTL/Timer/Multiplexador/mux_2x1_5.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity mux_2x1_5
+# -- Compiling architecture behav of mux_2x1_5
+# vcom -93 -work work {C:/altera/13.0sp1/Projeto_RTL/Timer/Multiplexador/mux_2x1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity mux_2x1
+# -- Compiling architecture behav of mux_2x1
+# vcom -93 -work work {C:/altera/13.0sp1/Projeto_RTL/Timer/Divisor de clock/divide_freq.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity divide_freq
+# -- Compiling architecture behav of divide_freq
+# vcom -93 -work work {C:/altera/13.0sp1/Projeto_RTL/Timer/Contadores/counter.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity counter
+# -- Compiling architecture rtl of counter
+# vcom -93 -work work {C:/altera/13.0sp1/Projeto_RTL/Timer/Contadores/Somadores/half_adder5.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity half_adder5
+# -- Compiling architecture bhv of half_adder5
+# vcom -93 -work work {C:/altera/13.0sp1/Projeto_RTL/Timer/Contadores/Somadores/half_adder_6.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity half_adder_6
+# -- Compiling architecture bhv of half_adder_6
+# vcom -93 -work work {C:/altera/13.0sp1/Projeto_RTL/Timer/Contadores/Relogio/Segundos/counter_seg_6.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity counter_seg_6
+# -- Compiling architecture bhv of counter_seg_6
+# ** Error: C:/altera/13.0sp1/Projeto_RTL/Timer/Contadores/Relogio/Segundos/counter_seg_6.vhd(96): (vcom-1436) Actual expression (infix expression) of formal "load" is not globally static.
+# 
+# ** Error: C:/altera/13.0sp1/Projeto_RTL/Timer/Contadores/Relogio/Segundos/counter_seg_6.vhd(119): VHDL Compiler exiting
+# ** Error: C:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./reg_8x1_run_msim_rtl_vhdl.do line 17
+# C:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {C:/altera/13.0sp1/Projeto_RTL/Timer/Contadores/Relogio/Segundos/counter_seg_6.vhd}"

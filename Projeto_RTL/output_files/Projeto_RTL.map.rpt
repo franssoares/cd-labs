@@ -1,0 +1,1044 @@
+Analysis & Synthesis report for Projeto_RTL
+Fri Jun 16 01:24:02 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: counter_seg_6:divfrq
+ 10. Parameter Settings for User Entity Instance: counter_seg_6:divfrq|mux_2x1_6:mux06
+ 11. Parameter Settings for User Entity Instance: counter_seg_6:divfrq|reg_1x6:bit_register_6
+ 12. Parameter Settings for User Entity Instance: counter_seg_6:divfrq|incrementer6:adder06
+ 13. Parameter Settings for User Entity Instance: counter_seg_6:divfrq|comparator_6:comp06
+ 14. Parameter Settings for User Entity Instance: counter:counter0|counter_seg_6:seconds
+ 15. Parameter Settings for User Entity Instance: counter:counter0|counter_seg_6:seconds|mux_2x1_6:mux06
+ 16. Parameter Settings for User Entity Instance: counter:counter0|counter_seg_6:seconds|reg_1x6:bit_register_6
+ 17. Parameter Settings for User Entity Instance: counter:counter0|counter_seg_6:seconds|incrementer6:adder06
+ 18. Parameter Settings for User Entity Instance: counter:counter0|counter_seg_6:seconds|comparator_6:comp06
+ 19. Parameter Settings for User Entity Instance: counter:counter0|counter_min_6:minutes
+ 20. Parameter Settings for User Entity Instance: counter:counter0|counter_min_6:minutes|mux_2x1_6:mux06
+ 21. Parameter Settings for User Entity Instance: counter:counter0|counter_min_6:minutes|reg_1x6:bit_register_6
+ 22. Parameter Settings for User Entity Instance: counter:counter0|counter_min_6:minutes|incrementer6:adder06
+ 23. Parameter Settings for User Entity Instance: counter:counter0|counter_min_6:minutes|comparator_6:comp06
+ 24. Parameter Settings for User Entity Instance: counter:counter0|counter_hours_5:hours
+ 25. Parameter Settings for User Entity Instance: counter:counter0|counter_hours_5:hours|mux_2x1_5:mux0
+ 26. Parameter Settings for User Entity Instance: counter:counter0|counter_hours_5:hours|reg_1x5:register_5
+ 27. Parameter Settings for User Entity Instance: counter:counter0|counter_hours_5:hours|incrementer5:adder0
+ 28. Parameter Settings for User Entity Instance: counter:counter0|counter_hours_5:hours|incrementer5:adder0|half_adder5:adder0
+ 29. Parameter Settings for User Entity Instance: counter:counter0|counter_hours_5:hours|incrementer5:adder0|half_adder5:adder1
+ 30. Parameter Settings for User Entity Instance: counter:counter0|counter_hours_5:hours|incrementer5:adder0|half_adder5:adder2
+ 31. Parameter Settings for User Entity Instance: counter:counter0|counter_hours_5:hours|incrementer5:adder0|half_adder5:adder3
+ 32. Parameter Settings for User Entity Instance: counter:counter0|counter_hours_5:hours|incrementer5:adder0|half_adder5:adder4
+ 33. Parameter Settings for User Entity Instance: counter:counter0|counter_hours_5:hours|comparator_5:comp0
+ 34. Parameter Settings for User Entity Instance: counter:counter0|counter_days_5:days
+ 35. Parameter Settings for User Entity Instance: counter:counter0|counter_days_5:days|mux_2x1_5:mux0
+ 36. Parameter Settings for User Entity Instance: counter:counter0|counter_days_5:days|reg_1x5:bit_register_5
+ 37. Parameter Settings for User Entity Instance: counter:counter0|counter_days_5:days|incrementer5:adder0
+ 38. Parameter Settings for User Entity Instance: counter:counter0|counter_days_5:days|incrementer5:adder0|half_adder5:adder0
+ 39. Parameter Settings for User Entity Instance: counter:counter0|counter_days_5:days|incrementer5:adder0|half_adder5:adder1
+ 40. Parameter Settings for User Entity Instance: counter:counter0|counter_days_5:days|incrementer5:adder0|half_adder5:adder2
+ 41. Parameter Settings for User Entity Instance: counter:counter0|counter_days_5:days|incrementer5:adder0|half_adder5:adder3
+ 42. Parameter Settings for User Entity Instance: counter:counter0|counter_days_5:days|incrementer5:adder0|half_adder5:adder4
+ 43. Parameter Settings for User Entity Instance: counter:counter0|counter_days_5:days|comparator_5:comp0
+ 44. Port Connectivity Checks: "counter:counter0|counter_days_5:days|comparator_5:comp0"
+ 45. Port Connectivity Checks: "counter:counter0|counter_days_5:days|reg_1x5:bit_register_5"
+ 46. Port Connectivity Checks: "counter:counter0|counter_hours_5:hours|comparator_5:comp0"
+ 47. Port Connectivity Checks: "counter:counter0|counter_hours_5:hours|incrementer5:adder0|half_adder5:adder4"
+ 48. Port Connectivity Checks: "counter:counter0|counter_hours_5:hours|reg_1x5:register_5"
+ 49. Port Connectivity Checks: "counter:counter0|counter_min_6:minutes|comparator_6:comp06"
+ 50. Port Connectivity Checks: "counter:counter0|counter_min_6:minutes|reg_1x6:bit_register_6"
+ 51. Port Connectivity Checks: "counter:counter0"
+ 52. Port Connectivity Checks: "counter_seg_6:divfrq|comparator_6:comp06"
+ 53. Port Connectivity Checks: "counter_seg_6:divfrq|incrementer6:adder06|half_adder_6:adder5"
+ 54. Port Connectivity Checks: "counter_seg_6:divfrq|incrementer6:adder06"
+ 55. Port Connectivity Checks: "counter_seg_6:divfrq|reg_1x6:bit_register_6|ffd_6:inst5"
+ 56. Port Connectivity Checks: "counter_seg_6:divfrq|reg_1x6:bit_register_6|ffd_6:inst4"
+ 57. Port Connectivity Checks: "counter_seg_6:divfrq|reg_1x6:bit_register_6|ffd_6:inst3"
+ 58. Port Connectivity Checks: "counter_seg_6:divfrq|reg_1x6:bit_register_6|ffd_6:inst2"
+ 59. Port Connectivity Checks: "counter_seg_6:divfrq|reg_1x6:bit_register_6|ffd_6:inst1"
+ 60. Port Connectivity Checks: "counter_seg_6:divfrq|reg_1x6:bit_register_6|ffd_6:inst0"
+ 61. Port Connectivity Checks: "counter_seg_6:divfrq|reg_1x6:bit_register_6"
+ 62. Port Connectivity Checks: "counter_seg_6:divfrq"
+ 63. Elapsed Time Per Partition
+ 64. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Jun 16 01:24:02 2023           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; Projeto_RTL                                     ;
+; Top-level Entity Name              ; timer                                           ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 58                                              ;
+;     Total combinational functions  ; 58                                              ;
+;     Dedicated logic registers      ; 28                                              ;
+; Total registers                    ; 28                                              ;
+; Total pins                         ; 26                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; timer              ; Projeto_RTL        ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                      ;
++----------------------------------------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                               ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                 ; Library ;
++----------------------------------------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------+---------+
+; Timer/Contadores/Relogio/Dias/counter_days_5.vhd               ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Projeto_RTL/Timer/Contadores/Relogio/Dias/counter_days_5.vhd               ;         ;
+; Timer/timer.vhd                                                ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Projeto_RTL/Timer/timer.vhd                                                ;         ;
+; Timer/Registradores/Registrador 1x6/reg_1x6.vhd                ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Projeto_RTL/Timer/Registradores/Registrador 1x6/reg_1x6.vhd                ;         ;
+; Timer/Registradores/Registrador 1x6/Flip Flop tipo D/ffd_6.vhd ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Projeto_RTL/Timer/Registradores/Registrador 1x6/Flip Flop tipo D/ffd_6.vhd ;         ;
+; Timer/Registradores/Registrador 1x5/reg_1x5.vhd                ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Projeto_RTL/Timer/Registradores/Registrador 1x5/reg_1x5.vhd                ;         ;
+; Timer/Registradores/Registrador 1x5/Flip Flop tipo D/ffd_5.vhd ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Projeto_RTL/Timer/Registradores/Registrador 1x5/Flip Flop tipo D/ffd_5.vhd ;         ;
+; Timer/Multiplexador/mux_2x1_6.vhd                              ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Projeto_RTL/Timer/Multiplexador/mux_2x1_6.vhd                              ;         ;
+; Timer/Multiplexador/mux_2x1_5.vhd                              ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Projeto_RTL/Timer/Multiplexador/mux_2x1_5.vhd                              ;         ;
+; Timer/Multiplexador/mux_2x1.vhd                                ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Projeto_RTL/Timer/Multiplexador/mux_2x1.vhd                                ;         ;
+; Timer/Contadores/counter.vhd                                   ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Projeto_RTL/Timer/Contadores/counter.vhd                                   ;         ;
+; Timer/Contadores/Somadores/half_adder5.vhd                     ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Projeto_RTL/Timer/Contadores/Somadores/half_adder5.vhd                     ;         ;
+; Timer/Contadores/Somadores/half_adder_6.vhd                    ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Projeto_RTL/Timer/Contadores/Somadores/half_adder_6.vhd                    ;         ;
+; Timer/Contadores/Relogio/Segundos/counter_seg_6.vhd            ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Projeto_RTL/Timer/Contadores/Relogio/Segundos/counter_seg_6.vhd            ;         ;
+; Timer/Contadores/Relogio/Minutos/counter_min_6.vhd             ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Projeto_RTL/Timer/Contadores/Relogio/Minutos/counter_min_6.vhd             ;         ;
+; Timer/Contadores/Relogio/Horas/counter_hours_5.vhd             ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Projeto_RTL/Timer/Contadores/Relogio/Horas/counter_hours_5.vhd             ;         ;
+; Timer/Contadores/Incrementador/incrementer5.vhd                ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Projeto_RTL/Timer/Contadores/Incrementador/incrementer5.vhd                ;         ;
+; Timer/Contadores/Incrementador/incrementer_6.vhd               ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Projeto_RTL/Timer/Contadores/Incrementador/incrementer_6.vhd               ;         ;
+; Timer/Comparador/comparator_6.vhd                              ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Projeto_RTL/Timer/Comparador/comparator_6.vhd                              ;         ;
+; Timer/Comparador/comparator_5.vhd                              ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Projeto_RTL/Timer/Comparador/comparator_5.vhd                              ;         ;
++----------------------------------------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                               ;
++---------------------------------------------+---------------------------------------------+
+; Resource                                    ; Usage                                       ;
++---------------------------------------------+---------------------------------------------+
+; Estimated Total logic elements              ; 58                                          ;
+;                                             ;                                             ;
+; Total combinational functions               ; 58                                          ;
+; Logic element usage by number of LUT inputs ;                                             ;
+;     -- 4 input functions                    ; 40                                          ;
+;     -- 3 input functions                    ; 10                                          ;
+;     -- <=2 input functions                  ; 8                                           ;
+;                                             ;                                             ;
+; Logic elements by mode                      ;                                             ;
+;     -- normal mode                          ; 58                                          ;
+;     -- arithmetic mode                      ; 0                                           ;
+;                                             ;                                             ;
+; Total registers                             ; 28                                          ;
+;     -- Dedicated logic registers            ; 28                                          ;
+;     -- I/O registers                        ; 0                                           ;
+;                                             ;                                             ;
+; I/O pins                                    ; 26                                          ;
+; Embedded Multiplier 9-bit elements          ; 0                                           ;
+; Maximum fan-out node                        ; counter_seg_6:divfrq|comparator_6:comp06|eq ;
+; Maximum fan-out                             ; 28                                          ;
+; Total fan-out                               ; 318                                         ;
+; Average fan-out                             ; 2.84                                        ;
++---------------------------------------------+---------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                   ;
++-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                    ; Library Name ;
++-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------+--------------+
+; |timer                            ; 58 (0)            ; 28 (0)       ; 0           ; 0            ; 0       ; 0         ; 26   ; 0            ; |timer                                                                                 ; work         ;
+;    |counter:counter0|             ; 48 (0)            ; 22 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0                                                                ; work         ;
+;       |counter_days_5:days|       ; 11 (0)            ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_days_5:days                                            ; work         ;
+;          |comparator_5:comp0|     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_days_5:days|comparator_5:comp0                         ; work         ;
+;          |incrementer5:adder0|    ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_days_5:days|incrementer5:adder0                        ; work         ;
+;             |half_adder5:adder2|  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_days_5:days|incrementer5:adder0|half_adder5:adder2     ; work         ;
+;          |reg_1x5:bit_register_5| ; 6 (0)             ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_days_5:days|reg_1x5:bit_register_5                     ; work         ;
+;             |ffd_5:inst0|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_days_5:days|reg_1x5:bit_register_5|ffd_5:inst0         ; work         ;
+;             |ffd_5:inst1|         ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_days_5:days|reg_1x5:bit_register_5|ffd_5:inst1         ; work         ;
+;             |ffd_5:inst2|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_days_5:days|reg_1x5:bit_register_5|ffd_5:inst2         ; work         ;
+;             |ffd_5:inst3|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_days_5:days|reg_1x5:bit_register_5|ffd_5:inst3         ; work         ;
+;             |ffd_5:inst4|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_days_5:days|reg_1x5:bit_register_5|ffd_5:inst4         ; work         ;
+;       |counter_hours_5:hours|     ; 12 (0)            ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_hours_5:hours                                          ; work         ;
+;          |comparator_5:comp0|     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_hours_5:hours|comparator_5:comp0                       ; work         ;
+;          |incrementer5:adder0|    ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_hours_5:hours|incrementer5:adder0                      ; work         ;
+;             |half_adder5:adder2|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_hours_5:hours|incrementer5:adder0|half_adder5:adder2   ; work         ;
+;          |reg_1x5:register_5|     ; 8 (0)             ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_hours_5:hours|reg_1x5:register_5                       ; work         ;
+;             |ffd_5:inst0|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_hours_5:hours|reg_1x5:register_5|ffd_5:inst0           ; work         ;
+;             |ffd_5:inst1|         ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_hours_5:hours|reg_1x5:register_5|ffd_5:inst1           ; work         ;
+;             |ffd_5:inst2|         ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_hours_5:hours|reg_1x5:register_5|ffd_5:inst2           ; work         ;
+;             |ffd_5:inst3|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_hours_5:hours|reg_1x5:register_5|ffd_5:inst3           ; work         ;
+;             |ffd_5:inst4|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_hours_5:hours|reg_1x5:register_5|ffd_5:inst4           ; work         ;
+;       |counter_min_6:minutes|     ; 14 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_min_6:minutes                                          ; work         ;
+;          |comparator_6:comp06|    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_min_6:minutes|comparator_6:comp06                      ; work         ;
+;          |incrementer6:adder06|   ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_min_6:minutes|incrementer6:adder06                     ; work         ;
+;             |half_adder_6:adder1| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_min_6:minutes|incrementer6:adder06|half_adder_6:adder1 ; work         ;
+;             |half_adder_6:adder2| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_min_6:minutes|incrementer6:adder06|half_adder_6:adder2 ; work         ;
+;             |half_adder_6:adder3| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_min_6:minutes|incrementer6:adder06|half_adder_6:adder3 ; work         ;
+;          |reg_1x6:bit_register_6| ; 7 (0)             ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_min_6:minutes|reg_1x6:bit_register_6                   ; work         ;
+;             |ffd_6:inst0|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_min_6:minutes|reg_1x6:bit_register_6|ffd_6:inst0       ; work         ;
+;             |ffd_6:inst1|         ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_min_6:minutes|reg_1x6:bit_register_6|ffd_6:inst1       ; work         ;
+;             |ffd_6:inst2|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_min_6:minutes|reg_1x6:bit_register_6|ffd_6:inst2       ; work         ;
+;             |ffd_6:inst3|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_min_6:minutes|reg_1x6:bit_register_6|ffd_6:inst3       ; work         ;
+;             |ffd_6:inst4|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_min_6:minutes|reg_1x6:bit_register_6|ffd_6:inst4       ; work         ;
+;             |ffd_6:inst5|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_min_6:minutes|reg_1x6:bit_register_6|ffd_6:inst5       ; work         ;
+;       |counter_seg_6:seconds|     ; 11 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_seg_6:seconds                                          ; work         ;
+;          |comparator_6:comp06|    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_seg_6:seconds|comparator_6:comp06                      ; work         ;
+;          |incrementer6:adder06|   ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_seg_6:seconds|incrementer6:adder06                     ; work         ;
+;             |half_adder_6:adder1| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_seg_6:seconds|incrementer6:adder06|half_adder_6:adder1 ; work         ;
+;             |half_adder_6:adder3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_seg_6:seconds|incrementer6:adder06|half_adder_6:adder3 ; work         ;
+;          |mux_2x1_6:mux06|        ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_seg_6:seconds|mux_2x1_6:mux06                          ; work         ;
+;             |mux_2x1:mux1|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_seg_6:seconds|mux_2x1_6:mux06|mux_2x1:mux1             ; work         ;
+;             |mux_2x1:mux2|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_seg_6:seconds|mux_2x1_6:mux06|mux_2x1:mux2             ; work         ;
+;             |mux_2x1:mux3|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_seg_6:seconds|mux_2x1_6:mux06|mux_2x1:mux3             ; work         ;
+;             |mux_2x1:mux4|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_seg_6:seconds|mux_2x1_6:mux06|mux_2x1:mux4             ; work         ;
+;          |reg_1x6:bit_register_6| ; 2 (0)             ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_seg_6:seconds|reg_1x6:bit_register_6                   ; work         ;
+;             |ffd_6:inst0|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_seg_6:seconds|reg_1x6:bit_register_6|ffd_6:inst0       ; work         ;
+;             |ffd_6:inst1|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_seg_6:seconds|reg_1x6:bit_register_6|ffd_6:inst1       ; work         ;
+;             |ffd_6:inst2|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_seg_6:seconds|reg_1x6:bit_register_6|ffd_6:inst2       ; work         ;
+;             |ffd_6:inst3|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_seg_6:seconds|reg_1x6:bit_register_6|ffd_6:inst3       ; work         ;
+;             |ffd_6:inst4|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_seg_6:seconds|reg_1x6:bit_register_6|ffd_6:inst4       ; work         ;
+;             |ffd_6:inst5|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter:counter0|counter_seg_6:seconds|reg_1x6:bit_register_6|ffd_6:inst5       ; work         ;
+;    |counter_seg_6:divfrq|         ; 10 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter_seg_6:divfrq                                                            ; work         ;
+;       |comparator_6:comp06|       ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter_seg_6:divfrq|comparator_6:comp06                                        ; work         ;
+;       |incrementer6:adder06|      ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter_seg_6:divfrq|incrementer6:adder06                                       ; work         ;
+;          |half_adder_6:adder2|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter_seg_6:divfrq|incrementer6:adder06|half_adder_6:adder2                   ; work         ;
+;          |half_adder_6:adder3|    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter_seg_6:divfrq|incrementer6:adder06|half_adder_6:adder3                   ; work         ;
+;       |mux_2x1_6:mux06|           ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter_seg_6:divfrq|mux_2x1_6:mux06                                            ; work         ;
+;          |mux_2x1:mux0|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter_seg_6:divfrq|mux_2x1_6:mux06|mux_2x1:mux0                               ; work         ;
+;          |mux_2x1:mux1|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter_seg_6:divfrq|mux_2x1_6:mux06|mux_2x1:mux1                               ; work         ;
+;          |mux_2x1:mux3|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter_seg_6:divfrq|mux_2x1_6:mux06|mux_2x1:mux3                               ; work         ;
+;          |mux_2x1:mux4|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter_seg_6:divfrq|mux_2x1_6:mux06|mux_2x1:mux4                               ; work         ;
+;          |mux_2x1:mux5|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter_seg_6:divfrq|mux_2x1_6:mux06|mux_2x1:mux5                               ; work         ;
+;       |reg_1x6:bit_register_6|    ; 0 (0)             ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter_seg_6:divfrq|reg_1x6:bit_register_6                                     ; work         ;
+;          |ffd_6:inst0|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter_seg_6:divfrq|reg_1x6:bit_register_6|ffd_6:inst0                         ; work         ;
+;          |ffd_6:inst1|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter_seg_6:divfrq|reg_1x6:bit_register_6|ffd_6:inst1                         ; work         ;
+;          |ffd_6:inst2|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter_seg_6:divfrq|reg_1x6:bit_register_6|ffd_6:inst2                         ; work         ;
+;          |ffd_6:inst3|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter_seg_6:divfrq|reg_1x6:bit_register_6|ffd_6:inst3                         ; work         ;
+;          |ffd_6:inst4|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter_seg_6:divfrq|reg_1x6:bit_register_6|ffd_6:inst4                         ; work         ;
+;          |ffd_6:inst5|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|counter_seg_6:divfrq|reg_1x6:bit_register_6|ffd_6:inst5                         ; work         ;
++-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 28    ;
+; Number of registers using Synchronous Clear  ; 1     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 28    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 5     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter_seg_6:divfrq ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; w              ; 5     ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter_seg_6:divfrq|mux_2x1_6:mux06 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; w              ; 5     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter_seg_6:divfrq|reg_1x6:bit_register_6 ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; tam            ; 5     ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter_seg_6:divfrq|incrementer6:adder06 ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; w              ; 5     ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter_seg_6:divfrq|comparator_6:comp06 ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; w              ; 5     ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:counter0|counter_seg_6:seconds ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; w              ; 5     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:counter0|counter_seg_6:seconds|mux_2x1_6:mux06 ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; w              ; 5     ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:counter0|counter_seg_6:seconds|reg_1x6:bit_register_6 ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; tam            ; 5     ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:counter0|counter_seg_6:seconds|incrementer6:adder06 ;
++----------------+-------+---------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------+
+; w              ; 5     ; Signed Integer                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:counter0|counter_seg_6:seconds|comparator_6:comp06 ;
++----------------+-------+--------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                           ;
++----------------+-------+--------------------------------------------------------------------------------+
+; w              ; 5     ; Signed Integer                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:counter0|counter_min_6:minutes ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; w              ; 5     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:counter0|counter_min_6:minutes|mux_2x1_6:mux06 ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; w              ; 5     ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:counter0|counter_min_6:minutes|reg_1x6:bit_register_6 ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; tam            ; 5     ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:counter0|counter_min_6:minutes|incrementer6:adder06 ;
++----------------+-------+---------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------+
+; w              ; 5     ; Signed Integer                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:counter0|counter_min_6:minutes|comparator_6:comp06 ;
++----------------+-------+--------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                           ;
++----------------+-------+--------------------------------------------------------------------------------+
+; w              ; 5     ; Signed Integer                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:counter0|counter_hours_5:hours ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; w              ; 4     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:counter0|counter_hours_5:hours|mux_2x1_5:mux0 ;
++----------------+-------+---------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                      ;
++----------------+-------+---------------------------------------------------------------------------+
+; w              ; 4     ; Signed Integer                                                            ;
++----------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:counter0|counter_hours_5:hours|reg_1x5:register_5 ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; tam            ; 4     ; Signed Integer                                                                ;
++----------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:counter0|counter_hours_5:hours|incrementer5:adder0 ;
++----------------+-------+--------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                           ;
++----------------+-------+--------------------------------------------------------------------------------+
+; w              ; 4     ; Signed Integer                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:counter0|counter_hours_5:hours|incrementer5:adder0|half_adder5:adder0 ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                              ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; w              ; 4     ; Signed Integer                                                                                    ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:counter0|counter_hours_5:hours|incrementer5:adder0|half_adder5:adder1 ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                              ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; w              ; 4     ; Signed Integer                                                                                    ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:counter0|counter_hours_5:hours|incrementer5:adder0|half_adder5:adder2 ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                              ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; w              ; 4     ; Signed Integer                                                                                    ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:counter0|counter_hours_5:hours|incrementer5:adder0|half_adder5:adder3 ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                              ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; w              ; 4     ; Signed Integer                                                                                    ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:counter0|counter_hours_5:hours|incrementer5:adder0|half_adder5:adder4 ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                              ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; w              ; 4     ; Signed Integer                                                                                    ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:counter0|counter_hours_5:hours|comparator_5:comp0 ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; w              ; 4     ; Signed Integer                                                                ;
++----------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:counter0|counter_days_5:days ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; w              ; 4     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:counter0|counter_days_5:days|mux_2x1_5:mux0 ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; w              ; 4     ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:counter0|counter_days_5:days|reg_1x5:bit_register_5 ;
++----------------+-------+---------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------+
+; tam            ; 4     ; Signed Integer                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:counter0|counter_days_5:days|incrementer5:adder0 ;
++----------------+-------+------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                         ;
++----------------+-------+------------------------------------------------------------------------------+
+; w              ; 4     ; Signed Integer                                                               ;
++----------------+-------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:counter0|counter_days_5:days|incrementer5:adder0|half_adder5:adder0 ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; w              ; 4     ; Signed Integer                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:counter0|counter_days_5:days|incrementer5:adder0|half_adder5:adder1 ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; w              ; 4     ; Signed Integer                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:counter0|counter_days_5:days|incrementer5:adder0|half_adder5:adder2 ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; w              ; 4     ; Signed Integer                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:counter0|counter_days_5:days|incrementer5:adder0|half_adder5:adder3 ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; w              ; 4     ; Signed Integer                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:counter0|counter_days_5:days|incrementer5:adder0|half_adder5:adder4 ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; w              ; 4     ; Signed Integer                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:counter0|counter_days_5:days|comparator_5:comp0 ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; w              ; 4     ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "counter:counter0|counter_days_5:days|comparator_5:comp0" ;
++---------+-------+----------+--------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                ;
++---------+-------+----------+--------------------------------------------------------+
+; b[4..2] ; Input ; Info     ; Stuck at VCC                                           ;
+; b[1]    ; Input ; Info     ; Stuck at GND                                           ;
+; b[0]    ; Input ; Info     ; Stuck at VCC                                           ;
++---------+-------+----------+--------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "counter:counter0|counter_days_5:days|reg_1x5:bit_register_5"                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; q_bar_reg ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "counter:counter0|counter_hours_5:hours|comparator_5:comp0" ;
++---------+-------+----------+----------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                  ;
++---------+-------+----------+----------------------------------------------------------+
+; b[2..0] ; Input ; Info     ; Stuck at VCC                                             ;
+; b[4]    ; Input ; Info     ; Stuck at VCC                                             ;
+; b[3]    ; Input ; Info     ; Stuck at GND                                             ;
++---------+-------+----------+----------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "counter:counter0|counter_hours_5:hours|incrementer5:adder0|half_adder5:adder4"      ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; co   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "counter:counter0|counter_hours_5:hours|reg_1x5:register_5"                               ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; q_bar_reg ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "counter:counter0|counter_min_6:minutes|comparator_6:comp06" ;
++---------+-------+----------+-----------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                   ;
++---------+-------+----------+-----------------------------------------------------------+
+; b[5..3] ; Input ; Info     ; Stuck at VCC                                              ;
+; b[1..0] ; Input ; Info     ; Stuck at VCC                                              ;
+; b[2]    ; Input ; Info     ; Stuck at GND                                              ;
++---------+-------+----------+-----------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "counter:counter0|counter_min_6:minutes|reg_1x6:bit_register_6"                           ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; q_bar_reg ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "counter:counter0"      ;
++-----------------+-------+----------+--------------+
+; Port            ; Type  ; Severity ; Details      ;
++-----------------+-------+----------+--------------+
+; in_data[18..15] ; Input ; Info     ; Stuck at VCC ;
+; in_data[11..10] ; Input ; Info     ; Stuck at VCC ;
+; in_data[7..1]   ; Input ; Info     ; Stuck at VCC ;
+; in_data[20..19] ; Input ; Info     ; Stuck at GND ;
+; in_data[14..12] ; Input ; Info     ; Stuck at GND ;
+; in_data[9..8]   ; Input ; Info     ; Stuck at GND ;
+; in_data[21]     ; Input ; Info     ; Stuck at VCC ;
+; in_data[0]      ; Input ; Info     ; Stuck at GND ;
++-----------------+-------+----------+--------------+
+
+
++----------------------------------------------------------------------+
+; Port Connectivity Checks: "counter_seg_6:divfrq|comparator_6:comp06" ;
++---------+-------+----------+-----------------------------------------+
+; Port    ; Type  ; Severity ; Details                                 ;
++---------+-------+----------+-----------------------------------------+
+; b[5..3] ; Input ; Info     ; Stuck at VCC                            ;
+; b[1..0] ; Input ; Info     ; Stuck at VCC                            ;
+; b[2]    ; Input ; Info     ; Stuck at GND                            ;
++---------+-------+----------+-----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "counter_seg_6:divfrq|incrementer6:adder06|half_adder_6:adder5"                      ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; co   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Port Connectivity Checks: "counter_seg_6:divfrq|incrementer6:adder06" ;
++------+-------+----------+---------------------------------------------+
+; Port ; Type  ; Severity ; Details                                     ;
++------+-------+----------+---------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at VCC                                ;
++------+-------+----------+---------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "counter_seg_6:divfrq|reg_1x6:bit_register_6|ffd_6:inst5"                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; q_bar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "counter_seg_6:divfrq|reg_1x6:bit_register_6|ffd_6:inst4"                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; q_bar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "counter_seg_6:divfrq|reg_1x6:bit_register_6|ffd_6:inst3"                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; q_bar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "counter_seg_6:divfrq|reg_1x6:bit_register_6|ffd_6:inst2"                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; q_bar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "counter_seg_6:divfrq|reg_1x6:bit_register_6|ffd_6:inst1"                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; q_bar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "counter_seg_6:divfrq|reg_1x6:bit_register_6|ffd_6:inst0"                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; q_bar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "counter_seg_6:divfrq|reg_1x6:bit_register_6"                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; q_bar_reg ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "counter_seg_6:divfrq"                                                                        ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; in_data[5..3] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; in_data[1..0] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; in_data[2]    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; out_data      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; load          ; Input  ; Info     ; Stuck at VCC                                                                        ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Jun 16 01:24:01 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Projeto_RTL -c Projeto_RTL
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file timer/contadores/relogio/dias/counter_days_5.vhd
+    Info (12022): Found design unit 1: counter_days_5-bhv
+    Info (12023): Found entity 1: counter_days_5
+Info (12021): Found 2 design units, including 1 entities, in source file timer/timer.vhd
+    Info (12022): Found design unit 1: timer-behav
+    Info (12023): Found entity 1: timer
+Info (12021): Found 2 design units, including 1 entities, in source file timer/registradores/registrador 1x6/reg_1x6.vhd
+    Info (12022): Found design unit 1: reg_1x6-comp
+    Info (12023): Found entity 1: reg_1x6
+Info (12021): Found 2 design units, including 1 entities, in source file timer/registradores/registrador 1x6/flip flop tipo d/ffd_6.vhd
+    Info (12022): Found design unit 1: ffd_6-behav
+    Info (12023): Found entity 1: ffd_6
+Info (12021): Found 2 design units, including 1 entities, in source file timer/registradores/registrador 1x5/reg_1x5.vhd
+    Info (12022): Found design unit 1: reg_1x5-comp
+    Info (12023): Found entity 1: reg_1x5
+Info (12021): Found 2 design units, including 1 entities, in source file timer/registradores/registrador 1x5/flip flop tipo d/ffd_5.vhd
+    Info (12022): Found design unit 1: ffd_5-behav
+    Info (12023): Found entity 1: ffd_5
+Info (12021): Found 2 design units, including 1 entities, in source file timer/multiplexador/mux_2x1_6.vhd
+    Info (12022): Found design unit 1: mux_2x1_6-behav
+    Info (12023): Found entity 1: mux_2x1_6
+Info (12021): Found 2 design units, including 1 entities, in source file timer/multiplexador/mux_2x1_5.vhd
+    Info (12022): Found design unit 1: mux_2x1_5-behav
+    Info (12023): Found entity 1: mux_2x1_5
+Info (12021): Found 2 design units, including 1 entities, in source file timer/multiplexador/mux_2x1.vhd
+    Info (12022): Found design unit 1: mux_2x1-behav
+    Info (12023): Found entity 1: mux_2x1
+Info (12021): Found 2 design units, including 1 entities, in source file timer/divisor de clock/divide_freq.vhd
+    Info (12022): Found design unit 1: divide_freq-behav
+    Info (12023): Found entity 1: divide_freq
+Info (12021): Found 2 design units, including 1 entities, in source file timer/contadores/counter.vhd
+    Info (12022): Found design unit 1: counter-rtl
+    Info (12023): Found entity 1: counter
+Info (12021): Found 2 design units, including 1 entities, in source file timer/contadores/somadores/half_adder5.vhd
+    Info (12022): Found design unit 1: half_adder5-bhv
+    Info (12023): Found entity 1: half_adder5
+Info (12021): Found 2 design units, including 1 entities, in source file timer/contadores/somadores/half_adder_6.vhd
+    Info (12022): Found design unit 1: half_adder_6-bhv
+    Info (12023): Found entity 1: half_adder_6
+Info (12021): Found 2 design units, including 1 entities, in source file timer/contadores/relogio/segundos/counter_seg_6.vhd
+    Info (12022): Found design unit 1: counter_seg_6-bhv
+    Info (12023): Found entity 1: counter_seg_6
+Info (12021): Found 2 design units, including 1 entities, in source file timer/contadores/relogio/minutos/counter_min_6.vhd
+    Info (12022): Found design unit 1: counter_min_6-bhv
+    Info (12023): Found entity 1: counter_min_6
+Info (12021): Found 2 design units, including 1 entities, in source file timer/contadores/relogio/horas/counter_hours_5.vhd
+    Info (12022): Found design unit 1: counter_hours_5-bhv
+    Info (12023): Found entity 1: counter_hours_5
+Info (12021): Found 2 design units, including 1 entities, in source file timer/contadores/incrementador/incrementer5.vhd
+    Info (12022): Found design unit 1: incrementer5-rtl
+    Info (12023): Found entity 1: incrementer5
+Info (12021): Found 2 design units, including 1 entities, in source file timer/contadores/incrementador/incrementer_6.vhd
+    Info (12022): Found design unit 1: incrementer6-rtl
+    Info (12023): Found entity 1: incrementer6
+Info (12021): Found 2 design units, including 1 entities, in source file timer/comparador/comparator_6.vhd
+    Info (12022): Found design unit 1: comparator_6-behav
+    Info (12023): Found entity 1: comparator_6
+Info (12021): Found 2 design units, including 1 entities, in source file timer/comparador/comparator_5.vhd
+    Info (12022): Found design unit 1: comparator_5-behav
+    Info (12023): Found entity 1: comparator_5
+Info (12021): Found 2 design units, including 1 entities, in source file banco de registreadores/banco de registradores 8x22/bf_8x22.vhd
+    Info (12022): Found design unit 1: bf_8x22-behav
+    Info (12023): Found entity 1: bf_8x22
+Info (12021): Found 2 design units, including 1 entities, in source file banco de registreadores/banco de registradores 8x22/registradores 8x22/reg_8x22.vhd
+    Info (12022): Found design unit 1: reg_8x22-behav
+    Info (12023): Found entity 1: reg_8x22
+Info (12021): Found 2 design units, including 1 entities, in source file banco de registreadores/banco de registradores 8x22/registradores 8x22/latchd/latchd_22.vhd
+    Info (12022): Found design unit 1: LatchD_22-behav
+    Info (12023): Found entity 1: LatchD_22
+Info (12021): Found 2 design units, including 1 entities, in source file banco de registreadores/banco de registradores 8x22/driver de 3 estados/tri_states_driver_22.vhd
+    Info (12022): Found design unit 1: tri_states_driver_22-behav
+    Info (12023): Found entity 1: tri_states_driver_22
+Info (12021): Found 2 design units, including 1 entities, in source file banco de registreadores/banco de registradores 8x22/decodificador/decoder_3x8.vhd
+    Info (12022): Found design unit 1: decoder_3x8-behav
+    Info (12023): Found entity 1: decoder_3x8
+Info (12021): Found 2 design units, including 1 entities, in source file banco de registreadores/banco de registradores 1x8/bf_8x1.vhd
+    Info (12022): Found design unit 1: bf_8x1-behav
+    Info (12023): Found entity 1: bf_8x1
+Info (12021): Found 2 design units, including 1 entities, in source file banco de registreadores/banco de registradores 1x8/registradores 8x1/reg_8x1.vhd
+    Info (12022): Found design unit 1: reg_8x1-behav
+    Info (12023): Found entity 1: reg_8x1
+Info (12021): Found 2 design units, including 1 entities, in source file banco de registreadores/banco de registradores 1x8/registradores 8x1/latchd/latchd.vhd
+    Info (12022): Found design unit 1: LatchD-behav
+    Info (12023): Found entity 1: LatchD
+Info (12021): Found 2 design units, including 1 entities, in source file banco de registreadores/banco de registradores 1x8/driver de 3 estados/tri_states_driver.vhd
+    Info (12022): Found design unit 1: tri_states_driver-behav
+    Info (12023): Found entity 1: tri_states_driver
+Info (12021): Found 2 design units, including 1 entities, in source file banco de registreadores/banco de registradores 1x8/decodificador/decoder_3x8.vhd
+    Info (12022): Found design unit 1: dcd_3x8-behav
+    Info (12023): Found entity 1: dcd_3x8
+Info (12127): Elaborating entity "timer" for the top level hierarchy
+Info (12128): Elaborating entity "counter_seg_6" for hierarchy "counter_seg_6:divfrq"
+Info (12128): Elaborating entity "mux_2x1_6" for hierarchy "counter_seg_6:divfrq|mux_2x1_6:mux06"
+Info (12128): Elaborating entity "mux_2x1" for hierarchy "counter_seg_6:divfrq|mux_2x1_6:mux06|mux_2x1:mux0"
+Info (12128): Elaborating entity "reg_1x6" for hierarchy "counter_seg_6:divfrq|reg_1x6:bit_register_6"
+Warning (10541): VHDL Signal Declaration warning at reg_1x6.vhd(17): used implicit default value for signal "Q_bar_reg" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Info (12128): Elaborating entity "ffd_6" for hierarchy "counter_seg_6:divfrq|reg_1x6:bit_register_6|ffd_6:inst0"
+Warning (10492): VHDL Process Statement warning at ffd_6.vhd(18): signal "clear" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "incrementer6" for hierarchy "counter_seg_6:divfrq|incrementer6:adder06"
+Info (12128): Elaborating entity "half_adder_6" for hierarchy "counter_seg_6:divfrq|incrementer6:adder06|half_adder_6:adder0"
+Info (12128): Elaborating entity "comparator_6" for hierarchy "counter_seg_6:divfrq|comparator_6:comp06"
+Info (12128): Elaborating entity "counter" for hierarchy "counter:counter0"
+Info (12128): Elaborating entity "counter_min_6" for hierarchy "counter:counter0|counter_min_6:minutes"
+Info (12128): Elaborating entity "counter_hours_5" for hierarchy "counter:counter0|counter_hours_5:hours"
+Info (12128): Elaborating entity "mux_2x1_5" for hierarchy "counter:counter0|counter_hours_5:hours|mux_2x1_5:mux0"
+Info (12128): Elaborating entity "reg_1x5" for hierarchy "counter:counter0|counter_hours_5:hours|reg_1x5:register_5"
+Info (12128): Elaborating entity "ffd_5" for hierarchy "counter:counter0|counter_hours_5:hours|reg_1x5:register_5|ffd_5:inst0"
+Warning (10492): VHDL Process Statement warning at ffd_5.vhd(18): signal "clear" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "incrementer5" for hierarchy "counter:counter0|counter_hours_5:hours|incrementer5:adder0"
+Info (12128): Elaborating entity "half_adder5" for hierarchy "counter:counter0|counter_hours_5:hours|incrementer5:adder0|half_adder5:adder0"
+Info (12128): Elaborating entity "comparator_5" for hierarchy "counter:counter0|counter_hours_5:hours|comparator_5:comp0"
+Info (12128): Elaborating entity "counter_days_5" for hierarchy "counter:counter0|counter_days_5:days"
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 84 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 23 output pins
+    Info (21061): Implemented 58 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4639 megabytes
+    Info: Processing ended: Fri Jun 16 01:24:02 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
