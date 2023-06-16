@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1\Projeto_RTL\Banco de registreadores Registradores\Banco de registradores 1x8\Registradores\Latch tipo D\simulation\qsim
+vLatchD
+Z1 IcPJ@9zD`De1Pk9d>o3?C30
+Z2 V1Ik`_l9J6N3AzUdLMl]kL3
+Z3 dC:\altera\13.0sp1\Projeto_RTL\Banco de registreadores Registradores\Banco de registradores 1x8\Registradores\Latch tipo D\simulation\qsim
+Z4 w1686845047
+Z5 8LatchD.vo
+Z6 FLatchD.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 n@latch@d
+!i10b 1
+Z10 !s100 D3nRa=>OAPPCHhhBo[5?G2
+!s85 0
+Z11 !s108 1686845048.202000
+Z12 !s107 LatchD.vo|
+Z13 !s90 -work|work|LatchD.vo|
+!s101 -O0
+vLatchD_vlg_check_tst
+!i10b 1
+!s100 AXCf6lYl`88QG]9><G]PO0
+I5A439XTN:=AY?U9cf5:UP3
+V;Wh_3:X`o7iE[@H5O5RWV0
+R3
+Z14 w1686845046
+Z15 8LatchD.vt
+Z16 FLatchD.vt
+L0 61
+R7
+r1
+!s85 0
+31
+Z17 !s108 1686845048.271000
+Z18 !s107 LatchD.vt|
+Z19 !s90 -work|work|LatchD.vt|
+!s101 -O0
+R8
+n@latch@d_vlg_check_tst
+vLatchD_vlg_sample_tst
+!i10b 1
+!s100 5S]Ho0K`Amgkk:U:`[_Vn3
+IdF>dI?:B4cfAbhC8e0dMS2
+V?8j>bm@I2<:PC_zC^5m[P0
+R3
+R14
+R15
+R16
+L0 29
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@latch@d_vlg_sample_tst
+vLatchD_vlg_vec_tst
+!i10b 1
+!s100 2E6]DD;T4feFi6LJmZfeU2
+IPK5Sj>oPolYmh5jz9_:Wj1
+VXPH;_:feUUZCIkOgYTgJK1
+R3
+R14
+R15
+R16
+L0 156
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@latch@d_vlg_vec_tst

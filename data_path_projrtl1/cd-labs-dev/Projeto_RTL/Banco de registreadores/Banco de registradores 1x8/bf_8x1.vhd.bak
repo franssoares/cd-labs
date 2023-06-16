@@ -1,0 +1,94 @@
+-- Biblioteca
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+	 
+-- Entidade
+ENTITY bf_8x1 is
+    port (
+		w_data : in std_logic;
+		w_addr : in std_logic_vector(2 downto 0);
+		w_en : in std_logic;
+		r_data : in std_logic;
+		r_addr : in std_logic_vector(2 downto 0);
+		r_en : in std_logic;
+		
+	    clk : in std_logic;
+		en :  in std_logic;              
+		clear : in std_logic;						
+		load : in std_logic
+	);
+END ENTITY bf_8x1;
+
+-- Arquitetura
+ARCHITECTURE behav OF bf_8x1 IS
+
+-- Componentes
+
+	-- Registrador
+	COMPONENT reg_8x1 is
+		port (
+			d_data : in std_logic_vector(7 downto 0);    
+			clk : in std_logic;                 
+			clear : in std_logic;						
+			load : in std_logic; 		  	
+			q_data : out std_logic_vector(7 downto 0)
+		);
+	END COMPONENT reg_8x1;
+
+	--Decoder
+	COMPONENT decoder_3x8 is
+		PORT(
+			in_id : STD_LOGIC_VECTOR(2 DOWNTO 0); -- ID
+        	en : STD_LOGIC; --ENABLE
+			d : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+		);
+	END COMPONENT decoder_3x8;
+
+	-- Driver de 3 estados
+	COMPONENT tri_states_driver IS
+		PORT(
+			in_data : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+			enable : IN STD_LOGIC;
+			out_data : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+		);
+	END COMPONENT tri_states_driver;
+
+-- Fios
+
+	SIGNAL decoder0_wires : STD_LOGIC_VECTOR(7 DOWNTO 0);
+	SIGNAL reg0_wires : STD_LOGIC_VECTOR(7 DOWNTO 0);
+	
+BEGIN
+
+    -- Instancia
+    decoder_3x8_0 : decoder_3x8
+    PORT MAP(
+       in_id => w_addr,
+	   en => w_en,
+	   d => decoder0_wires
+    );
+
+	reg0_8x1 : reg0_8x1
+	PORT MAP(
+		d_data => w_data,
+		clk => clk,
+		clear => clear,
+		load => decoder0_wires,
+		q_data => reg0_wires
+	);
+
+	tsd0 : tri_states_driver
+	PORT MAP(
+		in_data => reg0_wires,
+		enable => decoder1_wires,
+		out_data => r_addr
+	);
+	
+	decoder1_3x8 : decoder_3x8
+	PORT MAP(
+		in_id => r_addr,
+		en => r_en,
+		d => decoder1_wires
+	);
+
+END ARCHITECTURE behav;
