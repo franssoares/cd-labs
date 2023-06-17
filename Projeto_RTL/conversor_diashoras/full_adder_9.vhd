@@ -105,7 +105,7 @@ BEGIN
 		a => a_9(8),
 		b => b_9(8),
 		cin => fa_9bits_wires(7),
-		co => fa_9bits_wires(8),
+		co => co_9,
 		s => s_9(8)
 	);
 	
