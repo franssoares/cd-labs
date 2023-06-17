@@ -1,0 +1,41 @@
+-- Biblioteca
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE work.LatchD.all; -- Referencia todos os componentes definidos na pasta LatchD
+
+-- Componente
+    component LatchD is
+        port(port (
+            d: in std_logic;        -- Entrada de dados
+            clk: in std_logic;      -- Sinal de clock
+            clear: in std_logic;    -- Sinal de clear
+            q: out std_logic       -- Saída
+        );
+    END COMPONENT LatchD;
+
+-- Entidade
+entity reg_8x1 is
+    port (
+        d_data : in std_logic_vector(7 DOWNTO 0);        -- Entrada de dados
+        clk : in std_logic;                 -- Sinal de clock
+        clear : in std_logic;               -- Sinal de clear
+        q_data : in std_logic_vector(7 DOWNTO 0)
+    );
+end reg_8x1;
+
+-- Arquitetura
+architecture behav of reg_8x1 is
+
+begin
+
+    -- Instancia
+    latchd0 : entity LatchD
+    PORT MAP(
+        d => d_data(0),
+        clk => clk,
+        clear => clear,
+        q => q_data(0)
+
+    );
+   
+end behav;
