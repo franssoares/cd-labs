@@ -14,7 +14,7 @@ ENTITY reg_1x5 IS
 	PORT(
 		D_reg : IN STD_LOGIC_VECTOR(tam DOWNTO 0);
 	    clk_reg, load, clear : IN STD_LOGIC;
-        Q_reg, Q_bar_reg : OUT STD_LOGIC_VECTOR(tam DOWNTO 0)
+        Q_reg : OUT STD_LOGIC_VECTOR(tam DOWNTO 0)
 	);
   
 END ENTITY reg_1x5;
@@ -25,8 +25,8 @@ ARCHITECTURE comp OF reg_1x5 IS
 	-- Declaração da componente
     COMPONENT ffd_5 is
         PORT(
-            D, clk, load, clear : IN STD_LOGIC;
-			Q, Q_bar : OUT STD_LOGIC
+          D, clk, load, clear : IN STD_LOGIC;
+			Q : OUT STD_LOGIC
         );
     END COMPONENT ffd_5;
 
@@ -39,8 +39,7 @@ BEGIN
 			clk => clk_reg,
 			load => load,
 			clear => clear,
-			Q => Q_reg(0),
-			Q_bar => Q_bar_reg(0)
+			Q => Q_reg(0)
 	);
 		
 	inst1 : ffd_5
@@ -49,8 +48,8 @@ BEGIN
 			clk => clk_reg,
 			load => load,
 			clear => clear,
-			Q => Q_reg(1),
-			Q_bar => Q_bar_reg(1)
+			Q => Q_reg(1)
+			
 	);	
 	
 	inst2 : ffd_5
@@ -59,8 +58,8 @@ BEGIN
 			clk => clk_reg,
 			load => load,
 			clear => clear,
-			Q => Q_reg(2),
-			Q_bar => Q_bar_reg(2)
+			Q => Q_reg(2)
+		
 	);	
 	
 	inst3 : ffd_5
@@ -69,8 +68,8 @@ BEGIN
 			clk => clk_reg,
 			load => load,
 			clear => clear,
-			Q => Q_reg(3),
-			Q_bar => Q_bar_reg(3)
+			Q => Q_reg(3)
+		
 	);
 	
 	inst4 : ffd_5
@@ -79,8 +78,8 @@ BEGIN
 			clk => clk_reg,
 			load => load,
 			clear => clear,
-			Q => Q_reg(4),
-			Q_bar => Q_bar_reg(4)
+			Q => Q_reg(4)
+		
 	);
 		
 END ARCHITECTURE comp;

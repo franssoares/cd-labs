@@ -14,7 +14,7 @@ ENTITY reg_1x6 IS
 	PORT(
 		D_reg : IN STD_LOGIC_VECTOR(tam DOWNTO 0);
 	    clk_reg, load, clear : IN STD_LOGIC;
-        Q_reg, Q_bar_reg : OUT STD_LOGIC_VECTOR(tam DOWNTO 0)
+        Q_reg : OUT STD_LOGIC_VECTOR(tam DOWNTO 0)
 	);
   
 END ENTITY reg_1x6;
@@ -26,7 +26,7 @@ ARCHITECTURE comp OF reg_1x6 IS
     COMPONENT ffd_6 is
         PORT(
 				D, clk, load, clear : IN STD_LOGIC;
-				Q, Q_bar : OUT STD_LOGIC
+				Q : OUT STD_LOGIC
 		  );
     END COMPONENT ffd_6;
 

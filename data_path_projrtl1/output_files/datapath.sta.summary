@@ -2,68 +2,44 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow Model Setup 'timer:timer0|counter_seg_6:divfrq|reg_1x6:bit_register_6|ffd_6:inst0|Q'
-Slack : -1.308
-TNS   : -22.092
-
 Type  : Slow Model Setup 'CLK'
-Slack : -1.077
-TNS   : -5.478
+Slack : -1.624
+TNS   : -27.763
 
 Type  : Slow Model Hold 'CLK'
-Slack : -2.535
-TNS   : -6.689
-
-Type  : Slow Model Hold 'timer:timer0|counter_seg_6:divfrq|reg_1x6:bit_register_6|ffd_6:inst0|Q'
 Slack : 0.391
 TNS   : 0.000
 
 Type  : Slow Model Recovery 'CLK'
-Slack : -0.650
-TNS   : -0.650
+Slack : -0.798
+TNS   : -1.590
 
 Type  : Slow Model Removal 'CLK'
-Slack : 1.420
+Slack : 1.432
 TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'CLK'
 Slack : -1.380
-TNS   : -8.380
-
-Type  : Slow Model Minimum Pulse Width 'timer:timer0|counter_seg_6:divfrq|reg_1x6:bit_register_6|ffd_6:inst0|Q'
-Slack : -0.500
-TNS   : -22.000
-
-Type  : Fast Model Setup 'timer:timer0|counter_seg_6:divfrq|reg_1x6:bit_register_6|ffd_6:inst0|Q'
-Slack : -0.057
-TNS   : -0.114
+TNS   : -25.380
 
 Type  : Fast Model Setup 'CLK'
-Slack : -0.005
-TNS   : -0.005
+Slack : -0.196
+TNS   : -1.471
 
 Type  : Fast Model Hold 'CLK'
-Slack : -1.579
-TNS   : -4.615
-
-Type  : Fast Model Hold 'timer:timer0|counter_seg_6:divfrq|reg_1x6:bit_register_6|ffd_6:inst0|Q'
 Slack : 0.215
 TNS   : 0.000
 
 Type  : Fast Model Recovery 'CLK'
-Slack : 0.119
+Slack : 0.076
 TNS   : 0.000
 
 Type  : Fast Model Removal 'CLK'
-Slack : 0.761
+Slack : 0.750
 TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'CLK'
 Slack : -1.380
-TNS   : -8.380
-
-Type  : Fast Model Minimum Pulse Width 'timer:timer0|counter_seg_6:divfrq|reg_1x6:bit_register_6|ffd_6:inst0|Q'
-Slack : -0.500
-TNS   : -22.000
+TNS   : -25.380
 
 ------------------------------------------------------------

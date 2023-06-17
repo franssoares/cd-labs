@@ -130,9 +130,26 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
 set_global_assignment -name VHDL_FILE "juscelino/cd-labs/projeto_1/datapath.vhd"
+set_global_assignment -name VECTOR_WAVEFORM_FILE "juscelino/cd-labs/projeto_1/Waveform.vwf"
+set_global_assignment -name SOURCE_FILE "../../../../../../../../altera/13.0sp1/data_path_projrtl1/cd-labs-dev/Projeto_RTL"
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform3.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform4.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform5.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform6.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform7.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform8.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform9.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform10.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform11.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform12.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform13.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform14.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform15.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform16.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform17.vwf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name VECTOR_WAVEFORM_FILE "juscelino/cd-labs/projeto_1/Waveform.vwf"
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/altera/13.0sp1/data_path_projrtl1/juscelino/cd-labs/projeto_1/Waveform.vwf"
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform18.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/Frank/OneDrive/Área de Trabalho/CD/cd_labs/cd-labs/data_path_projrtl1/Waveform18.vwf"

@@ -68,7 +68,7 @@ ARCHITECTURE bhv OF counter_seg_6 IS
             PORT(
                 D_reg : IN STD_LOGIC_VECTOR(tam DOWNTO 0);
                 clk_reg, load, clear : IN STD_LOGIC;
-                Q_reg, Q_bar_reg : OUT STD_LOGIC_VECTOR(tam DOWNTO 0)
+                Q_reg : OUT STD_LOGIC_VECTOR(tam DOWNTO 0)
             );
         END COMPONENT reg_1x6;
 
@@ -95,8 +95,8 @@ BEGIN
         clk_reg => clk,
         load => (load),
         clear => clear,
-        Q_reg => wires3,
-        Q_bar_reg => open
+        Q_reg => wires3
+       
     );
 
     adder06 : incrementer6
