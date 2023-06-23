@@ -59,5 +59,34 @@ set_global_assignment -name VHDL_FILE extensor_al.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_global_assignment -name VECTOR_WAVEFORM_FILE simulacao1.vwf
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/Frank/OneDrive/Área de Trabalho/CD/cd_labs/cd-labs/lab6/Calculadora ALU/simulacao1.vwf"
+set_location_assignment PIN_N25 -to A[0]
+set_location_assignment PIN_N26 -to A[1]
+set_location_assignment PIN_P25 -to A[2]
+set_location_assignment PIN_AE14 -to A[3]
+set_location_assignment PIN_AF14 -to A[4]
+set_location_assignment PIN_AD13 -to A[5]
+set_location_assignment PIN_C13 -to B[0]
+set_location_assignment PIN_B13 -to B[1]
+set_location_assignment PIN_A13 -to B[2]
+set_location_assignment PIN_N1 -to B[3]
+set_location_assignment PIN_P1 -to B[4]
+set_location_assignment PIN_P2 -to B[5]
+set_location_assignment PIN_U3 -to en
+set_location_assignment PIN_V2 -to x
+set_location_assignment PIN_V1 -to y
+set_location_assignment PIN_U4 -to z
+set_location_assignment PIN_AE23 -to S[0]
+set_location_assignment PIN_AF23 -to S[1]
+set_location_assignment PIN_AB21 -to S[2]
+set_location_assignment PIN_AC22 -to S[3]
+set_location_assignment PIN_AD22 -to S[4]
+set_location_assignment PIN_AD23 -to S[5]
+set_location_assignment PIN_N2 -to clk
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

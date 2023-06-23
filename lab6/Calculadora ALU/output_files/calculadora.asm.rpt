@@ -1,5 +1,5 @@
 Assembler report for calculadora
-Fri Jun 23 13:36:03 2023
+Fri Jun 23 19:55:57 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,8 +10,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/altera/13.0sp1/Calculadora ALU/output_files/calculadora.sof
-  6. Assembler Device Options: C:/altera/13.0sp1/Calculadora ALU/output_files/calculadora.pof
+  5. Assembler Device Options: C:/Users/Frank/OneDrive/햞ea de Trabalho/CD/cd_labs/cd-labs/lab6/Calculadora ALU/output_files/calculadora.sof
+  6. Assembler Device Options: C:/Users/Frank/OneDrive/햞ea de Trabalho/CD/cd_labs/cd-labs/lab6/Calculadora ALU/output_files/calculadora.pof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri Jun 23 13:36:03 2023 ;
+; Assembler Status      ; Successful - Fri Jun 23 19:55:57 2023 ;
 ; Revision Name         ; calculadora                           ;
 ; Top-level Entity Name ; calculadora                           ;
 ; Family                ; Cyclone II                            ;
@@ -78,37 +78,37 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+----------------------------------------------------------------+
-; Assembler Generated Files                                      ;
-+----------------------------------------------------------------+
-; File Name                                                      ;
-+----------------------------------------------------------------+
-; C:/altera/13.0sp1/Calculadora ALU/output_files/calculadora.sof ;
-; C:/altera/13.0sp1/Calculadora ALU/output_files/calculadora.pof ;
-+----------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                                     ;
++---------------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                     ;
++---------------------------------------------------------------------------------------------------------------+
+; C:/Users/Frank/OneDrive/햞ea de Trabalho/CD/cd_labs/cd-labs/lab6/Calculadora ALU/output_files/calculadora.sof ;
+; C:/Users/Frank/OneDrive/햞ea de Trabalho/CD/cd_labs/cd-labs/lab6/Calculadora ALU/output_files/calculadora.pof ;
++---------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/altera/13.0sp1/Calculadora ALU/output_files/calculadora.sof ;
-+----------------+-------------------------------------------------------------------------+
-; Option         ; Setting                                                                 ;
-+----------------+-------------------------------------------------------------------------+
-; Device         ; EP2C70F672C6                                                            ;
-; JTAG usercode  ; 0x0060B61D                                                              ;
-; Checksum       ; 0x0060B61D                                                              ;
-+----------------+-------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/Frank/OneDrive/햞ea de Trabalho/CD/cd_labs/cd-labs/lab6/Calculadora ALU/output_files/calculadora.sof ;
++----------------+------------------------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                                ;
++----------------+------------------------------------------------------------------------------------------------------------------------+
+; Device         ; EP2C70F672C6                                                                                                           ;
+; JTAG usercode  ; 0x0060CED0                                                                                                             ;
+; Checksum       ; 0x0060CED0                                                                                                             ;
++----------------+------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/altera/13.0sp1/Calculadora ALU/output_files/calculadora.pof ;
-+--------------------+---------------------------------------------------------------------+
-; Option             ; Setting                                                             ;
-+--------------------+---------------------------------------------------------------------+
-; Device             ; EPCS16                                                              ;
-; JTAG usercode      ; 0x00000000                                                          ;
-; Checksum           ; 0x187EB338                                                          ;
-; Compression Ratio  ; 3                                                                   ;
-+--------------------+---------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/Frank/OneDrive/햞ea de Trabalho/CD/cd_labs/cd-labs/lab6/Calculadora ALU/output_files/calculadora.pof ;
++--------------------+--------------------------------------------------------------------------------------------------------------------+
+; Option             ; Setting                                                                                                            ;
++--------------------+--------------------------------------------------------------------------------------------------------------------+
+; Device             ; EPCS16                                                                                                             ;
+; JTAG usercode      ; 0x00000000                                                                                                         ;
+; Checksum           ; 0x187F350A                                                                                                         ;
+; Compression Ratio  ; 3                                                                                                                  ;
++--------------------+--------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -117,14 +117,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Jun 23 13:35:58 2023
+    Info: Processing started: Fri Jun 23 19:55:55 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off calculadora -c calculadora
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4556 megabytes
-    Info: Processing ended: Fri Jun 23 13:36:03 2023
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Peak virtual memory: 4558 megabytes
+    Info: Processing ended: Fri Jun 23 19:55:57 2023
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

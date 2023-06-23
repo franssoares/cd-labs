@@ -5,7 +5,7 @@ use ieee.std_logic_1164.all;
 entity calculadora is
 	port(
 		A, B : in std_logic_vector(5 downto 0);
-		x, y, z : in std_logic;
+		x, y, z, en : in std_logic;
 		clk : in std_logic;
 		S : out std_logic_vector(5 downto 0)
 	);
@@ -28,7 +28,7 @@ architecture rtl of calculadora is
 	component reg_6 is
 		port(
 			D_reg : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
-		   clk_reg : IN STD_LOGIC;
+		   clk_reg, en : IN STD_LOGIC;
 		   Q_reg, Q_bar_reg : OUT STD_LOGIC_VECTOR(5 DOWNTO 0)
 		);
 	end component;
@@ -56,6 +56,7 @@ begin
 		D_reg => alu_out_wires,
 		clk_reg => clk,
 		Q_reg => S,
+		en => en,
 		Q_bar_reg => open
 	
 	);

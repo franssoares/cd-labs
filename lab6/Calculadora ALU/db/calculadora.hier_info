@@ -14,6 +14,7 @@ B[5] => alu:alu0.B[5]
 x => alu:alu0.x
 y => alu:alu0.y
 z => alu:alu0.z
+en => reg_6:reg_60.en
 clk => reg_6:reg_60.clk_reg
 S[0] <= reg_6:reg_60.Q_reg[0]
 S[1] <= reg_6:reg_60.Q_reg[1]
@@ -447,6 +448,12 @@ clk_reg => ffd:inst2.clk
 clk_reg => ffd:inst3.clk
 clk_reg => ffd:inst4.clk
 clk_reg => ffd:inst5.clk
+en => ffd:inst0.load
+en => ffd:inst1.load
+en => ffd:inst2.load
+en => ffd:inst3.load
+en => ffd:inst4.load
+en => ffd:inst5.load
 Q_reg[0] <= ffd:inst0.Q
 Q_reg[1] <= ffd:inst1.Q
 Q_reg[2] <= ffd:inst2.Q
@@ -462,67 +469,67 @@ Q_bar_reg[5] <= ffd:inst5.Q_bar
 
 
 |calculadora|reg_6:reg_60|ffd:inst0
-D => Q_bar.OUTPUTSELECT
-D => Q.OUTPUTSELECT
-D => Q_bar.OUTPUTSELECT
-D => Q.OUTPUTSELECT
+D => process_0.IN0
+D => process_0.IN0
 clk => Q_bar~reg0.CLK
 clk => Q~reg0.CLK
+load => process_0.IN1
+load => process_0.IN1
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q_bar <= Q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |calculadora|reg_6:reg_60|ffd:inst1
-D => Q_bar.OUTPUTSELECT
-D => Q.OUTPUTSELECT
-D => Q_bar.OUTPUTSELECT
-D => Q.OUTPUTSELECT
+D => process_0.IN0
+D => process_0.IN0
 clk => Q_bar~reg0.CLK
 clk => Q~reg0.CLK
+load => process_0.IN1
+load => process_0.IN1
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q_bar <= Q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |calculadora|reg_6:reg_60|ffd:inst2
-D => Q_bar.OUTPUTSELECT
-D => Q.OUTPUTSELECT
-D => Q_bar.OUTPUTSELECT
-D => Q.OUTPUTSELECT
+D => process_0.IN0
+D => process_0.IN0
 clk => Q_bar~reg0.CLK
 clk => Q~reg0.CLK
+load => process_0.IN1
+load => process_0.IN1
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q_bar <= Q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |calculadora|reg_6:reg_60|ffd:inst3
-D => Q_bar.OUTPUTSELECT
-D => Q.OUTPUTSELECT
-D => Q_bar.OUTPUTSELECT
-D => Q.OUTPUTSELECT
+D => process_0.IN0
+D => process_0.IN0
 clk => Q_bar~reg0.CLK
 clk => Q~reg0.CLK
+load => process_0.IN1
+load => process_0.IN1
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q_bar <= Q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |calculadora|reg_6:reg_60|ffd:inst4
-D => Q_bar.OUTPUTSELECT
-D => Q.OUTPUTSELECT
-D => Q_bar.OUTPUTSELECT
-D => Q.OUTPUTSELECT
+D => process_0.IN0
+D => process_0.IN0
 clk => Q_bar~reg0.CLK
 clk => Q~reg0.CLK
+load => process_0.IN1
+load => process_0.IN1
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q_bar <= Q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |calculadora|reg_6:reg_60|ffd:inst5
-D => Q_bar.OUTPUTSELECT
-D => Q.OUTPUTSELECT
-D => Q_bar.OUTPUTSELECT
-D => Q.OUTPUTSELECT
+D => process_0.IN0
+D => process_0.IN0
 clk => Q_bar~reg0.CLK
 clk => Q~reg0.CLK
+load => process_0.IN1
+load => process_0.IN1
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q_bar <= Q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
