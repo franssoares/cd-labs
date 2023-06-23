@@ -1,0 +1,35 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+-- entidade
+entity alu is
+	port(
+		A, B : in std_logic_vector(5 downto 0);
+		S : out std_logic_vector(5 downto 0)
+	);
+end entity;
+
+-- arquitetura
+architecture rtl of alu is
+
+	-- componentes
+	-- abext
+	component abext is
+		port(
+			
+		);
+	end component;
+	
+	-- cinext
+	component cinext is
+		port(
+			
+		);
+	end component;
+	
+	-- registrador
+-- comportamento
+begin
+
+	
+end architecture;
