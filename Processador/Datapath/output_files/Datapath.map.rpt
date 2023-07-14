@@ -1,0 +1,662 @@
+Analysis & Synthesis report for Datapath
+Fri Jul 14 05:35:28 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0
+ 12. Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits
+ 13. Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:inst0_fa
+ 14. Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:1:fa
+ 15. Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:2:fa
+ 16. Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:3:fa
+ 17. Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:4:fa
+ 18. Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:5:fa
+ 19. Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:6:fa
+ 20. Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:7:fa
+ 21. Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:8:fa
+ 22. Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:9:fa
+ 23. Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:10:fa
+ 24. Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:11:fa
+ 25. Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:12:fa
+ 26. Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:13:fa
+ 27. Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:14:fa
+ 28. Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:inst1_fa
+ 29. Port Connectivity Checks: "ula:ula_0|sum_16:sum_16_0"
+ 30. Port Connectivity Checks: "ula:ula_0"
+ 31. Elapsed Time Per Partition
+ 32. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Jul 14 05:35:28 2023           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; Datapath                                        ;
+; Top-level Entity Name              ; datapath                                        ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 783                                             ;
+;     Total combinational functions  ; 543                                             ;
+;     Dedicated logic registers      ; 256                                             ;
+; Total registers                    ; 256                                             ;
+; Total pins                         ; 62                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; Datapath           ; Datapath           ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                                     ;
++---------------------------------------------------------------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                                                                  ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                             ; Library ;
++---------------------------------------------------------------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; Componentes/ULA/ula.vhd                                                                           ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Datapath/Componentes/ULA/ula.vhd                                                                           ;         ;
+; Componentes/ULA/sum_16.vhd                                                                        ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Datapath/Componentes/ULA/sum_16.vhd                                                                        ;         ;
+; Componentes/ULA/full_adder_16.vhd                                                                 ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Datapath/Componentes/ULA/full_adder_16.vhd                                                                 ;         ;
+; Componentes/ULA/full_adder.vhd                                                                    ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Datapath/Componentes/ULA/full_adder.vhd                                                                    ;         ;
+; Componentes/ULA/extensor_al.vhd                                                                   ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Datapath/Componentes/ULA/extensor_al.vhd                                                                   ;         ;
+; Componentes/ULA/comp16bit.vhd                                                                     ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Datapath/Componentes/ULA/comp16bit.vhd                                                                     ;         ;
+; Componentes/ULA/cinext.vhd                                                                        ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Datapath/Componentes/ULA/cinext.vhd                                                                        ;         ;
+; Componentes/ULA/abext.vhd                                                                         ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Datapath/Componentes/ULA/abext.vhd                                                                         ;         ;
+; Componentes/Multiplexador/mux16bit.vhd                                                            ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Datapath/Componentes/Multiplexador/mux16bit.vhd                                                            ;         ;
+; Componentes/Banco_de_registradores/Componentes/registrador_1x16/ffd.vhd                           ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Datapath/Componentes/Banco_de_registradores/Componentes/registrador_1x16/ffd.vhd                           ;         ;
+; Componentes/Banco_de_registradores/Componentes/driver_de_tres_estados/tri_states_driver_16bit.vhd ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Datapath/Componentes/Banco_de_registradores/Componentes/driver_de_tres_estados/tri_states_driver_16bit.vhd ;         ;
+; Componentes/Banco_de_registradores/Componentes/decodificador/dcd_4x16.vhd                         ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Datapath/Componentes/Banco_de_registradores/Componentes/decodificador/dcd_4x16.vhd                         ;         ;
+; Componentes/Banco_de_registradores/RF_16x16.vhd                                                   ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Datapath/Componentes/Banco_de_registradores/RF_16x16.vhd                                                   ;         ;
+; Datapath.vhd                                                                                      ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Datapath/Datapath.vhd                                                                                      ;         ;
+; comp_zero.vhd                                                                                     ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Datapath/comp_zero.vhd                                                                                     ;         ;
++---------------------------------------------------------------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 783   ;
+;                                             ;       ;
+; Total combinational functions               ; 543   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 415   ;
+;     -- 3 input functions                    ; 63    ;
+;     -- <=2 input functions                  ; 65    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 528   ;
+;     -- arithmetic mode                      ; 15    ;
+;                                             ;       ;
+; Total registers                             ; 256   ;
+;     -- Dedicated logic registers            ; 256   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 62    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 256   ;
+; Total fan-out                               ; 2781  ;
+; Average fan-out                             ; 3.23  ;
++---------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                 ;
++-----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                ; Library Name ;
++-----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------+--------------+
+; |datapath                                           ; 543 (0)           ; 256 (0)      ; 0           ; 0            ; 0       ; 0         ; 62   ; 0            ; |datapath                                                                                          ; work         ;
+;    |RF_16x16:rf_0|                                  ; 444 (184)         ; 256 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0                                                                            ; work         ;
+;       |FFD:\gen_registers:0:reg|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD:\gen_registers:0:reg                                                   ; work         ;
+;       |FFD:\gen_registers:10:reg|                   ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD:\gen_registers:10:reg                                                  ; work         ;
+;       |FFD:\gen_registers:11:reg|                   ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD:\gen_registers:11:reg                                                  ; work         ;
+;       |FFD:\gen_registers:12:reg|                   ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD:\gen_registers:12:reg                                                  ; work         ;
+;       |FFD:\gen_registers:13:reg|                   ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD:\gen_registers:13:reg                                                  ; work         ;
+;       |FFD:\gen_registers:14:reg|                   ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD:\gen_registers:14:reg                                                  ; work         ;
+;       |FFD:\gen_registers:15:reg|                   ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD:\gen_registers:15:reg                                                  ; work         ;
+;       |FFD:\gen_registers:1:reg|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD:\gen_registers:1:reg                                                   ; work         ;
+;       |FFD:\gen_registers:2:reg|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD:\gen_registers:2:reg                                                   ; work         ;
+;       |FFD:\gen_registers:3:reg|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD:\gen_registers:3:reg                                                   ; work         ;
+;       |FFD:\gen_registers:4:reg|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD:\gen_registers:4:reg                                                   ; work         ;
+;       |FFD:\gen_registers:5:reg|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD:\gen_registers:5:reg                                                   ; work         ;
+;       |FFD:\gen_registers:6:reg|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD:\gen_registers:6:reg                                                   ; work         ;
+;       |FFD:\gen_registers:7:reg|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD:\gen_registers:7:reg                                                   ; work         ;
+;       |FFD:\gen_registers:8:reg|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD:\gen_registers:8:reg                                                   ; work         ;
+;       |FFD:\gen_registers:9:reg|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD:\gen_registers:9:reg                                                   ; work         ;
+;       |dcd_4x16:dcdp|                               ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|dcd_4x16:dcdp                                                              ; work         ;
+;       |dcd_4x16:dcdw|                               ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|dcd_4x16:dcdw                                                              ; work         ;
+;       |tri_states_driver_16bit:\gen_3sdp:0:driverp| ; 182 (182)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|tri_states_driver_16bit:\gen_3sdp:0:driverp                                ; work         ;
+;       |tri_states_driver_16bit:\gen_3sdp:2:driverp| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|tri_states_driver_16bit:\gen_3sdp:2:driverp                                ; work         ;
+;       |tri_states_driver_16bit:\gen_3sdp:4:driverp| ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|tri_states_driver_16bit:\gen_3sdp:4:driverp                                ; work         ;
+;       |tri_states_driver_16bit:\gen_3sdp:5:driverp| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|tri_states_driver_16bit:\gen_3sdp:5:driverp                                ; work         ;
+;    |comp_zero:comp_0|                               ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|comp_zero:comp_0                                                                         ; work         ;
+;    |mux16bit:mux0|                                  ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|mux16bit:mux0                                                                            ; work         ;
+;    |ula:ula_0|                                      ; 61 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ula:ula_0                                                                                ; work         ;
+;       |comp16bit:comparator|                        ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ula:ula_0|comp16bit:comparator                                                           ; work         ;
+;       |sum_16:sum_16_0|                             ; 45 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ula:ula_0|sum_16:sum_16_0                                                                ; work         ;
+;          |full_adder_16:inst0_full_adder_16bits|    ; 45 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits                          ; work         ;
+;             |full_adder:\gen_fa:10:fa|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:10:fa ; work         ;
+;             |full_adder:\gen_fa:11:fa|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:11:fa ; work         ;
+;             |full_adder:\gen_fa:12:fa|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:12:fa ; work         ;
+;             |full_adder:\gen_fa:13:fa|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:13:fa ; work         ;
+;             |full_adder:\gen_fa:14:fa|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:14:fa ; work         ;
+;             |full_adder:\gen_fa:1:fa|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:1:fa  ; work         ;
+;             |full_adder:\gen_fa:2:fa|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:2:fa  ; work         ;
+;             |full_adder:\gen_fa:3:fa|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:3:fa  ; work         ;
+;             |full_adder:\gen_fa:4:fa|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:4:fa  ; work         ;
+;             |full_adder:\gen_fa:5:fa|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:5:fa  ; work         ;
+;             |full_adder:\gen_fa:6:fa|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:6:fa  ; work         ;
+;             |full_adder:\gen_fa:7:fa|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:7:fa  ; work         ;
+;             |full_adder:\gen_fa:8:fa|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:8:fa  ; work         ;
+;             |full_adder:\gen_fa:9:fa|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:9:fa  ; work         ;
+;             |full_adder:inst0_fa|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:inst0_fa      ; work         ;
+;             |full_adder:inst1_fa|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:inst1_fa      ; work         ;
++-----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; mux16bit:mux0|data_o[15]                           ; RF_s1               ; yes                    ;
+; mux16bit:mux0|data_o[14]                           ; RF_s1               ; yes                    ;
+; mux16bit:mux0|data_o[13]                           ; RF_s1               ; yes                    ;
+; mux16bit:mux0|data_o[12]                           ; RF_s1               ; yes                    ;
+; mux16bit:mux0|data_o[11]                           ; RF_s1               ; yes                    ;
+; mux16bit:mux0|data_o[10]                           ; RF_s1               ; yes                    ;
+; mux16bit:mux0|data_o[9]                            ; RF_s1               ; yes                    ;
+; mux16bit:mux0|data_o[8]                            ; RF_s1               ; yes                    ;
+; Number of user-specified and inferred latches = 8  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 256   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 256   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |datapath|mux16bit:mux0|data_o[7]   ;
+; 16:1               ; 16 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |datapath|RF_16x16:rf_0|Rq_data[15] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; tam            ; 15    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits ;
++----------------+-------+-------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                ;
++----------------+-------+-------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                      ;
++----------------+-------+-------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:inst0_fa ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                    ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                          ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:1:fa ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                        ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                              ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:2:fa ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                        ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                              ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:3:fa ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                        ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                              ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:4:fa ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                        ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                              ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:5:fa ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                        ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                              ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:6:fa ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                        ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                              ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:7:fa ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                        ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                              ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:8:fa ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                        ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                              ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:9:fa ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                        ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                              ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:10:fa ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                         ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                               ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:11:fa ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                         ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                               ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:12:fa ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                         ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                               ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:13:fa ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                         ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                               ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:14:fa ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                         ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                               ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:inst1_fa ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                    ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                          ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ula:ula_0|sum_16:sum_16_0"                                                          ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; co   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------+
+; Port Connectivity Checks: "ula:ula_0"  ;
++------+-------+----------+--------------+
+; Port ; Type  ; Severity ; Details      ;
++------+-------+----------+--------------+
+; x    ; Input ; Info     ; Stuck at GND ;
++------+-------+----------+--------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Jul 14 05:35:26 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Datapath -c Datapath
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/ula/ula.vhd
+    Info (12022): Found design unit 1: ula-rtl
+    Info (12023): Found entity 1: ula
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/ula/sum_16.vhd
+    Info (12022): Found design unit 1: sum_16-comp
+    Info (12023): Found entity 1: sum_16
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/ula/full_adder_16.vhd
+    Info (12022): Found design unit 1: full_adder_16-comp
+    Info (12023): Found entity 1: full_adder_16
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/ula/full_adder.vhd
+    Info (12022): Found design unit 1: full_adder-behav
+    Info (12023): Found entity 1: full_adder
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/ula/extensor_al.vhd
+    Info (12022): Found design unit 1: extensor_al-rtl
+    Info (12023): Found entity 1: extensor_al
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/ula/comp16bit.vhd
+    Info (12022): Found design unit 1: comp16bit-behav
+    Info (12023): Found entity 1: comp16bit
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/ula/cinext.vhd
+    Info (12022): Found design unit 1: cinext-arc
+    Info (12023): Found entity 1: cinext
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/ula/abext.vhd
+    Info (12022): Found design unit 1: abext-arc
+    Info (12023): Found entity 1: abext
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/multiplexador/mux16bit.vhd
+    Info (12022): Found design unit 1: mux16bit-behav
+    Info (12023): Found entity 1: mux16bit
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/banco_de_registradores/componentes/registrador_1x16/ffd.vhd
+    Info (12022): Found design unit 1: FFD-Behavioral
+    Info (12023): Found entity 1: FFD
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/banco_de_registradores/componentes/driver_de_tres_estados/tri_states_driver_16bit.vhd
+    Info (12022): Found design unit 1: tri_states_driver_16bit-behav
+    Info (12023): Found entity 1: tri_states_driver_16bit
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/banco_de_registradores/componentes/decodificador/dcd_4x16.vhd
+    Info (12022): Found design unit 1: dcd_4x16-Behavioral
+    Info (12023): Found entity 1: dcd_4x16
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/banco_de_registradores/rf_16x16.vhd
+    Info (12022): Found design unit 1: RF_16x16-mem
+    Info (12023): Found entity 1: RF_16x16
+Info (12021): Found 2 design units, including 1 entities, in source file datapath.vhd
+    Info (12022): Found design unit 1: datapath-RTL
+    Info (12023): Found entity 1: datapath
+Info (12021): Found 2 design units, including 1 entities, in source file comp_zero.vhd
+    Info (12022): Found design unit 1: comp_zero-behav
+    Info (12023): Found entity 1: comp_zero
+Info (12127): Elaborating entity "Datapath" for the top level hierarchy
+Info (12128): Elaborating entity "mux16bit" for hierarchy "mux16bit:mux0"
+Warning (10631): VHDL Process Statement warning at mux16bit.vhd(22): inferring latch(es) for signal or variable "data_o", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "data_o[8]" at mux16bit.vhd(22)
+Info (10041): Inferred latch for "data_o[9]" at mux16bit.vhd(22)
+Info (10041): Inferred latch for "data_o[10]" at mux16bit.vhd(22)
+Info (10041): Inferred latch for "data_o[11]" at mux16bit.vhd(22)
+Info (10041): Inferred latch for "data_o[12]" at mux16bit.vhd(22)
+Info (10041): Inferred latch for "data_o[13]" at mux16bit.vhd(22)
+Info (10041): Inferred latch for "data_o[14]" at mux16bit.vhd(22)
+Info (10041): Inferred latch for "data_o[15]" at mux16bit.vhd(22)
+Info (12128): Elaborating entity "RF_16x16" for hierarchy "RF_16x16:rf_0"
+Info (12128): Elaborating entity "dcd_4x16" for hierarchy "RF_16x16:rf_0|dcd_4x16:dcdw"
+Info (12128): Elaborating entity "FFD" for hierarchy "RF_16x16:rf_0|FFD:\gen_registers:0:reg"
+Info (12128): Elaborating entity "tri_states_driver_16bit" for hierarchy "RF_16x16:rf_0|tri_states_driver_16bit:\gen_3sdp:0:driverp"
+Warning (10492): VHDL Process Statement warning at tri_states_driver_16bit.vhd(22): signal "in_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "ula" for hierarchy "ula:ula_0"
+Info (12128): Elaborating entity "extensor_al" for hierarchy "ula:ula_0|extensor_al:extensor_al0"
+Info (12128): Elaborating entity "abext" for hierarchy "ula:ula_0|extensor_al:extensor_al0|abext:\gen_abext:0:inst_abext"
+Info (12128): Elaborating entity "cinext" for hierarchy "ula:ula_0|extensor_al:extensor_al0|cinext:inst_cinext"
+Info (12128): Elaborating entity "sum_16" for hierarchy "ula:ula_0|sum_16:sum_16_0"
+Info (12128): Elaborating entity "full_adder_16" for hierarchy "ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits"
+Info (12128): Elaborating entity "full_adder" for hierarchy "ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:inst0_fa"
+Info (12128): Elaborating entity "comp16bit" for hierarchy "ula:ula_0|comp16bit:comparator"
+Info (12128): Elaborating entity "comp_zero" for hierarchy "comp_zero:comp_0"
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13048): Converted tri-state node "RF_16x16:rf_0|Rq_data[15]" into a selector
+    Warning (13048): Converted tri-state node "RF_16x16:rf_0|Rq_data[14]" into a selector
+    Warning (13048): Converted tri-state node "RF_16x16:rf_0|Rq_data[13]" into a selector
+    Warning (13048): Converted tri-state node "RF_16x16:rf_0|Rq_data[12]" into a selector
+    Warning (13048): Converted tri-state node "RF_16x16:rf_0|Rq_data[11]" into a selector
+    Warning (13048): Converted tri-state node "RF_16x16:rf_0|Rq_data[10]" into a selector
+    Warning (13048): Converted tri-state node "RF_16x16:rf_0|Rq_data[9]" into a selector
+    Warning (13048): Converted tri-state node "RF_16x16:rf_0|Rq_data[8]" into a selector
+    Warning (13048): Converted tri-state node "RF_16x16:rf_0|Rq_data[7]" into a selector
+    Warning (13048): Converted tri-state node "RF_16x16:rf_0|Rq_data[6]" into a selector
+    Warning (13048): Converted tri-state node "RF_16x16:rf_0|Rq_data[5]" into a selector
+    Warning (13048): Converted tri-state node "RF_16x16:rf_0|Rq_data[4]" into a selector
+    Warning (13048): Converted tri-state node "RF_16x16:rf_0|Rq_data[3]" into a selector
+    Warning (13048): Converted tri-state node "RF_16x16:rf_0|Rq_data[2]" into a selector
+    Warning (13048): Converted tri-state node "RF_16x16:rf_0|Rq_data[1]" into a selector
+    Warning (13048): Converted tri-state node "RF_16x16:rf_0|Rq_data[0]" into a selector
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13047): Converted the fan-out from the tri-state buffer "RF_16x16:rf_0|tri_states_driver_16bit:\gen_3sdp:0:driverp|out_data[0]" to the node "ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:inst0_fa|co" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "RF_16x16:rf_0|tri_states_driver_16bit:\gen_3sdp:0:driverp|out_data[1]" to the node "comp_zero:comp_0|Equal0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "RF_16x16:rf_0|tri_states_driver_16bit:\gen_3sdp:0:driverp|out_data[2]" to the node "comp_zero:comp_0|Equal0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "RF_16x16:rf_0|tri_states_driver_16bit:\gen_3sdp:0:driverp|out_data[3]" to the node "comp_zero:comp_0|Equal0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "RF_16x16:rf_0|tri_states_driver_16bit:\gen_3sdp:0:driverp|out_data[4]" to the node "comp_zero:comp_0|Equal0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "RF_16x16:rf_0|tri_states_driver_16bit:\gen_3sdp:0:driverp|out_data[5]" to the node "comp_zero:comp_0|Equal0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "RF_16x16:rf_0|tri_states_driver_16bit:\gen_3sdp:0:driverp|out_data[6]" to the node "comp_zero:comp_0|Equal0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "RF_16x16:rf_0|tri_states_driver_16bit:\gen_3sdp:0:driverp|out_data[7]" to the node "comp_zero:comp_0|Equal0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "RF_16x16:rf_0|tri_states_driver_16bit:\gen_3sdp:0:driverp|out_data[8]" to the node "comp_zero:comp_0|Equal0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "RF_16x16:rf_0|tri_states_driver_16bit:\gen_3sdp:0:driverp|out_data[9]" to the node "comp_zero:comp_0|Equal0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "RF_16x16:rf_0|tri_states_driver_16bit:\gen_3sdp:0:driverp|out_data[10]" to the node "comp_zero:comp_0|Equal0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "RF_16x16:rf_0|tri_states_driver_16bit:\gen_3sdp:0:driverp|out_data[11]" to the node "comp_zero:comp_0|Equal0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "RF_16x16:rf_0|tri_states_driver_16bit:\gen_3sdp:0:driverp|out_data[12]" to the node "comp_zero:comp_0|Equal0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "RF_16x16:rf_0|tri_states_driver_16bit:\gen_3sdp:0:driverp|out_data[13]" to the node "comp_zero:comp_0|Equal0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "RF_16x16:rf_0|tri_states_driver_16bit:\gen_3sdp:0:driverp|out_data[14]" to the node "comp_zero:comp_0|Equal0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "RF_16x16:rf_0|tri_states_driver_16bit:\gen_3sdp:0:driverp|out_data[15]" to the node "comp_zero:comp_0|Equal0" into an OR gate
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 861 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 44 input pins
+    Info (21059): Implemented 18 output pins
+    Info (21061): Implemented 799 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 37 warnings
+    Info: Peak virtual memory: 4640 megabytes
+    Info: Processing ended: Fri Jul 14 05:35:28 2023
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+
