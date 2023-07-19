@@ -1,5 +1,5 @@
 Flow report for ram
-Fri Jul 14 05:43:37 2023
+Sun Jul 16 12:32:37 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,15 +40,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Fri Jul 14 05:43:35 2023           ;
+; Flow Status                        ; Successful - Sun Jul 16 12:32:36 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ram                                             ;
-; Top-level Entity Name              ; RAM                                             ;
+; Top-level Entity Name              ; RAM256x16                                       ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 2 / 33,216 ( < 1 % )                            ;
-;     Total combinational functions  ; 2 / 33,216 ( < 1 % )                            ;
+; Total logic elements               ; 0 / 33,216 ( 0 % )                              ;
+;     Total combinational functions  ; 0 / 33,216 ( 0 % )                              ;
 ;     Dedicated logic registers      ; 0 / 33,216 ( 0 % )                              ;
 ; Total registers                    ; 0                                               ;
 ; Total pins                         ; 43 / 475 ( 9 % )                                ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 07/14/2023 05:43:29 ;
+; Start date & time ; 07/16/2023 12:32:30 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ram                 ;
 +-------------------+---------------------+
@@ -75,13 +75,14 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 220449202203146.168932420906436 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 220449202203146.168952155012392 ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; 16764057                        ; --            ; --          ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; --          ; Top        ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; --          ; Top        ;
+; PARTITION_COLOR                     ; 16764057                        ; --            ; RAM256x16   ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; RAM256x16   ; Top        ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; RAM256x16   ; Top        ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --          ; --         ;
+; TOP_LEVEL_ENTITY                    ; RAM256x16                       ; ram           ; --          ; --         ;
 +-------------------------------------+---------------------------------+---------------+-------------+------------+
 
 
@@ -90,11 +91,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 4643 MB             ; 00:00:01                           ;
-; Fitter                    ; 00:00:03     ; 1.0                     ; 4880 MB             ; 00:00:03                           ;
+; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 4648 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:03     ; 1.0                     ; 4872 MB             ; 00:00:03                           ;
 ; Assembler                 ; 00:00:01     ; 1.0                     ; 4562 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4537 MB             ; 00:00:00                           ;
-; Total                     ; 00:00:06     ; --                      ; --                  ; 00:00:05                           ;
+; TimeQuest Timing Analyzer ; 00:00:00     ; 1.0                     ; 4537 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:05     ; --                      ; --                  ; 00:00:06                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

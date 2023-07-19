@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1\Processador\Control Unit\Controller\Controller\simulation\qsim
+vcontrolador
+Z1 !s100 SedgRo5`91b3?0E5dg5Aj2
+Z2 IhCi_Fhf>E^@ANa@]DBXBg3
+Z3 V9f<OSM[Qd^<J[ia8UmNG70
+Z4 dC:\altera\13.0sp1\Processador\Control Unit\Controller\Controller\simulation\qsim
+Z5 w1689733696
+Z6 8controlador.vo
+Z7 Fcontrolador.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|controlador.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1689733696.744000
+Z12 !s107 controlador.vo|
+!s101 -O0
+vcontrolador_vlg_check_tst
+!i10b 1
+Z13 !s100 <RGVAd9Y0=NQ<B77a39;P1
+Z14 IjX4N<G?137@7eTioQOSiK0
+Z15 VJEjZhCmVS<Oi8@6R^VRgX1
+R4
+Z16 w1689733695
+Z17 8controlador.vt
+Z18 Fcontrolador.vt
+L0 69
+R8
+r1
+!s85 0
+31
+Z19 !s108 1689733696.790000
+Z20 !s107 controlador.vt|
+Z21 !s90 -work|work|controlador.vt|
+!s101 -O0
+R10
+vcontrolador_vlg_sample_tst
+!i10b 1
+Z22 !s100 L3WQSLlC^O=4CDgBAMR>S1
+Z23 I]Eh@iXZob]`Y6`o]Ij6<53
+Z24 VaG?6X:09oDXM3QRRIjfg92
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vcontrolador_vlg_vec_tst
+!i10b 1
+Z25 !s100 @D?od2E;>@^0RE7L?]aEa2
+Z26 IlKiCTngcZPlg]o?5V<aV72
+Z27 VV]^Uo1L`J8e@nG1Lj`G?G1
+R4
+R16
+R17
+R18
+Z28 L0 515
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10

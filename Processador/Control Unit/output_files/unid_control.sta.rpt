@@ -1,0 +1,1595 @@
+TimeQuest Timing Analyzer report for unid_control
+Wed Jul 19 05:44:48 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk'
+ 12. Slow Model Hold: 'clk'
+ 13. Slow Model Recovery: 'clk'
+ 14. Slow Model Removal: 'clk'
+ 15. Slow Model Minimum Pulse Width: 'clk'
+ 16. Setup Times
+ 17. Hold Times
+ 18. Clock to Output Times
+ 19. Minimum Clock to Output Times
+ 20. Fast Model Setup Summary
+ 21. Fast Model Hold Summary
+ 22. Fast Model Recovery Summary
+ 23. Fast Model Removal Summary
+ 24. Fast Model Minimum Pulse Width Summary
+ 25. Fast Model Setup: 'clk'
+ 26. Fast Model Hold: 'clk'
+ 27. Fast Model Recovery: 'clk'
+ 28. Fast Model Removal: 'clk'
+ 29. Fast Model Minimum Pulse Width: 'clk'
+ 30. Setup Times
+ 31. Hold Times
+ 32. Clock to Output Times
+ 33. Minimum Clock to Output Times
+ 34. Multicorner Timing Analysis Summary
+ 35. Setup Times
+ 36. Hold Times
+ 37. Clock to Output Times
+ 38. Minimum Clock to Output Times
+ 39. Setup Transfers
+ 40. Hold Transfers
+ 41. Recovery Transfers
+ 42. Removal Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; unid_control                                                      ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-------------------------------------------------+
+; Slow Model Fmax Summary                         ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 385.8 MHz ; 385.8 MHz       ; clk        ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -1.592 ; -34.750       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.391 ; 0.000         ;
++-------+-------+---------------+
+
+
++--------------------------------+
+; Slow Model Recovery Summary    ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -1.178 ; -4.712        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Removal Summary    ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 1.706 ; 0.000         ;
++-------+-------+---------------+
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.380 ; -45.380               ;
++-------+--------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                                                                                                            ;
++--------+------------------------------------------------------------------+------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                        ; To Node                                                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------------------------------+------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.592 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 2.628      ;
+; -1.585 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 2.621      ;
+; -1.548 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[8]                                            ; clk          ; clk         ; 1.000        ; 0.008      ; 2.592      ;
+; -1.548 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[9]                                            ; clk          ; clk         ; 1.000        ; 0.008      ; 2.592      ;
+; -1.548 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[10]                                           ; clk          ; clk         ; 1.000        ; 0.008      ; 2.592      ;
+; -1.548 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[11]                                           ; clk          ; clk         ; 1.000        ; 0.008      ; 2.592      ;
+; -1.548 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[4]                                            ; clk          ; clk         ; 1.000        ; 0.008      ; 2.592      ;
+; -1.548 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[6]                                            ; clk          ; clk         ; 1.000        ; 0.008      ; 2.592      ;
+; -1.548 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[7]                                            ; clk          ; clk         ; 1.000        ; 0.008      ; 2.592      ;
+; -1.548 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[2]                                            ; clk          ; clk         ; 1.000        ; 0.008      ; 2.592      ;
+; -1.548 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[3]                                            ; clk          ; clk         ; 1.000        ; 0.008      ; 2.592      ;
+; -1.492 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[8]                                            ; clk          ; clk         ; 1.000        ; 0.008      ; 2.536      ;
+; -1.492 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[9]                                            ; clk          ; clk         ; 1.000        ; 0.008      ; 2.536      ;
+; -1.492 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[10]                                           ; clk          ; clk         ; 1.000        ; 0.008      ; 2.536      ;
+; -1.492 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[11]                                           ; clk          ; clk         ; 1.000        ; 0.008      ; 2.536      ;
+; -1.492 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[4]                                            ; clk          ; clk         ; 1.000        ; 0.008      ; 2.536      ;
+; -1.492 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[6]                                            ; clk          ; clk         ; 1.000        ; 0.008      ; 2.536      ;
+; -1.492 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[7]                                            ; clk          ; clk         ; 1.000        ; 0.008      ; 2.536      ;
+; -1.492 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[2]                                            ; clk          ; clk         ; 1.000        ; 0.008      ; 2.536      ;
+; -1.492 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[3]                                            ; clk          ; clk         ; 1.000        ; 0.008      ; 2.536      ;
+; -1.464 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; cont_program:pc0|counter[3]                                      ; clk          ; clk         ; 1.000        ; -0.003     ; 2.497      ;
+; -1.448 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; cont_program:pc0|counter[1]                                      ; clk          ; clk         ; 1.000        ; -0.003     ; 2.481      ;
+; -1.447 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; cont_program:pc0|counter[3]                                      ; clk          ; clk         ; 1.000        ; -0.003     ; 2.480      ;
+; -1.443 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 2.479      ;
+; -1.440 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; cont_program:pc0|counter[2]                                      ; clk          ; clk         ; 1.000        ; -0.003     ; 2.473      ;
+; -1.439 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; cont_program:pc0|counter[3]                                      ; clk          ; clk         ; 1.000        ; -0.003     ; 2.472      ;
+; -1.436 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 2.472      ;
+; -1.392 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; cont_program:pc0|counter[1]                                      ; clk          ; clk         ; 1.000        ; -0.003     ; 2.425      ;
+; -1.385 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[8]                                            ; clk          ; clk         ; 1.000        ; 0.008      ; 2.429      ;
+; -1.385 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[9]                                            ; clk          ; clk         ; 1.000        ; 0.008      ; 2.429      ;
+; -1.385 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[10]                                           ; clk          ; clk         ; 1.000        ; 0.008      ; 2.429      ;
+; -1.385 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[11]                                           ; clk          ; clk         ; 1.000        ; 0.008      ; 2.429      ;
+; -1.385 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[4]                                            ; clk          ; clk         ; 1.000        ; 0.008      ; 2.429      ;
+; -1.385 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[6]                                            ; clk          ; clk         ; 1.000        ; 0.008      ; 2.429      ;
+; -1.385 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[7]                                            ; clk          ; clk         ; 1.000        ; 0.008      ; 2.429      ;
+; -1.385 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[2]                                            ; clk          ; clk         ; 1.000        ; 0.008      ; 2.429      ;
+; -1.385 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[3]                                            ; clk          ; clk         ; 1.000        ; 0.008      ; 2.429      ;
+; -1.384 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; cont_program:pc0|counter[2]                                      ; clk          ; clk         ; 1.000        ; -0.003     ; 2.417      ;
+; -1.332 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 2.368      ;
+; -1.315 ; ireader:ir0|IR_reg[14]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 2.351      ;
+; -1.314 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 2.350      ;
+; -1.307 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 2.343      ;
+; -1.285 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; cont_program:pc0|counter[1]                                      ; clk          ; clk         ; 1.000        ; -0.003     ; 2.318      ;
+; -1.277 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; cont_program:pc0|counter[2]                                      ; clk          ; clk         ; 1.000        ; -0.003     ; 2.310      ;
+; -1.243 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[8]                                            ; clk          ; clk         ; 1.000        ; 0.008      ; 2.287      ;
+; -1.243 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[9]                                            ; clk          ; clk         ; 1.000        ; 0.008      ; 2.287      ;
+; -1.243 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[10]                                           ; clk          ; clk         ; 1.000        ; 0.008      ; 2.287      ;
+; -1.243 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[11]                                           ; clk          ; clk         ; 1.000        ; 0.008      ; 2.287      ;
+; -1.243 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[4]                                            ; clk          ; clk         ; 1.000        ; 0.008      ; 2.287      ;
+; -1.243 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[6]                                            ; clk          ; clk         ; 1.000        ; 0.008      ; 2.287      ;
+; -1.243 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[7]                                            ; clk          ; clk         ; 1.000        ; 0.008      ; 2.287      ;
+; -1.243 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[2]                                            ; clk          ; clk         ; 1.000        ; 0.008      ; 2.287      ;
+; -1.243 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[3]                                            ; clk          ; clk         ; 1.000        ; 0.008      ; 2.287      ;
+; -1.194 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 2.230      ;
+; -1.183 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 2.219      ;
+; -1.165 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 2.201      ;
+; -1.143 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; cont_program:pc0|counter[1]                                      ; clk          ; clk         ; 1.000        ; -0.003     ; 2.176      ;
+; -1.135 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; cont_program:pc0|counter[2]                                      ; clk          ; clk         ; 1.000        ; -0.003     ; 2.168      ;
+; -1.134 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 2.170      ;
+; -1.134 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; cont_program:pc0|counter[3]                                      ; clk          ; clk         ; 1.000        ; -0.003     ; 2.167      ;
+; -1.098 ; ireader:ir0|IR_reg[12]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 2.134      ;
+; -1.064 ; ireader:ir0|IR_reg[15]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 2.100      ;
+; -1.054 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 2.090      ;
+; -1.054 ; ireader:ir0|IR_reg[15]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 2.090      ;
+; -1.045 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 2.081      ;
+; -1.042 ; ireader:ir0|IR_reg[15]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 2.078      ;
+; -0.976 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 2.012      ;
+; -0.924 ; ireader:ir0|IR_reg[14]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 1.960      ;
+; -0.923 ; ireader:ir0|IR_reg[14]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 1.959      ;
+; -0.916 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 1.952      ;
+; -0.915 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; cont_program:pc0|counter[0]                                      ; clk          ; clk         ; 1.000        ; -0.003     ; 1.948      ;
+; -0.912 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[12]                                           ; clk          ; clk         ; 1.000        ; 0.000      ; 1.948      ;
+; -0.912 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[15]                                           ; clk          ; clk         ; 1.000        ; 0.000      ; 1.948      ;
+; -0.912 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[13]                                           ; clk          ; clk         ; 1.000        ; 0.000      ; 1.948      ;
+; -0.912 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[14]                                           ; clk          ; clk         ; 1.000        ; 0.000      ; 1.948      ;
+; -0.912 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[5]                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 1.948      ;
+; -0.912 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[0]                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 1.948      ;
+; -0.912 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[1]                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 1.948      ;
+; -0.872 ; ireader:ir0|IR_reg[13]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 1.908      ;
+; -0.856 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[12]                                           ; clk          ; clk         ; 1.000        ; 0.000      ; 1.892      ;
+; -0.856 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[15]                                           ; clk          ; clk         ; 1.000        ; 0.000      ; 1.892      ;
+; -0.856 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[13]                                           ; clk          ; clk         ; 1.000        ; 0.000      ; 1.892      ;
+; -0.856 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[14]                                           ; clk          ; clk         ; 1.000        ; 0.000      ; 1.892      ;
+; -0.856 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[5]                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 1.892      ;
+; -0.856 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[0]                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 1.892      ;
+; -0.856 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[1]                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 1.892      ;
+; -0.752 ; cont_program:pc0|counter[0]                                      ; cont_program:pc0|counter[3]                                      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.788      ;
+; -0.749 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[12]                                           ; clk          ; clk         ; 1.000        ; 0.000      ; 1.785      ;
+; -0.749 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[15]                                           ; clk          ; clk         ; 1.000        ; 0.000      ; 1.785      ;
+; -0.749 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[13]                                           ; clk          ; clk         ; 1.000        ; 0.000      ; 1.785      ;
+; -0.749 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[14]                                           ; clk          ; clk         ; 1.000        ; 0.000      ; 1.785      ;
+; -0.749 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[5]                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 1.785      ;
+; -0.749 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[0]                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 1.785      ;
+; -0.749 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[1]                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 1.785      ;
+; -0.743 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 1.779      ;
+; -0.640 ; ireader:ir0|IR_reg[15]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 1.676      ;
+; -0.620 ; ireader:ir0|IR_reg[12]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 1.656      ;
+; -0.607 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[12]                                           ; clk          ; clk         ; 1.000        ; 0.000      ; 1.643      ;
+; -0.607 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[15]                                           ; clk          ; clk         ; 1.000        ; 0.000      ; 1.643      ;
+; -0.607 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[13]                                           ; clk          ; clk         ; 1.000        ; 0.000      ; 1.643      ;
++--------+------------------------------------------------------------------+------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                                                                                                            ;
++-------+------------------------------------------------------------------+------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                        ; To Node                                                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------------------------------------+------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; cont_program:pc0|counter[0]                                      ; cont_program:pc0|counter[0]                                      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; cont_program:pc0|counter[1]                                      ; cont_program:pc0|counter[1]                                      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; cont_program:pc0|counter[2]                                      ; cont_program:pc0|counter[2]                                      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; cont_program:pc0|counter[3]                                      ; cont_program:pc0|counter[3]                                      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.516 ; ireader:ir0|IR_reg[9]                                            ; controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF1|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.782      ;
+; 0.516 ; ireader:ir0|IR_reg[10]                                           ; controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF2|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.782      ;
+; 0.516 ; ireader:ir0|IR_reg[11]                                           ; controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF3|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.782      ;
+; 0.655 ; ireader:ir0|IR_reg[8]                                            ; controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF0|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.921      ;
+; 0.706 ; ireader:ir0|IR_reg[6]                                            ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF6|q_reg      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.972      ;
+; 0.710 ; ireader:ir0|IR_reg[6]                                            ; controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF2|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.976      ;
+; 0.788 ; ireader:ir0|IR_reg[12]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 1.054      ;
+; 0.808 ; ireader:ir0|IR_reg[13]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 1.074      ;
+; 0.814 ; ireader:ir0|IR_reg[14]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 1.080      ;
+; 0.831 ; cont_program:pc0|counter[2]                                      ; cont_program:pc0|counter[3]                                      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.097      ;
+; 0.852 ; cont_program:pc0|counter[1]                                      ; cont_program:pc0|counter[2]                                      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.118      ;
+; 0.853 ; cont_program:pc0|counter[0]                                      ; cont_program:pc0|counter[1]                                      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.119      ;
+; 0.863 ; ireader:ir0|IR_reg[12]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 1.129      ;
+; 0.867 ; ireader:ir0|IR_reg[12]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 1.133      ;
+; 0.928 ; ireader:ir0|IR_reg[3]                                            ; controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF3|q_reg ; clk          ; clk         ; 0.000        ; 0.001      ; 1.195      ;
+; 0.928 ; ireader:ir0|IR_reg[3]                                            ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF3|q_reg      ; clk          ; clk         ; 0.000        ; 0.001      ; 1.195      ;
+; 0.930 ; ireader:ir0|IR_reg[4]                                            ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF4|q_reg      ; clk          ; clk         ; 0.000        ; 0.001      ; 1.197      ;
+; 0.931 ; ireader:ir0|IR_reg[4]                                            ; controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF0|q_reg ; clk          ; clk         ; 0.000        ; 0.001      ; 1.198      ;
+; 0.936 ; ireader:ir0|IR_reg[5]                                            ; controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF1|q_reg ; clk          ; clk         ; 0.000        ; -0.006     ; 1.196      ;
+; 0.936 ; ireader:ir0|IR_reg[5]                                            ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF5|q_reg      ; clk          ; clk         ; 0.000        ; -0.006     ; 1.196      ;
+; 0.937 ; ireader:ir0|IR_reg[0]                                            ; controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF0|q_reg ; clk          ; clk         ; 0.000        ; -0.006     ; 1.197      ;
+; 0.941 ; ireader:ir0|IR_reg[0]                                            ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF0|q_reg      ; clk          ; clk         ; 0.000        ; -0.006     ; 1.201      ;
+; 1.019 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; cont_program:pc0|counter[0]                                      ; clk          ; clk         ; 0.000        ; -0.003     ; 1.282      ;
+; 1.083 ; ireader:ir0|IR_reg[1]                                            ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF1|q_reg      ; clk          ; clk         ; 0.000        ; -0.006     ; 1.343      ;
+; 1.085 ; ireader:ir0|IR_reg[1]                                            ; controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF1|q_reg ; clk          ; clk         ; 0.000        ; -0.006     ; 1.345      ;
+; 1.099 ; ireader:ir0|IR_reg[15]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 1.365      ;
+; 1.100 ; ireader:ir0|IR_reg[15]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 1.366      ;
+; 1.146 ; ireader:ir0|IR_reg[7]                                            ; controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF3|q_reg ; clk          ; clk         ; 0.000        ; 0.001      ; 1.413      ;
+; 1.150 ; ireader:ir0|IR_reg[7]                                            ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF7|q_reg      ; clk          ; clk         ; 0.000        ; 0.001      ; 1.417      ;
+; 1.156 ; ireader:ir0|IR_reg[2]                                            ; controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF2|q_reg ; clk          ; clk         ; 0.000        ; 0.002      ; 1.424      ;
+; 1.157 ; ireader:ir0|IR_reg[2]                                            ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF2|q_reg      ; clk          ; clk         ; 0.000        ; 0.002      ; 1.425      ;
+; 1.210 ; cont_program:pc0|counter[0]                                      ; cont_program:pc0|counter[2]                                      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.476      ;
+; 1.212 ; cont_program:pc0|counter[1]                                      ; cont_program:pc0|counter[3]                                      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.478      ;
+; 1.216 ; ireader:ir0|IR_reg[14]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 1.482      ;
+; 1.228 ; ireader:ir0|IR_reg[14]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 1.494      ;
+; 1.230 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 1.496      ;
+; 1.238 ; ireader:ir0|IR_reg[14]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 1.504      ;
+; 1.244 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 1.510      ;
+; 1.250 ; ireader:ir0|IR_reg[13]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 1.516      ;
+; 1.251 ; ireader:ir0|IR_reg[13]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 1.517      ;
+; 1.370 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; cont_program:pc0|counter[0]                                      ; clk          ; clk         ; 0.000        ; -0.003     ; 1.633      ;
+; 1.377 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[12]                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.643      ;
+; 1.377 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[15]                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.643      ;
+; 1.377 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[13]                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.643      ;
+; 1.377 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[14]                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.643      ;
+; 1.377 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[5]                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.643      ;
+; 1.377 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[0]                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.643      ;
+; 1.377 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[1]                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.643      ;
+; 1.390 ; ireader:ir0|IR_reg[12]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 1.656      ;
+; 1.400 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 1.666      ;
+; 1.432 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 1.698      ;
+; 1.491 ; ireader:ir0|IR_reg[15]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 1.757      ;
+; 1.505 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; cont_program:pc0|counter[2]                                      ; clk          ; clk         ; 0.000        ; -0.003     ; 1.768      ;
+; 1.512 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 1.778      ;
+; 1.519 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[12]                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.785      ;
+; 1.519 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[15]                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.785      ;
+; 1.519 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[13]                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.785      ;
+; 1.519 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[14]                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.785      ;
+; 1.519 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[5]                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.785      ;
+; 1.519 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[0]                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.785      ;
+; 1.519 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[1]                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.785      ;
+; 1.522 ; cont_program:pc0|counter[0]                                      ; cont_program:pc0|counter[3]                                      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.788      ;
+; 1.523 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 1.789      ;
+; 1.524 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 1.790      ;
+; 1.529 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 1.795      ;
+; 1.587 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; cont_program:pc0|counter[1]                                      ; clk          ; clk         ; 0.000        ; -0.003     ; 1.850      ;
+; 1.626 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[12]                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.892      ;
+; 1.626 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[15]                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.892      ;
+; 1.626 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[13]                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.892      ;
+; 1.626 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[14]                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.892      ;
+; 1.626 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[5]                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.892      ;
+; 1.626 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[0]                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.892      ;
+; 1.626 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[1]                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.892      ;
+; 1.642 ; ireader:ir0|IR_reg[13]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 1.908      ;
+; 1.672 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 1.938      ;
+; 1.672 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 1.938      ;
+; 1.673 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 1.939      ;
+; 1.674 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; cont_program:pc0|counter[2]                                      ; clk          ; clk         ; 0.000        ; -0.003     ; 1.937      ;
+; 1.678 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 1.944      ;
+; 1.682 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[12]                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.948      ;
+; 1.682 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[15]                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.948      ;
+; 1.682 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[13]                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.948      ;
+; 1.682 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[14]                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.948      ;
+; 1.682 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[5]                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.948      ;
+; 1.682 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[0]                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.948      ;
+; 1.682 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[1]                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.948      ;
+; 1.685 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; cont_program:pc0|counter[0]                                      ; clk          ; clk         ; 0.000        ; -0.003     ; 1.948      ;
+; 1.690 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; cont_program:pc0|counter[1]                                      ; clk          ; clk         ; 0.000        ; -0.003     ; 1.953      ;
+; 1.707 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; cont_program:pc0|counter[1]                                      ; clk          ; clk         ; 0.000        ; -0.003     ; 1.970      ;
+; 1.744 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; cont_program:pc0|counter[2]                                      ; clk          ; clk         ; 0.000        ; -0.003     ; 2.007      ;
+; 1.783 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; cont_program:pc0|counter[3]                                      ; clk          ; clk         ; 0.000        ; -0.003     ; 2.046      ;
+; 1.802 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 2.068      ;
+; 1.814 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 2.080      ;
+; 1.814 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 2.080      ;
+; 1.834 ; ireader:ir0|IR_reg[15]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 2.100      ;
+; 1.886 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; cont_program:pc0|counter[3]                                      ; clk          ; clk         ; 0.000        ; -0.003     ; 2.149      ;
++-------+------------------------------------------------------------------+------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Recovery: 'clk'                                                                                                                                                    ;
++--------+------------------------------------------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                        ; To Node                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; -1.178 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; cont_program:pc0|counter[0] ; clk          ; clk         ; 1.000        ; -0.003     ; 2.211      ;
+; -1.178 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; cont_program:pc0|counter[1] ; clk          ; clk         ; 1.000        ; -0.003     ; 2.211      ;
+; -1.178 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; cont_program:pc0|counter[2] ; clk          ; clk         ; 1.000        ; -0.003     ; 2.211      ;
+; -1.178 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; cont_program:pc0|counter[3] ; clk          ; clk         ; 1.000        ; -0.003     ; 2.211      ;
+; -1.137 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; cont_program:pc0|counter[0] ; clk          ; clk         ; 1.000        ; -0.003     ; 2.170      ;
+; -1.137 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; cont_program:pc0|counter[1] ; clk          ; clk         ; 1.000        ; -0.003     ; 2.170      ;
+; -1.137 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; cont_program:pc0|counter[2] ; clk          ; clk         ; 1.000        ; -0.003     ; 2.170      ;
+; -1.137 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; cont_program:pc0|counter[3] ; clk          ; clk         ; 1.000        ; -0.003     ; 2.170      ;
+; -0.973 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; cont_program:pc0|counter[0] ; clk          ; clk         ; 1.000        ; -0.003     ; 2.006      ;
+; -0.973 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; cont_program:pc0|counter[1] ; clk          ; clk         ; 1.000        ; -0.003     ; 2.006      ;
+; -0.973 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; cont_program:pc0|counter[2] ; clk          ; clk         ; 1.000        ; -0.003     ; 2.006      ;
+; -0.973 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; cont_program:pc0|counter[3] ; clk          ; clk         ; 1.000        ; -0.003     ; 2.006      ;
+; -0.936 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; cont_program:pc0|counter[0] ; clk          ; clk         ; 1.000        ; -0.003     ; 1.969      ;
+; -0.936 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; cont_program:pc0|counter[1] ; clk          ; clk         ; 1.000        ; -0.003     ; 1.969      ;
+; -0.936 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; cont_program:pc0|counter[2] ; clk          ; clk         ; 1.000        ; -0.003     ; 1.969      ;
+; -0.936 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; cont_program:pc0|counter[3] ; clk          ; clk         ; 1.000        ; -0.003     ; 1.969      ;
++--------+------------------------------------------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Removal: 'clk'                                                                                                                                                    ;
++-------+------------------------------------------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                        ; To Node                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; 1.706 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; cont_program:pc0|counter[0] ; clk          ; clk         ; 0.000        ; -0.003     ; 1.969      ;
+; 1.706 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; cont_program:pc0|counter[1] ; clk          ; clk         ; 0.000        ; -0.003     ; 1.969      ;
+; 1.706 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; cont_program:pc0|counter[2] ; clk          ; clk         ; 0.000        ; -0.003     ; 1.969      ;
+; 1.706 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; cont_program:pc0|counter[3] ; clk          ; clk         ; 0.000        ; -0.003     ; 1.969      ;
+; 1.743 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; cont_program:pc0|counter[0] ; clk          ; clk         ; 0.000        ; -0.003     ; 2.006      ;
+; 1.743 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; cont_program:pc0|counter[1] ; clk          ; clk         ; 0.000        ; -0.003     ; 2.006      ;
+; 1.743 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; cont_program:pc0|counter[2] ; clk          ; clk         ; 0.000        ; -0.003     ; 2.006      ;
+; 1.743 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; cont_program:pc0|counter[3] ; clk          ; clk         ; 0.000        ; -0.003     ; 2.006      ;
+; 1.907 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; cont_program:pc0|counter[0] ; clk          ; clk         ; 0.000        ; -0.003     ; 2.170      ;
+; 1.907 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; cont_program:pc0|counter[1] ; clk          ; clk         ; 0.000        ; -0.003     ; 2.170      ;
+; 1.907 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; cont_program:pc0|counter[2] ; clk          ; clk         ; 0.000        ; -0.003     ; 2.170      ;
+; 1.907 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; cont_program:pc0|counter[3] ; clk          ; clk         ; 0.000        ; -0.003     ; 2.170      ;
+; 1.948 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; cont_program:pc0|counter[0] ; clk          ; clk         ; 0.000        ; -0.003     ; 2.211      ;
+; 1.948 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; cont_program:pc0|counter[1] ; clk          ; clk         ; 0.000        ; -0.003     ; 2.211      ;
+; 1.948 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; cont_program:pc0|counter[2] ; clk          ; clk         ; 0.000        ; -0.003     ; 2.211      ;
+; 1.948 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; cont_program:pc0|counter[3] ; clk          ; clk         ; 0.000        ; -0.003     ; 2.211      ;
++-------+------------------------------------------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                                                             ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                           ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; cont_program:pc0|counter[0]                                      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; cont_program:pc0|counter[0]                                      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; cont_program:pc0|counter[1]                                      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; cont_program:pc0|counter[1]                                      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; cont_program:pc0|counter[2]                                      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; cont_program:pc0|counter[2]                                      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; cont_program:pc0|counter[3]                                      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; cont_program:pc0|counter[3]                                      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF0|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF0|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF1|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF1|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF2|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF2|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF3|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF3|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF0|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF0|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF1|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF1|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF2|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF2|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF3|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF3|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF0|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF0|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF1|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF1|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF2|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF2|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF3|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF3|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF0|q_reg      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF0|q_reg      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF1|q_reg      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF1|q_reg      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF2|q_reg      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF2|q_reg      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF3|q_reg      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF3|q_reg      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF4|q_reg      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF4|q_reg      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF5|q_reg      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF5|q_reg      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF6|q_reg      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF6|q_reg      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF7|q_reg      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF7|q_reg      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ireader:ir0|IR_reg[0]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ireader:ir0|IR_reg[0]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ireader:ir0|IR_reg[10]                                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ireader:ir0|IR_reg[10]                                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ireader:ir0|IR_reg[11]                                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ireader:ir0|IR_reg[11]                                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ireader:ir0|IR_reg[12]                                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ireader:ir0|IR_reg[12]                                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ireader:ir0|IR_reg[13]                                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ireader:ir0|IR_reg[13]                                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ireader:ir0|IR_reg[14]                                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ireader:ir0|IR_reg[14]                                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ireader:ir0|IR_reg[15]                                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ireader:ir0|IR_reg[15]                                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ireader:ir0|IR_reg[1]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ireader:ir0|IR_reg[1]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ireader:ir0|IR_reg[2]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ireader:ir0|IR_reg[2]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ireader:ir0|IR_reg[3]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ireader:ir0|IR_reg[3]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ireader:ir0|IR_reg[4]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ireader:ir0|IR_reg[4]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ireader:ir0|IR_reg[5]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ireader:ir0|IR_reg[5]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ireader:ir0|IR_reg[6]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ireader:ir0|IR_reg[6]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ireader:ir0|IR_reg[7]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ireader:ir0|IR_reg[7]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ireader:ir0|IR_reg[8]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ireader:ir0|IR_reg[8]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ireader:ir0|IR_reg[9]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ireader:ir0|IR_reg[9]                                            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                                                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                                                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]                                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]                                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk                                               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk                                               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ctrl0|ctr0|reg|FF0|q_reg|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ctrl0|ctr0|reg|FF0|q_reg|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ctrl0|ctr0|reg|FF1|q_reg|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ctrl0|ctr0|reg|FF1|q_reg|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ctrl0|ctr0|reg|FF2|q_reg|clk                                     ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Times                                                               ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; comp_ab       ; clk        ; 4.814 ; 4.814 ; Rise       ; clk             ;
+; data_rom[*]   ; clk        ; 3.787 ; 3.787 ; Rise       ; clk             ;
+;  data_rom[0]  ; clk        ; 3.324 ; 3.324 ; Rise       ; clk             ;
+;  data_rom[1]  ; clk        ; 3.285 ; 3.285 ; Rise       ; clk             ;
+;  data_rom[2]  ; clk        ; 3.168 ; 3.168 ; Rise       ; clk             ;
+;  data_rom[3]  ; clk        ; 3.152 ; 3.152 ; Rise       ; clk             ;
+;  data_rom[4]  ; clk        ; 3.679 ; 3.679 ; Rise       ; clk             ;
+;  data_rom[5]  ; clk        ; 3.525 ; 3.525 ; Rise       ; clk             ;
+;  data_rom[6]  ; clk        ; 3.342 ; 3.342 ; Rise       ; clk             ;
+;  data_rom[7]  ; clk        ; 3.386 ; 3.386 ; Rise       ; clk             ;
+;  data_rom[8]  ; clk        ; 3.522 ; 3.522 ; Rise       ; clk             ;
+;  data_rom[9]  ; clk        ; 3.587 ; 3.587 ; Rise       ; clk             ;
+;  data_rom[10] ; clk        ; 3.348 ; 3.348 ; Rise       ; clk             ;
+;  data_rom[11] ; clk        ; 3.663 ; 3.663 ; Rise       ; clk             ;
+;  data_rom[12] ; clk        ; 3.571 ; 3.571 ; Rise       ; clk             ;
+;  data_rom[13] ; clk        ; 3.787 ; 3.787 ; Rise       ; clk             ;
+;  data_rom[14] ; clk        ; 3.300 ; 3.300 ; Rise       ; clk             ;
+;  data_rom[15] ; clk        ; 3.333 ; 3.333 ; Rise       ; clk             ;
+; rf_rp_zero    ; clk        ; 4.660 ; 4.660 ; Rise       ; clk             ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; comp_ab       ; clk        ; -4.168 ; -4.168 ; Rise       ; clk             ;
+; data_rom[*]   ; clk        ; -2.922 ; -2.922 ; Rise       ; clk             ;
+;  data_rom[0]  ; clk        ; -3.094 ; -3.094 ; Rise       ; clk             ;
+;  data_rom[1]  ; clk        ; -3.055 ; -3.055 ; Rise       ; clk             ;
+;  data_rom[2]  ; clk        ; -2.938 ; -2.938 ; Rise       ; clk             ;
+;  data_rom[3]  ; clk        ; -2.922 ; -2.922 ; Rise       ; clk             ;
+;  data_rom[4]  ; clk        ; -3.449 ; -3.449 ; Rise       ; clk             ;
+;  data_rom[5]  ; clk        ; -3.295 ; -3.295 ; Rise       ; clk             ;
+;  data_rom[6]  ; clk        ; -3.112 ; -3.112 ; Rise       ; clk             ;
+;  data_rom[7]  ; clk        ; -3.156 ; -3.156 ; Rise       ; clk             ;
+;  data_rom[8]  ; clk        ; -3.292 ; -3.292 ; Rise       ; clk             ;
+;  data_rom[9]  ; clk        ; -3.357 ; -3.357 ; Rise       ; clk             ;
+;  data_rom[10] ; clk        ; -3.118 ; -3.118 ; Rise       ; clk             ;
+;  data_rom[11] ; clk        ; -3.433 ; -3.433 ; Rise       ; clk             ;
+;  data_rom[12] ; clk        ; -3.341 ; -3.341 ; Rise       ; clk             ;
+;  data_rom[13] ; clk        ; -3.557 ; -3.557 ; Rise       ; clk             ;
+;  data_rom[14] ; clk        ; -3.070 ; -3.070 ; Rise       ; clk             ;
+;  data_rom[15] ; clk        ; -3.103 ; -3.103 ; Rise       ; clk             ;
+; rf_rp_zero    ; clk        ; -3.298 ; -3.298 ; Rise       ; clk             ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; alu_s0         ; clk        ; 7.982 ; 7.982 ; Rise       ; clk             ;
+; d_addr[*]      ; clk        ; 7.065 ; 7.065 ; Rise       ; clk             ;
+;  d_addr[0]     ; clk        ; 7.059 ; 7.059 ; Rise       ; clk             ;
+;  d_addr[1]     ; clk        ; 7.015 ; 7.015 ; Rise       ; clk             ;
+;  d_addr[2]     ; clk        ; 7.065 ; 7.065 ; Rise       ; clk             ;
+;  d_addr[3]     ; clk        ; 6.639 ; 6.639 ; Rise       ; clk             ;
+;  d_addr[4]     ; clk        ; 6.831 ; 6.831 ; Rise       ; clk             ;
+;  d_addr[5]     ; clk        ; 6.833 ; 6.833 ; Rise       ; clk             ;
+;  d_addr[6]     ; clk        ; 7.057 ; 7.057 ; Rise       ; clk             ;
+;  d_addr[7]     ; clk        ; 6.836 ; 6.836 ; Rise       ; clk             ;
+; d_rd           ; clk        ; 8.262 ; 8.262 ; Rise       ; clk             ;
+; d_wr           ; clk        ; 7.604 ; 7.604 ; Rise       ; clk             ;
+; pc_addr[*]     ; clk        ; 6.833 ; 6.833 ; Rise       ; clk             ;
+;  pc_addr[0]    ; clk        ; 6.833 ; 6.833 ; Rise       ; clk             ;
+;  pc_addr[1]    ; clk        ; 6.335 ; 6.335 ; Rise       ; clk             ;
+;  pc_addr[2]    ; clk        ; 6.362 ; 6.362 ; Rise       ; clk             ;
+;  pc_addr[3]    ; clk        ; 6.782 ; 6.782 ; Rise       ; clk             ;
+; rd             ; clk        ; 7.763 ; 7.763 ; Rise       ; clk             ;
+; rf_rp_addr[*]  ; clk        ; 6.777 ; 6.777 ; Rise       ; clk             ;
+;  rf_rp_addr[0] ; clk        ; 6.355 ; 6.355 ; Rise       ; clk             ;
+;  rf_rp_addr[1] ; clk        ; 6.600 ; 6.600 ; Rise       ; clk             ;
+;  rf_rp_addr[2] ; clk        ; 6.777 ; 6.777 ; Rise       ; clk             ;
+;  rf_rp_addr[3] ; clk        ; 6.335 ; 6.335 ; Rise       ; clk             ;
+; rf_rp_rd       ; clk        ; 7.818 ; 7.818 ; Rise       ; clk             ;
+; rf_rq_addr[*]  ; clk        ; 7.058 ; 7.058 ; Rise       ; clk             ;
+;  rf_rq_addr[0] ; clk        ; 6.320 ; 6.320 ; Rise       ; clk             ;
+;  rf_rq_addr[1] ; clk        ; 6.571 ; 6.571 ; Rise       ; clk             ;
+;  rf_rq_addr[2] ; clk        ; 6.346 ; 6.346 ; Rise       ; clk             ;
+;  rf_rq_addr[3] ; clk        ; 7.058 ; 7.058 ; Rise       ; clk             ;
+; rf_rq_rd       ; clk        ; 8.013 ; 8.013 ; Rise       ; clk             ;
+; rf_s0          ; clk        ; 8.262 ; 8.262 ; Rise       ; clk             ;
+; rf_s1          ; clk        ; 7.535 ; 7.535 ; Rise       ; clk             ;
+; rf_w_addr[*]   ; clk        ; 6.581 ; 6.581 ; Rise       ; clk             ;
+;  rf_w_addr[0]  ; clk        ; 6.335 ; 6.335 ; Rise       ; clk             ;
+;  rf_w_addr[1]  ; clk        ; 6.581 ; 6.581 ; Rise       ; clk             ;
+;  rf_w_addr[2]  ; clk        ; 6.338 ; 6.338 ; Rise       ; clk             ;
+;  rf_w_addr[3]  ; clk        ; 6.334 ; 6.334 ; Rise       ; clk             ;
+; rf_w_data[*]   ; clk        ; 7.085 ; 7.085 ; Rise       ; clk             ;
+;  rf_w_data[0]  ; clk        ; 7.059 ; 7.059 ; Rise       ; clk             ;
+;  rf_w_data[1]  ; clk        ; 7.035 ; 7.035 ; Rise       ; clk             ;
+;  rf_w_data[2]  ; clk        ; 7.085 ; 7.085 ; Rise       ; clk             ;
+;  rf_w_data[3]  ; clk        ; 6.629 ; 6.629 ; Rise       ; clk             ;
+;  rf_w_data[4]  ; clk        ; 6.831 ; 6.831 ; Rise       ; clk             ;
+;  rf_w_data[5]  ; clk        ; 6.833 ; 6.833 ; Rise       ; clk             ;
+;  rf_w_data[6]  ; clk        ; 7.057 ; 7.057 ; Rise       ; clk             ;
+;  rf_w_data[7]  ; clk        ; 6.836 ; 6.836 ; Rise       ; clk             ;
+; rf_w_wr        ; clk        ; 8.049 ; 8.049 ; Rise       ; clk             ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; alu_s0         ; clk        ; 7.469 ; 7.469 ; Rise       ; clk             ;
+; d_addr[*]      ; clk        ; 6.639 ; 6.639 ; Rise       ; clk             ;
+;  d_addr[0]     ; clk        ; 7.059 ; 7.059 ; Rise       ; clk             ;
+;  d_addr[1]     ; clk        ; 7.015 ; 7.015 ; Rise       ; clk             ;
+;  d_addr[2]     ; clk        ; 7.065 ; 7.065 ; Rise       ; clk             ;
+;  d_addr[3]     ; clk        ; 6.639 ; 6.639 ; Rise       ; clk             ;
+;  d_addr[4]     ; clk        ; 6.831 ; 6.831 ; Rise       ; clk             ;
+;  d_addr[5]     ; clk        ; 6.833 ; 6.833 ; Rise       ; clk             ;
+;  d_addr[6]     ; clk        ; 7.057 ; 7.057 ; Rise       ; clk             ;
+;  d_addr[7]     ; clk        ; 6.836 ; 6.836 ; Rise       ; clk             ;
+; d_rd           ; clk        ; 7.751 ; 7.751 ; Rise       ; clk             ;
+; d_wr           ; clk        ; 7.062 ; 7.062 ; Rise       ; clk             ;
+; pc_addr[*]     ; clk        ; 6.335 ; 6.335 ; Rise       ; clk             ;
+;  pc_addr[0]    ; clk        ; 6.833 ; 6.833 ; Rise       ; clk             ;
+;  pc_addr[1]    ; clk        ; 6.335 ; 6.335 ; Rise       ; clk             ;
+;  pc_addr[2]    ; clk        ; 6.362 ; 6.362 ; Rise       ; clk             ;
+;  pc_addr[3]    ; clk        ; 6.782 ; 6.782 ; Rise       ; clk             ;
+; rd             ; clk        ; 7.458 ; 7.458 ; Rise       ; clk             ;
+; rf_rp_addr[*]  ; clk        ; 6.335 ; 6.335 ; Rise       ; clk             ;
+;  rf_rp_addr[0] ; clk        ; 6.355 ; 6.355 ; Rise       ; clk             ;
+;  rf_rp_addr[1] ; clk        ; 6.600 ; 6.600 ; Rise       ; clk             ;
+;  rf_rp_addr[2] ; clk        ; 6.777 ; 6.777 ; Rise       ; clk             ;
+;  rf_rp_addr[3] ; clk        ; 6.335 ; 6.335 ; Rise       ; clk             ;
+; rf_rp_rd       ; clk        ; 7.276 ; 7.276 ; Rise       ; clk             ;
+; rf_rq_addr[*]  ; clk        ; 6.320 ; 6.320 ; Rise       ; clk             ;
+;  rf_rq_addr[0] ; clk        ; 6.320 ; 6.320 ; Rise       ; clk             ;
+;  rf_rq_addr[1] ; clk        ; 6.571 ; 6.571 ; Rise       ; clk             ;
+;  rf_rq_addr[2] ; clk        ; 6.346 ; 6.346 ; Rise       ; clk             ;
+;  rf_rq_addr[3] ; clk        ; 7.058 ; 7.058 ; Rise       ; clk             ;
+; rf_rq_rd       ; clk        ; 7.503 ; 7.503 ; Rise       ; clk             ;
+; rf_s0          ; clk        ; 7.751 ; 7.751 ; Rise       ; clk             ;
+; rf_s1          ; clk        ; 7.035 ; 7.035 ; Rise       ; clk             ;
+; rf_w_addr[*]   ; clk        ; 6.334 ; 6.334 ; Rise       ; clk             ;
+;  rf_w_addr[0]  ; clk        ; 6.335 ; 6.335 ; Rise       ; clk             ;
+;  rf_w_addr[1]  ; clk        ; 6.581 ; 6.581 ; Rise       ; clk             ;
+;  rf_w_addr[2]  ; clk        ; 6.338 ; 6.338 ; Rise       ; clk             ;
+;  rf_w_addr[3]  ; clk        ; 6.334 ; 6.334 ; Rise       ; clk             ;
+; rf_w_data[*]   ; clk        ; 6.629 ; 6.629 ; Rise       ; clk             ;
+;  rf_w_data[0]  ; clk        ; 7.059 ; 7.059 ; Rise       ; clk             ;
+;  rf_w_data[1]  ; clk        ; 7.035 ; 7.035 ; Rise       ; clk             ;
+;  rf_w_data[2]  ; clk        ; 7.085 ; 7.085 ; Rise       ; clk             ;
+;  rf_w_data[3]  ; clk        ; 6.629 ; 6.629 ; Rise       ; clk             ;
+;  rf_w_data[4]  ; clk        ; 6.831 ; 6.831 ; Rise       ; clk             ;
+;  rf_w_data[5]  ; clk        ; 6.833 ; 6.833 ; Rise       ; clk             ;
+;  rf_w_data[6]  ; clk        ; 7.057 ; 7.057 ; Rise       ; clk             ;
+;  rf_w_data[7]  ; clk        ; 6.836 ; 6.836 ; Rise       ; clk             ;
+; rf_w_wr        ; clk        ; 7.539 ; 7.539 ; Rise       ; clk             ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -0.235 ; -2.808        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
++--------------------------------+
+; Fast Model Recovery Summary    ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -0.140 ; -0.560        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Removal Summary    ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.885 ; 0.000         ;
++-------+-------+---------------+
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.380 ; -45.380               ;
++-------+--------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                                                                                                            ;
++--------+------------------------------------------------------------------+------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                        ; To Node                                                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------------------------------+------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.235 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[8]                                            ; clk          ; clk         ; 1.000        ; 0.007      ; 1.274      ;
+; -0.235 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[9]                                            ; clk          ; clk         ; 1.000        ; 0.007      ; 1.274      ;
+; -0.235 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[10]                                           ; clk          ; clk         ; 1.000        ; 0.007      ; 1.274      ;
+; -0.235 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[11]                                           ; clk          ; clk         ; 1.000        ; 0.007      ; 1.274      ;
+; -0.235 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[4]                                            ; clk          ; clk         ; 1.000        ; 0.007      ; 1.274      ;
+; -0.235 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[6]                                            ; clk          ; clk         ; 1.000        ; 0.007      ; 1.274      ;
+; -0.235 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[7]                                            ; clk          ; clk         ; 1.000        ; 0.007      ; 1.274      ;
+; -0.235 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[2]                                            ; clk          ; clk         ; 1.000        ; 0.007      ; 1.274      ;
+; -0.235 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[3]                                            ; clk          ; clk         ; 1.000        ; 0.007      ; 1.274      ;
+; -0.228 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[8]                                            ; clk          ; clk         ; 1.000        ; 0.007      ; 1.267      ;
+; -0.228 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[9]                                            ; clk          ; clk         ; 1.000        ; 0.007      ; 1.267      ;
+; -0.228 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[10]                                           ; clk          ; clk         ; 1.000        ; 0.007      ; 1.267      ;
+; -0.228 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[11]                                           ; clk          ; clk         ; 1.000        ; 0.007      ; 1.267      ;
+; -0.228 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[4]                                            ; clk          ; clk         ; 1.000        ; 0.007      ; 1.267      ;
+; -0.228 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[6]                                            ; clk          ; clk         ; 1.000        ; 0.007      ; 1.267      ;
+; -0.228 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[7]                                            ; clk          ; clk         ; 1.000        ; 0.007      ; 1.267      ;
+; -0.228 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[2]                                            ; clk          ; clk         ; 1.000        ; 0.007      ; 1.267      ;
+; -0.228 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[3]                                            ; clk          ; clk         ; 1.000        ; 0.007      ; 1.267      ;
+; -0.162 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 1.194      ;
+; -0.161 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 1.193      ;
+; -0.158 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[8]                                            ; clk          ; clk         ; 1.000        ; 0.007      ; 1.197      ;
+; -0.158 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[9]                                            ; clk          ; clk         ; 1.000        ; 0.007      ; 1.197      ;
+; -0.158 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[10]                                           ; clk          ; clk         ; 1.000        ; 0.007      ; 1.197      ;
+; -0.158 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[11]                                           ; clk          ; clk         ; 1.000        ; 0.007      ; 1.197      ;
+; -0.158 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[4]                                            ; clk          ; clk         ; 1.000        ; 0.007      ; 1.197      ;
+; -0.158 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[6]                                            ; clk          ; clk         ; 1.000        ; 0.007      ; 1.197      ;
+; -0.158 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[7]                                            ; clk          ; clk         ; 1.000        ; 0.007      ; 1.197      ;
+; -0.158 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[2]                                            ; clk          ; clk         ; 1.000        ; 0.007      ; 1.197      ;
+; -0.158 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[3]                                            ; clk          ; clk         ; 1.000        ; 0.007      ; 1.197      ;
+; -0.108 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; cont_program:pc0|counter[1]                                      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.139      ;
+; -0.103 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; cont_program:pc0|counter[3]                                      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.134      ;
+; -0.101 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[8]                                            ; clk          ; clk         ; 1.000        ; 0.007      ; 1.140      ;
+; -0.101 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[9]                                            ; clk          ; clk         ; 1.000        ; 0.007      ; 1.140      ;
+; -0.101 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[10]                                           ; clk          ; clk         ; 1.000        ; 0.007      ; 1.140      ;
+; -0.101 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[11]                                           ; clk          ; clk         ; 1.000        ; 0.007      ; 1.140      ;
+; -0.101 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[4]                                            ; clk          ; clk         ; 1.000        ; 0.007      ; 1.140      ;
+; -0.101 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[6]                                            ; clk          ; clk         ; 1.000        ; 0.007      ; 1.140      ;
+; -0.101 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[7]                                            ; clk          ; clk         ; 1.000        ; 0.007      ; 1.140      ;
+; -0.101 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[2]                                            ; clk          ; clk         ; 1.000        ; 0.007      ; 1.140      ;
+; -0.101 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[3]                                            ; clk          ; clk         ; 1.000        ; 0.007      ; 1.140      ;
+; -0.101 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; cont_program:pc0|counter[1]                                      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.132      ;
+; -0.100 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; cont_program:pc0|counter[2]                                      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.131      ;
+; -0.100 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; cont_program:pc0|counter[3]                                      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.131      ;
+; -0.097 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; cont_program:pc0|counter[3]                                      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.128      ;
+; -0.093 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; cont_program:pc0|counter[2]                                      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.124      ;
+; -0.077 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 1.109      ;
+; -0.076 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 1.108      ;
+; -0.059 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 1.091      ;
+; -0.048 ; ireader:ir0|IR_reg[14]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 1.080      ;
+; -0.031 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; cont_program:pc0|counter[1]                                      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.062      ;
+; -0.030 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 1.062      ;
+; -0.029 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 1.061      ;
+; -0.023 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; cont_program:pc0|counter[2]                                      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.054      ;
+; -0.009 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 1.041      ;
+; 0.001  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 1.031      ;
+; 0.011  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 1.021      ;
+; 0.026  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 1.006      ;
+; 0.026  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; cont_program:pc0|counter[1]                                      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.005      ;
+; 0.034  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; cont_program:pc0|counter[2]                                      ; clk          ; clk         ; 1.000        ; -0.001     ; 0.997      ;
+; 0.034  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; cont_program:pc0|counter[3]                                      ; clk          ; clk         ; 1.000        ; -0.001     ; 0.997      ;
+; 0.044  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[12]                                           ; clk          ; clk         ; 1.000        ; 0.000      ; 0.988      ;
+; 0.044  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[15]                                           ; clk          ; clk         ; 1.000        ; 0.000      ; 0.988      ;
+; 0.044  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[13]                                           ; clk          ; clk         ; 1.000        ; 0.000      ; 0.988      ;
+; 0.044  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[14]                                           ; clk          ; clk         ; 1.000        ; 0.000      ; 0.988      ;
+; 0.044  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[5]                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 0.988      ;
+; 0.044  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[0]                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 0.988      ;
+; 0.044  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[1]                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 0.988      ;
+; 0.051  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[12]                                           ; clk          ; clk         ; 1.000        ; 0.000      ; 0.981      ;
+; 0.051  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[15]                                           ; clk          ; clk         ; 1.000        ; 0.000      ; 0.981      ;
+; 0.051  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[13]                                           ; clk          ; clk         ; 1.000        ; 0.000      ; 0.981      ;
+; 0.051  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[14]                                           ; clk          ; clk         ; 1.000        ; 0.000      ; 0.981      ;
+; 0.051  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[5]                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 0.981      ;
+; 0.051  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[0]                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 0.981      ;
+; 0.051  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[1]                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 0.981      ;
+; 0.054  ; ireader:ir0|IR_reg[15]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 0.978      ;
+; 0.063  ; ireader:ir0|IR_reg[12]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 0.969      ;
+; 0.063  ; ireader:ir0|IR_reg[15]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 0.969      ;
+; 0.068  ; ireader:ir0|IR_reg[15]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 0.964      ;
+; 0.073  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 0.959      ;
+; 0.084  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 0.948      ;
+; 0.086  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 0.946      ;
+; 0.114  ; ireader:ir0|IR_reg[14]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 0.918      ;
+; 0.114  ; ireader:ir0|IR_reg[14]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 0.918      ;
+; 0.121  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[12]                                           ; clk          ; clk         ; 1.000        ; 0.000      ; 0.911      ;
+; 0.121  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[15]                                           ; clk          ; clk         ; 1.000        ; 0.000      ; 0.911      ;
+; 0.121  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[13]                                           ; clk          ; clk         ; 1.000        ; 0.000      ; 0.911      ;
+; 0.121  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[14]                                           ; clk          ; clk         ; 1.000        ; 0.000      ; 0.911      ;
+; 0.121  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[5]                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 0.911      ;
+; 0.121  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[0]                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 0.911      ;
+; 0.121  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[1]                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 0.911      ;
+; 0.133  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; cont_program:pc0|counter[0]                                      ; clk          ; clk         ; 1.000        ; -0.001     ; 0.898      ;
+; 0.133  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 0.899      ;
+; 0.159  ; ireader:ir0|IR_reg[13]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; clk          ; clk         ; 1.000        ; 0.000      ; 0.873      ;
+; 0.178  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[12]                                           ; clk          ; clk         ; 1.000        ; 0.000      ; 0.854      ;
+; 0.178  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[15]                                           ; clk          ; clk         ; 1.000        ; 0.000      ; 0.854      ;
+; 0.178  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[13]                                           ; clk          ; clk         ; 1.000        ; 0.000      ; 0.854      ;
+; 0.178  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[14]                                           ; clk          ; clk         ; 1.000        ; 0.000      ; 0.854      ;
+; 0.178  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[5]                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 0.854      ;
+; 0.178  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[0]                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 0.854      ;
+; 0.178  ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[1]                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 0.854      ;
++--------+------------------------------------------------------------------+------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                                                                                                            ;
++-------+------------------------------------------------------------------+------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                        ; To Node                                                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------------------------------------+------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; cont_program:pc0|counter[0]                                      ; cont_program:pc0|counter[0]                                      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; cont_program:pc0|counter[1]                                      ; cont_program:pc0|counter[1]                                      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; cont_program:pc0|counter[2]                                      ; cont_program:pc0|counter[2]                                      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; cont_program:pc0|counter[3]                                      ; cont_program:pc0|counter[3]                                      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.237 ; ireader:ir0|IR_reg[9]                                            ; controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF1|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.389      ;
+; 0.238 ; ireader:ir0|IR_reg[10]                                           ; controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF2|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.390      ;
+; 0.238 ; ireader:ir0|IR_reg[11]                                           ; controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF3|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.390      ;
+; 0.306 ; ireader:ir0|IR_reg[8]                                            ; controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF0|q_reg ; clk          ; clk         ; 0.000        ; 0.001      ; 0.459      ;
+; 0.319 ; ireader:ir0|IR_reg[6]                                            ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF6|q_reg      ; clk          ; clk         ; 0.000        ; 0.001      ; 0.472      ;
+; 0.324 ; ireader:ir0|IR_reg[6]                                            ; controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF2|q_reg ; clk          ; clk         ; 0.000        ; 0.001      ; 0.477      ;
+; 0.367 ; cont_program:pc0|counter[2]                                      ; cont_program:pc0|counter[3]                                      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.519      ;
+; 0.380 ; cont_program:pc0|counter[0]                                      ; cont_program:pc0|counter[1]                                      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.532      ;
+; 0.382 ; ireader:ir0|IR_reg[12]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.534      ;
+; 0.382 ; cont_program:pc0|counter[1]                                      ; cont_program:pc0|counter[2]                                      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.534      ;
+; 0.390 ; ireader:ir0|IR_reg[12]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.542      ;
+; 0.390 ; ireader:ir0|IR_reg[12]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.542      ;
+; 0.394 ; ireader:ir0|IR_reg[13]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.546      ;
+; 0.396 ; ireader:ir0|IR_reg[14]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.548      ;
+; 0.419 ; ireader:ir0|IR_reg[3]                                            ; controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF3|q_reg ; clk          ; clk         ; 0.000        ; 0.002      ; 0.573      ;
+; 0.419 ; ireader:ir0|IR_reg[3]                                            ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF3|q_reg      ; clk          ; clk         ; 0.000        ; 0.002      ; 0.573      ;
+; 0.422 ; ireader:ir0|IR_reg[4]                                            ; controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF0|q_reg ; clk          ; clk         ; 0.000        ; 0.002      ; 0.576      ;
+; 0.422 ; ireader:ir0|IR_reg[4]                                            ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF4|q_reg      ; clk          ; clk         ; 0.000        ; 0.002      ; 0.576      ;
+; 0.427 ; ireader:ir0|IR_reg[5]                                            ; controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF1|q_reg ; clk          ; clk         ; 0.000        ; -0.005     ; 0.574      ;
+; 0.427 ; ireader:ir0|IR_reg[5]                                            ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF5|q_reg      ; clk          ; clk         ; 0.000        ; -0.005     ; 0.574      ;
+; 0.428 ; ireader:ir0|IR_reg[0]                                            ; controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF0|q_reg ; clk          ; clk         ; 0.000        ; -0.005     ; 0.575      ;
+; 0.431 ; ireader:ir0|IR_reg[0]                                            ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF0|q_reg      ; clk          ; clk         ; 0.000        ; -0.005     ; 0.578      ;
+; 0.468 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; cont_program:pc0|counter[0]                                      ; clk          ; clk         ; 0.000        ; -0.001     ; 0.619      ;
+; 0.513 ; ireader:ir0|IR_reg[7]                                            ; controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF3|q_reg ; clk          ; clk         ; 0.000        ; 0.003      ; 0.668      ;
+; 0.517 ; ireader:ir0|IR_reg[7]                                            ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF7|q_reg      ; clk          ; clk         ; 0.000        ; 0.003      ; 0.672      ;
+; 0.520 ; ireader:ir0|IR_reg[2]                                            ; controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF2|q_reg ; clk          ; clk         ; 0.000        ; 0.003      ; 0.675      ;
+; 0.520 ; ireader:ir0|IR_reg[1]                                            ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF1|q_reg      ; clk          ; clk         ; 0.000        ; -0.005     ; 0.667      ;
+; 0.521 ; ireader:ir0|IR_reg[2]                                            ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF2|q_reg      ; clk          ; clk         ; 0.000        ; 0.003      ; 0.676      ;
+; 0.521 ; ireader:ir0|IR_reg[15]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.673      ;
+; 0.521 ; ireader:ir0|IR_reg[15]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.673      ;
+; 0.522 ; ireader:ir0|IR_reg[1]                                            ; controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF1|q_reg ; clk          ; clk         ; 0.000        ; -0.005     ; 0.669      ;
+; 0.532 ; cont_program:pc0|counter[0]                                      ; cont_program:pc0|counter[2]                                      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.684      ;
+; 0.543 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.695      ;
+; 0.553 ; cont_program:pc0|counter[1]                                      ; cont_program:pc0|counter[3]                                      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.705      ;
+; 0.558 ; ireader:ir0|IR_reg[13]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.710      ;
+; 0.559 ; ireader:ir0|IR_reg[13]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.711      ;
+; 0.567 ; ireader:ir0|IR_reg[14]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.719      ;
+; 0.569 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.721      ;
+; 0.572 ; ireader:ir0|IR_reg[14]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.724      ;
+; 0.581 ; ireader:ir0|IR_reg[14]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.733      ;
+; 0.622 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.774      ;
+; 0.629 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.781      ;
+; 0.635 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; cont_program:pc0|counter[0]                                      ; clk          ; clk         ; 0.000        ; -0.001     ; 0.786      ;
+; 0.635 ; ireader:ir0|IR_reg[12]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.787      ;
+; 0.663 ; cont_program:pc0|counter[0]                                      ; cont_program:pc0|counter[3]                                      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.815      ;
+; 0.669 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.821      ;
+; 0.683 ; ireader:ir0|IR_reg[15]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.835      ;
+; 0.688 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.840      ;
+; 0.689 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.841      ;
+; 0.691 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; cont_program:pc0|counter[2]                                      ; clk          ; clk         ; 0.000        ; -0.001     ; 0.842      ;
+; 0.692 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.844      ;
+; 0.698 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; cont_program:pc0|counter[1]                                      ; clk          ; clk         ; 0.000        ; -0.001     ; 0.849      ;
+; 0.702 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[12]                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.854      ;
+; 0.702 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[15]                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.854      ;
+; 0.702 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[13]                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.854      ;
+; 0.702 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[14]                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.854      ;
+; 0.702 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[5]                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.854      ;
+; 0.702 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[0]                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.854      ;
+; 0.702 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; ireader:ir0|IR_reg[1]                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.854      ;
+; 0.721 ; ireader:ir0|IR_reg[13]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.873      ;
+; 0.736 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.888      ;
+; 0.737 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.889      ;
+; 0.742 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.894      ;
+; 0.747 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; cont_program:pc0|counter[0]                                      ; clk          ; clk         ; 0.000        ; -0.001     ; 0.898      ;
+; 0.754 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.906      ;
+; 0.755 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; cont_program:pc0|counter[2]                                      ; clk          ; clk         ; 0.000        ; -0.001     ; 0.906      ;
+; 0.759 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[12]                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.911      ;
+; 0.759 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[15]                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.911      ;
+; 0.759 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[13]                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.911      ;
+; 0.759 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[14]                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.911      ;
+; 0.759 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[5]                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.911      ;
+; 0.759 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[0]                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.911      ;
+; 0.759 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; ireader:ir0|IR_reg[1]                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.911      ;
+; 0.761 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; cont_program:pc0|counter[1]                                      ; clk          ; clk         ; 0.000        ; -0.001     ; 0.912      ;
+; 0.767 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; cont_program:pc0|counter[1]                                      ; clk          ; clk         ; 0.000        ; -0.001     ; 0.918      ;
+; 0.784 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.936      ;
+; 0.787 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; cont_program:pc0|counter[2]                                      ; clk          ; clk         ; 0.000        ; -0.001     ; 0.938      ;
+; 0.790 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; cont_program:pc0|counter[3]                                      ; clk          ; clk         ; 0.000        ; -0.001     ; 0.941      ;
+; 0.794 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.946      ;
+; 0.799 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.951      ;
+; 0.826 ; ireader:ir0|IR_reg[15]                                           ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; clk          ; clk         ; 0.000        ; 0.000      ; 0.978      ;
+; 0.829 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[12]                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.981      ;
+; 0.829 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[15]                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.981      ;
+; 0.829 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[13]                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.981      ;
+; 0.829 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[14]                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.981      ;
+; 0.829 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[5]                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.981      ;
+; 0.829 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[0]                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.981      ;
+; 0.829 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; ireader:ir0|IR_reg[1]                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.981      ;
+; 0.836 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[12]                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.988      ;
+; 0.836 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[15]                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.988      ;
+; 0.836 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[13]                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.988      ;
+; 0.836 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[14]                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.988      ;
+; 0.836 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[5]                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.988      ;
+; 0.836 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[0]                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.988      ;
+; 0.836 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; ireader:ir0|IR_reg[1]                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.988      ;
+; 0.846 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; cont_program:pc0|counter[2]                                      ; clk          ; clk         ; 0.000        ; -0.001     ; 0.997      ;
++-------+------------------------------------------------------------------+------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Recovery: 'clk'                                                                                                                                                    ;
++--------+------------------------------------------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                        ; To Node                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; -0.140 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; cont_program:pc0|counter[0] ; clk          ; clk         ; 1.000        ; -0.001     ; 1.171      ;
+; -0.140 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; cont_program:pc0|counter[1] ; clk          ; clk         ; 1.000        ; -0.001     ; 1.171      ;
+; -0.140 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; cont_program:pc0|counter[2] ; clk          ; clk         ; 1.000        ; -0.001     ; 1.171      ;
+; -0.140 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; cont_program:pc0|counter[3] ; clk          ; clk         ; 1.000        ; -0.001     ; 1.171      ;
+; -0.097 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; cont_program:pc0|counter[0] ; clk          ; clk         ; 1.000        ; -0.001     ; 1.128      ;
+; -0.097 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; cont_program:pc0|counter[1] ; clk          ; clk         ; 1.000        ; -0.001     ; 1.128      ;
+; -0.097 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; cont_program:pc0|counter[2] ; clk          ; clk         ; 1.000        ; -0.001     ; 1.128      ;
+; -0.097 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; cont_program:pc0|counter[3] ; clk          ; clk         ; 1.000        ; -0.001     ; 1.128      ;
+; -0.012 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; cont_program:pc0|counter[0] ; clk          ; clk         ; 1.000        ; -0.001     ; 1.043      ;
+; -0.012 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; cont_program:pc0|counter[1] ; clk          ; clk         ; 1.000        ; -0.001     ; 1.043      ;
+; -0.012 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; cont_program:pc0|counter[2] ; clk          ; clk         ; 1.000        ; -0.001     ; 1.043      ;
+; -0.012 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; cont_program:pc0|counter[3] ; clk          ; clk         ; 1.000        ; -0.001     ; 1.043      ;
+; -0.005 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; cont_program:pc0|counter[0] ; clk          ; clk         ; 1.000        ; -0.001     ; 1.036      ;
+; -0.005 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; cont_program:pc0|counter[1] ; clk          ; clk         ; 1.000        ; -0.001     ; 1.036      ;
+; -0.005 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; cont_program:pc0|counter[2] ; clk          ; clk         ; 1.000        ; -0.001     ; 1.036      ;
+; -0.005 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; cont_program:pc0|counter[3] ; clk          ; clk         ; 1.000        ; -0.001     ; 1.036      ;
++--------+------------------------------------------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Removal: 'clk'                                                                                                                                                    ;
++-------+------------------------------------------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                        ; To Node                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; 0.885 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; cont_program:pc0|counter[0] ; clk          ; clk         ; 0.000        ; -0.001     ; 1.036      ;
+; 0.885 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; cont_program:pc0|counter[1] ; clk          ; clk         ; 0.000        ; -0.001     ; 1.036      ;
+; 0.885 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; cont_program:pc0|counter[2] ; clk          ; clk         ; 0.000        ; -0.001     ; 1.036      ;
+; 0.885 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; cont_program:pc0|counter[3] ; clk          ; clk         ; 0.000        ; -0.001     ; 1.036      ;
+; 0.892 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; cont_program:pc0|counter[0] ; clk          ; clk         ; 0.000        ; -0.001     ; 1.043      ;
+; 0.892 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; cont_program:pc0|counter[1] ; clk          ; clk         ; 0.000        ; -0.001     ; 1.043      ;
+; 0.892 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; cont_program:pc0|counter[2] ; clk          ; clk         ; 0.000        ; -0.001     ; 1.043      ;
+; 0.892 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; cont_program:pc0|counter[3] ; clk          ; clk         ; 0.000        ; -0.001     ; 1.043      ;
+; 0.977 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; cont_program:pc0|counter[0] ; clk          ; clk         ; 0.000        ; -0.001     ; 1.128      ;
+; 0.977 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; cont_program:pc0|counter[1] ; clk          ; clk         ; 0.000        ; -0.001     ; 1.128      ;
+; 0.977 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; cont_program:pc0|counter[2] ; clk          ; clk         ; 0.000        ; -0.001     ; 1.128      ;
+; 0.977 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; cont_program:pc0|counter[3] ; clk          ; clk         ; 0.000        ; -0.001     ; 1.128      ;
+; 1.020 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; cont_program:pc0|counter[0] ; clk          ; clk         ; 0.000        ; -0.001     ; 1.171      ;
+; 1.020 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; cont_program:pc0|counter[1] ; clk          ; clk         ; 0.000        ; -0.001     ; 1.171      ;
+; 1.020 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; cont_program:pc0|counter[2] ; clk          ; clk         ; 0.000        ; -0.001     ; 1.171      ;
+; 1.020 ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; cont_program:pc0|counter[3] ; clk          ; clk         ; 0.000        ; -0.001     ; 1.171      ;
++-------+------------------------------------------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                                                             ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                           ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; cont_program:pc0|counter[0]                                      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; cont_program:pc0|counter[0]                                      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; cont_program:pc0|counter[1]                                      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; cont_program:pc0|counter[1]                                      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; cont_program:pc0|counter[2]                                      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; cont_program:pc0|counter[2]                                      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; cont_program:pc0|counter[3]                                      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; cont_program:pc0|counter[3]                                      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF0|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF0|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF1|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF1|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF2|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF2|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF3|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF3|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF0|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF0|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF1|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF1|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF2|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF2|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF3|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF3|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF0|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF0|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF1|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF1|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF2|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF2|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF3|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF3|q_reg ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF0|q_reg      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF0|q_reg      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF1|q_reg      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF1|q_reg      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF2|q_reg      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF2|q_reg      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF3|q_reg      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF3|q_reg      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF4|q_reg      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF4|q_reg      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF5|q_reg      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF5|q_reg      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF6|q_reg      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF6|q_reg      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF7|q_reg      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF7|q_reg      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ireader:ir0|IR_reg[0]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ireader:ir0|IR_reg[0]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ireader:ir0|IR_reg[10]                                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ireader:ir0|IR_reg[10]                                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ireader:ir0|IR_reg[11]                                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ireader:ir0|IR_reg[11]                                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ireader:ir0|IR_reg[12]                                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ireader:ir0|IR_reg[12]                                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ireader:ir0|IR_reg[13]                                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ireader:ir0|IR_reg[13]                                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ireader:ir0|IR_reg[14]                                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ireader:ir0|IR_reg[14]                                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ireader:ir0|IR_reg[15]                                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ireader:ir0|IR_reg[15]                                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ireader:ir0|IR_reg[1]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ireader:ir0|IR_reg[1]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ireader:ir0|IR_reg[2]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ireader:ir0|IR_reg[2]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ireader:ir0|IR_reg[3]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ireader:ir0|IR_reg[3]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ireader:ir0|IR_reg[4]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ireader:ir0|IR_reg[4]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ireader:ir0|IR_reg[5]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ireader:ir0|IR_reg[5]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ireader:ir0|IR_reg[6]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ireader:ir0|IR_reg[6]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ireader:ir0|IR_reg[7]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ireader:ir0|IR_reg[7]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ireader:ir0|IR_reg[8]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ireader:ir0|IR_reg[8]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ireader:ir0|IR_reg[9]                                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ireader:ir0|IR_reg[9]                                            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                                                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                                                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]                                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]                                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk                                               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk                                               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ctrl0|ctr0|reg|FF0|q_reg|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ctrl0|ctr0|reg|FF0|q_reg|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ctrl0|ctr0|reg|FF1|q_reg|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ctrl0|ctr0|reg|FF1|q_reg|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ctrl0|ctr0|reg|FF2|q_reg|clk                                     ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Times                                                               ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; comp_ab       ; clk        ; 2.443 ; 2.443 ; Rise       ; clk             ;
+; data_rom[*]   ; clk        ; 2.022 ; 2.022 ; Rise       ; clk             ;
+;  data_rom[0]  ; clk        ; 1.817 ; 1.817 ; Rise       ; clk             ;
+;  data_rom[1]  ; clk        ; 1.803 ; 1.803 ; Rise       ; clk             ;
+;  data_rom[2]  ; clk        ; 1.716 ; 1.716 ; Rise       ; clk             ;
+;  data_rom[3]  ; clk        ; 1.706 ; 1.706 ; Rise       ; clk             ;
+;  data_rom[4]  ; clk        ; 1.953 ; 1.953 ; Rise       ; clk             ;
+;  data_rom[5]  ; clk        ; 1.897 ; 1.897 ; Rise       ; clk             ;
+;  data_rom[6]  ; clk        ; 1.773 ; 1.773 ; Rise       ; clk             ;
+;  data_rom[7]  ; clk        ; 1.811 ; 1.811 ; Rise       ; clk             ;
+;  data_rom[8]  ; clk        ; 1.896 ; 1.896 ; Rise       ; clk             ;
+;  data_rom[9]  ; clk        ; 1.890 ; 1.890 ; Rise       ; clk             ;
+;  data_rom[10] ; clk        ; 1.772 ; 1.772 ; Rise       ; clk             ;
+;  data_rom[11] ; clk        ; 1.944 ; 1.944 ; Rise       ; clk             ;
+;  data_rom[12] ; clk        ; 1.920 ; 1.920 ; Rise       ; clk             ;
+;  data_rom[13] ; clk        ; 2.022 ; 2.022 ; Rise       ; clk             ;
+;  data_rom[14] ; clk        ; 1.794 ; 1.794 ; Rise       ; clk             ;
+;  data_rom[15] ; clk        ; 1.823 ; 1.823 ; Rise       ; clk             ;
+; rf_rp_zero    ; clk        ; 2.373 ; 2.373 ; Rise       ; clk             ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; comp_ab       ; clk        ; -2.140 ; -2.140 ; Rise       ; clk             ;
+; data_rom[*]   ; clk        ; -1.586 ; -1.586 ; Rise       ; clk             ;
+;  data_rom[0]  ; clk        ; -1.697 ; -1.697 ; Rise       ; clk             ;
+;  data_rom[1]  ; clk        ; -1.683 ; -1.683 ; Rise       ; clk             ;
+;  data_rom[2]  ; clk        ; -1.596 ; -1.596 ; Rise       ; clk             ;
+;  data_rom[3]  ; clk        ; -1.586 ; -1.586 ; Rise       ; clk             ;
+;  data_rom[4]  ; clk        ; -1.833 ; -1.833 ; Rise       ; clk             ;
+;  data_rom[5]  ; clk        ; -1.777 ; -1.777 ; Rise       ; clk             ;
+;  data_rom[6]  ; clk        ; -1.653 ; -1.653 ; Rise       ; clk             ;
+;  data_rom[7]  ; clk        ; -1.691 ; -1.691 ; Rise       ; clk             ;
+;  data_rom[8]  ; clk        ; -1.776 ; -1.776 ; Rise       ; clk             ;
+;  data_rom[9]  ; clk        ; -1.770 ; -1.770 ; Rise       ; clk             ;
+;  data_rom[10] ; clk        ; -1.652 ; -1.652 ; Rise       ; clk             ;
+;  data_rom[11] ; clk        ; -1.824 ; -1.824 ; Rise       ; clk             ;
+;  data_rom[12] ; clk        ; -1.800 ; -1.800 ; Rise       ; clk             ;
+;  data_rom[13] ; clk        ; -1.902 ; -1.902 ; Rise       ; clk             ;
+;  data_rom[14] ; clk        ; -1.674 ; -1.674 ; Rise       ; clk             ;
+;  data_rom[15] ; clk        ; -1.703 ; -1.703 ; Rise       ; clk             ;
+; rf_rp_zero    ; clk        ; -1.766 ; -1.766 ; Rise       ; clk             ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; alu_s0         ; clk        ; 4.371 ; 4.371 ; Rise       ; clk             ;
+; d_addr[*]      ; clk        ; 3.964 ; 3.964 ; Rise       ; clk             ;
+;  d_addr[0]     ; clk        ; 3.962 ; 3.962 ; Rise       ; clk             ;
+;  d_addr[1]     ; clk        ; 3.919 ; 3.919 ; Rise       ; clk             ;
+;  d_addr[2]     ; clk        ; 3.964 ; 3.964 ; Rise       ; clk             ;
+;  d_addr[3]     ; clk        ; 3.776 ; 3.776 ; Rise       ; clk             ;
+;  d_addr[4]     ; clk        ; 3.860 ; 3.860 ; Rise       ; clk             ;
+;  d_addr[5]     ; clk        ; 3.853 ; 3.853 ; Rise       ; clk             ;
+;  d_addr[6]     ; clk        ; 3.964 ; 3.964 ; Rise       ; clk             ;
+;  d_addr[7]     ; clk        ; 3.869 ; 3.869 ; Rise       ; clk             ;
+; d_rd           ; clk        ; 4.518 ; 4.518 ; Rise       ; clk             ;
+; d_wr           ; clk        ; 4.207 ; 4.207 ; Rise       ; clk             ;
+; pc_addr[*]     ; clk        ; 3.865 ; 3.865 ; Rise       ; clk             ;
+;  pc_addr[0]    ; clk        ; 3.865 ; 3.865 ; Rise       ; clk             ;
+;  pc_addr[1]    ; clk        ; 3.619 ; 3.619 ; Rise       ; clk             ;
+;  pc_addr[2]    ; clk        ; 3.648 ; 3.648 ; Rise       ; clk             ;
+;  pc_addr[3]    ; clk        ; 3.817 ; 3.817 ; Rise       ; clk             ;
+; rd             ; clk        ; 4.246 ; 4.246 ; Rise       ; clk             ;
+; rf_rp_addr[*]  ; clk        ; 3.817 ; 3.817 ; Rise       ; clk             ;
+;  rf_rp_addr[0] ; clk        ; 3.644 ; 3.644 ; Rise       ; clk             ;
+;  rf_rp_addr[1] ; clk        ; 3.753 ; 3.753 ; Rise       ; clk             ;
+;  rf_rp_addr[2] ; clk        ; 3.817 ; 3.817 ; Rise       ; clk             ;
+;  rf_rp_addr[3] ; clk        ; 3.625 ; 3.625 ; Rise       ; clk             ;
+; rf_rp_rd       ; clk        ; 4.289 ; 4.289 ; Rise       ; clk             ;
+; rf_rq_addr[*]  ; clk        ; 3.965 ; 3.965 ; Rise       ; clk             ;
+;  rf_rq_addr[0] ; clk        ; 3.610 ; 3.610 ; Rise       ; clk             ;
+;  rf_rq_addr[1] ; clk        ; 3.732 ; 3.732 ; Rise       ; clk             ;
+;  rf_rq_addr[2] ; clk        ; 3.631 ; 3.631 ; Rise       ; clk             ;
+;  rf_rq_addr[3] ; clk        ; 3.965 ; 3.965 ; Rise       ; clk             ;
+; rf_rq_rd       ; clk        ; 4.394 ; 4.394 ; Rise       ; clk             ;
+; rf_s0          ; clk        ; 4.518 ; 4.518 ; Rise       ; clk             ;
+; rf_s1          ; clk        ; 4.178 ; 4.178 ; Rise       ; clk             ;
+; rf_w_addr[*]   ; clk        ; 3.744 ; 3.744 ; Rise       ; clk             ;
+;  rf_w_addr[0]  ; clk        ; 3.624 ; 3.624 ; Rise       ; clk             ;
+;  rf_w_addr[1]  ; clk        ; 3.744 ; 3.744 ; Rise       ; clk             ;
+;  rf_w_addr[2]  ; clk        ; 3.624 ; 3.624 ; Rise       ; clk             ;
+;  rf_w_addr[3]  ; clk        ; 3.622 ; 3.622 ; Rise       ; clk             ;
+; rf_w_data[*]   ; clk        ; 3.984 ; 3.984 ; Rise       ; clk             ;
+;  rf_w_data[0]  ; clk        ; 3.962 ; 3.962 ; Rise       ; clk             ;
+;  rf_w_data[1]  ; clk        ; 3.939 ; 3.939 ; Rise       ; clk             ;
+;  rf_w_data[2]  ; clk        ; 3.984 ; 3.984 ; Rise       ; clk             ;
+;  rf_w_data[3]  ; clk        ; 3.766 ; 3.766 ; Rise       ; clk             ;
+;  rf_w_data[4]  ; clk        ; 3.860 ; 3.860 ; Rise       ; clk             ;
+;  rf_w_data[5]  ; clk        ; 3.853 ; 3.853 ; Rise       ; clk             ;
+;  rf_w_data[6]  ; clk        ; 3.964 ; 3.964 ; Rise       ; clk             ;
+;  rf_w_data[7]  ; clk        ; 3.869 ; 3.869 ; Rise       ; clk             ;
+; rf_w_wr        ; clk        ; 4.438 ; 4.438 ; Rise       ; clk             ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; alu_s0         ; clk        ; 4.121 ; 4.121 ; Rise       ; clk             ;
+; d_addr[*]      ; clk        ; 3.776 ; 3.776 ; Rise       ; clk             ;
+;  d_addr[0]     ; clk        ; 3.962 ; 3.962 ; Rise       ; clk             ;
+;  d_addr[1]     ; clk        ; 3.919 ; 3.919 ; Rise       ; clk             ;
+;  d_addr[2]     ; clk        ; 3.964 ; 3.964 ; Rise       ; clk             ;
+;  d_addr[3]     ; clk        ; 3.776 ; 3.776 ; Rise       ; clk             ;
+;  d_addr[4]     ; clk        ; 3.860 ; 3.860 ; Rise       ; clk             ;
+;  d_addr[5]     ; clk        ; 3.853 ; 3.853 ; Rise       ; clk             ;
+;  d_addr[6]     ; clk        ; 3.964 ; 3.964 ; Rise       ; clk             ;
+;  d_addr[7]     ; clk        ; 3.869 ; 3.869 ; Rise       ; clk             ;
+; d_rd           ; clk        ; 4.271 ; 4.271 ; Rise       ; clk             ;
+; d_wr           ; clk        ; 3.968 ; 3.968 ; Rise       ; clk             ;
+; pc_addr[*]     ; clk        ; 3.619 ; 3.619 ; Rise       ; clk             ;
+;  pc_addr[0]    ; clk        ; 3.865 ; 3.865 ; Rise       ; clk             ;
+;  pc_addr[1]    ; clk        ; 3.619 ; 3.619 ; Rise       ; clk             ;
+;  pc_addr[2]    ; clk        ; 3.648 ; 3.648 ; Rise       ; clk             ;
+;  pc_addr[3]    ; clk        ; 3.817 ; 3.817 ; Rise       ; clk             ;
+; rd             ; clk        ; 4.112 ; 4.112 ; Rise       ; clk             ;
+; rf_rp_addr[*]  ; clk        ; 3.625 ; 3.625 ; Rise       ; clk             ;
+;  rf_rp_addr[0] ; clk        ; 3.644 ; 3.644 ; Rise       ; clk             ;
+;  rf_rp_addr[1] ; clk        ; 3.753 ; 3.753 ; Rise       ; clk             ;
+;  rf_rp_addr[2] ; clk        ; 3.817 ; 3.817 ; Rise       ; clk             ;
+;  rf_rp_addr[3] ; clk        ; 3.625 ; 3.625 ; Rise       ; clk             ;
+; rf_rp_rd       ; clk        ; 4.049 ; 4.049 ; Rise       ; clk             ;
+; rf_rq_addr[*]  ; clk        ; 3.610 ; 3.610 ; Rise       ; clk             ;
+;  rf_rq_addr[0] ; clk        ; 3.610 ; 3.610 ; Rise       ; clk             ;
+;  rf_rq_addr[1] ; clk        ; 3.732 ; 3.732 ; Rise       ; clk             ;
+;  rf_rq_addr[2] ; clk        ; 3.631 ; 3.631 ; Rise       ; clk             ;
+;  rf_rq_addr[3] ; clk        ; 3.965 ; 3.965 ; Rise       ; clk             ;
+; rf_rq_rd       ; clk        ; 4.155 ; 4.155 ; Rise       ; clk             ;
+; rf_s0          ; clk        ; 4.271 ; 4.271 ; Rise       ; clk             ;
+; rf_s1          ; clk        ; 3.939 ; 3.939 ; Rise       ; clk             ;
+; rf_w_addr[*]   ; clk        ; 3.622 ; 3.622 ; Rise       ; clk             ;
+;  rf_w_addr[0]  ; clk        ; 3.624 ; 3.624 ; Rise       ; clk             ;
+;  rf_w_addr[1]  ; clk        ; 3.744 ; 3.744 ; Rise       ; clk             ;
+;  rf_w_addr[2]  ; clk        ; 3.624 ; 3.624 ; Rise       ; clk             ;
+;  rf_w_addr[3]  ; clk        ; 3.622 ; 3.622 ; Rise       ; clk             ;
+; rf_w_data[*]   ; clk        ; 3.766 ; 3.766 ; Rise       ; clk             ;
+;  rf_w_data[0]  ; clk        ; 3.962 ; 3.962 ; Rise       ; clk             ;
+;  rf_w_data[1]  ; clk        ; 3.939 ; 3.939 ; Rise       ; clk             ;
+;  rf_w_data[2]  ; clk        ; 3.984 ; 3.984 ; Rise       ; clk             ;
+;  rf_w_data[3]  ; clk        ; 3.766 ; 3.766 ; Rise       ; clk             ;
+;  rf_w_data[4]  ; clk        ; 3.860 ; 3.860 ; Rise       ; clk             ;
+;  rf_w_data[5]  ; clk        ; 3.853 ; 3.853 ; Rise       ; clk             ;
+;  rf_w_data[6]  ; clk        ; 3.964 ; 3.964 ; Rise       ; clk             ;
+;  rf_w_data[7]  ; clk        ; 3.869 ; 3.869 ; Rise       ; clk             ;
+; rf_w_wr        ; clk        ; 4.193 ; 4.193 ; Rise       ; clk             ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -1.592  ; 0.215 ; -1.178   ; 0.885   ; -1.380              ;
+;  clk             ; -1.592  ; 0.215 ; -1.178   ; 0.885   ; -1.380              ;
+; Design-wide TNS  ; -34.75  ; 0.0   ; -4.712   ; 0.0     ; -45.38              ;
+;  clk             ; -34.750 ; 0.000 ; -4.712   ; 0.000   ; -45.380             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Times                                                               ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; comp_ab       ; clk        ; 4.814 ; 4.814 ; Rise       ; clk             ;
+; data_rom[*]   ; clk        ; 3.787 ; 3.787 ; Rise       ; clk             ;
+;  data_rom[0]  ; clk        ; 3.324 ; 3.324 ; Rise       ; clk             ;
+;  data_rom[1]  ; clk        ; 3.285 ; 3.285 ; Rise       ; clk             ;
+;  data_rom[2]  ; clk        ; 3.168 ; 3.168 ; Rise       ; clk             ;
+;  data_rom[3]  ; clk        ; 3.152 ; 3.152 ; Rise       ; clk             ;
+;  data_rom[4]  ; clk        ; 3.679 ; 3.679 ; Rise       ; clk             ;
+;  data_rom[5]  ; clk        ; 3.525 ; 3.525 ; Rise       ; clk             ;
+;  data_rom[6]  ; clk        ; 3.342 ; 3.342 ; Rise       ; clk             ;
+;  data_rom[7]  ; clk        ; 3.386 ; 3.386 ; Rise       ; clk             ;
+;  data_rom[8]  ; clk        ; 3.522 ; 3.522 ; Rise       ; clk             ;
+;  data_rom[9]  ; clk        ; 3.587 ; 3.587 ; Rise       ; clk             ;
+;  data_rom[10] ; clk        ; 3.348 ; 3.348 ; Rise       ; clk             ;
+;  data_rom[11] ; clk        ; 3.663 ; 3.663 ; Rise       ; clk             ;
+;  data_rom[12] ; clk        ; 3.571 ; 3.571 ; Rise       ; clk             ;
+;  data_rom[13] ; clk        ; 3.787 ; 3.787 ; Rise       ; clk             ;
+;  data_rom[14] ; clk        ; 3.300 ; 3.300 ; Rise       ; clk             ;
+;  data_rom[15] ; clk        ; 3.333 ; 3.333 ; Rise       ; clk             ;
+; rf_rp_zero    ; clk        ; 4.660 ; 4.660 ; Rise       ; clk             ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; comp_ab       ; clk        ; -2.140 ; -2.140 ; Rise       ; clk             ;
+; data_rom[*]   ; clk        ; -1.586 ; -1.586 ; Rise       ; clk             ;
+;  data_rom[0]  ; clk        ; -1.697 ; -1.697 ; Rise       ; clk             ;
+;  data_rom[1]  ; clk        ; -1.683 ; -1.683 ; Rise       ; clk             ;
+;  data_rom[2]  ; clk        ; -1.596 ; -1.596 ; Rise       ; clk             ;
+;  data_rom[3]  ; clk        ; -1.586 ; -1.586 ; Rise       ; clk             ;
+;  data_rom[4]  ; clk        ; -1.833 ; -1.833 ; Rise       ; clk             ;
+;  data_rom[5]  ; clk        ; -1.777 ; -1.777 ; Rise       ; clk             ;
+;  data_rom[6]  ; clk        ; -1.653 ; -1.653 ; Rise       ; clk             ;
+;  data_rom[7]  ; clk        ; -1.691 ; -1.691 ; Rise       ; clk             ;
+;  data_rom[8]  ; clk        ; -1.776 ; -1.776 ; Rise       ; clk             ;
+;  data_rom[9]  ; clk        ; -1.770 ; -1.770 ; Rise       ; clk             ;
+;  data_rom[10] ; clk        ; -1.652 ; -1.652 ; Rise       ; clk             ;
+;  data_rom[11] ; clk        ; -1.824 ; -1.824 ; Rise       ; clk             ;
+;  data_rom[12] ; clk        ; -1.800 ; -1.800 ; Rise       ; clk             ;
+;  data_rom[13] ; clk        ; -1.902 ; -1.902 ; Rise       ; clk             ;
+;  data_rom[14] ; clk        ; -1.674 ; -1.674 ; Rise       ; clk             ;
+;  data_rom[15] ; clk        ; -1.703 ; -1.703 ; Rise       ; clk             ;
+; rf_rp_zero    ; clk        ; -1.766 ; -1.766 ; Rise       ; clk             ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; alu_s0         ; clk        ; 7.982 ; 7.982 ; Rise       ; clk             ;
+; d_addr[*]      ; clk        ; 7.065 ; 7.065 ; Rise       ; clk             ;
+;  d_addr[0]     ; clk        ; 7.059 ; 7.059 ; Rise       ; clk             ;
+;  d_addr[1]     ; clk        ; 7.015 ; 7.015 ; Rise       ; clk             ;
+;  d_addr[2]     ; clk        ; 7.065 ; 7.065 ; Rise       ; clk             ;
+;  d_addr[3]     ; clk        ; 6.639 ; 6.639 ; Rise       ; clk             ;
+;  d_addr[4]     ; clk        ; 6.831 ; 6.831 ; Rise       ; clk             ;
+;  d_addr[5]     ; clk        ; 6.833 ; 6.833 ; Rise       ; clk             ;
+;  d_addr[6]     ; clk        ; 7.057 ; 7.057 ; Rise       ; clk             ;
+;  d_addr[7]     ; clk        ; 6.836 ; 6.836 ; Rise       ; clk             ;
+; d_rd           ; clk        ; 8.262 ; 8.262 ; Rise       ; clk             ;
+; d_wr           ; clk        ; 7.604 ; 7.604 ; Rise       ; clk             ;
+; pc_addr[*]     ; clk        ; 6.833 ; 6.833 ; Rise       ; clk             ;
+;  pc_addr[0]    ; clk        ; 6.833 ; 6.833 ; Rise       ; clk             ;
+;  pc_addr[1]    ; clk        ; 6.335 ; 6.335 ; Rise       ; clk             ;
+;  pc_addr[2]    ; clk        ; 6.362 ; 6.362 ; Rise       ; clk             ;
+;  pc_addr[3]    ; clk        ; 6.782 ; 6.782 ; Rise       ; clk             ;
+; rd             ; clk        ; 7.763 ; 7.763 ; Rise       ; clk             ;
+; rf_rp_addr[*]  ; clk        ; 6.777 ; 6.777 ; Rise       ; clk             ;
+;  rf_rp_addr[0] ; clk        ; 6.355 ; 6.355 ; Rise       ; clk             ;
+;  rf_rp_addr[1] ; clk        ; 6.600 ; 6.600 ; Rise       ; clk             ;
+;  rf_rp_addr[2] ; clk        ; 6.777 ; 6.777 ; Rise       ; clk             ;
+;  rf_rp_addr[3] ; clk        ; 6.335 ; 6.335 ; Rise       ; clk             ;
+; rf_rp_rd       ; clk        ; 7.818 ; 7.818 ; Rise       ; clk             ;
+; rf_rq_addr[*]  ; clk        ; 7.058 ; 7.058 ; Rise       ; clk             ;
+;  rf_rq_addr[0] ; clk        ; 6.320 ; 6.320 ; Rise       ; clk             ;
+;  rf_rq_addr[1] ; clk        ; 6.571 ; 6.571 ; Rise       ; clk             ;
+;  rf_rq_addr[2] ; clk        ; 6.346 ; 6.346 ; Rise       ; clk             ;
+;  rf_rq_addr[3] ; clk        ; 7.058 ; 7.058 ; Rise       ; clk             ;
+; rf_rq_rd       ; clk        ; 8.013 ; 8.013 ; Rise       ; clk             ;
+; rf_s0          ; clk        ; 8.262 ; 8.262 ; Rise       ; clk             ;
+; rf_s1          ; clk        ; 7.535 ; 7.535 ; Rise       ; clk             ;
+; rf_w_addr[*]   ; clk        ; 6.581 ; 6.581 ; Rise       ; clk             ;
+;  rf_w_addr[0]  ; clk        ; 6.335 ; 6.335 ; Rise       ; clk             ;
+;  rf_w_addr[1]  ; clk        ; 6.581 ; 6.581 ; Rise       ; clk             ;
+;  rf_w_addr[2]  ; clk        ; 6.338 ; 6.338 ; Rise       ; clk             ;
+;  rf_w_addr[3]  ; clk        ; 6.334 ; 6.334 ; Rise       ; clk             ;
+; rf_w_data[*]   ; clk        ; 7.085 ; 7.085 ; Rise       ; clk             ;
+;  rf_w_data[0]  ; clk        ; 7.059 ; 7.059 ; Rise       ; clk             ;
+;  rf_w_data[1]  ; clk        ; 7.035 ; 7.035 ; Rise       ; clk             ;
+;  rf_w_data[2]  ; clk        ; 7.085 ; 7.085 ; Rise       ; clk             ;
+;  rf_w_data[3]  ; clk        ; 6.629 ; 6.629 ; Rise       ; clk             ;
+;  rf_w_data[4]  ; clk        ; 6.831 ; 6.831 ; Rise       ; clk             ;
+;  rf_w_data[5]  ; clk        ; 6.833 ; 6.833 ; Rise       ; clk             ;
+;  rf_w_data[6]  ; clk        ; 7.057 ; 7.057 ; Rise       ; clk             ;
+;  rf_w_data[7]  ; clk        ; 6.836 ; 6.836 ; Rise       ; clk             ;
+; rf_w_wr        ; clk        ; 8.049 ; 8.049 ; Rise       ; clk             ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; alu_s0         ; clk        ; 4.121 ; 4.121 ; Rise       ; clk             ;
+; d_addr[*]      ; clk        ; 3.776 ; 3.776 ; Rise       ; clk             ;
+;  d_addr[0]     ; clk        ; 3.962 ; 3.962 ; Rise       ; clk             ;
+;  d_addr[1]     ; clk        ; 3.919 ; 3.919 ; Rise       ; clk             ;
+;  d_addr[2]     ; clk        ; 3.964 ; 3.964 ; Rise       ; clk             ;
+;  d_addr[3]     ; clk        ; 3.776 ; 3.776 ; Rise       ; clk             ;
+;  d_addr[4]     ; clk        ; 3.860 ; 3.860 ; Rise       ; clk             ;
+;  d_addr[5]     ; clk        ; 3.853 ; 3.853 ; Rise       ; clk             ;
+;  d_addr[6]     ; clk        ; 3.964 ; 3.964 ; Rise       ; clk             ;
+;  d_addr[7]     ; clk        ; 3.869 ; 3.869 ; Rise       ; clk             ;
+; d_rd           ; clk        ; 4.271 ; 4.271 ; Rise       ; clk             ;
+; d_wr           ; clk        ; 3.968 ; 3.968 ; Rise       ; clk             ;
+; pc_addr[*]     ; clk        ; 3.619 ; 3.619 ; Rise       ; clk             ;
+;  pc_addr[0]    ; clk        ; 3.865 ; 3.865 ; Rise       ; clk             ;
+;  pc_addr[1]    ; clk        ; 3.619 ; 3.619 ; Rise       ; clk             ;
+;  pc_addr[2]    ; clk        ; 3.648 ; 3.648 ; Rise       ; clk             ;
+;  pc_addr[3]    ; clk        ; 3.817 ; 3.817 ; Rise       ; clk             ;
+; rd             ; clk        ; 4.112 ; 4.112 ; Rise       ; clk             ;
+; rf_rp_addr[*]  ; clk        ; 3.625 ; 3.625 ; Rise       ; clk             ;
+;  rf_rp_addr[0] ; clk        ; 3.644 ; 3.644 ; Rise       ; clk             ;
+;  rf_rp_addr[1] ; clk        ; 3.753 ; 3.753 ; Rise       ; clk             ;
+;  rf_rp_addr[2] ; clk        ; 3.817 ; 3.817 ; Rise       ; clk             ;
+;  rf_rp_addr[3] ; clk        ; 3.625 ; 3.625 ; Rise       ; clk             ;
+; rf_rp_rd       ; clk        ; 4.049 ; 4.049 ; Rise       ; clk             ;
+; rf_rq_addr[*]  ; clk        ; 3.610 ; 3.610 ; Rise       ; clk             ;
+;  rf_rq_addr[0] ; clk        ; 3.610 ; 3.610 ; Rise       ; clk             ;
+;  rf_rq_addr[1] ; clk        ; 3.732 ; 3.732 ; Rise       ; clk             ;
+;  rf_rq_addr[2] ; clk        ; 3.631 ; 3.631 ; Rise       ; clk             ;
+;  rf_rq_addr[3] ; clk        ; 3.965 ; 3.965 ; Rise       ; clk             ;
+; rf_rq_rd       ; clk        ; 4.155 ; 4.155 ; Rise       ; clk             ;
+; rf_s0          ; clk        ; 4.271 ; 4.271 ; Rise       ; clk             ;
+; rf_s1          ; clk        ; 3.939 ; 3.939 ; Rise       ; clk             ;
+; rf_w_addr[*]   ; clk        ; 3.622 ; 3.622 ; Rise       ; clk             ;
+;  rf_w_addr[0]  ; clk        ; 3.624 ; 3.624 ; Rise       ; clk             ;
+;  rf_w_addr[1]  ; clk        ; 3.744 ; 3.744 ; Rise       ; clk             ;
+;  rf_w_addr[2]  ; clk        ; 3.624 ; 3.624 ; Rise       ; clk             ;
+;  rf_w_addr[3]  ; clk        ; 3.622 ; 3.622 ; Rise       ; clk             ;
+; rf_w_data[*]   ; clk        ; 3.766 ; 3.766 ; Rise       ; clk             ;
+;  rf_w_data[0]  ; clk        ; 3.962 ; 3.962 ; Rise       ; clk             ;
+;  rf_w_data[1]  ; clk        ; 3.939 ; 3.939 ; Rise       ; clk             ;
+;  rf_w_data[2]  ; clk        ; 3.984 ; 3.984 ; Rise       ; clk             ;
+;  rf_w_data[3]  ; clk        ; 3.766 ; 3.766 ; Rise       ; clk             ;
+;  rf_w_data[4]  ; clk        ; 3.860 ; 3.860 ; Rise       ; clk             ;
+;  rf_w_data[5]  ; clk        ; 3.853 ; 3.853 ; Rise       ; clk             ;
+;  rf_w_data[6]  ; clk        ; 3.964 ; 3.964 ; Rise       ; clk             ;
+;  rf_w_data[7]  ; clk        ; 3.869 ; 3.869 ; Rise       ; clk             ;
+; rf_w_wr        ; clk        ; 4.193 ; 4.193 ; Rise       ; clk             ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 203      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 203      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Recovery Transfers                                                ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 16       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Removal Transfers                                                 ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 16       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 18    ; 18   ;
+; Unconstrained Input Port Paths  ; 24    ; 24   ;
+; Unconstrained Output Ports      ; 41    ; 41   ;
+; Unconstrained Output Port Paths ; 68    ; 68   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Jul 19 05:44:47 2023
+Info: Command: quartus_sta unid_control -c unid_control
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'unid_control.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.592
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.592       -34.750 clk 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 clk 
+Info (332146): Worst-case recovery slack is -1.178
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.178        -4.712 clk 
+Info (332146): Worst-case removal slack is 1.706
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     1.706         0.000 clk 
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -45.380 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.235
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.235        -2.808 clk 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 clk 
+Info (332146): Worst-case recovery slack is -0.140
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.140        -0.560 clk 
+Info (332146): Worst-case removal slack is 0.885
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.885         0.000 clk 
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -45.380 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4552 megabytes
+    Info: Processing ended: Wed Jul 19 05:44:48 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

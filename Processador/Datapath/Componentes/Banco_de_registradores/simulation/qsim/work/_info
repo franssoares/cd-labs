@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1\Processador\Datapath\Componentes\Banco_de_registradores\simulation\qsim
+vRF_16x16
+Z1 I74:ci=^R1h?jH^oW;8dLE1
+Z2 VhO_dVNJ6C84l7Q0U]Q1bZ2
+Z3 dC:\altera\13.0sp1\Processador\Datapath\Componentes\Banco_de_registradores\simulation\qsim
+Z4 w1689516773
+Z5 8RF_16x16.vo
+Z6 FRF_16x16.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 n@r@f_16x16
+!i10b 1
+Z10 !s100 NEZf?TKDA>O[1MV4Hd6NS3
+!s85 0
+Z11 !s108 1689516774.698000
+Z12 !s107 RF_16x16.vo|
+Z13 !s90 -work|work|RF_16x16.vo|
+!s101 -O0
+vRF_16x16_vlg_check_tst
+!i10b 1
+!s100 DaC0D87EWFWQYFgQBjj<72
+IRz`gDLj9fG@0Jf1Z7LDbc0
+V=>D6`=_WMSFfk2_z<f_dI3
+R3
+R4
+Z14 8RF_16x16.vt
+Z15 FRF_16x16.vt
+L0 71
+R7
+r1
+!s85 0
+31
+Z16 !s108 1689516774.826000
+Z17 !s107 RF_16x16.vt|
+Z18 !s90 -work|work|RF_16x16.vt|
+!s101 -O0
+R8
+n@r@f_16x16_vlg_check_tst
+vRF_16x16_vlg_sample_tst
+!i10b 1
+!s100 CWdD[[FIY`Z>jkfVEDf5L1
+IHnNFL];694dg>GUATCWeC3
+V>7JkLnCo:?>X_a4YeALBQ3
+R3
+R4
+R14
+R15
+L0 29
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
+n@r@f_16x16_vlg_sample_tst
+vRF_16x16_vlg_vec_tst
+!i10b 1
+!s100 PH8V@P@@caZ<4GW2RJz=[1
+IbjaZEdblf3BeGOOV:^OJN0
+VLz:4mL^;CKDCAT125de7P3
+R3
+R4
+R14
+R15
+L0 731
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
+n@r@f_16x16_vlg_vec_tst

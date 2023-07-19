@@ -1,0 +1,439 @@
+|controle
+clock => controlador:ctr.clk
+clock => datapath:dp.clock
+pc_ld <= controlador:ctr.pc_ld
+pc_clr <= controlador:ctr.pc_clr
+pc_inc <= controlador:ctr.pc_inc
+ir_ld <= controlador:ctr.ir_ld
+rf_w_wr <= controlador:ctr.rf_w_wr
+rf_rp_rd <= controlador:ctr.rf_rp_rd
+rf_rq_rd <= controlador:ctr.rf_rq_rd
+rf_s0 <= controlador:ctr.rf_s0
+rf_s1 <= controlador:ctr.rf_s1
+d_rd <= controlador:ctr.d_rd
+d_wr <= controlador:ctr.d_wr
+i_rd <= controlador:ctr.i_rd
+alu_s0 <= controlador:ctr.alu_s0
+alu_s1 <= controlador:ctr.alu_s1
+comp_ab => controlador:ctr.comp_ab
+rf_rp_zero => controlador:ctr.rf_rp_zero
+ir[0] => datapath:dp.entrada[0]
+ir[1] => datapath:dp.entrada[1]
+ir[2] => datapath:dp.entrada[2]
+ir[3] => datapath:dp.entrada[3]
+ir[4] => datapath:dp.entrada[4]
+ir[5] => datapath:dp.entrada[5]
+ir[6] => datapath:dp.entrada[6]
+ir[7] => datapath:dp.entrada[7]
+ir[8] => datapath:dp.entrada[8]
+ir[9] => datapath:dp.entrada[9]
+ir[10] => datapath:dp.entrada[10]
+ir[11] => datapath:dp.entrada[11]
+ir[12] => controlador:ctr.op0
+ir[13] => controlador:ctr.op1
+ir[14] => controlador:ctr.op2
+ir[15] => controlador:ctr.op3
+rf_w_addr[0] <= datapath:dp.rf_w_addr[0]
+rf_w_addr[1] <= datapath:dp.rf_w_addr[1]
+rf_w_addr[2] <= datapath:dp.rf_w_addr[2]
+rf_w_addr[3] <= datapath:dp.rf_w_addr[3]
+rf_rp_addr[0] <= datapath:dp.rf_rp_addr[0]
+rf_rp_addr[1] <= datapath:dp.rf_rp_addr[1]
+rf_rp_addr[2] <= datapath:dp.rf_rp_addr[2]
+rf_rp_addr[3] <= datapath:dp.rf_rp_addr[3]
+rf_rq_addr[0] <= datapath:dp.rf_rq_addr[0]
+rf_rq_addr[1] <= datapath:dp.rf_rq_addr[1]
+rf_rq_addr[2] <= datapath:dp.rf_rq_addr[2]
+rf_rq_addr[3] <= datapath:dp.rf_rq_addr[3]
+rf_w_data[0] <= datapath:dp.rf_w_data[0]
+rf_w_data[1] <= datapath:dp.rf_w_data[1]
+rf_w_data[2] <= datapath:dp.rf_w_data[2]
+rf_w_data[3] <= datapath:dp.rf_w_data[3]
+rf_w_data[4] <= datapath:dp.rf_w_data[4]
+rf_w_data[5] <= datapath:dp.rf_w_data[5]
+rf_w_data[6] <= datapath:dp.rf_w_data[6]
+rf_w_data[7] <= datapath:dp.rf_w_data[7]
+d_addr[0] <= datapath:dp.d_addr[0]
+d_addr[1] <= datapath:dp.d_addr[1]
+d_addr[2] <= datapath:dp.d_addr[2]
+d_addr[3] <= datapath:dp.d_addr[3]
+d_addr[4] <= datapath:dp.d_addr[4]
+d_addr[5] <= datapath:dp.d_addr[5]
+d_addr[6] <= datapath:dp.d_addr[6]
+d_addr[7] <= datapath:dp.d_addr[7]
+
+
+|controle|controlador:ctr
+clk => reg_states:reg.clock
+op0 => comb_logic:cl.op0
+op1 => comb_logic:cl.op1
+op2 => comb_logic:cl.op2
+op3 => comb_logic:cl.op3
+pc_ld <= comb_logic:cl.pc_ld
+pc_clr <= comb_logic:cl.pc_clr
+pc_inc <= comb_logic:cl.pc_inc
+ir_ld <= comb_logic:cl.ir_ld
+rf_w_wr <= comb_logic:cl.rf_w_wr
+rf_rp_rd <= comb_logic:cl.rf_rp_rd
+rf_rq_rd <= comb_logic:cl.rf_rq_rd
+rf_s0 <= comb_logic:cl.rf_s0
+rf_s1 <= comb_logic:cl.rf_s1
+d_rd <= comb_logic:cl.d_rd
+d_wr <= comb_logic:cl.d_wr
+i_rd <= comb_logic:cl.i_rd
+alu_s0 <= comb_logic:cl.alu_s0
+alu_s1 <= comb_logic:cl.alu_s1
+comp_ab => comb_logic:cl.comp_ab
+rf_rp_zero => comb_logic:cl.rf_rp_zero
+
+
+|controle|controlador:ctr|comb_logic:cl
+op0 => n3.IN1
+op0 => n2.IN1
+op0 => n1.IN1
+op0 => n0.IN1
+op0 => n0.IN1
+op0 => n0.IN1
+op0 => n1.IN1
+op1 => n1.IN1
+op1 => n0.IN1
+op1 => n0.IN1
+op1 => n0.IN1
+op2 => n0.IN1
+op2 => n0.IN1
+op3 => n0.IN1
+pc_ld <= pc_ld.DB_MAX_OUTPUT_PORT_TYPE
+pc_clr <= pc_clr.DB_MAX_OUTPUT_PORT_TYPE
+pc_inc <= pc_inc.DB_MAX_OUTPUT_PORT_TYPE
+ir_ld <= pc_inc.DB_MAX_OUTPUT_PORT_TYPE
+rf_w_wr <= rf_w_wr.DB_MAX_OUTPUT_PORT_TYPE
+rf_rp_rd <= rf_rp_rd.DB_MAX_OUTPUT_PORT_TYPE
+rf_rq_rd <= rf_rq_rd.DB_MAX_OUTPUT_PORT_TYPE
+rf_s0 <= rf_w_wr.DB_MAX_OUTPUT_PORT_TYPE
+rf_s1 <= rf_w_wr.DB_MAX_OUTPUT_PORT_TYPE
+d_rd <= d_rd.DB_MAX_OUTPUT_PORT_TYPE
+d_wr <= rf_rp_rd.DB_MAX_OUTPUT_PORT_TYPE
+i_rd <= i_rd.DB_MAX_OUTPUT_PORT_TYPE
+alu_s0 <= rf_w_wr.DB_MAX_OUTPUT_PORT_TYPE
+alu_s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+comp_ab => pc_inc.IN1
+comp_ab => n0.IN1
+rf_rp_zero => n0.IN1
+n0 <= n0.DB_MAX_OUTPUT_PORT_TYPE
+n1 <= n1.DB_MAX_OUTPUT_PORT_TYPE
+n2 <= n2.DB_MAX_OUTPUT_PORT_TYPE
+n3 <= n3.DB_MAX_OUTPUT_PORT_TYPE
+s0 => pc_ld.IN1
+s0 => pc_ld.IN1
+s0 => pc_inc.IN1
+s0 => i_rd.IN1
+s0 => d_rd.IN1
+s0 => rf_w_wr.IN1
+s0 => rf_w_wr.IN1
+s0 => rf_w_wr.IN1
+s0 => pc_clr.IN1
+s0 => rf_w_wr.IN1
+s0 => rf_rp_rd.IN1
+s0 => rf_rp_rd.IN1
+s0 => rf_rp_rd.IN1
+s0 => n0.IN1
+s1 => pc_ld.IN1
+s1 => rf_w_wr.IN1
+s1 => rf_w_wr.IN1
+s1 => pc_ld.IN1
+s1 => pc_clr.IN1
+s1 => rf_w_wr.IN1
+s2 => rf_w_wr.IN0
+s2 => pc_ld.IN0
+s2 => pc_clr.IN0
+s3 => pc_ld.IN1
+s3 => pc_clr.IN1
+s3 => rf_w_wr.IN1
+
+
+|controle|controlador:ctr|reg_states:reg
+clock => ffd:FF0.clock
+clock => ffd:FF1.clock
+clock => ffd:FF2.clock
+clock => ffd:FF3.clock
+entrada[0] => ffd:FF0.d
+entrada[1] => ffd:FF1.d
+entrada[2] => ffd:FF2.d
+entrada[3] => ffd:FF3.d
+saida[0] <= ffd:FF0.q
+saida[1] <= ffd:FF1.q
+saida[2] <= ffd:FF2.q
+saida[3] <= ffd:FF3.q
+
+
+|controle|controlador:ctr|reg_states:reg|ffd:FF0
+clock => q_reg.CLK
+d => q_reg.DATAIN
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controle|controlador:ctr|reg_states:reg|ffd:FF1
+clock => q_reg.CLK
+d => q_reg.DATAIN
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controle|controlador:ctr|reg_states:reg|ffd:FF2
+clock => q_reg.CLK
+d => q_reg.DATAIN
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controle|controlador:ctr|reg_states:reg|ffd:FF3
+clock => q_reg.CLK
+d => q_reg.DATAIN
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controle|datapath:dp
+clock => reg4bits:Ra.clock
+clock => reg4bits:Rb.clock
+clock => reg4bits:Rc.clock
+clock => regd:d.clock
+entrada[0] => reg4bits:Rc.entrada[0]
+entrada[0] => regd:d.entrada[0]
+entrada[1] => reg4bits:Rc.entrada[1]
+entrada[1] => regd:d.entrada[1]
+entrada[2] => reg4bits:Rc.entrada[2]
+entrada[2] => regd:d.entrada[2]
+entrada[3] => reg4bits:Rc.entrada[3]
+entrada[3] => regd:d.entrada[3]
+entrada[4] => reg4bits:Rb.entrada[0]
+entrada[4] => regd:d.entrada[4]
+entrada[5] => reg4bits:Rb.entrada[1]
+entrada[5] => regd:d.entrada[5]
+entrada[6] => reg4bits:Rb.entrada[2]
+entrada[6] => regd:d.entrada[6]
+entrada[7] => reg4bits:Rb.entrada[3]
+entrada[7] => regd:d.entrada[7]
+entrada[8] => reg4bits:Ra.entrada[0]
+entrada[9] => reg4bits:Ra.entrada[1]
+entrada[10] => reg4bits:Ra.entrada[2]
+entrada[11] => reg4bits:Ra.entrada[3]
+rf_w_addr[0] <= reg4bits:Rc.saida[0]
+rf_w_addr[1] <= reg4bits:Rc.saida[1]
+rf_w_addr[2] <= reg4bits:Rc.saida[2]
+rf_w_addr[3] <= reg4bits:Rc.saida[3]
+rf_rp_addr[0] <= reg4bits:Ra.saida[0]
+rf_rp_addr[1] <= reg4bits:Ra.saida[1]
+rf_rp_addr[2] <= reg4bits:Ra.saida[2]
+rf_rp_addr[3] <= reg4bits:Ra.saida[3]
+rf_rq_addr[0] <= reg4bits:Rb.saida[0]
+rf_rq_addr[1] <= reg4bits:Rb.saida[1]
+rf_rq_addr[2] <= reg4bits:Rb.saida[2]
+rf_rq_addr[3] <= reg4bits:Rb.saida[3]
+rf_w_data[0] <= regd:d.saida[0]
+rf_w_data[1] <= regd:d.saida[1]
+rf_w_data[2] <= regd:d.saida[2]
+rf_w_data[3] <= regd:d.saida[3]
+rf_w_data[4] <= regd:d.saida[4]
+rf_w_data[5] <= regd:d.saida[5]
+rf_w_data[6] <= regd:d.saida[6]
+rf_w_data[7] <= regd:d.saida[7]
+d_addr[0] <= regd:d.saida[0]
+d_addr[1] <= regd:d.saida[1]
+d_addr[2] <= regd:d.saida[2]
+d_addr[3] <= regd:d.saida[3]
+d_addr[4] <= regd:d.saida[4]
+d_addr[5] <= regd:d.saida[5]
+d_addr[6] <= regd:d.saida[6]
+d_addr[7] <= regd:d.saida[7]
+
+
+|controle|datapath:dp|reg4bits:Ra
+clock => ffd:FF0.clock
+clock => ffd:FF1.clock
+clock => ffd:FF2.clock
+clock => ffd:FF3.clock
+entrada[0] => ffd:FF0.d
+entrada[1] => ffd:FF1.d
+entrada[2] => ffd:FF2.d
+entrada[3] => ffd:FF3.d
+saida[0] <= ffd:FF0.q
+saida[1] <= ffd:FF1.q
+saida[2] <= ffd:FF2.q
+saida[3] <= ffd:FF3.q
+
+
+|controle|datapath:dp|reg4bits:Ra|ffd:FF0
+clock => q_reg.CLK
+d => q_reg.DATAIN
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controle|datapath:dp|reg4bits:Ra|ffd:FF1
+clock => q_reg.CLK
+d => q_reg.DATAIN
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controle|datapath:dp|reg4bits:Ra|ffd:FF2
+clock => q_reg.CLK
+d => q_reg.DATAIN
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controle|datapath:dp|reg4bits:Ra|ffd:FF3
+clock => q_reg.CLK
+d => q_reg.DATAIN
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controle|datapath:dp|reg4bits:Rb
+clock => ffd:FF0.clock
+clock => ffd:FF1.clock
+clock => ffd:FF2.clock
+clock => ffd:FF3.clock
+entrada[0] => ffd:FF0.d
+entrada[1] => ffd:FF1.d
+entrada[2] => ffd:FF2.d
+entrada[3] => ffd:FF3.d
+saida[0] <= ffd:FF0.q
+saida[1] <= ffd:FF1.q
+saida[2] <= ffd:FF2.q
+saida[3] <= ffd:FF3.q
+
+
+|controle|datapath:dp|reg4bits:Rb|ffd:FF0
+clock => q_reg.CLK
+d => q_reg.DATAIN
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controle|datapath:dp|reg4bits:Rb|ffd:FF1
+clock => q_reg.CLK
+d => q_reg.DATAIN
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controle|datapath:dp|reg4bits:Rb|ffd:FF2
+clock => q_reg.CLK
+d => q_reg.DATAIN
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controle|datapath:dp|reg4bits:Rb|ffd:FF3
+clock => q_reg.CLK
+d => q_reg.DATAIN
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controle|datapath:dp|reg4bits:Rc
+clock => ffd:FF0.clock
+clock => ffd:FF1.clock
+clock => ffd:FF2.clock
+clock => ffd:FF3.clock
+entrada[0] => ffd:FF0.d
+entrada[1] => ffd:FF1.d
+entrada[2] => ffd:FF2.d
+entrada[3] => ffd:FF3.d
+saida[0] <= ffd:FF0.q
+saida[1] <= ffd:FF1.q
+saida[2] <= ffd:FF2.q
+saida[3] <= ffd:FF3.q
+
+
+|controle|datapath:dp|reg4bits:Rc|ffd:FF0
+clock => q_reg.CLK
+d => q_reg.DATAIN
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controle|datapath:dp|reg4bits:Rc|ffd:FF1
+clock => q_reg.CLK
+d => q_reg.DATAIN
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controle|datapath:dp|reg4bits:Rc|ffd:FF2
+clock => q_reg.CLK
+d => q_reg.DATAIN
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controle|datapath:dp|reg4bits:Rc|ffd:FF3
+clock => q_reg.CLK
+d => q_reg.DATAIN
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controle|datapath:dp|regd:d
+clock => ffd:FF0.clock
+clock => ffd:FF1.clock
+clock => ffd:FF2.clock
+clock => ffd:FF3.clock
+clock => ffd:FF4.clock
+clock => ffd:FF5.clock
+clock => ffd:FF6.clock
+clock => ffd:FF7.clock
+entrada[0] => ffd:FF0.d
+entrada[1] => ffd:FF1.d
+entrada[2] => ffd:FF2.d
+entrada[3] => ffd:FF3.d
+entrada[4] => ffd:FF4.d
+entrada[5] => ffd:FF5.d
+entrada[6] => ffd:FF6.d
+entrada[7] => ffd:FF7.d
+saida[0] <= ffd:FF0.q
+saida[1] <= ffd:FF1.q
+saida[2] <= ffd:FF2.q
+saida[3] <= ffd:FF3.q
+saida[4] <= ffd:FF4.q
+saida[5] <= ffd:FF5.q
+saida[6] <= ffd:FF6.q
+saida[7] <= ffd:FF7.q
+
+
+|controle|datapath:dp|regd:d|ffd:FF0
+clock => q_reg.CLK
+d => q_reg.DATAIN
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controle|datapath:dp|regd:d|ffd:FF1
+clock => q_reg.CLK
+d => q_reg.DATAIN
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controle|datapath:dp|regd:d|ffd:FF2
+clock => q_reg.CLK
+d => q_reg.DATAIN
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controle|datapath:dp|regd:d|ffd:FF3
+clock => q_reg.CLK
+d => q_reg.DATAIN
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controle|datapath:dp|regd:d|ffd:FF4
+clock => q_reg.CLK
+d => q_reg.DATAIN
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controle|datapath:dp|regd:d|ffd:FF5
+clock => q_reg.CLK
+d => q_reg.DATAIN
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controle|datapath:dp|regd:d|ffd:FF6
+clock => q_reg.CLK
+d => q_reg.DATAIN
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controle|datapath:dp|regd:d|ffd:FF7
+clock => q_reg.CLK
+d => q_reg.DATAIN
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+

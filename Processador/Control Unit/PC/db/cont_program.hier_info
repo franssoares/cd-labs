@@ -1,0 +1,30 @@
+|cont_program
+clock => counter[0].CLK
+clock => counter[1].CLK
+clock => counter[2].CLK
+clock => counter[3].CLK
+reset => counter[0].ACLR
+reset => counter[1].ACLR
+reset => counter[2].ACLR
+reset => counter[3].ACLR
+enable => counter~3.OUTPUTSELECT
+enable => counter~4.OUTPUTSELECT
+enable => counter~5.OUTPUTSELECT
+enable => counter[0].ENA
+pc_inc => counter~0.OUTPUTSELECT
+pc_inc => counter~1.OUTPUTSELECT
+pc_inc => counter~2.OUTPUTSELECT
+input_data[0] => ~NO_FANOUT~
+input_data[1] => ~NO_FANOUT~
+input_data[2] => ~NO_FANOUT~
+input_data[3] => ~NO_FANOUT~
+input_data[4] => ~NO_FANOUT~
+input_data[5] => ~NO_FANOUT~
+input_data[6] => ~NO_FANOUT~
+input_data[7] => ~NO_FANOUT~
+output[0] <= counter[0].DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= counter[1].DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= counter[2].DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= counter[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

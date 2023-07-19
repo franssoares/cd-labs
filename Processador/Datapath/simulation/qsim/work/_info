@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1\Processador\Datapath\simulation\qsim
+vdatapath
+Z1 !s100 7[UFakm69nk[T2In[0dZD1
+Z2 IjcTV=4@IXjYlNHH_50=gY2
+Z3 VX=Q0L?`DVfjKS^G?K>jY42
+Z4 dC:\altera\13.0sp1\Processador\Datapath\simulation\qsim
+Z5 w1689518193
+Z6 8Datapath.vo
+Z7 FDatapath.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|Datapath.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1689518194.241000
+Z12 !s107 Datapath.vo|
+!s101 -O0
+vdatapath_vlg_check_tst
+!i10b 1
+Z13 !s100 5PLnHm^=>KZXOBR3`HHFe1
+Z14 IE@VTg_PB?D@DkJe2DiR@D3
+Z15 V9<7An9Y99E>lBXi^ji>U:2
+R4
+R5
+Z16 8Datapath.vt
+Z17 FDatapath.vt
+L0 81
+R8
+r1
+!s85 0
+31
+Z18 !s108 1689518194.334000
+Z19 !s107 Datapath.vt|
+Z20 !s90 -work|work|Datapath.vt|
+!s101 -O0
+R10
+vdatapath_vlg_sample_tst
+!i10b 1
+Z21 !s100 `:QJ10TXbaL^CKOAZCFbX2
+Z22 I1C5R[l@Pc?@ob_44Oa6Zn2
+Z23 VkeVSOPPd;HlaJhOMYIAa[2
+R4
+R5
+R16
+R17
+L0 29
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R10
+vdatapath_vlg_vec_tst
+!i10b 1
+!s100 ohhbzPJ2g9GDUE6Wk9OHd0
+InMPCTID`JKVg7jZ7mX]6=1
+Z24 V^@Kb0LjGY<clOm@lcHMDA1
+R4
+R5
+R16
+R17
+Z25 L0 499
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R10

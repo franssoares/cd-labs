@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for ram
-Fri Jul 14 05:43:37 2023
+Sun Jul 16 12:32:37 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -16,9 +16,9 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   8. Slow Model Recovery Summary
   9. Slow Model Removal Summary
  10. Slow Model Minimum Pulse Width Summary
- 11. Slow Model Setup: 'CLK'
- 12. Slow Model Hold: 'CLK'
- 13. Slow Model Minimum Pulse Width: 'CLK'
+ 11. Slow Model Setup: 'clk'
+ 12. Slow Model Hold: 'clk'
+ 13. Slow Model Minimum Pulse Width: 'clk'
  14. Setup Times
  15. Hold Times
  16. Clock to Output Times
@@ -28,9 +28,9 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  20. Fast Model Recovery Summary
  21. Fast Model Removal Summary
  22. Fast Model Minimum Pulse Width Summary
- 23. Fast Model Setup: 'CLK'
- 24. Fast Model Hold: 'CLK'
- 25. Fast Model Minimum Pulse Width: 'CLK'
+ 23. Fast Model Setup: 'clk'
+ 24. Fast Model Hold: 'clk'
+ 25. Fast Model Minimum Pulse Width: 'clk'
  26. Setup Times
  27. Hold Times
  28. Clock to Output Times
@@ -97,7 +97,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
 ; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
-; CLK        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK } ;
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
 
 
@@ -106,7 +106,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------+-----------------+------------+-------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                  ;
 +------------+-----------------+------------+-------------------------------------------------------+
-; 343.05 MHz ; 235.07 MHz      ; CLK        ; limit due to high minimum pulse width violation (tch) ;
+; 343.05 MHz ; 235.07 MHz      ; clk        ; limit due to high minimum pulse width violation (tch) ;
 +------------+-----------------+------------+-------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -116,7 +116,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+---------------+
 ; Clock ; Slack  ; End Point TNS ;
 +-------+--------+---------------+
-; CLK   ; -1.915 ; -30.640       ;
+; clk   ; -1.915 ; -30.640       ;
 +-------+--------+---------------+
 
 
@@ -125,7 +125,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------+---------------+
 ; Clock ; Slack ; End Point TNS ;
 +-------+-------+---------------+
-; CLK   ; 2.646 ; 0.000         ;
+; clk   ; 2.646 ; 0.000         ;
 +-------+-------+---------------+
 
 
@@ -146,164 +146,164 @@ No paths to report.
 +-------+--------+-----------------------+
 ; Clock ; Slack  ; End Point TNS         ;
 +-------+--------+-----------------------+
-; CLK   ; -1.627 ; -160.826              ;
+; clk   ; -1.627 ; -160.826              ;
 +-------+--------+-----------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow Model Setup: 'CLK'                                                                                                                                                                                                                                                                                                ;
-+--------+--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node                                                                                                          ; To Node                                                                                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; -1.915 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg0  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_memory_reg0  ; CLK          ; CLK         ; 1.000        ; -0.037     ; 2.843      ;
-; -1.915 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg1  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a1~portb_memory_reg0  ; CLK          ; CLK         ; 1.000        ; -0.037     ; 2.843      ;
-; -1.915 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg2  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a2~portb_memory_reg0  ; CLK          ; CLK         ; 1.000        ; -0.037     ; 2.843      ;
-; -1.915 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg3  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a3~portb_memory_reg0  ; CLK          ; CLK         ; 1.000        ; -0.037     ; 2.843      ;
-; -1.915 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg4  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a4~portb_memory_reg0  ; CLK          ; CLK         ; 1.000        ; -0.037     ; 2.843      ;
-; -1.915 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg5  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a5~portb_memory_reg0  ; CLK          ; CLK         ; 1.000        ; -0.037     ; 2.843      ;
-; -1.915 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg6  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a6~portb_memory_reg0  ; CLK          ; CLK         ; 1.000        ; -0.037     ; 2.843      ;
-; -1.915 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg7  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a7~portb_memory_reg0  ; CLK          ; CLK         ; 1.000        ; -0.037     ; 2.843      ;
-; -1.915 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg8  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a8~portb_memory_reg0  ; CLK          ; CLK         ; 1.000        ; -0.037     ; 2.843      ;
-; -1.915 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg9  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a9~portb_memory_reg0  ; CLK          ; CLK         ; 1.000        ; -0.037     ; 2.843      ;
-; -1.915 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg10 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a10~portb_memory_reg0 ; CLK          ; CLK         ; 1.000        ; -0.037     ; 2.843      ;
-; -1.915 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg11 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a11~portb_memory_reg0 ; CLK          ; CLK         ; 1.000        ; -0.037     ; 2.843      ;
-; -1.915 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg12 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a12~portb_memory_reg0 ; CLK          ; CLK         ; 1.000        ; -0.037     ; 2.843      ;
-; -1.915 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg13 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a13~portb_memory_reg0 ; CLK          ; CLK         ; 1.000        ; -0.037     ; 2.843      ;
-; -1.915 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg14 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a14~portb_memory_reg0 ; CLK          ; CLK         ; 1.000        ; -0.037     ; 2.843      ;
-; -1.915 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg15 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a15~portb_memory_reg0 ; CLK          ; CLK         ; 1.000        ; -0.037     ; 2.843      ;
-+--------+--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                                                                                                                                                                                                          ;
++--------+-----------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                                                       ; To Node                                                                                                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.915 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg0  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_memory_reg0  ; clk          ; clk         ; 1.000        ; -0.037     ; 2.843      ;
+; -1.915 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg1  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a1~portb_memory_reg0  ; clk          ; clk         ; 1.000        ; -0.037     ; 2.843      ;
+; -1.915 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg2  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a2~portb_memory_reg0  ; clk          ; clk         ; 1.000        ; -0.037     ; 2.843      ;
+; -1.915 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg3  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a3~portb_memory_reg0  ; clk          ; clk         ; 1.000        ; -0.037     ; 2.843      ;
+; -1.915 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg4  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a4~portb_memory_reg0  ; clk          ; clk         ; 1.000        ; -0.037     ; 2.843      ;
+; -1.915 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg5  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a5~portb_memory_reg0  ; clk          ; clk         ; 1.000        ; -0.037     ; 2.843      ;
+; -1.915 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg6  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a6~portb_memory_reg0  ; clk          ; clk         ; 1.000        ; -0.037     ; 2.843      ;
+; -1.915 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg7  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a7~portb_memory_reg0  ; clk          ; clk         ; 1.000        ; -0.037     ; 2.843      ;
+; -1.915 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg8  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a8~portb_memory_reg0  ; clk          ; clk         ; 1.000        ; -0.037     ; 2.843      ;
+; -1.915 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg9  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a9~portb_memory_reg0  ; clk          ; clk         ; 1.000        ; -0.037     ; 2.843      ;
+; -1.915 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg10 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a10~portb_memory_reg0 ; clk          ; clk         ; 1.000        ; -0.037     ; 2.843      ;
+; -1.915 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg11 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a11~portb_memory_reg0 ; clk          ; clk         ; 1.000        ; -0.037     ; 2.843      ;
+; -1.915 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg12 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a12~portb_memory_reg0 ; clk          ; clk         ; 1.000        ; -0.037     ; 2.843      ;
+; -1.915 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg13 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a13~portb_memory_reg0 ; clk          ; clk         ; 1.000        ; -0.037     ; 2.843      ;
+; -1.915 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg14 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a14~portb_memory_reg0 ; clk          ; clk         ; 1.000        ; -0.037     ; 2.843      ;
+; -1.915 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg15 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a15~portb_memory_reg0 ; clk          ; clk         ; 1.000        ; -0.037     ; 2.843      ;
++--------+-----------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow Model Hold: 'CLK'                                                                                                                                                                                                                                                                                                ;
-+-------+--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node                                                                                                          ; To Node                                                                                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; 2.646 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg0  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_memory_reg0  ; CLK          ; CLK         ; 0.000        ; -0.037     ; 2.843      ;
-; 2.646 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg1  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a1~portb_memory_reg0  ; CLK          ; CLK         ; 0.000        ; -0.037     ; 2.843      ;
-; 2.646 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg2  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a2~portb_memory_reg0  ; CLK          ; CLK         ; 0.000        ; -0.037     ; 2.843      ;
-; 2.646 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg3  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a3~portb_memory_reg0  ; CLK          ; CLK         ; 0.000        ; -0.037     ; 2.843      ;
-; 2.646 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg4  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a4~portb_memory_reg0  ; CLK          ; CLK         ; 0.000        ; -0.037     ; 2.843      ;
-; 2.646 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg5  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a5~portb_memory_reg0  ; CLK          ; CLK         ; 0.000        ; -0.037     ; 2.843      ;
-; 2.646 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg6  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a6~portb_memory_reg0  ; CLK          ; CLK         ; 0.000        ; -0.037     ; 2.843      ;
-; 2.646 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg7  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a7~portb_memory_reg0  ; CLK          ; CLK         ; 0.000        ; -0.037     ; 2.843      ;
-; 2.646 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg8  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a8~portb_memory_reg0  ; CLK          ; CLK         ; 0.000        ; -0.037     ; 2.843      ;
-; 2.646 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg9  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a9~portb_memory_reg0  ; CLK          ; CLK         ; 0.000        ; -0.037     ; 2.843      ;
-; 2.646 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg10 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a10~portb_memory_reg0 ; CLK          ; CLK         ; 0.000        ; -0.037     ; 2.843      ;
-; 2.646 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg11 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a11~portb_memory_reg0 ; CLK          ; CLK         ; 0.000        ; -0.037     ; 2.843      ;
-; 2.646 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg12 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a12~portb_memory_reg0 ; CLK          ; CLK         ; 0.000        ; -0.037     ; 2.843      ;
-; 2.646 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg13 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a13~portb_memory_reg0 ; CLK          ; CLK         ; 0.000        ; -0.037     ; 2.843      ;
-; 2.646 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg14 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a14~portb_memory_reg0 ; CLK          ; CLK         ; 0.000        ; -0.037     ; 2.843      ;
-; 2.646 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg15 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a15~portb_memory_reg0 ; CLK          ; CLK         ; 0.000        ; -0.037     ; 2.843      ;
-+-------+--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                                                                                                                                                                                                          ;
++-------+-----------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                                                       ; To Node                                                                                                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 2.646 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg0  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_memory_reg0  ; clk          ; clk         ; 0.000        ; -0.037     ; 2.843      ;
+; 2.646 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg1  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a1~portb_memory_reg0  ; clk          ; clk         ; 0.000        ; -0.037     ; 2.843      ;
+; 2.646 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg2  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a2~portb_memory_reg0  ; clk          ; clk         ; 0.000        ; -0.037     ; 2.843      ;
+; 2.646 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg3  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a3~portb_memory_reg0  ; clk          ; clk         ; 0.000        ; -0.037     ; 2.843      ;
+; 2.646 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg4  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a4~portb_memory_reg0  ; clk          ; clk         ; 0.000        ; -0.037     ; 2.843      ;
+; 2.646 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg5  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a5~portb_memory_reg0  ; clk          ; clk         ; 0.000        ; -0.037     ; 2.843      ;
+; 2.646 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg6  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a6~portb_memory_reg0  ; clk          ; clk         ; 0.000        ; -0.037     ; 2.843      ;
+; 2.646 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg7  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a7~portb_memory_reg0  ; clk          ; clk         ; 0.000        ; -0.037     ; 2.843      ;
+; 2.646 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg8  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a8~portb_memory_reg0  ; clk          ; clk         ; 0.000        ; -0.037     ; 2.843      ;
+; 2.646 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg9  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a9~portb_memory_reg0  ; clk          ; clk         ; 0.000        ; -0.037     ; 2.843      ;
+; 2.646 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg10 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a10~portb_memory_reg0 ; clk          ; clk         ; 0.000        ; -0.037     ; 2.843      ;
+; 2.646 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg11 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a11~portb_memory_reg0 ; clk          ; clk         ; 0.000        ; -0.037     ; 2.843      ;
+; 2.646 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg12 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a12~portb_memory_reg0 ; clk          ; clk         ; 0.000        ; -0.037     ; 2.843      ;
+; 2.646 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg13 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a13~portb_memory_reg0 ; clk          ; clk         ; 0.000        ; -0.037     ; 2.843      ;
+; 2.646 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg14 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a14~portb_memory_reg0 ; clk          ; clk         ; 0.000        ; -0.037     ; 2.843      ;
+; 2.646 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg15 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a15~portb_memory_reg0 ; clk          ; clk         ; 0.000        ; -0.037     ; 2.843      ;
++-------+-----------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow Model Minimum Pulse Width: 'CLK'                                                                                                                                                               ;
-+--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------------------------------------------------------------+
-; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                                             ;
-+--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------------------------------------------------------------+
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg0 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg0 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg1 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg1 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg2 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg2 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg3 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg3 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg4 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg4 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg5 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg5 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg6 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg6 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg7 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg7 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg0 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg0 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg1 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg1 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg2 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg2 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg3 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg3 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg4 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg4 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg5 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg5 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg6 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg6 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg7 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg7 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg1  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg1  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg10 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg10 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg11 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg11 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg12 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg12 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg13 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg13 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg14 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg14 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg15 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg15 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg2  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg2  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg3  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg3  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg4  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg4  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg5  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg5  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg6  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg6  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg7  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg7  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg8  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg8  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg9  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg9  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_we_reg       ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_we_reg       ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a10~portb_memory_reg0 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a10~portb_memory_reg0 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a11~portb_memory_reg0 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a11~portb_memory_reg0 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a12~portb_memory_reg0 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a12~portb_memory_reg0 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a13~portb_memory_reg0 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a13~portb_memory_reg0 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a14~portb_memory_reg0 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a14~portb_memory_reg0 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a15~portb_memory_reg0 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a15~portb_memory_reg0 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a1~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a1~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a2~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a2~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a3~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a3~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a4~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a4~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a5~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a5~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a6~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a6~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a7~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a7~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a8~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a8~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a9~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a9~portb_memory_reg0  ;
-; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLK   ; Rise       ; CLK                                                                                                                ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK|combout                                                                                                        ;
-+--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                                                                                                            ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                                          ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------------------------------------------------------------------+
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg1 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg1 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg2 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg2 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg3 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg3 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg4 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg4 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg5 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg5 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg6 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg6 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg7 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg7 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg1 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg1 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg2 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg2 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg3 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg3 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg4 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg4 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg5 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg5 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg6 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg6 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg7 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg7 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg1  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg1  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg10 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg10 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg11 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg11 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg12 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg12 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg13 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg13 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg14 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg14 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg15 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg15 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg2  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg2  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg3  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg3  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg4  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg4  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg5  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg5  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg6  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg6  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg7  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg7  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg8  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg8  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg9  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg9  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_we_reg       ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_we_reg       ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a10~portb_memory_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a10~portb_memory_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a11~portb_memory_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a11~portb_memory_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a12~portb_memory_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a12~portb_memory_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a13~portb_memory_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a13~portb_memory_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a14~portb_memory_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a14~portb_memory_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a15~portb_memory_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a15~portb_memory_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a1~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a1~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a2~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a2~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a3~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a3~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a4~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a4~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a5~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a5~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a6~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a6~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a7~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a7~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a8~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a8~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a9~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a9~portb_memory_reg0  ;
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                                                                                                     ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------+
@@ -311,34 +311,34 @@ No paths to report.
 +-------------+------------+-------+-------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-------------+------------+-------+-------+------------+-----------------+
-; ADDR[*]     ; CLK        ; 3.676 ; 3.676 ; Rise       ; CLK             ;
-;  ADDR[0]    ; CLK        ; 3.676 ; 3.676 ; Rise       ; CLK             ;
-;  ADDR[1]    ; CLK        ; 3.152 ; 3.152 ; Rise       ; CLK             ;
-;  ADDR[2]    ; CLK        ; 3.434 ; 3.434 ; Rise       ; CLK             ;
-;  ADDR[3]    ; CLK        ; 3.423 ; 3.423 ; Rise       ; CLK             ;
-;  ADDR[4]    ; CLK        ; 3.441 ; 3.441 ; Rise       ; CLK             ;
-;  ADDR[5]    ; CLK        ; 3.214 ; 3.214 ; Rise       ; CLK             ;
-;  ADDR[6]    ; CLK        ; 3.203 ; 3.203 ; Rise       ; CLK             ;
-;  ADDR[7]    ; CLK        ; 3.165 ; 3.165 ; Rise       ; CLK             ;
-; RD          ; CLK        ; 0.711 ; 0.711 ; Rise       ; CLK             ;
-; WR          ; CLK        ; 0.836 ; 0.836 ; Rise       ; CLK             ;
-; W_DATA[*]   ; CLK        ; 3.836 ; 3.836 ; Rise       ; CLK             ;
-;  W_DATA[0]  ; CLK        ; 3.836 ; 3.836 ; Rise       ; CLK             ;
-;  W_DATA[1]  ; CLK        ; 3.571 ; 3.571 ; Rise       ; CLK             ;
-;  W_DATA[2]  ; CLK        ; 3.812 ; 3.812 ; Rise       ; CLK             ;
-;  W_DATA[3]  ; CLK        ; 3.355 ; 3.355 ; Rise       ; CLK             ;
-;  W_DATA[4]  ; CLK        ; 3.609 ; 3.609 ; Rise       ; CLK             ;
-;  W_DATA[5]  ; CLK        ; 3.585 ; 3.585 ; Rise       ; CLK             ;
-;  W_DATA[6]  ; CLK        ; 3.821 ; 3.821 ; Rise       ; CLK             ;
-;  W_DATA[7]  ; CLK        ; 3.818 ; 3.818 ; Rise       ; CLK             ;
-;  W_DATA[8]  ; CLK        ; 3.362 ; 3.362 ; Rise       ; CLK             ;
-;  W_DATA[9]  ; CLK        ; 3.395 ; 3.395 ; Rise       ; CLK             ;
-;  W_DATA[10] ; CLK        ; 3.820 ; 3.820 ; Rise       ; CLK             ;
-;  W_DATA[11] ; CLK        ; 3.601 ; 3.601 ; Rise       ; CLK             ;
-;  W_DATA[12] ; CLK        ; 3.368 ; 3.368 ; Rise       ; CLK             ;
-;  W_DATA[13] ; CLK        ; 3.807 ; 3.807 ; Rise       ; CLK             ;
-;  W_DATA[14] ; CLK        ; 3.579 ; 3.579 ; Rise       ; CLK             ;
-;  W_DATA[15] ; CLK        ; 3.388 ; 3.388 ; Rise       ; CLK             ;
+; addr[*]     ; clk        ; 3.645 ; 3.645 ; Rise       ; clk             ;
+;  addr[0]    ; clk        ; 3.645 ; 3.645 ; Rise       ; clk             ;
+;  addr[1]    ; clk        ; 3.571 ; 3.571 ; Rise       ; clk             ;
+;  addr[2]    ; clk        ; 3.576 ; 3.576 ; Rise       ; clk             ;
+;  addr[3]    ; clk        ; 3.562 ; 3.562 ; Rise       ; clk             ;
+;  addr[4]    ; clk        ; 3.628 ; 3.628 ; Rise       ; clk             ;
+;  addr[5]    ; clk        ; 3.581 ; 3.581 ; Rise       ; clk             ;
+;  addr[6]    ; clk        ; 3.545 ; 3.545 ; Rise       ; clk             ;
+;  addr[7]    ; clk        ; 3.622 ; 3.622 ; Rise       ; clk             ;
+; data_w[*]   ; clk        ; 3.811 ; 3.811 ; Rise       ; clk             ;
+;  data_w[0]  ; clk        ; 3.483 ; 3.483 ; Rise       ; clk             ;
+;  data_w[1]  ; clk        ; 3.546 ; 3.546 ; Rise       ; clk             ;
+;  data_w[2]  ; clk        ; 3.544 ; 3.544 ; Rise       ; clk             ;
+;  data_w[3]  ; clk        ; 3.543 ; 3.543 ; Rise       ; clk             ;
+;  data_w[4]  ; clk        ; 3.547 ; 3.547 ; Rise       ; clk             ;
+;  data_w[5]  ; clk        ; 3.811 ; 3.811 ; Rise       ; clk             ;
+;  data_w[6]  ; clk        ; 3.783 ; 3.783 ; Rise       ; clk             ;
+;  data_w[7]  ; clk        ; 3.682 ; 3.682 ; Rise       ; clk             ;
+;  data_w[8]  ; clk        ; 3.613 ; 3.613 ; Rise       ; clk             ;
+;  data_w[9]  ; clk        ; 3.501 ; 3.501 ; Rise       ; clk             ;
+;  data_w[10] ; clk        ; 3.684 ; 3.684 ; Rise       ; clk             ;
+;  data_w[11] ; clk        ; 3.544 ; 3.544 ; Rise       ; clk             ;
+;  data_w[12] ; clk        ; 3.507 ; 3.507 ; Rise       ; clk             ;
+;  data_w[13] ; clk        ; 3.718 ; 3.718 ; Rise       ; clk             ;
+;  data_w[14] ; clk        ; 3.738 ; 3.738 ; Rise       ; clk             ;
+;  data_w[15] ; clk        ; 3.546 ; 3.546 ; Rise       ; clk             ;
+; en_r        ; clk        ; 0.509 ; 0.509 ; Rise       ; clk             ;
+; en_w        ; clk        ; 0.505 ; 0.505 ; Rise       ; clk             ;
 +-------------+------------+-------+-------+------------+-----------------+
 
 
@@ -347,34 +347,34 @@ No paths to report.
 +-------------+------------+--------+--------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-------------+------------+--------+--------+------------+-----------------+
-; ADDR[*]     ; CLK        ; -2.855 ; -2.855 ; Rise       ; CLK             ;
-;  ADDR[0]    ; CLK        ; -3.381 ; -3.381 ; Rise       ; CLK             ;
-;  ADDR[1]    ; CLK        ; -2.855 ; -2.855 ; Rise       ; CLK             ;
-;  ADDR[2]    ; CLK        ; -3.137 ; -3.137 ; Rise       ; CLK             ;
-;  ADDR[3]    ; CLK        ; -3.126 ; -3.126 ; Rise       ; CLK             ;
-;  ADDR[4]    ; CLK        ; -3.144 ; -3.144 ; Rise       ; CLK             ;
-;  ADDR[5]    ; CLK        ; -2.917 ; -2.917 ; Rise       ; CLK             ;
-;  ADDR[6]    ; CLK        ; -2.906 ; -2.906 ; Rise       ; CLK             ;
-;  ADDR[7]    ; CLK        ; -2.868 ; -2.868 ; Rise       ; CLK             ;
-; RD          ; CLK        ; -0.094 ; -0.094 ; Rise       ; CLK             ;
-; WR          ; CLK        ; -0.219 ; -0.219 ; Rise       ; CLK             ;
-; W_DATA[*]   ; CLK        ; -3.086 ; -3.086 ; Rise       ; CLK             ;
-;  W_DATA[0]  ; CLK        ; -3.567 ; -3.567 ; Rise       ; CLK             ;
-;  W_DATA[1]  ; CLK        ; -3.302 ; -3.302 ; Rise       ; CLK             ;
-;  W_DATA[2]  ; CLK        ; -3.543 ; -3.543 ; Rise       ; CLK             ;
-;  W_DATA[3]  ; CLK        ; -3.086 ; -3.086 ; Rise       ; CLK             ;
-;  W_DATA[4]  ; CLK        ; -3.340 ; -3.340 ; Rise       ; CLK             ;
-;  W_DATA[5]  ; CLK        ; -3.316 ; -3.316 ; Rise       ; CLK             ;
-;  W_DATA[6]  ; CLK        ; -3.552 ; -3.552 ; Rise       ; CLK             ;
-;  W_DATA[7]  ; CLK        ; -3.549 ; -3.549 ; Rise       ; CLK             ;
-;  W_DATA[8]  ; CLK        ; -3.093 ; -3.093 ; Rise       ; CLK             ;
-;  W_DATA[9]  ; CLK        ; -3.126 ; -3.126 ; Rise       ; CLK             ;
-;  W_DATA[10] ; CLK        ; -3.551 ; -3.551 ; Rise       ; CLK             ;
-;  W_DATA[11] ; CLK        ; -3.332 ; -3.332 ; Rise       ; CLK             ;
-;  W_DATA[12] ; CLK        ; -3.099 ; -3.099 ; Rise       ; CLK             ;
-;  W_DATA[13] ; CLK        ; -3.538 ; -3.538 ; Rise       ; CLK             ;
-;  W_DATA[14] ; CLK        ; -3.310 ; -3.310 ; Rise       ; CLK             ;
-;  W_DATA[15] ; CLK        ; -3.119 ; -3.119 ; Rise       ; CLK             ;
+; addr[*]     ; clk        ; -3.248 ; -3.248 ; Rise       ; clk             ;
+;  addr[0]    ; clk        ; -3.345 ; -3.345 ; Rise       ; clk             ;
+;  addr[1]    ; clk        ; -3.274 ; -3.274 ; Rise       ; clk             ;
+;  addr[2]    ; clk        ; -3.279 ; -3.279 ; Rise       ; clk             ;
+;  addr[3]    ; clk        ; -3.265 ; -3.265 ; Rise       ; clk             ;
+;  addr[4]    ; clk        ; -3.331 ; -3.331 ; Rise       ; clk             ;
+;  addr[5]    ; clk        ; -3.284 ; -3.284 ; Rise       ; clk             ;
+;  addr[6]    ; clk        ; -3.248 ; -3.248 ; Rise       ; clk             ;
+;  addr[7]    ; clk        ; -3.325 ; -3.325 ; Rise       ; clk             ;
+; data_w[*]   ; clk        ; -3.214 ; -3.214 ; Rise       ; clk             ;
+;  data_w[0]  ; clk        ; -3.214 ; -3.214 ; Rise       ; clk             ;
+;  data_w[1]  ; clk        ; -3.277 ; -3.277 ; Rise       ; clk             ;
+;  data_w[2]  ; clk        ; -3.275 ; -3.275 ; Rise       ; clk             ;
+;  data_w[3]  ; clk        ; -3.274 ; -3.274 ; Rise       ; clk             ;
+;  data_w[4]  ; clk        ; -3.278 ; -3.278 ; Rise       ; clk             ;
+;  data_w[5]  ; clk        ; -3.542 ; -3.542 ; Rise       ; clk             ;
+;  data_w[6]  ; clk        ; -3.514 ; -3.514 ; Rise       ; clk             ;
+;  data_w[7]  ; clk        ; -3.413 ; -3.413 ; Rise       ; clk             ;
+;  data_w[8]  ; clk        ; -3.344 ; -3.344 ; Rise       ; clk             ;
+;  data_w[9]  ; clk        ; -3.232 ; -3.232 ; Rise       ; clk             ;
+;  data_w[10] ; clk        ; -3.415 ; -3.415 ; Rise       ; clk             ;
+;  data_w[11] ; clk        ; -3.275 ; -3.275 ; Rise       ; clk             ;
+;  data_w[12] ; clk        ; -3.238 ; -3.238 ; Rise       ; clk             ;
+;  data_w[13] ; clk        ; -3.449 ; -3.449 ; Rise       ; clk             ;
+;  data_w[14] ; clk        ; -3.469 ; -3.469 ; Rise       ; clk             ;
+;  data_w[15] ; clk        ; -3.277 ; -3.277 ; Rise       ; clk             ;
+; en_r        ; clk        ; -0.240 ; -0.240 ; Rise       ; clk             ;
+; en_w        ; clk        ; 0.112  ; 0.112  ; Rise       ; clk             ;
 +-------------+------------+--------+--------+------------+-----------------+
 
 
@@ -383,23 +383,23 @@ No paths to report.
 +-------------+------------+--------+--------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-------------+------------+--------+--------+------------+-----------------+
-; R_DATA[*]   ; CLK        ; 10.267 ; 10.267 ; Rise       ; CLK             ;
-;  R_DATA[0]  ; CLK        ; 10.001 ; 10.001 ; Rise       ; CLK             ;
-;  R_DATA[1]  ; CLK        ; 9.285  ; 9.285  ; Rise       ; CLK             ;
-;  R_DATA[2]  ; CLK        ; 9.944  ; 9.944  ; Rise       ; CLK             ;
-;  R_DATA[3]  ; CLK        ; 9.960  ; 9.960  ; Rise       ; CLK             ;
-;  R_DATA[4]  ; CLK        ; 9.713  ; 9.713  ; Rise       ; CLK             ;
-;  R_DATA[5]  ; CLK        ; 9.518  ; 9.518  ; Rise       ; CLK             ;
-;  R_DATA[6]  ; CLK        ; 9.795  ; 9.795  ; Rise       ; CLK             ;
-;  R_DATA[7]  ; CLK        ; 10.246 ; 10.246 ; Rise       ; CLK             ;
-;  R_DATA[8]  ; CLK        ; 10.000 ; 10.000 ; Rise       ; CLK             ;
-;  R_DATA[9]  ; CLK        ; 9.998  ; 9.998  ; Rise       ; CLK             ;
-;  R_DATA[10] ; CLK        ; 9.520  ; 9.520  ; Rise       ; CLK             ;
-;  R_DATA[11] ; CLK        ; 9.535  ; 9.535  ; Rise       ; CLK             ;
-;  R_DATA[12] ; CLK        ; 9.809  ; 9.809  ; Rise       ; CLK             ;
-;  R_DATA[13] ; CLK        ; 10.267 ; 10.267 ; Rise       ; CLK             ;
-;  R_DATA[14] ; CLK        ; 9.523  ; 9.523  ; Rise       ; CLK             ;
-;  R_DATA[15] ; CLK        ; 10.012 ; 10.012 ; Rise       ; CLK             ;
+; data_r[*]   ; clk        ; 10.227 ; 10.227 ; Rise       ; clk             ;
+;  data_r[0]  ; clk        ; 10.011 ; 10.011 ; Rise       ; clk             ;
+;  data_r[1]  ; clk        ; 9.958  ; 9.958  ; Rise       ; clk             ;
+;  data_r[2]  ; clk        ; 9.670  ; 9.670  ; Rise       ; clk             ;
+;  data_r[3]  ; clk        ; 9.970  ; 9.970  ; Rise       ; clk             ;
+;  data_r[4]  ; clk        ; 9.949  ; 9.949  ; Rise       ; clk             ;
+;  data_r[5]  ; clk        ; 9.861  ; 9.861  ; Rise       ; clk             ;
+;  data_r[6]  ; clk        ; 10.062 ; 10.062 ; Rise       ; clk             ;
+;  data_r[7]  ; clk        ; 10.227 ; 10.227 ; Rise       ; clk             ;
+;  data_r[8]  ; clk        ; 10.173 ; 10.173 ; Rise       ; clk             ;
+;  data_r[9]  ; clk        ; 9.918  ; 9.918  ; Rise       ; clk             ;
+;  data_r[10] ; clk        ; 10.093 ; 10.093 ; Rise       ; clk             ;
+;  data_r[11] ; clk        ; 10.212 ; 10.212 ; Rise       ; clk             ;
+;  data_r[12] ; clk        ; 10.180 ; 10.180 ; Rise       ; clk             ;
+;  data_r[13] ; clk        ; 9.905  ; 9.905  ; Rise       ; clk             ;
+;  data_r[14] ; clk        ; 10.159 ; 10.159 ; Rise       ; clk             ;
+;  data_r[15] ; clk        ; 9.901  ; 9.901  ; Rise       ; clk             ;
 +-------------+------------+--------+--------+------------+-----------------+
 
 
@@ -408,23 +408,23 @@ No paths to report.
 +-------------+------------+--------+--------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-------------+------------+--------+--------+------------+-----------------+
-; R_DATA[*]   ; CLK        ; 9.285  ; 9.285  ; Rise       ; CLK             ;
-;  R_DATA[0]  ; CLK        ; 10.001 ; 10.001 ; Rise       ; CLK             ;
-;  R_DATA[1]  ; CLK        ; 9.285  ; 9.285  ; Rise       ; CLK             ;
-;  R_DATA[2]  ; CLK        ; 9.944  ; 9.944  ; Rise       ; CLK             ;
-;  R_DATA[3]  ; CLK        ; 9.960  ; 9.960  ; Rise       ; CLK             ;
-;  R_DATA[4]  ; CLK        ; 9.713  ; 9.713  ; Rise       ; CLK             ;
-;  R_DATA[5]  ; CLK        ; 9.518  ; 9.518  ; Rise       ; CLK             ;
-;  R_DATA[6]  ; CLK        ; 9.795  ; 9.795  ; Rise       ; CLK             ;
-;  R_DATA[7]  ; CLK        ; 10.246 ; 10.246 ; Rise       ; CLK             ;
-;  R_DATA[8]  ; CLK        ; 10.000 ; 10.000 ; Rise       ; CLK             ;
-;  R_DATA[9]  ; CLK        ; 9.998  ; 9.998  ; Rise       ; CLK             ;
-;  R_DATA[10] ; CLK        ; 9.520  ; 9.520  ; Rise       ; CLK             ;
-;  R_DATA[11] ; CLK        ; 9.535  ; 9.535  ; Rise       ; CLK             ;
-;  R_DATA[12] ; CLK        ; 9.809  ; 9.809  ; Rise       ; CLK             ;
-;  R_DATA[13] ; CLK        ; 10.267 ; 10.267 ; Rise       ; CLK             ;
-;  R_DATA[14] ; CLK        ; 9.523  ; 9.523  ; Rise       ; CLK             ;
-;  R_DATA[15] ; CLK        ; 10.012 ; 10.012 ; Rise       ; CLK             ;
+; data_r[*]   ; clk        ; 9.670  ; 9.670  ; Rise       ; clk             ;
+;  data_r[0]  ; clk        ; 10.011 ; 10.011 ; Rise       ; clk             ;
+;  data_r[1]  ; clk        ; 9.958  ; 9.958  ; Rise       ; clk             ;
+;  data_r[2]  ; clk        ; 9.670  ; 9.670  ; Rise       ; clk             ;
+;  data_r[3]  ; clk        ; 9.970  ; 9.970  ; Rise       ; clk             ;
+;  data_r[4]  ; clk        ; 9.949  ; 9.949  ; Rise       ; clk             ;
+;  data_r[5]  ; clk        ; 9.861  ; 9.861  ; Rise       ; clk             ;
+;  data_r[6]  ; clk        ; 10.062 ; 10.062 ; Rise       ; clk             ;
+;  data_r[7]  ; clk        ; 10.227 ; 10.227 ; Rise       ; clk             ;
+;  data_r[8]  ; clk        ; 10.173 ; 10.173 ; Rise       ; clk             ;
+;  data_r[9]  ; clk        ; 9.918  ; 9.918  ; Rise       ; clk             ;
+;  data_r[10] ; clk        ; 10.093 ; 10.093 ; Rise       ; clk             ;
+;  data_r[11] ; clk        ; 10.212 ; 10.212 ; Rise       ; clk             ;
+;  data_r[12] ; clk        ; 10.180 ; 10.180 ; Rise       ; clk             ;
+;  data_r[13] ; clk        ; 9.905  ; 9.905  ; Rise       ; clk             ;
+;  data_r[14] ; clk        ; 10.159 ; 10.159 ; Rise       ; clk             ;
+;  data_r[15] ; clk        ; 9.901  ; 9.901  ; Rise       ; clk             ;
 +-------------+------------+--------+--------+------------+-----------------+
 
 
@@ -433,7 +433,7 @@ No paths to report.
 +-------+--------+---------------+
 ; Clock ; Slack  ; End Point TNS ;
 +-------+--------+---------------+
-; CLK   ; -1.457 ; -23.312       ;
+; clk   ; -1.457 ; -23.312       ;
 +-------+--------+---------------+
 
 
@@ -442,7 +442,7 @@ No paths to report.
 +-------+-------+---------------+
 ; Clock ; Slack ; End Point TNS ;
 +-------+-------+---------------+
-; CLK   ; 2.318 ; 0.000         ;
+; clk   ; 2.318 ; 0.000         ;
 +-------+-------+---------------+
 
 
@@ -463,200 +463,200 @@ No paths to report.
 +-------+--------+-----------------------+
 ; Clock ; Slack  ; End Point TNS         ;
 +-------+--------+-----------------------+
-; CLK   ; -1.627 ; -160.826              ;
+; clk   ; -1.627 ; -160.826              ;
 +-------+--------+-----------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fast Model Setup: 'CLK'                                                                                                                                                                                                                                                                                                ;
-+--------+--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node                                                                                                          ; To Node                                                                                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; -1.457 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg0  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_memory_reg0  ; CLK          ; CLK         ; 1.000        ; -0.018     ; 2.438      ;
-; -1.457 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg1  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a1~portb_memory_reg0  ; CLK          ; CLK         ; 1.000        ; -0.018     ; 2.438      ;
-; -1.457 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg2  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a2~portb_memory_reg0  ; CLK          ; CLK         ; 1.000        ; -0.018     ; 2.438      ;
-; -1.457 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg3  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a3~portb_memory_reg0  ; CLK          ; CLK         ; 1.000        ; -0.018     ; 2.438      ;
-; -1.457 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg4  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a4~portb_memory_reg0  ; CLK          ; CLK         ; 1.000        ; -0.018     ; 2.438      ;
-; -1.457 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg5  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a5~portb_memory_reg0  ; CLK          ; CLK         ; 1.000        ; -0.018     ; 2.438      ;
-; -1.457 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg6  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a6~portb_memory_reg0  ; CLK          ; CLK         ; 1.000        ; -0.018     ; 2.438      ;
-; -1.457 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg7  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a7~portb_memory_reg0  ; CLK          ; CLK         ; 1.000        ; -0.018     ; 2.438      ;
-; -1.457 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg8  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a8~portb_memory_reg0  ; CLK          ; CLK         ; 1.000        ; -0.018     ; 2.438      ;
-; -1.457 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg9  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a9~portb_memory_reg0  ; CLK          ; CLK         ; 1.000        ; -0.018     ; 2.438      ;
-; -1.457 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg10 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a10~portb_memory_reg0 ; CLK          ; CLK         ; 1.000        ; -0.018     ; 2.438      ;
-; -1.457 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg11 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a11~portb_memory_reg0 ; CLK          ; CLK         ; 1.000        ; -0.018     ; 2.438      ;
-; -1.457 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg12 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a12~portb_memory_reg0 ; CLK          ; CLK         ; 1.000        ; -0.018     ; 2.438      ;
-; -1.457 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg13 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a13~portb_memory_reg0 ; CLK          ; CLK         ; 1.000        ; -0.018     ; 2.438      ;
-; -1.457 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg14 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a14~portb_memory_reg0 ; CLK          ; CLK         ; 1.000        ; -0.018     ; 2.438      ;
-; -1.457 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg15 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a15~portb_memory_reg0 ; CLK          ; CLK         ; 1.000        ; -0.018     ; 2.438      ;
-+--------+--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                                                                                                                                                                                                          ;
++--------+-----------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                                                       ; To Node                                                                                                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.457 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg0  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_memory_reg0  ; clk          ; clk         ; 1.000        ; -0.018     ; 2.438      ;
+; -1.457 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg1  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a1~portb_memory_reg0  ; clk          ; clk         ; 1.000        ; -0.018     ; 2.438      ;
+; -1.457 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg2  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a2~portb_memory_reg0  ; clk          ; clk         ; 1.000        ; -0.018     ; 2.438      ;
+; -1.457 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg3  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a3~portb_memory_reg0  ; clk          ; clk         ; 1.000        ; -0.018     ; 2.438      ;
+; -1.457 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg4  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a4~portb_memory_reg0  ; clk          ; clk         ; 1.000        ; -0.018     ; 2.438      ;
+; -1.457 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg5  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a5~portb_memory_reg0  ; clk          ; clk         ; 1.000        ; -0.018     ; 2.438      ;
+; -1.457 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg6  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a6~portb_memory_reg0  ; clk          ; clk         ; 1.000        ; -0.018     ; 2.438      ;
+; -1.457 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg7  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a7~portb_memory_reg0  ; clk          ; clk         ; 1.000        ; -0.018     ; 2.438      ;
+; -1.457 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg8  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a8~portb_memory_reg0  ; clk          ; clk         ; 1.000        ; -0.018     ; 2.438      ;
+; -1.457 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg9  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a9~portb_memory_reg0  ; clk          ; clk         ; 1.000        ; -0.018     ; 2.438      ;
+; -1.457 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg10 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a10~portb_memory_reg0 ; clk          ; clk         ; 1.000        ; -0.018     ; 2.438      ;
+; -1.457 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg11 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a11~portb_memory_reg0 ; clk          ; clk         ; 1.000        ; -0.018     ; 2.438      ;
+; -1.457 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg12 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a12~portb_memory_reg0 ; clk          ; clk         ; 1.000        ; -0.018     ; 2.438      ;
+; -1.457 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg13 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a13~portb_memory_reg0 ; clk          ; clk         ; 1.000        ; -0.018     ; 2.438      ;
+; -1.457 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg14 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a14~portb_memory_reg0 ; clk          ; clk         ; 1.000        ; -0.018     ; 2.438      ;
+; -1.457 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg15 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a15~portb_memory_reg0 ; clk          ; clk         ; 1.000        ; -0.018     ; 2.438      ;
++--------+-----------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fast Model Hold: 'CLK'                                                                                                                                                                                                                                                                                                ;
-+-------+--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node                                                                                                          ; To Node                                                                                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; 2.318 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg0  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_memory_reg0  ; CLK          ; CLK         ; 0.000        ; -0.018     ; 2.438      ;
-; 2.318 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg1  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a1~portb_memory_reg0  ; CLK          ; CLK         ; 0.000        ; -0.018     ; 2.438      ;
-; 2.318 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg2  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a2~portb_memory_reg0  ; CLK          ; CLK         ; 0.000        ; -0.018     ; 2.438      ;
-; 2.318 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg3  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a3~portb_memory_reg0  ; CLK          ; CLK         ; 0.000        ; -0.018     ; 2.438      ;
-; 2.318 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg4  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a4~portb_memory_reg0  ; CLK          ; CLK         ; 0.000        ; -0.018     ; 2.438      ;
-; 2.318 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg5  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a5~portb_memory_reg0  ; CLK          ; CLK         ; 0.000        ; -0.018     ; 2.438      ;
-; 2.318 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg6  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a6~portb_memory_reg0  ; CLK          ; CLK         ; 0.000        ; -0.018     ; 2.438      ;
-; 2.318 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg7  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a7~portb_memory_reg0  ; CLK          ; CLK         ; 0.000        ; -0.018     ; 2.438      ;
-; 2.318 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg8  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a8~portb_memory_reg0  ; CLK          ; CLK         ; 0.000        ; -0.018     ; 2.438      ;
-; 2.318 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg9  ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a9~portb_memory_reg0  ; CLK          ; CLK         ; 0.000        ; -0.018     ; 2.438      ;
-; 2.318 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg10 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a10~portb_memory_reg0 ; CLK          ; CLK         ; 0.000        ; -0.018     ; 2.438      ;
-; 2.318 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg11 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a11~portb_memory_reg0 ; CLK          ; CLK         ; 0.000        ; -0.018     ; 2.438      ;
-; 2.318 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg12 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a12~portb_memory_reg0 ; CLK          ; CLK         ; 0.000        ; -0.018     ; 2.438      ;
-; 2.318 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg13 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a13~portb_memory_reg0 ; CLK          ; CLK         ; 0.000        ; -0.018     ; 2.438      ;
-; 2.318 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg14 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a14~portb_memory_reg0 ; CLK          ; CLK         ; 0.000        ; -0.018     ; 2.438      ;
-; 2.318 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg15 ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a15~portb_memory_reg0 ; CLK          ; CLK         ; 0.000        ; -0.018     ; 2.438      ;
-+-------+--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                                                                                                                                                                                                          ;
++-------+-----------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                                                       ; To Node                                                                                                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 2.318 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg0  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_memory_reg0  ; clk          ; clk         ; 0.000        ; -0.018     ; 2.438      ;
+; 2.318 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg1  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a1~portb_memory_reg0  ; clk          ; clk         ; 0.000        ; -0.018     ; 2.438      ;
+; 2.318 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg2  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a2~portb_memory_reg0  ; clk          ; clk         ; 0.000        ; -0.018     ; 2.438      ;
+; 2.318 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg3  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a3~portb_memory_reg0  ; clk          ; clk         ; 0.000        ; -0.018     ; 2.438      ;
+; 2.318 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg4  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a4~portb_memory_reg0  ; clk          ; clk         ; 0.000        ; -0.018     ; 2.438      ;
+; 2.318 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg5  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a5~portb_memory_reg0  ; clk          ; clk         ; 0.000        ; -0.018     ; 2.438      ;
+; 2.318 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg6  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a6~portb_memory_reg0  ; clk          ; clk         ; 0.000        ; -0.018     ; 2.438      ;
+; 2.318 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg7  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a7~portb_memory_reg0  ; clk          ; clk         ; 0.000        ; -0.018     ; 2.438      ;
+; 2.318 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg8  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a8~portb_memory_reg0  ; clk          ; clk         ; 0.000        ; -0.018     ; 2.438      ;
+; 2.318 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg9  ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a9~portb_memory_reg0  ; clk          ; clk         ; 0.000        ; -0.018     ; 2.438      ;
+; 2.318 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg10 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a10~portb_memory_reg0 ; clk          ; clk         ; 0.000        ; -0.018     ; 2.438      ;
+; 2.318 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg11 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a11~portb_memory_reg0 ; clk          ; clk         ; 0.000        ; -0.018     ; 2.438      ;
+; 2.318 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg12 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a12~portb_memory_reg0 ; clk          ; clk         ; 0.000        ; -0.018     ; 2.438      ;
+; 2.318 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg13 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a13~portb_memory_reg0 ; clk          ; clk         ; 0.000        ; -0.018     ; 2.438      ;
+; 2.318 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg14 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a14~portb_memory_reg0 ; clk          ; clk         ; 0.000        ; -0.018     ; 2.438      ;
+; 2.318 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg15 ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a15~portb_memory_reg0 ; clk          ; clk         ; 0.000        ; -0.018     ; 2.438      ;
++-------+-----------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fast Model Minimum Pulse Width: 'CLK'                                                                                                                                                               ;
-+--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------------------------------------------------------------+
-; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                                             ;
-+--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------------------------------------------------------------+
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg0 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg0 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg1 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg1 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg2 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg2 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg3 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg3 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg4 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg4 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg5 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg5 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg6 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg6 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg7 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg7 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg0 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg0 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg1 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg1 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg2 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg2 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg3 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg3 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg4 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg4 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg5 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg5 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg6 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg6 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg7 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg7 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg1  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg1  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg10 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg10 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg11 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg11 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg12 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg12 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg13 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg13 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg14 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg14 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg15 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg15 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg2  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg2  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg3  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg3  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg4  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg4  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg5  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg5  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg6  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg6  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg7  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg7  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg8  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg8  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg9  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg9  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_we_reg       ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_we_reg       ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a10~portb_memory_reg0 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a10~portb_memory_reg0 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a11~portb_memory_reg0 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a11~portb_memory_reg0 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a12~portb_memory_reg0 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a12~portb_memory_reg0 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a13~portb_memory_reg0 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a13~portb_memory_reg0 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a14~portb_memory_reg0 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a14~portb_memory_reg0 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a15~portb_memory_reg0 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a15~portb_memory_reg0 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a1~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a1~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a2~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a2~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a3~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a3~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a4~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a4~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a5~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a5~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a6~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a6~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a7~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a7~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a8~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a8~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a9~portb_memory_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:memory_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a9~portb_memory_reg0  ;
-; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLK   ; Rise       ; CLK                                                                                                                ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK|combout                                                                                                        ;
-+--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                                                                                                            ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                                          ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------------------------------------------------------------------+
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg1 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg1 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg2 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg2 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg3 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg3 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg4 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg4 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg5 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg5 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg6 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg6 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg7 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~porta_address_reg7 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg1 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg1 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg2 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg2 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg3 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg3 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg4 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg4 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg5 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg5 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg6 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg6 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg7 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_address_reg7 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg1  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg1  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg10 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg10 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg11 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg11 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg12 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg12 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg13 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg13 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg14 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg14 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg15 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg15 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg2  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg2  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg3  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg3  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg4  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg4  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg5  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg5  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg6  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg6  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg7  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg7  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg8  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg8  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg9  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_datain_reg9  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_we_reg       ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0~portb_we_reg       ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a10~portb_memory_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a10~portb_memory_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a11~portb_memory_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a11~portb_memory_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a12~portb_memory_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a12~portb_memory_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a13~portb_memory_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a13~portb_memory_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a14~portb_memory_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a14~portb_memory_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a15~portb_memory_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a15~portb_memory_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a1~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a1~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a2~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a2~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a3~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a3~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a4~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a4~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a5~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a5~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a6~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a6~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a7~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a7~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a8~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a8~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a9~portb_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clk   ; Rise       ; altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a9~portb_memory_reg0  ;
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                                                                                                     ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------+
-; Setup Times                                                               ;
-+-------------+------------+--------+--------+------------+-----------------+
-; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
-+-------------+------------+--------+--------+------------+-----------------+
-; ADDR[*]     ; CLK        ; 1.925  ; 1.925  ; Rise       ; CLK             ;
-;  ADDR[0]    ; CLK        ; 1.925  ; 1.925  ; Rise       ; CLK             ;
-;  ADDR[1]    ; CLK        ; 1.659  ; 1.659  ; Rise       ; CLK             ;
-;  ADDR[2]    ; CLK        ; 1.810  ; 1.810  ; Rise       ; CLK             ;
-;  ADDR[3]    ; CLK        ; 1.802  ; 1.802  ; Rise       ; CLK             ;
-;  ADDR[4]    ; CLK        ; 1.813  ; 1.813  ; Rise       ; CLK             ;
-;  ADDR[5]    ; CLK        ; 1.720  ; 1.720  ; Rise       ; CLK             ;
-;  ADDR[6]    ; CLK        ; 1.720  ; 1.720  ; Rise       ; CLK             ;
-;  ADDR[7]    ; CLK        ; 1.671  ; 1.671  ; Rise       ; CLK             ;
-; RD          ; CLK        ; -0.004 ; -0.004 ; Rise       ; CLK             ;
-; WR          ; CLK        ; 0.073  ; 0.073  ; Rise       ; CLK             ;
-; W_DATA[*]   ; CLK        ; 1.992  ; 1.992  ; Rise       ; CLK             ;
-;  W_DATA[0]  ; CLK        ; 1.992  ; 1.992  ; Rise       ; CLK             ;
-;  W_DATA[1]  ; CLK        ; 1.852  ; 1.852  ; Rise       ; CLK             ;
-;  W_DATA[2]  ; CLK        ; 1.973  ; 1.973  ; Rise       ; CLK             ;
-;  W_DATA[3]  ; CLK        ; 1.760  ; 1.760  ; Rise       ; CLK             ;
-;  W_DATA[4]  ; CLK        ; 1.887  ; 1.887  ; Rise       ; CLK             ;
-;  W_DATA[5]  ; CLK        ; 1.862  ; 1.862  ; Rise       ; CLK             ;
-;  W_DATA[6]  ; CLK        ; 1.967  ; 1.967  ; Rise       ; CLK             ;
-;  W_DATA[7]  ; CLK        ; 1.968  ; 1.968  ; Rise       ; CLK             ;
-;  W_DATA[8]  ; CLK        ; 1.765  ; 1.765  ; Rise       ; CLK             ;
-;  W_DATA[9]  ; CLK        ; 1.790  ; 1.790  ; Rise       ; CLK             ;
-;  W_DATA[10] ; CLK        ; 1.975  ; 1.975  ; Rise       ; CLK             ;
-;  W_DATA[11] ; CLK        ; 1.878  ; 1.878  ; Rise       ; CLK             ;
-;  W_DATA[12] ; CLK        ; 1.775  ; 1.775  ; Rise       ; CLK             ;
-;  W_DATA[13] ; CLK        ; 1.964  ; 1.964  ; Rise       ; CLK             ;
-;  W_DATA[14] ; CLK        ; 1.862  ; 1.862  ; Rise       ; CLK             ;
-;  W_DATA[15] ; CLK        ; 1.788  ; 1.788  ; Rise       ; CLK             ;
-+-------------+------------+--------+--------+------------+-----------------+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; addr[*]     ; clk        ; 1.989 ; 1.989 ; Rise       ; clk             ;
+;  addr[0]    ; clk        ; 1.960 ; 1.960 ; Rise       ; clk             ;
+;  addr[1]    ; clk        ; 1.953 ; 1.953 ; Rise       ; clk             ;
+;  addr[2]    ; clk        ; 1.943 ; 1.943 ; Rise       ; clk             ;
+;  addr[3]    ; clk        ; 1.942 ; 1.942 ; Rise       ; clk             ;
+;  addr[4]    ; clk        ; 1.989 ; 1.989 ; Rise       ; clk             ;
+;  addr[5]    ; clk        ; 1.942 ; 1.942 ; Rise       ; clk             ;
+;  addr[6]    ; clk        ; 1.934 ; 1.934 ; Rise       ; clk             ;
+;  addr[7]    ; clk        ; 1.982 ; 1.982 ; Rise       ; clk             ;
+; data_w[*]   ; clk        ; 2.022 ; 2.022 ; Rise       ; clk             ;
+;  data_w[0]  ; clk        ; 1.871 ; 1.871 ; Rise       ; clk             ;
+;  data_w[1]  ; clk        ; 1.907 ; 1.907 ; Rise       ; clk             ;
+;  data_w[2]  ; clk        ; 1.903 ; 1.903 ; Rise       ; clk             ;
+;  data_w[3]  ; clk        ; 1.919 ; 1.919 ; Rise       ; clk             ;
+;  data_w[4]  ; clk        ; 1.918 ; 1.918 ; Rise       ; clk             ;
+;  data_w[5]  ; clk        ; 2.022 ; 2.022 ; Rise       ; clk             ;
+;  data_w[6]  ; clk        ; 2.002 ; 2.002 ; Rise       ; clk             ;
+;  data_w[7]  ; clk        ; 1.953 ; 1.953 ; Rise       ; clk             ;
+;  data_w[8]  ; clk        ; 1.954 ; 1.954 ; Rise       ; clk             ;
+;  data_w[9]  ; clk        ; 1.887 ; 1.887 ; Rise       ; clk             ;
+;  data_w[10] ; clk        ; 1.994 ; 1.994 ; Rise       ; clk             ;
+;  data_w[11] ; clk        ; 1.891 ; 1.891 ; Rise       ; clk             ;
+;  data_w[12] ; clk        ; 1.876 ; 1.876 ; Rise       ; clk             ;
+;  data_w[13] ; clk        ; 1.991 ; 1.991 ; Rise       ; clk             ;
+;  data_w[14] ; clk        ; 1.981 ; 1.981 ; Rise       ; clk             ;
+;  data_w[15] ; clk        ; 1.901 ; 1.901 ; Rise       ; clk             ;
+; en_r        ; clk        ; 0.003 ; 0.003 ; Rise       ; clk             ;
+; en_w        ; clk        ; 0.006 ; 0.006 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
 
 
 +---------------------------------------------------------------------------+
@@ -664,34 +664,34 @@ No paths to report.
 +-------------+------------+--------+--------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-------------+------------+--------+--------+------------+-----------------+
-; ADDR[*]     ; CLK        ; -1.516 ; -1.516 ; Rise       ; CLK             ;
-;  ADDR[0]    ; CLK        ; -1.782 ; -1.782 ; Rise       ; CLK             ;
-;  ADDR[1]    ; CLK        ; -1.516 ; -1.516 ; Rise       ; CLK             ;
-;  ADDR[2]    ; CLK        ; -1.667 ; -1.667 ; Rise       ; CLK             ;
-;  ADDR[3]    ; CLK        ; -1.659 ; -1.659 ; Rise       ; CLK             ;
-;  ADDR[4]    ; CLK        ; -1.670 ; -1.670 ; Rise       ; CLK             ;
-;  ADDR[5]    ; CLK        ; -1.577 ; -1.577 ; Rise       ; CLK             ;
-;  ADDR[6]    ; CLK        ; -1.577 ; -1.577 ; Rise       ; CLK             ;
-;  ADDR[7]    ; CLK        ; -1.528 ; -1.528 ; Rise       ; CLK             ;
-; RD          ; CLK        ; 0.364  ; 0.364  ; Rise       ; CLK             ;
-; WR          ; CLK        ; 0.287  ; 0.287  ; Rise       ; CLK             ;
-; W_DATA[*]   ; CLK        ; -1.621 ; -1.621 ; Rise       ; CLK             ;
-;  W_DATA[0]  ; CLK        ; -1.853 ; -1.853 ; Rise       ; CLK             ;
-;  W_DATA[1]  ; CLK        ; -1.713 ; -1.713 ; Rise       ; CLK             ;
-;  W_DATA[2]  ; CLK        ; -1.834 ; -1.834 ; Rise       ; CLK             ;
-;  W_DATA[3]  ; CLK        ; -1.621 ; -1.621 ; Rise       ; CLK             ;
-;  W_DATA[4]  ; CLK        ; -1.748 ; -1.748 ; Rise       ; CLK             ;
-;  W_DATA[5]  ; CLK        ; -1.723 ; -1.723 ; Rise       ; CLK             ;
-;  W_DATA[6]  ; CLK        ; -1.828 ; -1.828 ; Rise       ; CLK             ;
-;  W_DATA[7]  ; CLK        ; -1.829 ; -1.829 ; Rise       ; CLK             ;
-;  W_DATA[8]  ; CLK        ; -1.626 ; -1.626 ; Rise       ; CLK             ;
-;  W_DATA[9]  ; CLK        ; -1.651 ; -1.651 ; Rise       ; CLK             ;
-;  W_DATA[10] ; CLK        ; -1.836 ; -1.836 ; Rise       ; CLK             ;
-;  W_DATA[11] ; CLK        ; -1.739 ; -1.739 ; Rise       ; CLK             ;
-;  W_DATA[12] ; CLK        ; -1.636 ; -1.636 ; Rise       ; CLK             ;
-;  W_DATA[13] ; CLK        ; -1.825 ; -1.825 ; Rise       ; CLK             ;
-;  W_DATA[14] ; CLK        ; -1.723 ; -1.723 ; Rise       ; CLK             ;
-;  W_DATA[15] ; CLK        ; -1.649 ; -1.649 ; Rise       ; CLK             ;
+; addr[*]     ; clk        ; -1.791 ; -1.791 ; Rise       ; clk             ;
+;  addr[0]    ; clk        ; -1.817 ; -1.817 ; Rise       ; clk             ;
+;  addr[1]    ; clk        ; -1.810 ; -1.810 ; Rise       ; clk             ;
+;  addr[2]    ; clk        ; -1.800 ; -1.800 ; Rise       ; clk             ;
+;  addr[3]    ; clk        ; -1.799 ; -1.799 ; Rise       ; clk             ;
+;  addr[4]    ; clk        ; -1.846 ; -1.846 ; Rise       ; clk             ;
+;  addr[5]    ; clk        ; -1.799 ; -1.799 ; Rise       ; clk             ;
+;  addr[6]    ; clk        ; -1.791 ; -1.791 ; Rise       ; clk             ;
+;  addr[7]    ; clk        ; -1.839 ; -1.839 ; Rise       ; clk             ;
+; data_w[*]   ; clk        ; -1.732 ; -1.732 ; Rise       ; clk             ;
+;  data_w[0]  ; clk        ; -1.732 ; -1.732 ; Rise       ; clk             ;
+;  data_w[1]  ; clk        ; -1.768 ; -1.768 ; Rise       ; clk             ;
+;  data_w[2]  ; clk        ; -1.764 ; -1.764 ; Rise       ; clk             ;
+;  data_w[3]  ; clk        ; -1.780 ; -1.780 ; Rise       ; clk             ;
+;  data_w[4]  ; clk        ; -1.779 ; -1.779 ; Rise       ; clk             ;
+;  data_w[5]  ; clk        ; -1.883 ; -1.883 ; Rise       ; clk             ;
+;  data_w[6]  ; clk        ; -1.863 ; -1.863 ; Rise       ; clk             ;
+;  data_w[7]  ; clk        ; -1.814 ; -1.814 ; Rise       ; clk             ;
+;  data_w[8]  ; clk        ; -1.815 ; -1.815 ; Rise       ; clk             ;
+;  data_w[9]  ; clk        ; -1.748 ; -1.748 ; Rise       ; clk             ;
+;  data_w[10] ; clk        ; -1.855 ; -1.855 ; Rise       ; clk             ;
+;  data_w[11] ; clk        ; -1.752 ; -1.752 ; Rise       ; clk             ;
+;  data_w[12] ; clk        ; -1.737 ; -1.737 ; Rise       ; clk             ;
+;  data_w[13] ; clk        ; -1.852 ; -1.852 ; Rise       ; clk             ;
+;  data_w[14] ; clk        ; -1.842 ; -1.842 ; Rise       ; clk             ;
+;  data_w[15] ; clk        ; -1.762 ; -1.762 ; Rise       ; clk             ;
+; en_r        ; clk        ; 0.136  ; 0.136  ; Rise       ; clk             ;
+; en_w        ; clk        ; 0.354  ; 0.354  ; Rise       ; clk             ;
 +-------------+------------+--------+--------+------------+-----------------+
 
 
@@ -700,23 +700,23 @@ No paths to report.
 +-------------+------------+-------+-------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-------------+------------+-------+-------+------------+-----------------+
-; R_DATA[*]   ; CLK        ; 6.020 ; 6.020 ; Rise       ; CLK             ;
-;  R_DATA[0]  ; CLK        ; 5.879 ; 5.879 ; Rise       ; CLK             ;
-;  R_DATA[1]  ; CLK        ; 5.551 ; 5.551 ; Rise       ; CLK             ;
-;  R_DATA[2]  ; CLK        ; 5.898 ; 5.898 ; Rise       ; CLK             ;
-;  R_DATA[3]  ; CLK        ; 5.853 ; 5.853 ; Rise       ; CLK             ;
-;  R_DATA[4]  ; CLK        ; 5.735 ; 5.735 ; Rise       ; CLK             ;
-;  R_DATA[5]  ; CLK        ; 5.663 ; 5.663 ; Rise       ; CLK             ;
-;  R_DATA[6]  ; CLK        ; 5.789 ; 5.789 ; Rise       ; CLK             ;
-;  R_DATA[7]  ; CLK        ; 6.004 ; 6.004 ; Rise       ; CLK             ;
-;  R_DATA[8]  ; CLK        ; 5.887 ; 5.887 ; Rise       ; CLK             ;
-;  R_DATA[9]  ; CLK        ; 5.882 ; 5.882 ; Rise       ; CLK             ;
-;  R_DATA[10] ; CLK        ; 5.655 ; 5.655 ; Rise       ; CLK             ;
-;  R_DATA[11] ; CLK        ; 5.671 ; 5.671 ; Rise       ; CLK             ;
-;  R_DATA[12] ; CLK        ; 5.806 ; 5.806 ; Rise       ; CLK             ;
-;  R_DATA[13] ; CLK        ; 6.020 ; 6.020 ; Rise       ; CLK             ;
-;  R_DATA[14] ; CLK        ; 5.669 ; 5.669 ; Rise       ; CLK             ;
-;  R_DATA[15] ; CLK        ; 5.895 ; 5.895 ; Rise       ; CLK             ;
+; data_r[*]   ; clk        ; 5.948 ; 5.948 ; Rise       ; clk             ;
+;  data_r[0]  ; clk        ; 5.846 ; 5.846 ; Rise       ; clk             ;
+;  data_r[1]  ; clk        ; 5.810 ; 5.810 ; Rise       ; clk             ;
+;  data_r[2]  ; clk        ; 5.751 ; 5.751 ; Rise       ; clk             ;
+;  data_r[3]  ; clk        ; 5.813 ; 5.813 ; Rise       ; clk             ;
+;  data_r[4]  ; clk        ; 5.805 ; 5.805 ; Rise       ; clk             ;
+;  data_r[5]  ; clk        ; 5.824 ; 5.824 ; Rise       ; clk             ;
+;  data_r[6]  ; clk        ; 5.883 ; 5.883 ; Rise       ; clk             ;
+;  data_r[7]  ; clk        ; 5.948 ; 5.948 ; Rise       ; clk             ;
+;  data_r[8]  ; clk        ; 5.906 ; 5.906 ; Rise       ; clk             ;
+;  data_r[9]  ; clk        ; 5.868 ; 5.868 ; Rise       ; clk             ;
+;  data_r[10] ; clk        ; 5.924 ; 5.924 ; Rise       ; clk             ;
+;  data_r[11] ; clk        ; 5.938 ; 5.938 ; Rise       ; clk             ;
+;  data_r[12] ; clk        ; 5.913 ; 5.913 ; Rise       ; clk             ;
+;  data_r[13] ; clk        ; 5.853 ; 5.853 ; Rise       ; clk             ;
+;  data_r[14] ; clk        ; 5.892 ; 5.892 ; Rise       ; clk             ;
+;  data_r[15] ; clk        ; 5.853 ; 5.853 ; Rise       ; clk             ;
 +-------------+------------+-------+-------+------------+-----------------+
 
 
@@ -725,23 +725,23 @@ No paths to report.
 +-------------+------------+-------+-------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-------------+------------+-------+-------+------------+-----------------+
-; R_DATA[*]   ; CLK        ; 5.551 ; 5.551 ; Rise       ; CLK             ;
-;  R_DATA[0]  ; CLK        ; 5.879 ; 5.879 ; Rise       ; CLK             ;
-;  R_DATA[1]  ; CLK        ; 5.551 ; 5.551 ; Rise       ; CLK             ;
-;  R_DATA[2]  ; CLK        ; 5.898 ; 5.898 ; Rise       ; CLK             ;
-;  R_DATA[3]  ; CLK        ; 5.853 ; 5.853 ; Rise       ; CLK             ;
-;  R_DATA[4]  ; CLK        ; 5.735 ; 5.735 ; Rise       ; CLK             ;
-;  R_DATA[5]  ; CLK        ; 5.663 ; 5.663 ; Rise       ; CLK             ;
-;  R_DATA[6]  ; CLK        ; 5.789 ; 5.789 ; Rise       ; CLK             ;
-;  R_DATA[7]  ; CLK        ; 6.004 ; 6.004 ; Rise       ; CLK             ;
-;  R_DATA[8]  ; CLK        ; 5.887 ; 5.887 ; Rise       ; CLK             ;
-;  R_DATA[9]  ; CLK        ; 5.882 ; 5.882 ; Rise       ; CLK             ;
-;  R_DATA[10] ; CLK        ; 5.655 ; 5.655 ; Rise       ; CLK             ;
-;  R_DATA[11] ; CLK        ; 5.671 ; 5.671 ; Rise       ; CLK             ;
-;  R_DATA[12] ; CLK        ; 5.806 ; 5.806 ; Rise       ; CLK             ;
-;  R_DATA[13] ; CLK        ; 6.020 ; 6.020 ; Rise       ; CLK             ;
-;  R_DATA[14] ; CLK        ; 5.669 ; 5.669 ; Rise       ; CLK             ;
-;  R_DATA[15] ; CLK        ; 5.895 ; 5.895 ; Rise       ; CLK             ;
+; data_r[*]   ; clk        ; 5.751 ; 5.751 ; Rise       ; clk             ;
+;  data_r[0]  ; clk        ; 5.846 ; 5.846 ; Rise       ; clk             ;
+;  data_r[1]  ; clk        ; 5.810 ; 5.810 ; Rise       ; clk             ;
+;  data_r[2]  ; clk        ; 5.751 ; 5.751 ; Rise       ; clk             ;
+;  data_r[3]  ; clk        ; 5.813 ; 5.813 ; Rise       ; clk             ;
+;  data_r[4]  ; clk        ; 5.805 ; 5.805 ; Rise       ; clk             ;
+;  data_r[5]  ; clk        ; 5.824 ; 5.824 ; Rise       ; clk             ;
+;  data_r[6]  ; clk        ; 5.883 ; 5.883 ; Rise       ; clk             ;
+;  data_r[7]  ; clk        ; 5.948 ; 5.948 ; Rise       ; clk             ;
+;  data_r[8]  ; clk        ; 5.906 ; 5.906 ; Rise       ; clk             ;
+;  data_r[9]  ; clk        ; 5.868 ; 5.868 ; Rise       ; clk             ;
+;  data_r[10] ; clk        ; 5.924 ; 5.924 ; Rise       ; clk             ;
+;  data_r[11] ; clk        ; 5.938 ; 5.938 ; Rise       ; clk             ;
+;  data_r[12] ; clk        ; 5.913 ; 5.913 ; Rise       ; clk             ;
+;  data_r[13] ; clk        ; 5.853 ; 5.853 ; Rise       ; clk             ;
+;  data_r[14] ; clk        ; 5.892 ; 5.892 ; Rise       ; clk             ;
+;  data_r[15] ; clk        ; 5.853 ; 5.853 ; Rise       ; clk             ;
 +-------------+------------+-------+-------+------------+-----------------+
 
 
@@ -751,9 +751,9 @@ No paths to report.
 ; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+---------+-------+----------+---------+---------------------+
 ; Worst-case Slack ; -1.915  ; 2.318 ; N/A      ; N/A     ; -1.627              ;
-;  CLK             ; -1.915  ; 2.318 ; N/A      ; N/A     ; -1.627              ;
+;  clk             ; -1.915  ; 2.318 ; N/A      ; N/A     ; -1.627              ;
 ; Design-wide TNS  ; -30.64  ; 0.0   ; 0.0      ; 0.0     ; -160.826            ;
-;  CLK             ; -30.640 ; 0.000 ; N/A      ; N/A     ; -160.826            ;
+;  clk             ; -30.640 ; 0.000 ; N/A      ; N/A     ; -160.826            ;
 +------------------+---------+-------+----------+---------+---------------------+
 
 
@@ -762,34 +762,34 @@ No paths to report.
 +-------------+------------+-------+-------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-------------+------------+-------+-------+------------+-----------------+
-; ADDR[*]     ; CLK        ; 3.676 ; 3.676 ; Rise       ; CLK             ;
-;  ADDR[0]    ; CLK        ; 3.676 ; 3.676 ; Rise       ; CLK             ;
-;  ADDR[1]    ; CLK        ; 3.152 ; 3.152 ; Rise       ; CLK             ;
-;  ADDR[2]    ; CLK        ; 3.434 ; 3.434 ; Rise       ; CLK             ;
-;  ADDR[3]    ; CLK        ; 3.423 ; 3.423 ; Rise       ; CLK             ;
-;  ADDR[4]    ; CLK        ; 3.441 ; 3.441 ; Rise       ; CLK             ;
-;  ADDR[5]    ; CLK        ; 3.214 ; 3.214 ; Rise       ; CLK             ;
-;  ADDR[6]    ; CLK        ; 3.203 ; 3.203 ; Rise       ; CLK             ;
-;  ADDR[7]    ; CLK        ; 3.165 ; 3.165 ; Rise       ; CLK             ;
-; RD          ; CLK        ; 0.711 ; 0.711 ; Rise       ; CLK             ;
-; WR          ; CLK        ; 0.836 ; 0.836 ; Rise       ; CLK             ;
-; W_DATA[*]   ; CLK        ; 3.836 ; 3.836 ; Rise       ; CLK             ;
-;  W_DATA[0]  ; CLK        ; 3.836 ; 3.836 ; Rise       ; CLK             ;
-;  W_DATA[1]  ; CLK        ; 3.571 ; 3.571 ; Rise       ; CLK             ;
-;  W_DATA[2]  ; CLK        ; 3.812 ; 3.812 ; Rise       ; CLK             ;
-;  W_DATA[3]  ; CLK        ; 3.355 ; 3.355 ; Rise       ; CLK             ;
-;  W_DATA[4]  ; CLK        ; 3.609 ; 3.609 ; Rise       ; CLK             ;
-;  W_DATA[5]  ; CLK        ; 3.585 ; 3.585 ; Rise       ; CLK             ;
-;  W_DATA[6]  ; CLK        ; 3.821 ; 3.821 ; Rise       ; CLK             ;
-;  W_DATA[7]  ; CLK        ; 3.818 ; 3.818 ; Rise       ; CLK             ;
-;  W_DATA[8]  ; CLK        ; 3.362 ; 3.362 ; Rise       ; CLK             ;
-;  W_DATA[9]  ; CLK        ; 3.395 ; 3.395 ; Rise       ; CLK             ;
-;  W_DATA[10] ; CLK        ; 3.820 ; 3.820 ; Rise       ; CLK             ;
-;  W_DATA[11] ; CLK        ; 3.601 ; 3.601 ; Rise       ; CLK             ;
-;  W_DATA[12] ; CLK        ; 3.368 ; 3.368 ; Rise       ; CLK             ;
-;  W_DATA[13] ; CLK        ; 3.807 ; 3.807 ; Rise       ; CLK             ;
-;  W_DATA[14] ; CLK        ; 3.579 ; 3.579 ; Rise       ; CLK             ;
-;  W_DATA[15] ; CLK        ; 3.388 ; 3.388 ; Rise       ; CLK             ;
+; addr[*]     ; clk        ; 3.645 ; 3.645 ; Rise       ; clk             ;
+;  addr[0]    ; clk        ; 3.645 ; 3.645 ; Rise       ; clk             ;
+;  addr[1]    ; clk        ; 3.571 ; 3.571 ; Rise       ; clk             ;
+;  addr[2]    ; clk        ; 3.576 ; 3.576 ; Rise       ; clk             ;
+;  addr[3]    ; clk        ; 3.562 ; 3.562 ; Rise       ; clk             ;
+;  addr[4]    ; clk        ; 3.628 ; 3.628 ; Rise       ; clk             ;
+;  addr[5]    ; clk        ; 3.581 ; 3.581 ; Rise       ; clk             ;
+;  addr[6]    ; clk        ; 3.545 ; 3.545 ; Rise       ; clk             ;
+;  addr[7]    ; clk        ; 3.622 ; 3.622 ; Rise       ; clk             ;
+; data_w[*]   ; clk        ; 3.811 ; 3.811 ; Rise       ; clk             ;
+;  data_w[0]  ; clk        ; 3.483 ; 3.483 ; Rise       ; clk             ;
+;  data_w[1]  ; clk        ; 3.546 ; 3.546 ; Rise       ; clk             ;
+;  data_w[2]  ; clk        ; 3.544 ; 3.544 ; Rise       ; clk             ;
+;  data_w[3]  ; clk        ; 3.543 ; 3.543 ; Rise       ; clk             ;
+;  data_w[4]  ; clk        ; 3.547 ; 3.547 ; Rise       ; clk             ;
+;  data_w[5]  ; clk        ; 3.811 ; 3.811 ; Rise       ; clk             ;
+;  data_w[6]  ; clk        ; 3.783 ; 3.783 ; Rise       ; clk             ;
+;  data_w[7]  ; clk        ; 3.682 ; 3.682 ; Rise       ; clk             ;
+;  data_w[8]  ; clk        ; 3.613 ; 3.613 ; Rise       ; clk             ;
+;  data_w[9]  ; clk        ; 3.501 ; 3.501 ; Rise       ; clk             ;
+;  data_w[10] ; clk        ; 3.684 ; 3.684 ; Rise       ; clk             ;
+;  data_w[11] ; clk        ; 3.544 ; 3.544 ; Rise       ; clk             ;
+;  data_w[12] ; clk        ; 3.507 ; 3.507 ; Rise       ; clk             ;
+;  data_w[13] ; clk        ; 3.718 ; 3.718 ; Rise       ; clk             ;
+;  data_w[14] ; clk        ; 3.738 ; 3.738 ; Rise       ; clk             ;
+;  data_w[15] ; clk        ; 3.546 ; 3.546 ; Rise       ; clk             ;
+; en_r        ; clk        ; 0.509 ; 0.509 ; Rise       ; clk             ;
+; en_w        ; clk        ; 0.505 ; 0.505 ; Rise       ; clk             ;
 +-------------+------------+-------+-------+------------+-----------------+
 
 
@@ -798,34 +798,34 @@ No paths to report.
 +-------------+------------+--------+--------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-------------+------------+--------+--------+------------+-----------------+
-; ADDR[*]     ; CLK        ; -1.516 ; -1.516 ; Rise       ; CLK             ;
-;  ADDR[0]    ; CLK        ; -1.782 ; -1.782 ; Rise       ; CLK             ;
-;  ADDR[1]    ; CLK        ; -1.516 ; -1.516 ; Rise       ; CLK             ;
-;  ADDR[2]    ; CLK        ; -1.667 ; -1.667 ; Rise       ; CLK             ;
-;  ADDR[3]    ; CLK        ; -1.659 ; -1.659 ; Rise       ; CLK             ;
-;  ADDR[4]    ; CLK        ; -1.670 ; -1.670 ; Rise       ; CLK             ;
-;  ADDR[5]    ; CLK        ; -1.577 ; -1.577 ; Rise       ; CLK             ;
-;  ADDR[6]    ; CLK        ; -1.577 ; -1.577 ; Rise       ; CLK             ;
-;  ADDR[7]    ; CLK        ; -1.528 ; -1.528 ; Rise       ; CLK             ;
-; RD          ; CLK        ; 0.364  ; 0.364  ; Rise       ; CLK             ;
-; WR          ; CLK        ; 0.287  ; 0.287  ; Rise       ; CLK             ;
-; W_DATA[*]   ; CLK        ; -1.621 ; -1.621 ; Rise       ; CLK             ;
-;  W_DATA[0]  ; CLK        ; -1.853 ; -1.853 ; Rise       ; CLK             ;
-;  W_DATA[1]  ; CLK        ; -1.713 ; -1.713 ; Rise       ; CLK             ;
-;  W_DATA[2]  ; CLK        ; -1.834 ; -1.834 ; Rise       ; CLK             ;
-;  W_DATA[3]  ; CLK        ; -1.621 ; -1.621 ; Rise       ; CLK             ;
-;  W_DATA[4]  ; CLK        ; -1.748 ; -1.748 ; Rise       ; CLK             ;
-;  W_DATA[5]  ; CLK        ; -1.723 ; -1.723 ; Rise       ; CLK             ;
-;  W_DATA[6]  ; CLK        ; -1.828 ; -1.828 ; Rise       ; CLK             ;
-;  W_DATA[7]  ; CLK        ; -1.829 ; -1.829 ; Rise       ; CLK             ;
-;  W_DATA[8]  ; CLK        ; -1.626 ; -1.626 ; Rise       ; CLK             ;
-;  W_DATA[9]  ; CLK        ; -1.651 ; -1.651 ; Rise       ; CLK             ;
-;  W_DATA[10] ; CLK        ; -1.836 ; -1.836 ; Rise       ; CLK             ;
-;  W_DATA[11] ; CLK        ; -1.739 ; -1.739 ; Rise       ; CLK             ;
-;  W_DATA[12] ; CLK        ; -1.636 ; -1.636 ; Rise       ; CLK             ;
-;  W_DATA[13] ; CLK        ; -1.825 ; -1.825 ; Rise       ; CLK             ;
-;  W_DATA[14] ; CLK        ; -1.723 ; -1.723 ; Rise       ; CLK             ;
-;  W_DATA[15] ; CLK        ; -1.649 ; -1.649 ; Rise       ; CLK             ;
+; addr[*]     ; clk        ; -1.791 ; -1.791 ; Rise       ; clk             ;
+;  addr[0]    ; clk        ; -1.817 ; -1.817 ; Rise       ; clk             ;
+;  addr[1]    ; clk        ; -1.810 ; -1.810 ; Rise       ; clk             ;
+;  addr[2]    ; clk        ; -1.800 ; -1.800 ; Rise       ; clk             ;
+;  addr[3]    ; clk        ; -1.799 ; -1.799 ; Rise       ; clk             ;
+;  addr[4]    ; clk        ; -1.846 ; -1.846 ; Rise       ; clk             ;
+;  addr[5]    ; clk        ; -1.799 ; -1.799 ; Rise       ; clk             ;
+;  addr[6]    ; clk        ; -1.791 ; -1.791 ; Rise       ; clk             ;
+;  addr[7]    ; clk        ; -1.839 ; -1.839 ; Rise       ; clk             ;
+; data_w[*]   ; clk        ; -1.732 ; -1.732 ; Rise       ; clk             ;
+;  data_w[0]  ; clk        ; -1.732 ; -1.732 ; Rise       ; clk             ;
+;  data_w[1]  ; clk        ; -1.768 ; -1.768 ; Rise       ; clk             ;
+;  data_w[2]  ; clk        ; -1.764 ; -1.764 ; Rise       ; clk             ;
+;  data_w[3]  ; clk        ; -1.780 ; -1.780 ; Rise       ; clk             ;
+;  data_w[4]  ; clk        ; -1.779 ; -1.779 ; Rise       ; clk             ;
+;  data_w[5]  ; clk        ; -1.883 ; -1.883 ; Rise       ; clk             ;
+;  data_w[6]  ; clk        ; -1.863 ; -1.863 ; Rise       ; clk             ;
+;  data_w[7]  ; clk        ; -1.814 ; -1.814 ; Rise       ; clk             ;
+;  data_w[8]  ; clk        ; -1.815 ; -1.815 ; Rise       ; clk             ;
+;  data_w[9]  ; clk        ; -1.748 ; -1.748 ; Rise       ; clk             ;
+;  data_w[10] ; clk        ; -1.855 ; -1.855 ; Rise       ; clk             ;
+;  data_w[11] ; clk        ; -1.752 ; -1.752 ; Rise       ; clk             ;
+;  data_w[12] ; clk        ; -1.737 ; -1.737 ; Rise       ; clk             ;
+;  data_w[13] ; clk        ; -1.852 ; -1.852 ; Rise       ; clk             ;
+;  data_w[14] ; clk        ; -1.842 ; -1.842 ; Rise       ; clk             ;
+;  data_w[15] ; clk        ; -1.762 ; -1.762 ; Rise       ; clk             ;
+; en_r        ; clk        ; 0.136  ; 0.136  ; Rise       ; clk             ;
+; en_w        ; clk        ; 0.354  ; 0.354  ; Rise       ; clk             ;
 +-------------+------------+--------+--------+------------+-----------------+
 
 
@@ -834,23 +834,23 @@ No paths to report.
 +-------------+------------+--------+--------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-------------+------------+--------+--------+------------+-----------------+
-; R_DATA[*]   ; CLK        ; 10.267 ; 10.267 ; Rise       ; CLK             ;
-;  R_DATA[0]  ; CLK        ; 10.001 ; 10.001 ; Rise       ; CLK             ;
-;  R_DATA[1]  ; CLK        ; 9.285  ; 9.285  ; Rise       ; CLK             ;
-;  R_DATA[2]  ; CLK        ; 9.944  ; 9.944  ; Rise       ; CLK             ;
-;  R_DATA[3]  ; CLK        ; 9.960  ; 9.960  ; Rise       ; CLK             ;
-;  R_DATA[4]  ; CLK        ; 9.713  ; 9.713  ; Rise       ; CLK             ;
-;  R_DATA[5]  ; CLK        ; 9.518  ; 9.518  ; Rise       ; CLK             ;
-;  R_DATA[6]  ; CLK        ; 9.795  ; 9.795  ; Rise       ; CLK             ;
-;  R_DATA[7]  ; CLK        ; 10.246 ; 10.246 ; Rise       ; CLK             ;
-;  R_DATA[8]  ; CLK        ; 10.000 ; 10.000 ; Rise       ; CLK             ;
-;  R_DATA[9]  ; CLK        ; 9.998  ; 9.998  ; Rise       ; CLK             ;
-;  R_DATA[10] ; CLK        ; 9.520  ; 9.520  ; Rise       ; CLK             ;
-;  R_DATA[11] ; CLK        ; 9.535  ; 9.535  ; Rise       ; CLK             ;
-;  R_DATA[12] ; CLK        ; 9.809  ; 9.809  ; Rise       ; CLK             ;
-;  R_DATA[13] ; CLK        ; 10.267 ; 10.267 ; Rise       ; CLK             ;
-;  R_DATA[14] ; CLK        ; 9.523  ; 9.523  ; Rise       ; CLK             ;
-;  R_DATA[15] ; CLK        ; 10.012 ; 10.012 ; Rise       ; CLK             ;
+; data_r[*]   ; clk        ; 10.227 ; 10.227 ; Rise       ; clk             ;
+;  data_r[0]  ; clk        ; 10.011 ; 10.011 ; Rise       ; clk             ;
+;  data_r[1]  ; clk        ; 9.958  ; 9.958  ; Rise       ; clk             ;
+;  data_r[2]  ; clk        ; 9.670  ; 9.670  ; Rise       ; clk             ;
+;  data_r[3]  ; clk        ; 9.970  ; 9.970  ; Rise       ; clk             ;
+;  data_r[4]  ; clk        ; 9.949  ; 9.949  ; Rise       ; clk             ;
+;  data_r[5]  ; clk        ; 9.861  ; 9.861  ; Rise       ; clk             ;
+;  data_r[6]  ; clk        ; 10.062 ; 10.062 ; Rise       ; clk             ;
+;  data_r[7]  ; clk        ; 10.227 ; 10.227 ; Rise       ; clk             ;
+;  data_r[8]  ; clk        ; 10.173 ; 10.173 ; Rise       ; clk             ;
+;  data_r[9]  ; clk        ; 9.918  ; 9.918  ; Rise       ; clk             ;
+;  data_r[10] ; clk        ; 10.093 ; 10.093 ; Rise       ; clk             ;
+;  data_r[11] ; clk        ; 10.212 ; 10.212 ; Rise       ; clk             ;
+;  data_r[12] ; clk        ; 10.180 ; 10.180 ; Rise       ; clk             ;
+;  data_r[13] ; clk        ; 9.905  ; 9.905  ; Rise       ; clk             ;
+;  data_r[14] ; clk        ; 10.159 ; 10.159 ; Rise       ; clk             ;
+;  data_r[15] ; clk        ; 9.901  ; 9.901  ; Rise       ; clk             ;
 +-------------+------------+--------+--------+------------+-----------------+
 
 
@@ -859,23 +859,23 @@ No paths to report.
 +-------------+------------+-------+-------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-------------+------------+-------+-------+------------+-----------------+
-; R_DATA[*]   ; CLK        ; 5.551 ; 5.551 ; Rise       ; CLK             ;
-;  R_DATA[0]  ; CLK        ; 5.879 ; 5.879 ; Rise       ; CLK             ;
-;  R_DATA[1]  ; CLK        ; 5.551 ; 5.551 ; Rise       ; CLK             ;
-;  R_DATA[2]  ; CLK        ; 5.898 ; 5.898 ; Rise       ; CLK             ;
-;  R_DATA[3]  ; CLK        ; 5.853 ; 5.853 ; Rise       ; CLK             ;
-;  R_DATA[4]  ; CLK        ; 5.735 ; 5.735 ; Rise       ; CLK             ;
-;  R_DATA[5]  ; CLK        ; 5.663 ; 5.663 ; Rise       ; CLK             ;
-;  R_DATA[6]  ; CLK        ; 5.789 ; 5.789 ; Rise       ; CLK             ;
-;  R_DATA[7]  ; CLK        ; 6.004 ; 6.004 ; Rise       ; CLK             ;
-;  R_DATA[8]  ; CLK        ; 5.887 ; 5.887 ; Rise       ; CLK             ;
-;  R_DATA[9]  ; CLK        ; 5.882 ; 5.882 ; Rise       ; CLK             ;
-;  R_DATA[10] ; CLK        ; 5.655 ; 5.655 ; Rise       ; CLK             ;
-;  R_DATA[11] ; CLK        ; 5.671 ; 5.671 ; Rise       ; CLK             ;
-;  R_DATA[12] ; CLK        ; 5.806 ; 5.806 ; Rise       ; CLK             ;
-;  R_DATA[13] ; CLK        ; 6.020 ; 6.020 ; Rise       ; CLK             ;
-;  R_DATA[14] ; CLK        ; 5.669 ; 5.669 ; Rise       ; CLK             ;
-;  R_DATA[15] ; CLK        ; 5.895 ; 5.895 ; Rise       ; CLK             ;
+; data_r[*]   ; clk        ; 5.751 ; 5.751 ; Rise       ; clk             ;
+;  data_r[0]  ; clk        ; 5.846 ; 5.846 ; Rise       ; clk             ;
+;  data_r[1]  ; clk        ; 5.810 ; 5.810 ; Rise       ; clk             ;
+;  data_r[2]  ; clk        ; 5.751 ; 5.751 ; Rise       ; clk             ;
+;  data_r[3]  ; clk        ; 5.813 ; 5.813 ; Rise       ; clk             ;
+;  data_r[4]  ; clk        ; 5.805 ; 5.805 ; Rise       ; clk             ;
+;  data_r[5]  ; clk        ; 5.824 ; 5.824 ; Rise       ; clk             ;
+;  data_r[6]  ; clk        ; 5.883 ; 5.883 ; Rise       ; clk             ;
+;  data_r[7]  ; clk        ; 5.948 ; 5.948 ; Rise       ; clk             ;
+;  data_r[8]  ; clk        ; 5.906 ; 5.906 ; Rise       ; clk             ;
+;  data_r[9]  ; clk        ; 5.868 ; 5.868 ; Rise       ; clk             ;
+;  data_r[10] ; clk        ; 5.924 ; 5.924 ; Rise       ; clk             ;
+;  data_r[11] ; clk        ; 5.938 ; 5.938 ; Rise       ; clk             ;
+;  data_r[12] ; clk        ; 5.913 ; 5.913 ; Rise       ; clk             ;
+;  data_r[13] ; clk        ; 5.853 ; 5.853 ; Rise       ; clk             ;
+;  data_r[14] ; clk        ; 5.892 ; 5.892 ; Rise       ; clk             ;
+;  data_r[15] ; clk        ; 5.853 ; 5.853 ; Rise       ; clk             ;
 +-------------+------------+-------+-------+------------+-----------------+
 
 
@@ -884,7 +884,7 @@ No paths to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; CLK        ; CLK      ; 16       ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 16       ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -894,7 +894,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; CLK        ; CLK      ; 16       ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 16       ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -919,7 +919,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 26    ; 26   ;
-; Unconstrained Input Port Paths  ; 98    ; 98   ;
+; Unconstrained Input Port Paths  ; 65    ; 65   ;
 ; Unconstrained Output Ports      ; 16    ; 16   ;
 ; Unconstrained Output Port Paths ; 128   ; 128  ;
 +---------------------------------+-------+------+
@@ -931,7 +931,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Jul 14 05:43:36 2023
+    Info: Processing started: Sun Jul 16 12:32:37 2023
 Info: Command: quartus_sta ram -c ram
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -940,48 +940,48 @@ Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'ram.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
-    Info (332105): create_clock -period 1.000 -name CLK CLK
+    Info (332105): create_clock -period 1.000 -name clk clk
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow Model
 Critical Warning (332148): Timing requirements not met
 Info (332146): Worst-case setup slack is -1.915
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -1.915       -30.640 CLK 
+    Info (332119):    -1.915       -30.640 clk 
 Info (332146): Worst-case hold slack is 2.646
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):     2.646         0.000 CLK 
+    Info (332119):     2.646         0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -1.627
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -1.627      -160.826 CLK 
+    Info (332119):    -1.627      -160.826 clk 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info: Analyzing Fast Model
 Critical Warning (332148): Timing requirements not met
 Info (332146): Worst-case setup slack is -1.457
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -1.457       -23.312 CLK 
+    Info (332119):    -1.457       -23.312 clk 
 Info (332146): Worst-case hold slack is 2.318
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):     2.318         0.000 CLK 
+    Info (332119):     2.318         0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -1.627
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -1.627      -160.826 CLK 
+    Info (332119):    -1.627      -160.826 clk 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 4537 megabytes
-    Info: Processing ended: Fri Jul 14 05:43:37 2023
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Sun Jul 16 12:32:37 2023
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 

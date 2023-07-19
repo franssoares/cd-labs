@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Datapath
-Fri Jul 14 05:35:28 2023
+Wed Jul 19 05:11:46 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jul 14 05:35:28 2023           ;
+; Analysis & Synthesis Status        ; Successful - Wed Jul 19 05:11:46 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Datapath                                        ;
 ; Top-level Entity Name              ; datapath                                        ;
@@ -190,12 +190,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Componentes/ULA/cinext.vhd                                                                        ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Datapath/Componentes/ULA/cinext.vhd                                                                        ;         ;
 ; Componentes/ULA/abext.vhd                                                                         ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Datapath/Componentes/ULA/abext.vhd                                                                         ;         ;
 ; Componentes/Multiplexador/mux16bit.vhd                                                            ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Datapath/Componentes/Multiplexador/mux16bit.vhd                                                            ;         ;
-; Componentes/Banco_de_registradores/Componentes/registrador_1x16/ffd.vhd                           ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Datapath/Componentes/Banco_de_registradores/Componentes/registrador_1x16/ffd.vhd                           ;         ;
 ; Componentes/Banco_de_registradores/Componentes/driver_de_tres_estados/tri_states_driver_16bit.vhd ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Datapath/Componentes/Banco_de_registradores/Componentes/driver_de_tres_estados/tri_states_driver_16bit.vhd ;         ;
 ; Componentes/Banco_de_registradores/Componentes/decodificador/dcd_4x16.vhd                         ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Datapath/Componentes/Banco_de_registradores/Componentes/decodificador/dcd_4x16.vhd                         ;         ;
 ; Componentes/Banco_de_registradores/RF_16x16.vhd                                                   ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Datapath/Componentes/Banco_de_registradores/RF_16x16.vhd                                                   ;         ;
 ; Datapath.vhd                                                                                      ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Datapath/Datapath.vhd                                                                                      ;         ;
 ; comp_zero.vhd                                                                                     ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Datapath/comp_zero.vhd                                                                                     ;         ;
+; Componentes/Banco_de_registradores/Componentes/registrador_1x16/FFD_RF.vhd                        ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Datapath/Componentes/Banco_de_registradores/Componentes/registrador_1x16/FFD_RF.vhd                        ;         ;
 +---------------------------------------------------------------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -236,22 +236,22 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------+--------------+
 ; |datapath                                           ; 543 (0)           ; 256 (0)      ; 0           ; 0            ; 0       ; 0         ; 62   ; 0            ; |datapath                                                                                          ; work         ;
 ;    |RF_16x16:rf_0|                                  ; 444 (184)         ; 256 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0                                                                            ; work         ;
-;       |FFD:\gen_registers:0:reg|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD:\gen_registers:0:reg                                                   ; work         ;
-;       |FFD:\gen_registers:10:reg|                   ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD:\gen_registers:10:reg                                                  ; work         ;
-;       |FFD:\gen_registers:11:reg|                   ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD:\gen_registers:11:reg                                                  ; work         ;
-;       |FFD:\gen_registers:12:reg|                   ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD:\gen_registers:12:reg                                                  ; work         ;
-;       |FFD:\gen_registers:13:reg|                   ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD:\gen_registers:13:reg                                                  ; work         ;
-;       |FFD:\gen_registers:14:reg|                   ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD:\gen_registers:14:reg                                                  ; work         ;
-;       |FFD:\gen_registers:15:reg|                   ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD:\gen_registers:15:reg                                                  ; work         ;
-;       |FFD:\gen_registers:1:reg|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD:\gen_registers:1:reg                                                   ; work         ;
-;       |FFD:\gen_registers:2:reg|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD:\gen_registers:2:reg                                                   ; work         ;
-;       |FFD:\gen_registers:3:reg|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD:\gen_registers:3:reg                                                   ; work         ;
-;       |FFD:\gen_registers:4:reg|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD:\gen_registers:4:reg                                                   ; work         ;
-;       |FFD:\gen_registers:5:reg|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD:\gen_registers:5:reg                                                   ; work         ;
-;       |FFD:\gen_registers:6:reg|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD:\gen_registers:6:reg                                                   ; work         ;
-;       |FFD:\gen_registers:7:reg|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD:\gen_registers:7:reg                                                   ; work         ;
-;       |FFD:\gen_registers:8:reg|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD:\gen_registers:8:reg                                                   ; work         ;
-;       |FFD:\gen_registers:9:reg|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD:\gen_registers:9:reg                                                   ; work         ;
+;       |FFD_RF:\gen_registers:0:reg|                 ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD_RF:\gen_registers:0:reg                                                ; work         ;
+;       |FFD_RF:\gen_registers:10:reg|                ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg                                               ; work         ;
+;       |FFD_RF:\gen_registers:11:reg|                ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg                                               ; work         ;
+;       |FFD_RF:\gen_registers:12:reg|                ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg                                               ; work         ;
+;       |FFD_RF:\gen_registers:13:reg|                ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg                                               ; work         ;
+;       |FFD_RF:\gen_registers:14:reg|                ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg                                               ; work         ;
+;       |FFD_RF:\gen_registers:15:reg|                ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg                                               ; work         ;
+;       |FFD_RF:\gen_registers:1:reg|                 ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD_RF:\gen_registers:1:reg                                                ; work         ;
+;       |FFD_RF:\gen_registers:2:reg|                 ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD_RF:\gen_registers:2:reg                                                ; work         ;
+;       |FFD_RF:\gen_registers:3:reg|                 ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD_RF:\gen_registers:3:reg                                                ; work         ;
+;       |FFD_RF:\gen_registers:4:reg|                 ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg                                                ; work         ;
+;       |FFD_RF:\gen_registers:5:reg|                 ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg                                                ; work         ;
+;       |FFD_RF:\gen_registers:6:reg|                 ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg                                                ; work         ;
+;       |FFD_RF:\gen_registers:7:reg|                 ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg                                                ; work         ;
+;       |FFD_RF:\gen_registers:8:reg|                 ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg                                                ; work         ;
+;       |FFD_RF:\gen_registers:9:reg|                 ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg                                                ; work         ;
 ;       |dcd_4x16:dcdp|                               ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|dcd_4x16:dcdp                                                              ; work         ;
 ;       |dcd_4x16:dcdw|                               ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|dcd_4x16:dcdw                                                              ; work         ;
 ;       |tri_states_driver_16bit:\gen_3sdp:0:driverp| ; 182 (182)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RF_16x16:rf_0|tri_states_driver_16bit:\gen_3sdp:0:driverp                                ; work         ;
@@ -540,8 +540,100 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Jul 14 05:35:26 2023
+    Info: Processing started: Wed Jul 19 05:11:44 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Datapath -c Datapath
+Warning (136002): Ignored duplicate of assignment PARTITION_SOURCE for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_PRESERVE_HIGH_SPEED_TILES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IGNORE_SOURCE_FILE_CHANGES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ALWAYS_USE_QXP_NETLIST for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_NEW_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_EXISTING_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_PIN_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_PROMOTE_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_TYPE for node ""
+Warning (136002): Ignored duplicate of assignment ALLOW_MULTIPLE_PERSONAS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ASD_REGION_ID for node ""
+Warning (136002): Ignored duplicate of assignment CROSS_BOUNDARY_OPTIMIZATIONS for node ""
+Warning (136002): Ignored duplicate of assignment PROPAGATE_CONSTANTS_ON_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment PROPAGATE_INVERSIONS_ON_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS for node ""
+Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_BIDIRS for node ""
+Warning (136002): Ignored duplicate of assignment ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_EXTRACT_HARD_BLOCK_NODES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_BACK_ANNOTATION for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_COLOR for node ""
+Warning (136002): Ignored duplicate of assignment HIERARCHY_BLACKBOX_FILE for node "|"
+Warning (136002): Ignored duplicate of assignment PARTITION_SOURCE for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_PRESERVE_HIGH_SPEED_TILES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IGNORE_SOURCE_FILE_CHANGES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ALWAYS_USE_QXP_NETLIST for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_NEW_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_EXISTING_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_PIN_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_PROMOTE_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_TYPE for node ""
+Warning (136002): Ignored duplicate of assignment ALLOW_MULTIPLE_PERSONAS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ASD_REGION_ID for node ""
+Warning (136002): Ignored duplicate of assignment CROSS_BOUNDARY_OPTIMIZATIONS for node ""
+Warning (136002): Ignored duplicate of assignment PROPAGATE_CONSTANTS_ON_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment PROPAGATE_INVERSIONS_ON_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS for node ""
+Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_BIDIRS for node ""
+Warning (136002): Ignored duplicate of assignment ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_EXTRACT_HARD_BLOCK_NODES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_BACK_ANNOTATION for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_COLOR for node ""
+Warning (136002): Ignored duplicate of assignment HIERARCHY_BLACKBOX_FILE for node "|"
+Warning (136002): Ignored duplicate of assignment PARTITION_SOURCE for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_PRESERVE_HIGH_SPEED_TILES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IGNORE_SOURCE_FILE_CHANGES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ALWAYS_USE_QXP_NETLIST for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_NEW_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_EXISTING_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_PIN_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_PROMOTE_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_TYPE for node ""
+Warning (136002): Ignored duplicate of assignment ALLOW_MULTIPLE_PERSONAS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ASD_REGION_ID for node ""
+Warning (136002): Ignored duplicate of assignment CROSS_BOUNDARY_OPTIMIZATIONS for node ""
+Warning (136002): Ignored duplicate of assignment PROPAGATE_CONSTANTS_ON_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment PROPAGATE_INVERSIONS_ON_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS for node ""
+Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_BIDIRS for node ""
+Warning (136002): Ignored duplicate of assignment ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_EXTRACT_HARD_BLOCK_NODES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_BACK_ANNOTATION for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_COLOR for node ""
+Warning (136002): Ignored duplicate of assignment HIERARCHY_BLACKBOX_FILE for node "|"
+Warning (136002): Ignored duplicate of assignment PARTITION_SOURCE for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_PRESERVE_HIGH_SPEED_TILES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IGNORE_SOURCE_FILE_CHANGES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ALWAYS_USE_QXP_NETLIST for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_NEW_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_EXISTING_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_PIN_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_PROMOTE_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_TYPE for node ""
+Warning (136002): Ignored duplicate of assignment ALLOW_MULTIPLE_PERSONAS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ASD_REGION_ID for node ""
+Warning (136002): Ignored duplicate of assignment CROSS_BOUNDARY_OPTIMIZATIONS for node ""
+Warning (136002): Ignored duplicate of assignment PROPAGATE_CONSTANTS_ON_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment PROPAGATE_INVERSIONS_ON_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS for node ""
+Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_BIDIRS for node ""
+Warning (136002): Ignored duplicate of assignment ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_EXTRACT_HARD_BLOCK_NODES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_BACK_ANNOTATION for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_COLOR for node ""
+Warning (136002): Ignored duplicate of assignment HIERARCHY_BLACKBOX_FILE for node "|"
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file componentes/ula/ula.vhd
     Info (12022): Found design unit 1: ula-rtl
@@ -570,9 +662,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file compone
 Info (12021): Found 2 design units, including 1 entities, in source file componentes/multiplexador/mux16bit.vhd
     Info (12022): Found design unit 1: mux16bit-behav
     Info (12023): Found entity 1: mux16bit
-Info (12021): Found 2 design units, including 1 entities, in source file componentes/banco_de_registradores/componentes/registrador_1x16/ffd.vhd
-    Info (12022): Found design unit 1: FFD-Behavioral
-    Info (12023): Found entity 1: FFD
 Info (12021): Found 2 design units, including 1 entities, in source file componentes/banco_de_registradores/componentes/driver_de_tres_estados/tri_states_driver_16bit.vhd
     Info (12022): Found design unit 1: tri_states_driver_16bit-behav
     Info (12023): Found entity 1: tri_states_driver_16bit
@@ -588,6 +677,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file datapat
 Info (12021): Found 2 design units, including 1 entities, in source file comp_zero.vhd
     Info (12022): Found design unit 1: comp_zero-behav
     Info (12023): Found entity 1: comp_zero
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/banco_de_registradores/componentes/registrador_1x16/ffd_rf.vhd
+    Info (12022): Found design unit 1: FFD_RF-Behavioral
+    Info (12023): Found entity 1: FFD_RF
 Info (12127): Elaborating entity "Datapath" for the top level hierarchy
 Info (12128): Elaborating entity "mux16bit" for hierarchy "mux16bit:mux0"
 Warning (10631): VHDL Process Statement warning at mux16bit.vhd(22): inferring latch(es) for signal or variable "data_o", which holds its previous value in one or more paths through the process
@@ -601,7 +693,7 @@ Info (10041): Inferred latch for "data_o[14]" at mux16bit.vhd(22)
 Info (10041): Inferred latch for "data_o[15]" at mux16bit.vhd(22)
 Info (12128): Elaborating entity "RF_16x16" for hierarchy "RF_16x16:rf_0"
 Info (12128): Elaborating entity "dcd_4x16" for hierarchy "RF_16x16:rf_0|dcd_4x16:dcdw"
-Info (12128): Elaborating entity "FFD" for hierarchy "RF_16x16:rf_0|FFD:\gen_registers:0:reg"
+Info (12128): Elaborating entity "FFD_RF" for hierarchy "RF_16x16:rf_0|FFD_RF:\gen_registers:0:reg"
 Info (12128): Elaborating entity "tri_states_driver_16bit" for hierarchy "RF_16x16:rf_0|tri_states_driver_16bit:\gen_3sdp:0:driverp"
 Warning (10492): VHDL Process Statement warning at tri_states_driver_16bit.vhd(22): signal "in_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "ula" for hierarchy "ula:ula_0"
@@ -653,9 +745,9 @@ Info (21057): Implemented 861 device resources after synthesis - the final resou
     Info (21058): Implemented 44 input pins
     Info (21059): Implemented 18 output pins
     Info (21061): Implemented 799 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 37 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 129 warnings
     Info: Peak virtual memory: 4640 megabytes
-    Info: Processing ended: Fri Jul 14 05:35:28 2023
+    Info: Processing ended: Wed Jul 19 05:11:46 2023
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

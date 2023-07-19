@@ -41,14 +41,14 @@ ARCHITECTURE mem OF RF_16x16 IS
 	END COMPONENT dcd_4x16;
 
 	-- 2) Registrador ffd
-	COMPONENT FFD IS
+	COMPONENT FFD_RF IS
 		port (
 			 clk: in std_logic;
 			 load: in std_logic;
 			 d: in std_logic_vector(15 downto 0);
 			 q: out std_logic_vector(15 downto 0)
 		);
-	END COMPONENT FFD;
+	END COMPONENT FFD_RF;
 
 	-- 3) Driver de 3 estados
 	COMPONENT tri_states_driver_16bit IS
@@ -102,7 +102,7 @@ BEGIN
 -----------------------REGISTRADORES------------------------------------------
 	-- Registradores 0 a 15
 	gen_registers: for i in 0 to 15 generate
-		reg : FFD
+		reg : FFD_RF
 			PORT MAP(
 				clk => clk,
 				load => wires_dcd_w(i),

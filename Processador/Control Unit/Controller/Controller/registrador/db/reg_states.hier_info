@@ -1,0 +1,39 @@
+|reg_states
+clock => ffd:FF0.clock
+clock => ffd:FF1.clock
+clock => ffd:FF2.clock
+clock => ffd:FF3.clock
+entrada[0] => ffd:FF0.d
+entrada[1] => ffd:FF1.d
+entrada[2] => ffd:FF2.d
+entrada[3] => ffd:FF3.d
+saida[0] <= ffd:FF0.q
+saida[1] <= ffd:FF1.q
+saida[2] <= ffd:FF2.q
+saida[3] <= ffd:FF3.q
+
+
+|reg_states|ffd:FF0
+clock => q_reg.CLK
+d => q_reg.DATAIN
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|reg_states|ffd:FF1
+clock => q_reg.CLK
+d => q_reg.DATAIN
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|reg_states|ffd:FF2
+clock => q_reg.CLK
+d => q_reg.DATAIN
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|reg_states|ffd:FF3
+clock => q_reg.CLK
+d => q_reg.DATAIN
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
