@@ -6,6 +6,7 @@ use ieee.std_logic_1164.all;
 entity processador is
 	port(
 		clk : in std_logic;
+		sinal_zero, sinal_maior : out std_logic;
 		t_rf_addr, t_rf_rp_addr : out std_logic_vector(3 downto 0); 
 		rom_data: out std_logic_vector(15 downto 0)
 	);
@@ -234,5 +235,7 @@ begin
 	t_rf_addr <= wires_rf_w_addr;
 	t_rf_rp_addr <= wires_rf_addr;
 	rom_data <= wires_rom_data;
+	sinal_zero <= wires_alu(3);
+	sinal_maior <= wires_alu(2);
 		
 end architecture RTL;

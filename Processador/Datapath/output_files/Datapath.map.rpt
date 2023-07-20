@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Datapath
-Wed Jul 19 05:11:46 2023
+Wed Jul 19 23:25:51 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jul 19 05:11:46 2023           ;
+; Analysis & Synthesis Status        ; Successful - Wed Jul 19 23:25:51 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Datapath                                        ;
 ; Top-level Entity Name              ; datapath                                        ;
@@ -540,7 +540,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Jul 19 05:11:44 2023
+    Info: Processing started: Wed Jul 19 23:25:49 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Datapath -c Datapath
 Warning (136002): Ignored duplicate of assignment PARTITION_SOURCE for node ""
 Warning (136002): Ignored duplicate of assignment PARTITION_PRESERVE_HIGH_SPEED_TILES for node ""
@@ -746,8 +746,8 @@ Info (21057): Implemented 861 device resources after synthesis - the final resou
     Info (21059): Implemented 18 output pins
     Info (21061): Implemented 799 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 129 warnings
-    Info: Peak virtual memory: 4640 megabytes
-    Info: Processing ended: Wed Jul 19 05:11:46 2023
+    Info: Peak virtual memory: 4648 megabytes
+    Info: Processing ended: Wed Jul 19 23:25:51 2023
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

@@ -104,10 +104,9 @@ architecture Behavioral of unid_control is
 		port (
         clock       : in std_logic;
         reset       : in std_logic;
-        enable      : in std_logic;
+        pc_ld      : in std_logic;
         pc_inc      : in std_logic;
-        input_data  : in std_logic_vector(7 downto 0);
-        output      : out std_logic_vector(3 downto 0)
+        pc_addr      : out std_logic_vector(3 downto 0)
     );
 	 end component;
 	 
@@ -121,10 +120,9 @@ begin
 	port map (
 		clock => clk,
 		reset => wire_pc(0),
-		enable => wire_pc(1),
+		pc_ld => wire_pc(1),
 		pc_inc => wire_pc(2),
-		input_data => "00000000",
-		output => pc_addr
+		pc_addr => pc_addr
 	);
 	
 	ir0 : ireader

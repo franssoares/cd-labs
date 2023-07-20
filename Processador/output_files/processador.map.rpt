@@ -1,5 +1,5 @@
 Analysis & Synthesis report for processador
-Wed Jul 19 05:23:51 2023
+Thu Jul 20 15:46:50 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -20,7 +20,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  12. General Register Statistics
  13. Registers Added for RAM Pass-Through Logic
  14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for RAM256x16:ram0|altsyncram:ram_rtl_0|altsyncram_cog1:auto_generated
+ 15. Source assignments for RAM256x16:ram0|altsyncram:ram_rtl_0|altsyncram_mrg1:auto_generated
  16. Parameter Settings for User Entity Instance: ROM7x16:rom0
  17. Parameter Settings for User Entity Instance: unid_control:uctr0|ireader:ir0
  18. Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0
@@ -74,16 +74,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jul 19 05:23:51 2023           ;
+; Analysis & Synthesis Status        ; Successful - Thu Jul 20 15:46:50 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; processador                                     ;
 ; Top-level Entity Name              ; processador                                     ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 282                                             ;
-;     Total combinational functions  ; 223                                             ;
+; Total logic elements               ; 289                                             ;
+;     Total combinational functions  ; 230                                             ;
 ;     Dedicated logic registers      ; 126                                             ;
 ; Total registers                    ; 126                                             ;
-; Total pins                         ; 25                                              ;
+; Total pins                         ; 27                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 1,024                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -230,7 +230,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; altrom.inc                                                                                                 ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                                                                             ;         ;
 ; altram.inc                                                                                                 ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                                                                             ;         ;
 ; altdpram.inc                                                                                               ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                                                                           ;         ;
-; db/altsyncram_cog1.tdf                                                                                     ; yes             ; Auto-Generated Megafunction  ; C:/altera/13.0sp1/Processador/db/altsyncram_cog1.tdf                                                                                     ;         ;
+; db/altsyncram_mrg1.tdf                                                                                     ; yes             ; Auto-Generated Megafunction  ; C:/altera/13.0sp1/Processador/db/altsyncram_mrg1.tdf                                                                                     ;         ;
 +------------------------------------------------------------------------------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -239,29 +239,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 282   ;
+; Estimated Total logic elements              ; 289   ;
 ;                                             ;       ;
-; Total combinational functions               ; 223   ;
+; Total combinational functions               ; 230   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 129   ;
-;     -- 3 input functions                    ; 76    ;
-;     -- <=2 input functions                  ; 18    ;
+;     -- 4 input functions                    ; 150   ;
+;     -- 3 input functions                    ; 58    ;
+;     -- <=2 input functions                  ; 22    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 208   ;
+;     -- normal mode                          ; 215   ;
 ;     -- arithmetic mode                      ; 15    ;
 ;                                             ;       ;
 ; Total registers                             ; 126   ;
 ;     -- Dedicated logic registers            ; 126   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 25    ;
+; I/O pins                                    ; 27    ;
 ; Total memory bits                           ; 1024  ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; clk   ;
 ; Maximum fan-out                             ; 142   ;
-; Total fan-out                               ; 1331  ;
-; Average fan-out                             ; 3.41  ;
+; Total fan-out                               ; 1387  ;
+; Average fan-out                             ; 3.48  ;
 +---------------------------------------------+-------+
 
 
@@ -270,36 +270,34 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                               ; Library Name ;
 +-----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------+--------------+
-; |processador                                        ; 223 (1)           ; 126 (0)      ; 1024        ; 0            ; 0       ; 0         ; 25   ; 0            ; |processador                                                                                                      ; work         ;
+; |processador                                        ; 230 (1)           ; 126 (0)      ; 1024        ; 0            ; 0       ; 0         ; 27   ; 0            ; |processador                                                                                                      ; work         ;
 ;    |RAM256x16:ram0|                                 ; 19 (19)           ; 37 (37)      ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|RAM256x16:ram0                                                                                       ; work         ;
 ;       |altsyncram:ram_rtl_0|                        ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|RAM256x16:ram0|altsyncram:ram_rtl_0                                                                  ; work         ;
-;          |altsyncram_cog1:auto_generated|           ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|RAM256x16:ram0|altsyncram:ram_rtl_0|altsyncram_cog1:auto_generated                                   ; work         ;
-;    |ROM7x16:rom0|                                   ; 18 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|ROM7x16:rom0                                                                                         ; work         ;
-;    |datapath:dp|                                    ; 153 (0)           ; 64 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp                                                                                          ; work         ;
-;       |RF_16x16:rf_0|                               ; 91 (87)           ; 64 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|RF_16x16:rf_0                                                                            ; work         ;
+;          |altsyncram_mrg1:auto_generated|           ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|RAM256x16:ram0|altsyncram:ram_rtl_0|altsyncram_mrg1:auto_generated                                   ; work         ;
+;    |ROM7x16:rom0|                                   ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|ROM7x16:rom0                                                                                         ; work         ;
+;    |datapath:dp|                                    ; 175 (0)           ; 64 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp                                                                                          ; work         ;
+;       |RF_16x16:rf_0|                               ; 110 (105)         ; 64 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|RF_16x16:rf_0                                                                            ; work         ;
 ;          |FFD_RF:\gen_registers:0:reg|              ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:0:reg                                                ; work         ;
 ;          |FFD_RF:\gen_registers:1:reg|              ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:1:reg                                                ; work         ;
 ;          |FFD_RF:\gen_registers:2:reg|              ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:2:reg                                                ; work         ;
 ;          |FFD_RF:\gen_registers:3:reg|              ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:3:reg                                                ; work         ;
-;          |dcd_4x16:dcdw|                            ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|RF_16x16:rf_0|dcd_4x16:dcdw                                                              ; work         ;
+;          |dcd_4x16:dcdw|                            ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|RF_16x16:rf_0|dcd_4x16:dcdw                                                              ; work         ;
+;       |comp_zero:comp_0|                            ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|comp_zero:comp_0                                                                         ; work         ;
 ;       |mux16bit:mux0|                               ; 36 (36)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|mux16bit:mux0                                                                            ; work         ;
-;       |ula:ula_0|                                   ; 26 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|ula:ula_0                                                                                ; work         ;
+;       |ula:ula_0|                                   ; 24 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|ula:ula_0                                                                                ; work         ;
 ;          |comp16bit:comparator|                     ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|ula:ula_0|comp16bit:comparator                                                           ; work         ;
-;          |sum_16:sum_16_0|                          ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|ula:ula_0|sum_16:sum_16_0                                                                ; work         ;
-;             |full_adder_16:inst0_full_adder_16bits| ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits                          ; work         ;
-;                |full_adder:\gen_fa:10:fa|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:10:fa ; work         ;
+;          |sum_16:sum_16_0|                          ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|ula:ula_0|sum_16:sum_16_0                                                                ; work         ;
+;             |full_adder_16:inst0_full_adder_16bits| ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits                          ; work         ;
 ;                |full_adder:\gen_fa:12:fa|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:12:fa ; work         ;
-;                |full_adder:\gen_fa:14:fa|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:14:fa ; work         ;
-;                |full_adder:\gen_fa:2:fa|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:2:fa  ; work         ;
-;                |full_adder:\gen_fa:4:fa|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:4:fa  ; work         ;
-;                |full_adder:\gen_fa:6:fa|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:6:fa  ; work         ;
-;                |full_adder:\gen_fa:8:fa|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:8:fa  ; work         ;
+;                |full_adder:\gen_fa:3:fa|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:3:fa  ; work         ;
+;                |full_adder:\gen_fa:6:fa|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:6:fa  ; work         ;
+;                |full_adder:\gen_fa:9:fa|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:9:fa  ; work         ;
 ;                |full_adder:inst0_fa|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:inst0_fa      ; work         ;
-;    |unid_control:uctr0|                             ; 32 (0)            ; 25 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0                                                                                   ; work         ;
+;    |unid_control:uctr0|                             ; 25 (0)            ; 25 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0                                                                                   ; work         ;
 ;       |cont_program:pc0|                            ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0|cont_program:pc0                                                                  ; work         ;
-;       |controle:ctrl0|                              ; 27 (0)            ; 11 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0|controle:ctrl0                                                                    ; work         ;
-;          |controlador:ctr0|                         ; 27 (0)            ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0|controle:ctrl0|controlador:ctr0                                                   ; work         ;
-;             |comb_logic:cl|                         ; 27 (27)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0|controle:ctrl0|controlador:ctr0|comb_logic:cl                                     ; work         ;
+;       |controle:ctrl0|                              ; 20 (0)            ; 11 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0|controle:ctrl0                                                                    ; work         ;
+;          |controlador:ctr0|                         ; 20 (0)            ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0|controle:ctrl0|controlador:ctr0                                                   ; work         ;
+;             |comb_logic:cl|                         ; 20 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0|controle:ctrl0|controlador:ctr0|comb_logic:cl                                     ; work         ;
 ;             |reg_states:reg|                        ; 0 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg                                    ; work         ;
 ;                |ffd1bit:FF0|                        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0                        ; work         ;
 ;                |ffd1bit:FF1|                        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1                        ; work         ;
@@ -325,7 +323,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
 ; Name                                                                          ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
 +-------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
-; RAM256x16:ram0|altsyncram:ram_rtl_0|altsyncram_cog1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 64           ; 16           ; 64           ; 16           ; 1024 ; None ;
+; RAM256x16:ram0|altsyncram:ram_rtl_0|altsyncram_mrg1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 256          ; 16           ; 256          ; 16           ; 4096 ; None ;
 +-------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
 
 
@@ -334,6 +332,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------+------------------------------------------------------------------------+------------------------+
 ; Latch Name                                         ; Latch Enable Signal                                                    ; Free of Timing Hazards ;
 +----------------------------------------------------+------------------------------------------------------------------------+------------------------+
+; datapath:dp|mux16bit:mux0|data_o[15]               ; unid_control:uctr0|controle:ctrl0|controlador:ctr0|comb_logic:cl|rf_s1 ; yes                    ;
 ; datapath:dp|mux16bit:mux0|data_o[8]                ; unid_control:uctr0|controle:ctrl0|controlador:ctr0|comb_logic:cl|rf_s1 ; yes                    ;
 ; datapath:dp|mux16bit:mux0|data_o[9]                ; unid_control:uctr0|controle:ctrl0|controlador:ctr0|comb_logic:cl|rf_s1 ; yes                    ;
 ; datapath:dp|mux16bit:mux0|data_o[10]               ; unid_control:uctr0|controle:ctrl0|controlador:ctr0|comb_logic:cl|rf_s1 ; yes                    ;
@@ -341,7 +340,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; datapath:dp|mux16bit:mux0|data_o[12]               ; unid_control:uctr0|controle:ctrl0|controlador:ctr0|comb_logic:cl|rf_s1 ; yes                    ;
 ; datapath:dp|mux16bit:mux0|data_o[13]               ; unid_control:uctr0|controle:ctrl0|controlador:ctr0|comb_logic:cl|rf_s1 ; yes                    ;
 ; datapath:dp|mux16bit:mux0|data_o[14]               ; unid_control:uctr0|controle:ctrl0|controlador:ctr0|comb_logic:cl|rf_s1 ; yes                    ;
-; datapath:dp|mux16bit:mux0|data_o[15]               ; unid_control:uctr0|controle:ctrl0|controlador:ctr0|comb_logic:cl|rf_s1 ; yes                    ;
 ; Number of user-specified and inferred latches = 8  ;                                                                        ;                        ;
 +----------------------------------------------------+------------------------------------------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -352,203 +350,222 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
 ; Register name                                                                       ; Reason for Removal                                                                         ;
 +-------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
-; unid_control:uctr0|ireader:ir0|IR_reg[2,3,6,7,11,15]                                ; Stuck at GND due to stuck port data_in                                                     ;
-; unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF7|q_reg      ; Stuck at GND due to stuck port data_in                                                     ;
-; unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF6|q_reg      ; Stuck at GND due to stuck port data_in                                                     ;
-; unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF3|q_reg      ; Stuck at GND due to stuck port data_in                                                     ;
-; unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF2|q_reg      ; Stuck at GND due to stuck port data_in                                                     ;
-; unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF3|q_reg ; Stuck at GND due to stuck port data_in                                                     ;
-; unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF2|q_reg ; Stuck at GND due to stuck port data_in                                                     ;
-; unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF3|q_reg ; Stuck at GND due to stuck port data_in                                                     ;
-; unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF2|q_reg ; Stuck at GND due to stuck port data_in                                                     ;
-; unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF3|q_reg ; Stuck at GND due to stuck port data_in                                                     ;
+; unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF3|q_reg ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF7|q_reg ;
+; unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF2|q_reg ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF6|q_reg ;
 ; unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF1|q_reg ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF5|q_reg ;
 ; unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF0|q_reg ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF4|q_reg ;
+; unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF3|q_reg ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF3|q_reg ;
+; unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF2|q_reg ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF2|q_reg ;
 ; unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF1|q_reg ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF1|q_reg ;
 ; unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF0|q_reg ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF0|q_reg ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[0]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[0]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[0]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[0]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[0]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[0]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[0]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[0]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[0]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[0]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[0]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[0]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[0]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[0]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[0]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[0]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[0]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[0]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[0]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[0]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[0]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[0]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[1]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[1]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[1]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[1]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[1]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[1]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[1]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[1]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[1]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[1]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[1]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[1]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[1]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[1]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[1]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[1]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[1]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[1]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[1]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[1]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[1]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[1]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[2]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[2]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[2]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[2]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[2]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[2]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[2]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[2]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[2]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[2]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[2]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[2]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[2]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[2]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[2]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[2]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[2]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[2]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[2]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[2]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[2]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[2]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[3]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[3]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[3]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[3]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[3]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[3]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[3]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[3]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[3]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[3]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[3]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[3]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[3]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[3]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[3]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[3]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[3]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[3]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[3]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[3]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[3]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[3]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[4]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[4]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[4]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[4]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[4]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[4]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[4]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[4]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[4]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[4]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[4]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[4]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[4]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[4]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[4]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[4]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[4]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[4]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[4]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[4]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[4]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[4]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[5]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[5]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[5]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[5]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[5]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[5]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[5]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[5]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[5]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[5]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[5]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[5]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[5]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[5]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[5]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[5]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[5]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[5]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[5]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[5]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[5]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[5]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[6]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[6]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[6]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[6]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[6]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[6]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[6]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[6]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[6]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[6]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[6]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[6]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[6]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[6]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[6]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[6]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[6]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[6]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[6]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[6]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[6]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[6]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[7]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[7]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[7]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[7]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[7]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[7]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[7]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[7]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[7]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[7]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[7]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[7]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[7]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[7]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[7]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[7]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[7]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[7]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[7]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[7]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[7]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[7]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[8]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[8]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[8]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[8]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[8]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[8]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[8]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[8]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[8]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[8]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[8]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[8]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[8]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[8]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[8]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[8]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[8]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[8]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[8]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[8]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[8]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[8]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[9]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[9]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[9]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[9]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[9]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[9]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[9]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[9]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[9]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[9]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[9]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[9]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[9]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[9]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[9]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[9]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[9]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[9]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[9]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[9]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[9]                      ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[9]                ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[10]                    ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[10]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[10]                    ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[10]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[10]                    ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[10]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[10]                    ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[10]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[10]                    ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[10]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[10]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[10]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[10]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[10]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[10]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[10]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[10]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[10]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[10]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[10]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[10]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[10]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[11]                    ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[11]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[11]                    ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[11]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[11]                    ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[11]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[11]                    ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[11]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[11]                    ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[11]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[11]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[11]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[11]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[11]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[11]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[11]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[11]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[11]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[11]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[11]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[11]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[11]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[12]                    ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[12]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[12]                    ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[12]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[12]                    ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[12]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[12]                    ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[12]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[12]                    ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[12]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[12]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[12]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[12]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[12]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[12]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[12]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[12]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[12]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[12]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[12]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[12]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[12]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[13]                    ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[13]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[13]                    ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[13]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[13]                    ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[13]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[13]                    ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[13]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[13]                    ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[13]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[13]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[13]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[13]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[13]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[13]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[13]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[13]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[13]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[13]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[13]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[13]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[13]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[14]                    ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[14]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[14]                    ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[14]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[14]                    ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[14]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[14]                    ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[14]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[14]                    ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[14]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[14]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[14]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[14]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[14]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[14]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[14]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[14]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[14]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[14]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[14]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[14]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[14]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[15]                    ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[15]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[15]                    ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[15]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[15]                    ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[15]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[15]                    ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[15]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[15]                    ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[15]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[15]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[15]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[15]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[15]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[15]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[15]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[15]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[15]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[15]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[15]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[15]                     ; Merged with datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[15]               ;
-; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[0..15]                 ; Stuck at GND due to stuck port clock_enable                                                ;
-; RAM256x16:ram0|ram_rtl_0_bypass[5..8]                                               ; Stuck at GND due to stuck port data_in                                                     ;
+; RAM256x16:ram0|ram_rtl_0_bypass[16]                                                 ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF7|q_reg ;
+; RAM256x16:ram0|ram_rtl_0_bypass[14]                                                 ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF6|q_reg ;
+; RAM256x16:ram0|ram_rtl_0_bypass[12]                                                 ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF5|q_reg ;
+; RAM256x16:ram0|ram_rtl_0_bypass[10]                                                 ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF4|q_reg ;
 ; RAM256x16:ram0|ram_rtl_0_bypass[2]                                                  ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF0|q_reg ;
 ; RAM256x16:ram0|ram_rtl_0_bypass[4]                                                  ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF1|q_reg ;
-; RAM256x16:ram0|ram_rtl_0_bypass[10]                                                 ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF4|q_reg ;
-; RAM256x16:ram0|ram_rtl_0_bypass[12]                                                 ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF5|q_reg ;
-; Total Number of Removed Registers = 219                                             ;                                                                                            ;
+; RAM256x16:ram0|ram_rtl_0_bypass[6]                                                  ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF2|q_reg ;
+; RAM256x16:ram0|ram_rtl_0_bypass[8]                                                  ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF3|q_reg ;
+; unid_control:uctr0|ireader:ir0|IR_reg[2,3,6,7,11,15]                                ; Stuck at GND due to stuck port data_in                                                     ;
+; unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF3|q_reg ; Stuck at GND due to stuck port data_in                                                     ;
+; unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF6|q_reg      ; Stuck at GND due to stuck port data_in                                                     ;
+; unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF7|q_reg      ; Stuck at GND due to stuck port data_in                                                     ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[15]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[15]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[15]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[15]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[15]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[15]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[15]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[15]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[14]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[14]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[14]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[14]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[14]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[14]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[14]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[14]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[13]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[13]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[13]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[13]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[13]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[13]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[13]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[13]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[12]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[12]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[12]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[12]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[12]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[12]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[12]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[12]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[11]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[11]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[11]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[11]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[11]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[11]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[11]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[11]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[10]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[10]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[10]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[10]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[10]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[10]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[10]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[10]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[9]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[9]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[9]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[9]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[9]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[9]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[9]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[9]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[8]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[8]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[8]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[8]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[8]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[8]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[8]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[8]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[7]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[7]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[7]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[7]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[7]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[7]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[7]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[7]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[6]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[6]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[6]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[6]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[6]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[6]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[6]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[6]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[5]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[5]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[5]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[5]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[5]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[5]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[5]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[5]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[4]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[4]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[4]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[4]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[4]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[4]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[4]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[4]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[3]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[3]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[3]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[3]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[3]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[3]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[3]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[3]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[2]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[2]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[2]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[2]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[2]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[2]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[2]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[2]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[1]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[1]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[1]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[1]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[1]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[1]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[1]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[1]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[0]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[0]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[0]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[0]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[0]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[0]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[0]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[0]                     ; Lost fanout                                                                                ;
+; unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF2|q_reg      ; Stuck at GND due to stuck port data_in                                                     ;
+; unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF3|q_reg      ; Stuck at GND due to stuck port data_in                                                     ;
+; RAM256x16:ram0|ram_rtl_0_bypass[5,7,13,15]                                          ; Stuck at GND due to stuck port data_in                                                     ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[4]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[4]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[4]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[4]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[5]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[5]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[5]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[5]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[6]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[6]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[6]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[6]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[15]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[15]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[15]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[15]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[7]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[7]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[7]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[7]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[8]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[8]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[8]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[8]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[9]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[9]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[9]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[9]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[10]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[10]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[10]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[10]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[11]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[11]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[11]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[11]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[12]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[12]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[12]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[12]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[13]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[13]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[13]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[13]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[14]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[14]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[14]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[14]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[3]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[3]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[3]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[3]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[0]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[0]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[0]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[0]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[1]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[1]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[1]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[1]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[2]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[2]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[2]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[2]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; Total Number of Removed Registers = 223                                             ;                                                                                            ;
 +-------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
 
 
@@ -557,32 +574,207 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-------------------------------------------+---------------------------+--------------------------------------------------------------------------------------+
 ; Register name                             ; Reason for Removal        ; Registers Removed due to This Register                                               ;
 +-------------------------------------------+---------------------------+--------------------------------------------------------------------------------------+
-; unid_control:uctr0|ireader:ir0|IR_reg[3]  ; Stuck at GND              ; unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF3|q_reg,      ;
-;                                           ; due to stuck port data_in ; unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF3|q_reg, ;
-;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[0],                     ;
-;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[1],                     ;
-;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[3],                     ;
-;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[4],                     ;
-;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[5],                     ;
-;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[8],                     ;
-;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[9],                     ;
-;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[10],                    ;
-;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[11],                    ;
-;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[12],                    ;
-;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[13],                    ;
+; unid_control:uctr0|ireader:ir0|IR_reg[11] ; Stuck at GND              ; unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF3|q_reg, ;
+;                                           ; due to stuck port data_in ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[15],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[15],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[15],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[15],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[15],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[15],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[15],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[15],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[14],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[14],                     ;
 ;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[14],                    ;
-;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[15]                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[14],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[14],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[14],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[14],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[14],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[13],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[13],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[13],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[13],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[13],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[13],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[13],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[13],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[12],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[12],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[12],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[12],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[12],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[12],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[12],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[12],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[11],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[11],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[11],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[11],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[11],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[11],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[11],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[11],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[10],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[10],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[10],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[10],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[10],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[10],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[10],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[10],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[9],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[9],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[9],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[9],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[9],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[9],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[9],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[9],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[8],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[8],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[8],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[8],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[8],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[8],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[8],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[8],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[7],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[7],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[7],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[7],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[7],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[7],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[7],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[7],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[6],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[6],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[6],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[6],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[6],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[6],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[6],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[6],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[5],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[5],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[5],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[5],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[5],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[5],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[5],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[5],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[4],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[4],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[4],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[4],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[4],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[4],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[4],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[4],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[3],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[3],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[3],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[3],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[3],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[3],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[3],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[3],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[2],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[2],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[2],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[2],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[2],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[2],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[2],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[2],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[1],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[1],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[1],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[1],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[1],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[1],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[1],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[1],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[0],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[0],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[0],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[0],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[0],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[0],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[0],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[0]                      ;
 ; unid_control:uctr0|ireader:ir0|IR_reg[2]  ; Stuck at GND              ; unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF2|q_reg,      ;
-;                                           ; due to stuck port data_in ; unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF2|q_reg, ;
-;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[2]                      ;
+;                                           ; due to stuck port data_in ; RAM256x16:ram0|ram_rtl_0_bypass[5],                                                  ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[4],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[4],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[4],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[4],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[5],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[5],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[5],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[5],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[6],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[6],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[6],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[15],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[15],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[15],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[15],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[7],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[7],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[7],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[7],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[8],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[8],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[8],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[8],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[9],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[9],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[9],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[9],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[10],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[10],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[10],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[10],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[11],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[11],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[11],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[11],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[12],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[12],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[12],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[12],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[13],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[13],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[13],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[13],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[14],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[14],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[14],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[14],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[3],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[3],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[3],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[3],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[0],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[0],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[0],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[0],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[1],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[1],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[1],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[1],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[2],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[2],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[2],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[2]                       ;
 ; unid_control:uctr0|ireader:ir0|IR_reg[6]  ; Stuck at GND              ; unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF6|q_reg,      ;
-;                                           ; due to stuck port data_in ; unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF2|q_reg, ;
-;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[6]                      ;
+;                                           ; due to stuck port data_in ; RAM256x16:ram0|ram_rtl_0_bypass[13],                                                 ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[6]                       ;
 ; unid_control:uctr0|ireader:ir0|IR_reg[7]  ; Stuck at GND              ; unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF7|q_reg,      ;
-;                                           ; due to stuck port data_in ; unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF3|q_reg, ;
-;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[7]                      ;
-; unid_control:uctr0|ireader:ir0|IR_reg[11] ; Stuck at GND              ; unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF3|q_reg  ;
-;                                           ; due to stuck port data_in ;                                                                                      ;
+;                                           ; due to stuck port data_in ; RAM256x16:ram0|ram_rtl_0_bypass[15]                                                  ;
+; unid_control:uctr0|ireader:ir0|IR_reg[3]  ; Stuck at GND              ; unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF3|q_reg,      ;
+;                                           ; due to stuck port data_in ; RAM256x16:ram0|ram_rtl_0_bypass[7]                                                   ;
 +-------------------------------------------+---------------------------+--------------------------------------------------------------------------------------+
 
 
@@ -635,24 +827,26 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; RAM256x16:ram0|ram_rtl_0_bypass[26] ; RAM256x16:ram0|ram_rtl_0 ;
 ; RAM256x16:ram0|ram_rtl_0_bypass[27] ; RAM256x16:ram0|ram_rtl_0 ;
 ; RAM256x16:ram0|ram_rtl_0_bypass[28] ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[29] ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[30] ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[31] ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[32] ; RAM256x16:ram0|ram_rtl_0 ;
 +-------------------------------------+--------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |processador|unid_control:uctr0|cont_program:pc0|counter[3] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |processador|datapath:dp|mux16bit:mux0|data_o[6]            ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |processador|datapath:dp|mux16bit:mux0|data_o[0]            ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |processador|datapath:dp|RF_16x16:rf_0|Rq_data[11]          ;
-; 48:1               ; 16 bits   ; 512 LEs       ; 48 LEs               ; 464 LEs                ; No         ; |processador|datapath:dp|RF_16x16:rf_0|Rp_data[4]           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |processador|datapath:dp|mux16bit:mux0|data_o[1]   ;
+; 48:1               ; 16 bits   ; 512 LEs       ; 160 LEs              ; 352 LEs                ; No         ; |processador|datapath:dp|RF_16x16:rf_0|Rq_data[12] ;
+; 96:1               ; 16 bits   ; 1024 LEs      ; 160 LEs              ; 864 LEs                ; No         ; |processador|datapath:dp|RF_16x16:rf_0|Rp_data[4]  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------+
-; Source assignments for RAM256x16:ram0|altsyncram:ram_rtl_0|altsyncram_cog1:auto_generated ;
+; Source assignments for RAM256x16:ram0|altsyncram:ram_rtl_0|altsyncram_mrg1:auto_generated ;
 +---------------------------------+--------------------+------+-----------------------------+
 ; Assignment                      ; Value              ; From ; To                          ;
 +---------------------------------+--------------------+------+-----------------------------+
@@ -884,8 +1078,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; WIDTH_BYTEENA                      ; 1                    ; Untyped                  ;
 ; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                  ;
 ; WIDTH_A                            ; 16                   ; Untyped                  ;
-; WIDTHAD_A                          ; 6                    ; Untyped                  ;
-; NUMWORDS_A                         ; 64                   ; Untyped                  ;
+; WIDTHAD_A                          ; 8                    ; Untyped                  ;
+; NUMWORDS_A                         ; 256                  ; Untyped                  ;
 ; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                  ;
 ; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                  ;
 ; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                  ;
@@ -893,8 +1087,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; INDATA_ACLR_A                      ; NONE                 ; Untyped                  ;
 ; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                  ;
 ; WIDTH_B                            ; 16                   ; Untyped                  ;
-; WIDTHAD_B                          ; 6                    ; Untyped                  ;
-; NUMWORDS_B                         ; 64                   ; Untyped                  ;
+; WIDTHAD_B                          ; 8                    ; Untyped                  ;
+; NUMWORDS_B                         ; 256                  ; Untyped                  ;
 ; INDATA_REG_B                       ; CLOCK1               ; Untyped                  ;
 ; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                  ;
 ; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                  ;
@@ -927,7 +1121,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                  ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                  ;
 ; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                  ;
-; CBXI_PARAMETER                     ; altsyncram_cog1      ; Untyped                  ;
+; CBXI_PARAMETER                     ; altsyncram_mrg1      ; Untyped                  ;
 +------------------------------------+----------------------+--------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -941,10 +1135,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Entity Instance                           ; RAM256x16:ram0|altsyncram:ram_rtl_0 ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                           ;
 ;     -- WIDTH_A                            ; 16                                  ;
-;     -- NUMWORDS_A                         ; 64                                  ;
+;     -- NUMWORDS_A                         ; 256                                 ;
 ;     -- OUTDATA_REG_A                      ; UNREGISTERED                        ;
 ;     -- WIDTH_B                            ; 16                                  ;
-;     -- NUMWORDS_B                         ; 64                                  ;
+;     -- NUMWORDS_B                         ; 256                                 ;
 ;     -- ADDRESS_REG_B                      ; CLOCK0                              ;
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                        ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                ;
@@ -970,13 +1164,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+-------------------------+
 
 
-+-----------------------------------------------------------------+
-; Port Connectivity Checks: "unid_control:uctr0|cont_program:pc0" ;
-+------------+-------+----------+---------------------------------+
-; Port       ; Type  ; Severity ; Details                         ;
-+------------+-------+----------+---------------------------------+
-; input_data ; Input ; Info     ; Stuck at GND                    ;
-+------------+-------+----------+---------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "unid_control:uctr0|cont_program:pc0"                                                                                                              ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                      ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; input_data ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -984,7 +1178,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -994,7 +1188,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Jul 19 05:23:49 2023
+    Info: Processing started: Thu Jul 20 15:46:47 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off processador -c processador
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file control unit/ffd1bit.vhd
@@ -1165,11 +1359,11 @@ Info (19000): Inferred 1 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "RAM256x16:ram0|ram_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
         Info (286033): Parameter WIDTH_A set to 16
-        Info (286033): Parameter WIDTHAD_A set to 6
-        Info (286033): Parameter NUMWORDS_A set to 64
+        Info (286033): Parameter WIDTHAD_A set to 8
+        Info (286033): Parameter NUMWORDS_A set to 256
         Info (286033): Parameter WIDTH_B set to 16
-        Info (286033): Parameter WIDTHAD_B set to 6
-        Info (286033): Parameter NUMWORDS_B set to 64
+        Info (286033): Parameter WIDTHAD_B set to 8
+        Info (286033): Parameter NUMWORDS_B set to 256
         Info (286033): Parameter ADDRESS_ACLR_A set to NONE
         Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
         Info (286033): Parameter ADDRESS_ACLR_B set to NONE
@@ -1182,11 +1376,11 @@ Info (12130): Elaborated megafunction instantiation "RAM256x16:ram0|altsyncram:r
 Info (12133): Instantiated megafunction "RAM256x16:ram0|altsyncram:ram_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
     Info (12134): Parameter "WIDTH_A" = "16"
-    Info (12134): Parameter "WIDTHAD_A" = "6"
-    Info (12134): Parameter "NUMWORDS_A" = "64"
+    Info (12134): Parameter "WIDTHAD_A" = "8"
+    Info (12134): Parameter "NUMWORDS_A" = "256"
     Info (12134): Parameter "WIDTH_B" = "16"
-    Info (12134): Parameter "WIDTHAD_B" = "6"
-    Info (12134): Parameter "NUMWORDS_B" = "64"
+    Info (12134): Parameter "WIDTHAD_B" = "8"
+    Info (12134): Parameter "NUMWORDS_B" = "256"
     Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
     Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
     Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
@@ -1195,8 +1389,29 @@ Info (12133): Instantiated megafunction "RAM256x16:ram0|altsyncram:ram_rtl_0" wi
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_cog1.tdf
-    Info (12023): Found entity 1: altsyncram_cog1
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_mrg1.tdf
+    Info (12023): Found entity 1: altsyncram_mrg1
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13050): Open-drain buffer(s) that do not directly drive top-level pin(s) are removed
+    Warning (13051): Converted the fanout from the open-drain buffer "ROM7x16:rom0|data_r[2]" to the node "unid_control:uctr0|ireader:ir0|IR_reg[2]" into a wire
+    Warning (13051): Converted the fanout from the open-drain buffer "ROM7x16:rom0|data_r[3]" to the node "unid_control:uctr0|ireader:ir0|IR_reg[3]" into a wire
+    Warning (13051): Converted the fanout from the open-drain buffer "ROM7x16:rom0|data_r[6]" to the node "unid_control:uctr0|ireader:ir0|IR_reg[6]" into a wire
+    Warning (13051): Converted the fanout from the open-drain buffer "ROM7x16:rom0|data_r[7]" to the node "unid_control:uctr0|ireader:ir0|IR_reg[7]" into a wire
+    Warning (13051): Converted the fanout from the open-drain buffer "ROM7x16:rom0|data_r[11]" to the node "unid_control:uctr0|ireader:ir0|IR_reg[11]" into a wire
+    Warning (13051): Converted the fanout from the open-drain buffer "ROM7x16:rom0|data_r[15]" to the node "unid_control:uctr0|ireader:ir0|IR_reg[15]" into a wire
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13047): Converted the fan-out from the tri-state buffer "ROM7x16:rom0|data_r[0]" to the node "unid_control:uctr0|ireader:ir0|IR_reg[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ROM7x16:rom0|data_r[1]" to the node "unid_control:uctr0|ireader:ir0|IR_reg[1]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ROM7x16:rom0|data_r[4]" to the node "unid_control:uctr0|ireader:ir0|IR_reg[4]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ROM7x16:rom0|data_r[5]" to the node "unid_control:uctr0|ireader:ir0|IR_reg[5]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ROM7x16:rom0|data_r[8]" to the node "unid_control:uctr0|ireader:ir0|IR_reg[8]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ROM7x16:rom0|data_r[9]" to the node "unid_control:uctr0|ireader:ir0|IR_reg[9]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ROM7x16:rom0|data_r[10]" to the node "unid_control:uctr0|ireader:ir0|IR_reg[10]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ROM7x16:rom0|data_r[12]" to the node "unid_control:uctr0|ireader:ir0|IR_reg[12]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ROM7x16:rom0|data_r[13]" to the node "unid_control:uctr0|ireader:ir0|IR_reg[13]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ROM7x16:rom0|data_r[14]" to the node "unid_control:uctr0|ireader:ir0|IR_reg[14]" into an OR gate
+Warning (13012): Latch datapath:dp|mux16bit:mux0|data_o[15] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg
 Warning (13012): Latch datapath:dp|mux16bit:mux0|data_o[8] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg
 Warning (13012): Latch datapath:dp|mux16bit:mux0|data_o[9] has unsafe behavior
@@ -1211,29 +1426,23 @@ Warning (13012): Latch datapath:dp|mux16bit:mux0|data_o[13] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg
 Warning (13012): Latch datapath:dp|mux16bit:mux0|data_o[14] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg
-Warning (13012): Latch datapath:dp|mux16bit:mux0|data_o[15] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "t_rf_addr[2]" is stuck at GND
     Warning (13410): Pin "t_rf_addr[3]" is stuck at GND
     Warning (13410): Pin "t_rf_rp_addr[3]" is stuck at GND
-    Warning (13410): Pin "rom_data[2]" is stuck at GND
-    Warning (13410): Pin "rom_data[3]" is stuck at GND
-    Warning (13410): Pin "rom_data[6]" is stuck at GND
-    Warning (13410): Pin "rom_data[7]" is stuck at GND
-    Warning (13410): Pin "rom_data[11]" is stuck at GND
-    Warning (13410): Pin "rom_data[15]" is stuck at GND
+Info (17049): 128 registers lost all their fanouts during netlist optimizations.
+Info (17036): Removed 2 MSB VCC or GND address nodes from RAM block "RAM256x16:ram0|altsyncram:ram_rtl_0|altsyncram_mrg1:auto_generated|ALTSYNCRAM"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 366 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 375 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 24 output pins
-    Info (21061): Implemented 325 logic cells
+    Info (21059): Implemented 26 output pins
+    Info (21061): Implemented 332 logic cells
     Info (21064): Implemented 16 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 64 warnings
-    Info: Peak virtual memory: 4648 megabytes
-    Info: Processing ended: Wed Jul 19 05:23:51 2023
-    Info: Elapsed time: 00:00:02
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 77 warnings
+    Info: Peak virtual memory: 4660 megabytes
+    Info: Processing ended: Thu Jul 20 15:46:50 2023
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 
 

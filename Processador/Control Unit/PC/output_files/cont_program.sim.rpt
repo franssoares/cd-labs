@@ -1,5 +1,5 @@
 Simulator report for cont_program
-Wed Jul 19 01:36:59 2023
+Thu Jul 20 14:00:46 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -45,9 +45,9 @@ applicable agreement for further details.
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 1.0 us       ;
-; Simulation Netlist Size     ; 34 nodes     ;
-; Simulation Coverage         ;      92.00 % ;
-; Total Number of Transitions ; 1108         ;
+; Simulation Netlist Size     ; 35 nodes     ;
+; Simulation Coverage         ;      92.59 % ;
+; Total Number of Transitions ; 1529         ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Cyclone II   ;
 +-----------------------------+--------------+
@@ -94,12 +94,12 @@ Please use Quartus II 64-Bit to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      92.00 % ;
-; Total nodes checked                                 ; 34           ;
-; Total output ports checked                          ; 25           ;
-; Total output ports with complete 1/0-value coverage ; 23           ;
-; Total output ports with no 1/0-value coverage       ; 1            ;
-; Total output ports with no 1-value coverage         ; 1            ;
+; Total coverage as a percentage                      ;      92.59 % ;
+; Total nodes checked                                 ; 35           ;
+; Total output ports checked                          ; 27           ;
+; Total output ports with complete 1/0-value coverage ; 25           ;
+; Total output ports with no 1/0-value coverage       ; 2            ;
+; Total output ports with no 1-value coverage         ; 2            ;
 ; Total output ports with no 0-value coverage         ; 2            ;
 +-----------------------------------------------------+--------------+
 
@@ -116,6 +116,8 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |cont_program|counter~3  ; |cont_program|counter~3  ; out              ;
 ; |cont_program|counter~4  ; |cont_program|counter~4  ; out              ;
 ; |cont_program|counter~5  ; |cont_program|counter~5  ; out              ;
+; |cont_program|counter~6  ; |cont_program|counter~6  ; out              ;
+; |cont_program|counter[0] ; |cont_program|counter[0] ; regout           ;
 ; |cont_program|counter[3] ; |cont_program|counter[3] ; regout           ;
 ; |cont_program|counter[2] ; |cont_program|counter[2] ; regout           ;
 ; |cont_program|counter[1] ; |cont_program|counter[1] ; regout           ;
@@ -143,18 +145,19 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; Node Name           ; Output Port Name    ; Output Port Type ;
 +---------------------+---------------------+------------------+
 ; |cont_program|reset ; |cont_program|reset ; out              ;
+; |cont_program|pc_ld ; |cont_program|pc_ld ; out              ;
 +---------------------+---------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
-+----------------------------------------------------------------+
-; Missing 0-Value Coverage                                       ;
-+----------------------+----------------------+------------------+
-; Node Name            ; Output Port Name     ; Output Port Type ;
-+----------------------+----------------------+------------------+
-; |cont_program|reset  ; |cont_program|reset  ; out              ;
-; |cont_program|enable ; |cont_program|enable ; out              ;
-+----------------------+----------------------+------------------+
++--------------------------------------------------------------+
+; Missing 0-Value Coverage                                     ;
++---------------------+---------------------+------------------+
+; Node Name           ; Output Port Name    ; Output Port Type ;
++---------------------+---------------------+------------------+
+; |cont_program|reset ; |cont_program|reset ; out              ;
+; |cont_program|pc_ld ; |cont_program|pc_ld ; out              ;
++---------------------+---------------------+------------------+
 
 
 +---------------------+
@@ -170,19 +173,19 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Simulator
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Jul 19 01:36:59 2023
+    Info: Processing started: Thu Jul 20 14:00:45 2023
 Info: Command: quartus_sim --simulation_results_format=VWF cont_program -c cont_program
 Info (324025): Using vector source file "C:/altera/13.0sp1/Processador/Control Unit/PC/Waveform.vwf"
 Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info (310002): Simulation partitioned into 1 sub-simulations
-Info (328053): Simulation coverage is      92.00 %
-Info (328052): Number of transitions in simulation is 1108
+Info (328053): Simulation coverage is      92.59 %
+Info (328052): Number of transitions in simulation is 1529
 Info (324045): Vector file cont_program.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
 Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4441 megabytes
-    Info: Processing ended: Wed Jul 19 01:36:59 2023
-    Info: Elapsed time: 00:00:00
+    Info: Processing ended: Thu Jul 20 14:00:46 2023
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
 

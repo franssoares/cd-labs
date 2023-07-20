@@ -1,5 +1,5 @@
 Fitter report for cont_program
-Wed Jul 19 01:32:22 2023
+Thu Jul 20 14:00:19 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Wed Jul 19 01:32:22 2023           ;
+; Fitter Status                      ; Successful - Thu Jul 20 14:00:19 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; cont_program                                    ;
 ; Top-level Entity Name              ; cont_program                                    ;
@@ -195,8 +195,8 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/PC/o
 ;                                             ;                      ;
 ; Logic element usage by number of LUT inputs ;                      ;
 ;     -- 4 input functions                    ; 2                    ;
-;     -- 3 input functions                    ; 2                    ;
-;     -- <=2 input functions                  ; 1                    ;
+;     -- 3 input functions                    ; 3                    ;
+;     -- <=2 input functions                  ; 0                    ;
 ;     -- Register only                        ; 0                    ;
 ;                                             ;                      ;
 ; Logic elements by mode                      ;                      ;
@@ -226,8 +226,8 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/PC/o
 ; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%         ;
 ; Maximum fan-out                             ; 4                    ;
 ; Highest non-global fan-out                  ; 4                    ;
-; Total fan-out                               ; 34                   ;
-; Average fan-out                             ; 1.13                 ;
+; Total fan-out                               ; 35                   ;
+; Average fan-out                             ; 1.17                 ;
 +---------------------------------------------+----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -247,8 +247,8 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/PC/o
 ;                                             ;                     ;                                ;
 ; Logic element usage by number of LUT inputs ;                     ;                                ;
 ;     -- 4 input functions                    ; 2                   ; 0                              ;
-;     -- 3 input functions                    ; 2                   ; 0                              ;
-;     -- <=2 input functions                  ; 1                   ; 0                              ;
+;     -- 3 input functions                    ; 3                   ; 0                              ;
+;     -- <=2 input functions                  ; 0                   ; 0                              ;
 ;     -- Register only                        ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Logic elements by mode                      ;                     ;                                ;
@@ -274,7 +274,7 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/PC/o
 ;     -- Registered Output Connections        ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Internal Connections                        ;                     ;                                ;
-;     -- Total Connections                    ; 34                  ; 0                              ;
+;     -- Total Connections                    ; 35                  ; 0                              ;
 ;     -- Registered Connections               ; 13                  ; 0                              ;
 ;                                             ;                     ;                                ;
 ; External Connections                        ;                     ;                                ;
@@ -308,7 +308,6 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/PC/o
 ; Name          ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
 +---------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; clock         ; P2    ; 1        ; 0            ; 18           ; 2           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; enable        ; D2    ; 2        ; 0            ; 32           ; 2           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; input_data[0] ; C13   ; 3        ; 31           ; 36           ; 2           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; input_data[1] ; D13   ; 3        ; 31           ; 36           ; 3           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; input_data[2] ; W12   ; 8        ; 18           ; 0            ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
@@ -317,7 +316,8 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/PC/o
 ; input_data[5] ; V17   ; 7        ; 50           ; 0            ; 2           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; input_data[6] ; AE23  ; 7        ; 63           ; 0            ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; input_data[7] ; AA23  ; 6        ; 65           ; 5            ; 2           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; pc_inc        ; F4    ; 2        ; 0            ; 32           ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; pc_inc        ; D2    ; 2        ; 0            ; 32           ; 2           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; pc_ld         ; F4    ; 2        ; 0            ; 32           ; 1           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; reset         ; P1    ; 1        ; 0            ; 18           ; 3           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 +---------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
@@ -586,7 +586,7 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/PC/o
 ; C25      ; 361        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; C26      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; D1       ; 13         ; 2        ; output[0]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; D2       ; 12         ; 2        ; enable                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; D2       ; 12         ; 2        ; pc_inc                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; D3       ; 1          ; 2        ; ~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; On           ;
 ; D4       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; D5       ; 477        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -640,7 +640,7 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/PC/o
 ; F1       ; 29         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F2       ; 28         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F3       ; 10         ; 2        ; output[2]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; F4       ; 11         ; 2        ; pc_inc                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; F4       ; 11         ; 2        ; pc_ld                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; F5       ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; F6       ; 5          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F7       ; 14         ; 2        ; output[1]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
@@ -1095,10 +1095,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; output[1]     ; Output   ; --            ; --            ; --                    ; --  ;
 ; output[2]     ; Output   ; --            ; --            ; --                    ; --  ;
 ; output[3]     ; Output   ; --            ; --            ; --                    ; --  ;
-; enable        ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; pc_inc        ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; pc_ld         ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; clock         ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; reset         ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; pc_inc        ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 +---------------+----------+---------------+---------------+-----------------------+-----+
 
 
@@ -1115,15 +1115,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; input_data[5]       ;                   ;         ;
 ; input_data[6]       ;                   ;         ;
 ; input_data[7]       ;                   ;         ;
-; enable              ;                   ;         ;
-;      - counter[0]~0 ; 1                 ; 6       ;
-;      - counter[1]~1 ; 1                 ; 6       ;
-;      - counter[2]~2 ; 1                 ; 6       ;
-; clock               ;                   ;         ;
-; reset               ;                   ;         ;
 ; pc_inc              ;                   ;         ;
+;      - counter[0]~0 ; 0                 ; 6       ;
 ;      - counter[1]~1 ; 0                 ; 6       ;
 ;      - counter[2]~2 ; 0                 ; 6       ;
+; pc_ld               ;                   ;         ;
+;      - counter[0]~0 ; 0                 ; 6       ;
+;      - counter[1]~1 ; 0                 ; 6       ;
+;      - counter[2]~2 ; 0                 ; 6       ;
+; clock               ;                   ;         ;
+; reset               ;                   ;         ;
 +---------------------+-------------------+---------+
 
 
@@ -1154,9 +1155,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------+------------------+
 ; counter[1]   ; 4                ;
 ; counter[0]   ; 4                ;
-; enable       ; 3                ;
+; pc_ld        ; 3                ;
+; pc_inc       ; 3                ;
 ; counter[2]   ; 3                ;
-; pc_inc       ; 2                ;
 ; counter[2]~2 ; 2                ;
 ; counter[3]   ; 2                ;
 ; counter[3]~4 ; 1                ;
@@ -1171,14 +1172,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+----------------------+
 ; Other Routing Resource Type ; Usage                ;
 +-----------------------------+----------------------+
-; Block interconnects         ; 8 / 94,460 ( < 1 % ) ;
+; Block interconnects         ; 7 / 94,460 ( < 1 % ) ;
 ; C16 interconnects           ; 0 / 3,315 ( 0 % )    ;
 ; C4 interconnects            ; 1 / 60,840 ( < 1 % ) ;
-; Direct links                ; 2 / 94,460 ( < 1 % ) ;
+; Direct links                ; 4 / 94,460 ( < 1 % ) ;
 ; Global clocks               ; 2 / 16 ( 13 % )      ;
 ; Local interconnects         ; 4 / 33,216 ( < 1 % ) ;
 ; R24 interconnects           ; 0 / 3,091 ( 0 % )    ;
-; R4 interconnects            ; 1 / 81,294 ( < 1 % ) ;
+; R4 interconnects            ; 0 / 81,294 ( 0 % )   ;
 +-----------------------------+----------------------+
 
 
@@ -1318,10 +1319,10 @@ Critical Warning (169085): No exact pin location assignment(s) for 16 pins of 16
     Info (169086): Pin output[1] not assigned to an exact location on the device
     Info (169086): Pin output[2] not assigned to an exact location on the device
     Info (169086): Pin output[3] not assigned to an exact location on the device
-    Info (169086): Pin enable not assigned to an exact location on the device
+    Info (169086): Pin pc_inc not assigned to an exact location on the device
+    Info (169086): Pin pc_ld not assigned to an exact location on the device
     Info (169086): Pin clock not assigned to an exact location on the device
     Info (169086): Pin reset not assigned to an exact location on the device
-    Info (169086): Pin pc_inc not assigned to an exact location on the device
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'cont_program.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
@@ -1357,7 +1358,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.09 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.06 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 4 output pins without output pin load capacitance assignment
     Info (306007): Pin "output[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -1367,13 +1368,13 @@ Warning (306006): Found 4 output pins without output pin load capacitance assign
 Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file C:/altera/13.0sp1/Processador/Control Unit/PC/output_files/cont_program.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4880 megabytes
-    Info: Processing ended: Wed Jul 19 01:32:22 2023
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 4872 megabytes
+    Info: Processing ended: Thu Jul 20 14:00:19 2023
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 
 

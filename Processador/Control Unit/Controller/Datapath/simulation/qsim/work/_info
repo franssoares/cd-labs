@@ -1,0 +1,157 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1\Processador\Control Unit\Controller\Datapath\simulation\qsim
+vdatapath
+Z1 !s100 Uz>DQECW2MF1g[C4NbXPU1
+Z2 I2n<XKaeaO=hQV4mX_6YMX3
+Z3 VlcflBSGWZWmM`QgAQ5aGD3
+Z4 dC:\altera\13.0sp1\Processador\Control Unit\Controller\Datapath\simulation\qsim
+Z5 w1689876171
+Z6 8datapath.vo
+Z7 Fdatapath.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|datapath.vo|
+Z10 o-work work -O0
+Z11 !s108 1689876171.475000
+Z12 !s107 datapath.vo|
+!i10b 1
+!s85 0
+!s101 -O0
+vdatapath_control
+Z13 !s100 X4LIf1XR<]4;lEFb6MN7K2
+Z14 Iz06[gZFXYgKNkLLg;CjED2
+Z15 V;:fgbSK:oW`OPiMOEAOCj3
+R4
+Z16 w1689877089
+R6
+R7
+L0 31
+R8
+r1
+31
+R9
+R10
+!i10b 1
+!s85 0
+Z17 !s108 1689877090.300000
+R12
+!s101 -O0
+vdatapath_control_vlg_check_tst
+!i10b 1
+Z18 !s100 nOTHn9l;n]mJ4W<FhfaRD2
+Z19 IY<9K2[zX@1m[ASIVbGIPh3
+Z20 VFd>WFNn9=4f=:>dYW>XG:1
+R4
+R16
+Z21 8datapath.vt
+Z22 Fdatapath.vt
+L0 59
+R8
+r1
+!s85 0
+31
+Z23 !s108 1689877090.350000
+Z24 !s107 datapath.vt|
+Z25 !s90 -work|work|datapath.vt|
+!s101 -O0
+R10
+vdatapath_control_vlg_sample_tst
+!i10b 1
+Z26 !s100 YfiBL@iflA6SlPjL?<`9P2
+Z27 Ia>PoJzYAVmU[ngOjeSEQ<1
+Z28 VOB]b9>dN`R8i[3bmYC?0E0
+R4
+R16
+R21
+R22
+L0 29
+R8
+r1
+!s85 0
+31
+R23
+R24
+R25
+!s101 -O0
+R10
+vdatapath_control_vlg_vec_tst
+!i10b 1
+Z29 !s100 oHeZZoMLf>fXo_;X?<UPE2
+Z30 I6Moldko]b6<5Z0f4RT4Uf3
+Z31 VC4f90E[l^TN]kTSneU]_e1
+R4
+R16
+R21
+R22
+Z32 L0 671
+R8
+r1
+!s85 0
+31
+R23
+R24
+R25
+!s101 -O0
+R10
+vdatapath_vlg_check_tst
+Z33 !s100 QglDUMdJSbck3iN7hPe>X1
+Z34 ISe><j_zL>TGm=n]Q]UMeK3
+Z35 VVWJRAoHi:VR]bPWe0J^l:3
+R4
+Z36 w1689876170
+R21
+R22
+L0 59
+R8
+r1
+31
+Z37 !s108 1689876171.525000
+Z38 !s107 datapath.vt|
+R25
+R10
+!i10b 1
+!s85 0
+!s101 -O0
+vdatapath_vlg_sample_tst
+Z39 !s100 6=MWf;5>0b4d8G1L=nf=71
+Z40 INS:`gXTmVlB5fa[D619gk0
+Z41 VA[mYMEAnH<88hc@B=e6H41
+R4
+R36
+R21
+R22
+L0 29
+R8
+r1
+31
+R37
+R38
+R25
+R10
+!i10b 1
+!s85 0
+!s101 -O0
+vdatapath_vlg_vec_tst
+Z42 !s100 1ijnc?4FF[[5QV8_E=zK^0
+Z43 If@WIU>C9mL7i20z@6e?HD2
+Z44 V^@Kb0LjGY<clOm@lcHMDA1
+R4
+R36
+R21
+R22
+R32
+R8
+r1
+31
+R37
+R38
+R25
+R10
+!i10b 1
+!s85 0
+!s101 -O0

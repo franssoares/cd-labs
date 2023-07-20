@@ -1,5 +1,5 @@
 Flow report for unid_control
-Wed Jul 19 05:45:01 2023
+Thu Jul 20 15:32:48 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Wed Jul 19 05:45:01 2023           ;
+; Flow Status                        ; Successful - Thu Jul 20 15:32:48 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; unid_control                                    ;
 ; Top-level Entity Name              ; unid_control                                    ;
@@ -48,7 +48,7 @@ applicable agreement for further details.
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
 ; Total logic elements               ; 60 / 33,216 ( < 1 % )                           ;
-;     Total combinational functions  ; 31 / 33,216 ( < 1 % )                           ;
+;     Total combinational functions  ; 32 / 33,216 ( < 1 % )                           ;
 ;     Dedicated logic registers      ; 44 / 33,216 ( < 1 % )                           ;
 ; Total registers                    ; 44                                              ;
 ; Total pins                         ; 61 / 475 ( 13 % )                               ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 07/19/2023 05:44:40 ;
+; Start date & time ; 07/20/2023 15:32:29 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; unid_control        ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 220449202203146.168975628018400       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 220449202203146.168987794911552       ; --            ; --          ; --             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                    ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                           ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)             ; <None>        ; --          ; --             ;
@@ -95,14 +95,14 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 4639 MB             ; 00:00:01                           ;
-; Fitter                    ; 00:00:04     ; 1.0                     ; 4880 MB             ; 00:00:03                           ;
+; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 4636 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:03     ; 1.0                     ; 4880 MB             ; 00:00:03                           ;
 ; Assembler                 ; 00:00:01     ; 1.0                     ; 4558 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4552 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:00     ; 1.0                     ; 4552 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4508 MB             ; 00:00:00                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4516 MB             ; 00:00:00                           ;
 ; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4516 MB             ; 00:00:00                           ;
-; Total                     ; 00:00:08     ; --                      ; --                  ; 00:00:06                           ;
+; Total                     ; 00:00:06     ; --                      ; --                  ; 00:00:06                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

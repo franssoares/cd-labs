@@ -2,29 +2,29 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow Model Setup 'clk'
-Slack : -8.027
-TNS   : -689.283
-
 Type  : Slow Model Setup 'unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg'
-Slack : -7.225
-TNS   : -55.397
+Slack : -7.135
+TNS   : -54.802
 
-Type  : Slow Model Hold 'unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg'
-Slack : -1.996
-TNS   : -10.911
+Type  : Slow Model Setup 'clk'
+Slack : -6.853
+TNS   : -604.348
 
 Type  : Slow Model Hold 'clk'
-Slack : -1.654
-TNS   : -24.476
+Slack : -2.064
+TNS   : -46.729
+
+Type  : Slow Model Hold 'unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg'
+Slack : -0.235
+TNS   : -0.235
 
 Type  : Slow Model Recovery 'clk'
-Slack : -2.542
-TNS   : -9.755
+Slack : -2.132
+TNS   : -8.528
 
 Type  : Slow Model Removal 'clk'
-Slack : -1.026
-TNS   : -2.865
+Slack : -0.577
+TNS   : -2.308
 
 Type  : Slow Model Minimum Pulse Width 'clk'
 Slack : -1.627
@@ -34,29 +34,29 @@ Type  : Slow Model Minimum Pulse Width 'unid_control:uctr0|controle:ctrl0|contro
 Slack : 0.500
 TNS   : 0.000
 
-Type  : Fast Model Setup 'clk'
-Slack : -2.962
-TNS   : -243.293
-
 Type  : Fast Model Setup 'unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg'
-Slack : -2.841
-TNS   : -21.872
+Slack : -2.843
+TNS   : -21.835
 
-Type  : Fast Model Hold 'unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg'
-Slack : -1.243
-TNS   : -7.770
+Type  : Fast Model Setup 'clk'
+Slack : -2.384
+TNS   : -202.449
 
 Type  : Fast Model Hold 'clk'
-Slack : -1.146
-TNS   : -49.666
+Slack : -1.381
+TNS   : -73.966
+
+Type  : Fast Model Hold 'unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg'
+Slack : -0.432
+TNS   : -1.880
 
 Type  : Fast Model Recovery 'clk'
-Slack : -0.654
-TNS   : -2.434
+Slack : -0.435
+TNS   : -1.740
 
 Type  : Fast Model Removal 'clk'
-Slack : -0.809
-TNS   : -2.690
+Slack : -0.627
+TNS   : -2.508
 
 Type  : Fast Model Minimum Pulse Width 'clk'
 Slack : -1.627

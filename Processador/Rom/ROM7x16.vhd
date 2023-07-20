@@ -42,7 +42,7 @@ begin
         if enable = '1' then
             data_r <= rom_data(to_integer(unsigned(addr))); -- Lê os dados do endereço correspondente
         else
-            data_r <= (others => '0'); -- Saída de dados é zerada quando não habilitada
+            data_r <= (others => 'Z'); -- Saída de dados é zerada quando não habilitada
         end if;
     end process;
 end behav;

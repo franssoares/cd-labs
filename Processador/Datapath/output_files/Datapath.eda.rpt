@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Datapath
-Wed Jul 19 05:11:56 2023
+Wed Jul 19 23:26:02 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Jul 19 05:11:56 2023 ;
+; EDA Netlist Writer Status ; Successful - Wed Jul 19 23:26:02 2023 ;
 ; Revision Name             ; Datapath                              ;
 ; Top-level Entity Name     ; datapath                              ;
 ; Family                    ; Cyclone II                            ;
@@ -80,13 +80,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Jul 19 05:11:56 2023
+    Info: Processing started: Wed Jul 19 23:26:01 2023
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Datapath -c Datapath
 Info (204019): Generated file Datapath.vo in folder "C:/altera/13.0sp1/Processador/Datapath/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4525 megabytes
-    Info: Processing ended: Wed Jul 19 05:11:56 2023
-    Info: Elapsed time: 00:00:00
+    Info: Processing ended: Wed Jul 19 23:26:02 2023
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
 

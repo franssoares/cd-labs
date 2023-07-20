@@ -1,5 +1,5 @@
 Analysis & Synthesis report for datapath
-Wed Jul 19 00:04:05 2023
+Thu Jul 20 15:11:18 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -41,10 +41,10 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jul 19 00:04:05 2023           ;
+; Analysis & Synthesis Status        ; Successful - Thu Jul 20 15:11:18 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; datapath                                        ;
-; Top-level Entity Name              ; datapath                                        ;
+; Top-level Entity Name              ; datapath_control                                ;
 ; Family                             ; Cyclone II                                      ;
 ; Total logic elements               ; 20                                              ;
 ;     Total combinational functions  ; 0                                               ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C50F672C6       ;                    ;
-; Top-level entity name                                                      ; datapath           ; datapath           ;
+; Top-level entity name                                                      ; datapath_control   ; datapath           ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -154,16 +154,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                 ;
-+-----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path  ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                         ; Library ;
-+-----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
-; ../Controller/registrador/ffd.vhd ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Control Unit/Controller/Controller/registrador/ffd.vhd ;         ;
-; regd.vhd                          ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Control Unit/Controller/Datapath/regd.vhd              ;         ;
-; reg4bits.vhd                      ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Control Unit/Controller/Datapath/reg4bits.vhd          ;         ;
-; datapath.vhd                      ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Control Unit/Controller/Datapath/datapath.vhd          ;         ;
-+-----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                               ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                        ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
+; ../../ffd1bit.vhd                ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Control Unit/ffd1bit.vhd                              ;         ;
+; regd.vhd                         ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Control Unit/Controller/Datapath/regd.vhd             ;         ;
+; reg4bits.vhd                     ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Control Unit/Controller/Datapath/reg4bits.vhd         ;         ;
+; datapath_control.vhd             ; yes             ; User VHDL File  ; C:/altera/13.0sp1/Processador/Control Unit/Controller/Datapath/datapath_control.vhd ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -196,37 +196,37 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                   ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name           ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
-; |datapath                  ; 0 (0)             ; 20 (0)       ; 0           ; 0            ; 0       ; 0         ; 41   ; 0            ; |datapath                     ; work         ;
-;    |reg4bits:Ra|           ; 0 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg4bits:Ra         ; work         ;
-;       |ffd:FF0|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg4bits:Ra|ffd:FF0 ; work         ;
-;       |ffd:FF1|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg4bits:Ra|ffd:FF1 ; work         ;
-;       |ffd:FF2|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg4bits:Ra|ffd:FF2 ; work         ;
-;       |ffd:FF3|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg4bits:Ra|ffd:FF3 ; work         ;
-;    |reg4bits:Rb|           ; 0 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg4bits:Rb         ; work         ;
-;       |ffd:FF0|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg4bits:Rb|ffd:FF0 ; work         ;
-;       |ffd:FF1|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg4bits:Rb|ffd:FF1 ; work         ;
-;       |ffd:FF2|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg4bits:Rb|ffd:FF2 ; work         ;
-;       |ffd:FF3|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg4bits:Rb|ffd:FF3 ; work         ;
-;    |reg4bits:Rc|           ; 0 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg4bits:Rc         ; work         ;
-;       |ffd:FF0|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg4bits:Rc|ffd:FF0 ; work         ;
-;       |ffd:FF1|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg4bits:Rc|ffd:FF1 ; work         ;
-;       |ffd:FF2|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg4bits:Rc|ffd:FF2 ; work         ;
-;       |ffd:FF3|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg4bits:Rc|ffd:FF3 ; work         ;
-;    |regd:d|                ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|regd:d              ; work         ;
-;       |ffd:FF0|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|regd:d|ffd:FF0      ; work         ;
-;       |ffd:FF1|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|regd:d|ffd:FF1      ; work         ;
-;       |ffd:FF2|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|regd:d|ffd:FF2      ; work         ;
-;       |ffd:FF3|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|regd:d|ffd:FF3      ; work         ;
-;       |ffd:FF4|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|regd:d|ffd:FF4      ; work         ;
-;       |ffd:FF5|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|regd:d|ffd:FF5      ; work         ;
-;       |ffd:FF6|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|regd:d|ffd:FF6      ; work         ;
-;       |ffd:FF7|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|regd:d|ffd:FF7      ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                               ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+--------------+
+; |datapath_control          ; 0 (0)             ; 20 (0)       ; 0           ; 0            ; 0       ; 0         ; 41   ; 0            ; |datapath_control                         ; work         ;
+;    |reg4bits:Ra|           ; 0 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath_control|reg4bits:Ra             ; work         ;
+;       |ffd1bit:FF0|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath_control|reg4bits:Ra|ffd1bit:FF0 ; work         ;
+;       |ffd1bit:FF1|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath_control|reg4bits:Ra|ffd1bit:FF1 ; work         ;
+;       |ffd1bit:FF2|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath_control|reg4bits:Ra|ffd1bit:FF2 ; work         ;
+;       |ffd1bit:FF3|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath_control|reg4bits:Ra|ffd1bit:FF3 ; work         ;
+;    |reg4bits:Rb|           ; 0 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath_control|reg4bits:Rb             ; work         ;
+;       |ffd1bit:FF0|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath_control|reg4bits:Rb|ffd1bit:FF0 ; work         ;
+;       |ffd1bit:FF1|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath_control|reg4bits:Rb|ffd1bit:FF1 ; work         ;
+;       |ffd1bit:FF2|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath_control|reg4bits:Rb|ffd1bit:FF2 ; work         ;
+;       |ffd1bit:FF3|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath_control|reg4bits:Rb|ffd1bit:FF3 ; work         ;
+;    |reg4bits:Rc|           ; 0 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath_control|reg4bits:Rc             ; work         ;
+;       |ffd1bit:FF0|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath_control|reg4bits:Rc|ffd1bit:FF0 ; work         ;
+;       |ffd1bit:FF1|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath_control|reg4bits:Rc|ffd1bit:FF1 ; work         ;
+;       |ffd1bit:FF2|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath_control|reg4bits:Rc|ffd1bit:FF2 ; work         ;
+;       |ffd1bit:FF3|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath_control|reg4bits:Rc|ffd1bit:FF3 ; work         ;
+;    |regd:d|                ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath_control|regd:d                  ; work         ;
+;       |ffd1bit:FF0|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath_control|regd:d|ffd1bit:FF0      ; work         ;
+;       |ffd1bit:FF1|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath_control|regd:d|ffd1bit:FF1      ; work         ;
+;       |ffd1bit:FF2|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath_control|regd:d|ffd1bit:FF2      ; work         ;
+;       |ffd1bit:FF3|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath_control|regd:d|ffd1bit:FF3      ; work         ;
+;       |ffd1bit:FF4|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath_control|regd:d|ffd1bit:FF4      ; work         ;
+;       |ffd1bit:FF5|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath_control|regd:d|ffd1bit:FF5      ; work         ;
+;       |ffd1bit:FF6|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath_control|regd:d|ffd1bit:FF6      ; work         ;
+;       |ffd1bit:FF7|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath_control|regd:d|ffd1bit:FF7      ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -260,24 +260,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Jul 19 00:04:04 2023
+    Info: Processing started: Thu Jul 20 15:11:16 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off datapath -c datapath
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file /altera/13.0sp1/processador/control unit/controller/controller/registrador/ffd.vhd
-    Info (12022): Found design unit 1: ffd-Behavioral
-    Info (12023): Found entity 1: ffd
+Info (12021): Found 2 design units, including 1 entities, in source file /altera/13.0sp1/processador/control unit/ffd1bit.vhd
+    Info (12022): Found design unit 1: ffd1bit-Behavioral
+    Info (12023): Found entity 1: ffd1bit
 Info (12021): Found 2 design units, including 1 entities, in source file regd.vhd
     Info (12022): Found design unit 1: regd-Behavioral
     Info (12023): Found entity 1: regd
 Info (12021): Found 2 design units, including 1 entities, in source file reg4bits.vhd
     Info (12022): Found design unit 1: reg4bits-Behavioral
     Info (12023): Found entity 1: reg4bits
-Info (12021): Found 2 design units, including 1 entities, in source file datapath.vhd
-    Info (12022): Found design unit 1: datapath-Behavioral
-    Info (12023): Found entity 1: datapath
-Info (12127): Elaborating entity "datapath" for the top level hierarchy
+Info (12021): Found 2 design units, including 1 entities, in source file datapath_control.vhd
+    Info (12022): Found design unit 1: datapath_control-Behavioral
+    Info (12023): Found entity 1: datapath_control
+Info (12127): Elaborating entity "datapath_control" for the top level hierarchy
 Info (12128): Elaborating entity "reg4bits" for hierarchy "reg4bits:Ra"
-Info (12128): Elaborating entity "ffd" for hierarchy "reg4bits:Ra|ffd:FF0"
+Info (12128): Elaborating entity "ffd1bit" for hierarchy "reg4bits:Ra|ffd1bit:FF0"
 Info (12128): Elaborating entity "regd" for hierarchy "regd:d"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -286,9 +286,9 @@ Info (21057): Implemented 61 device resources after synthesis - the final resour
     Info (21059): Implemented 28 output pins
     Info (21061): Implemented 20 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4623 megabytes
-    Info: Processing ended: Wed Jul 19 00:04:05 2023
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 4631 megabytes
+    Info: Processing ended: Thu Jul 20 15:11:18 2023
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 

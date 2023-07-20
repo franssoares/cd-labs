@@ -312,6 +312,26 @@ SIGNAL("t_rf_rp_addr[0]")
 	PARENT = "t_rf_rp_addr";
 }
 
+SIGNAL("sinal_maior")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("sinal_zero")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
 TRANSITION_LIST("clk")
 {
 	NODE
@@ -534,6 +554,24 @@ TRANSITION_LIST("t_rf_rp_addr[1]")
 }
 
 TRANSITION_LIST("t_rf_rp_addr[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("sinal_maior")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("sinal_zero")
 {
 	NODE
 	{
@@ -819,6 +857,24 @@ DISPLAY_LINE
 	TREE_INDEX = 27;
 	TREE_LEVEL = 1;
 	PARENT = 23;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "sinal_maior";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 28;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "sinal_zero";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 29;
+	TREE_LEVEL = 0;
 }
 
 TIME_BAR

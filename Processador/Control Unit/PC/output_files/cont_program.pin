@@ -299,7 +299,7 @@ GND*                         : C24       :        :                   :         
 GND*                         : C25       :        :                   :         : 5         :                
 VCCIO5                       : C26       : power  :                   : 3.3V    : 5         :                
 output[0]                    : D1        : output : 3.3-V LVTTL       :         : 2         : N              
-enable                       : D2        : input  : 3.3-V LVTTL       :         : 2         : N              
+pc_inc                       : D2        : input  : 3.3-V LVTTL       :         : 2         : N              
 ~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : D3        : input  : 3.3-V LVTTL       :         : 2         : N              
 GND                          : D4        : gnd    :                   :         :           :                
 GND*                         : D5        :        :                   :         : 3         :                
@@ -353,7 +353,7 @@ GND*                         : E26       :        :                   :         
 GND*                         : F1        :        :                   :         : 2         :                
 GND*                         : F2        :        :                   :         : 2         :                
 output[2]                    : F3        : output : 3.3-V LVTTL       :         : 2         : N              
-pc_inc                       : F4        : input  : 3.3-V LVTTL       :         : 2         : N              
+pc_ld                        : F4        : input  : 3.3-V LVTTL       :         : 2         : N              
 VCCIO2                       : F5        : power  :                   : 3.3V    : 2         :                
 GND*                         : F6        :        :                   :         : 2         :                
 output[1]                    : F7        : output : 3.3-V LVTTL       :         : 2         : N              

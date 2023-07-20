@@ -1,4 +1,4 @@
-|datapath
+|datapath_control
 clock => reg4bits:Ra.clock
 clock => reg4bits:Rb.clock
 clock => reg4bits:Rc.clock
@@ -23,18 +23,18 @@ entrada[8] => reg4bits:Ra.entrada[0]
 entrada[9] => reg4bits:Ra.entrada[1]
 entrada[10] => reg4bits:Ra.entrada[2]
 entrada[11] => reg4bits:Ra.entrada[3]
-rf_w_addr[0] <= reg4bits:Rc.saida[0]
-rf_w_addr[1] <= reg4bits:Rc.saida[1]
-rf_w_addr[2] <= reg4bits:Rc.saida[2]
-rf_w_addr[3] <= reg4bits:Rc.saida[3]
-rf_rp_addr[0] <= reg4bits:Ra.saida[0]
-rf_rp_addr[1] <= reg4bits:Ra.saida[1]
-rf_rp_addr[2] <= reg4bits:Ra.saida[2]
-rf_rp_addr[3] <= reg4bits:Ra.saida[3]
-rf_rq_addr[0] <= reg4bits:Rb.saida[0]
-rf_rq_addr[1] <= reg4bits:Rb.saida[1]
-rf_rq_addr[2] <= reg4bits:Rb.saida[2]
-rf_rq_addr[3] <= reg4bits:Rb.saida[3]
+rf_w_addr[0] <= reg4bits:Ra.saida[0]
+rf_w_addr[1] <= reg4bits:Ra.saida[1]
+rf_w_addr[2] <= reg4bits:Ra.saida[2]
+rf_w_addr[3] <= reg4bits:Ra.saida[3]
+rf_rp_addr[0] <= reg4bits:Rb.saida[0]
+rf_rp_addr[1] <= reg4bits:Rb.saida[1]
+rf_rp_addr[2] <= reg4bits:Rb.saida[2]
+rf_rp_addr[3] <= reg4bits:Rb.saida[3]
+rf_rq_addr[0] <= reg4bits:Rc.saida[0]
+rf_rq_addr[1] <= reg4bits:Rc.saida[1]
+rf_rq_addr[2] <= reg4bits:Rc.saida[2]
+rf_rq_addr[3] <= reg4bits:Rc.saida[3]
 rf_w_data[0] <= regd:d.saida[0]
 rf_w_data[1] <= regd:d.saida[1]
 rf_w_data[2] <= regd:d.saida[2]
@@ -53,193 +53,193 @@ d_addr[6] <= regd:d.saida[6]
 d_addr[7] <= regd:d.saida[7]
 
 
-|datapath|reg4bits:Ra
-clock => ffd:FF0.clock
-clock => ffd:FF1.clock
-clock => ffd:FF2.clock
-clock => ffd:FF3.clock
-entrada[0] => ffd:FF0.d
-entrada[1] => ffd:FF1.d
-entrada[2] => ffd:FF2.d
-entrada[3] => ffd:FF3.d
-saida[0] <= ffd:FF0.q
-saida[1] <= ffd:FF1.q
-saida[2] <= ffd:FF2.q
-saida[3] <= ffd:FF3.q
+|datapath_control|reg4bits:Ra
+clock => ffd1bit:FF0.clock
+clock => ffd1bit:FF1.clock
+clock => ffd1bit:FF2.clock
+clock => ffd1bit:FF3.clock
+entrada[0] => ffd1bit:FF0.d
+entrada[1] => ffd1bit:FF1.d
+entrada[2] => ffd1bit:FF2.d
+entrada[3] => ffd1bit:FF3.d
+saida[0] <= ffd1bit:FF0.q
+saida[1] <= ffd1bit:FF1.q
+saida[2] <= ffd1bit:FF2.q
+saida[3] <= ffd1bit:FF3.q
 
 
-|datapath|reg4bits:Ra|ffd:FF0
+|datapath_control|reg4bits:Ra|ffd1bit:FF0
 clock => q_reg.CLK
 d => q_reg.DATAIN
 q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|reg4bits:Ra|ffd:FF1
+|datapath_control|reg4bits:Ra|ffd1bit:FF1
 clock => q_reg.CLK
 d => q_reg.DATAIN
 q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|reg4bits:Ra|ffd:FF2
+|datapath_control|reg4bits:Ra|ffd1bit:FF2
 clock => q_reg.CLK
 d => q_reg.DATAIN
 q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|reg4bits:Ra|ffd:FF3
+|datapath_control|reg4bits:Ra|ffd1bit:FF3
 clock => q_reg.CLK
 d => q_reg.DATAIN
 q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|reg4bits:Rb
-clock => ffd:FF0.clock
-clock => ffd:FF1.clock
-clock => ffd:FF2.clock
-clock => ffd:FF3.clock
-entrada[0] => ffd:FF0.d
-entrada[1] => ffd:FF1.d
-entrada[2] => ffd:FF2.d
-entrada[3] => ffd:FF3.d
-saida[0] <= ffd:FF0.q
-saida[1] <= ffd:FF1.q
-saida[2] <= ffd:FF2.q
-saida[3] <= ffd:FF3.q
+|datapath_control|reg4bits:Rb
+clock => ffd1bit:FF0.clock
+clock => ffd1bit:FF1.clock
+clock => ffd1bit:FF2.clock
+clock => ffd1bit:FF3.clock
+entrada[0] => ffd1bit:FF0.d
+entrada[1] => ffd1bit:FF1.d
+entrada[2] => ffd1bit:FF2.d
+entrada[3] => ffd1bit:FF3.d
+saida[0] <= ffd1bit:FF0.q
+saida[1] <= ffd1bit:FF1.q
+saida[2] <= ffd1bit:FF2.q
+saida[3] <= ffd1bit:FF3.q
 
 
-|datapath|reg4bits:Rb|ffd:FF0
+|datapath_control|reg4bits:Rb|ffd1bit:FF0
 clock => q_reg.CLK
 d => q_reg.DATAIN
 q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|reg4bits:Rb|ffd:FF1
+|datapath_control|reg4bits:Rb|ffd1bit:FF1
 clock => q_reg.CLK
 d => q_reg.DATAIN
 q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|reg4bits:Rb|ffd:FF2
+|datapath_control|reg4bits:Rb|ffd1bit:FF2
 clock => q_reg.CLK
 d => q_reg.DATAIN
 q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|reg4bits:Rb|ffd:FF3
+|datapath_control|reg4bits:Rb|ffd1bit:FF3
 clock => q_reg.CLK
 d => q_reg.DATAIN
 q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|reg4bits:Rc
-clock => ffd:FF0.clock
-clock => ffd:FF1.clock
-clock => ffd:FF2.clock
-clock => ffd:FF3.clock
-entrada[0] => ffd:FF0.d
-entrada[1] => ffd:FF1.d
-entrada[2] => ffd:FF2.d
-entrada[3] => ffd:FF3.d
-saida[0] <= ffd:FF0.q
-saida[1] <= ffd:FF1.q
-saida[2] <= ffd:FF2.q
-saida[3] <= ffd:FF3.q
+|datapath_control|reg4bits:Rc
+clock => ffd1bit:FF0.clock
+clock => ffd1bit:FF1.clock
+clock => ffd1bit:FF2.clock
+clock => ffd1bit:FF3.clock
+entrada[0] => ffd1bit:FF0.d
+entrada[1] => ffd1bit:FF1.d
+entrada[2] => ffd1bit:FF2.d
+entrada[3] => ffd1bit:FF3.d
+saida[0] <= ffd1bit:FF0.q
+saida[1] <= ffd1bit:FF1.q
+saida[2] <= ffd1bit:FF2.q
+saida[3] <= ffd1bit:FF3.q
 
 
-|datapath|reg4bits:Rc|ffd:FF0
+|datapath_control|reg4bits:Rc|ffd1bit:FF0
 clock => q_reg.CLK
 d => q_reg.DATAIN
 q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|reg4bits:Rc|ffd:FF1
+|datapath_control|reg4bits:Rc|ffd1bit:FF1
 clock => q_reg.CLK
 d => q_reg.DATAIN
 q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|reg4bits:Rc|ffd:FF2
+|datapath_control|reg4bits:Rc|ffd1bit:FF2
 clock => q_reg.CLK
 d => q_reg.DATAIN
 q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|reg4bits:Rc|ffd:FF3
+|datapath_control|reg4bits:Rc|ffd1bit:FF3
 clock => q_reg.CLK
 d => q_reg.DATAIN
 q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|regd:d
-clock => ffd:FF0.clock
-clock => ffd:FF1.clock
-clock => ffd:FF2.clock
-clock => ffd:FF3.clock
-clock => ffd:FF4.clock
-clock => ffd:FF5.clock
-clock => ffd:FF6.clock
-clock => ffd:FF7.clock
-entrada[0] => ffd:FF0.d
-entrada[1] => ffd:FF1.d
-entrada[2] => ffd:FF2.d
-entrada[3] => ffd:FF3.d
-entrada[4] => ffd:FF4.d
-entrada[5] => ffd:FF5.d
-entrada[6] => ffd:FF6.d
-entrada[7] => ffd:FF7.d
-saida[0] <= ffd:FF0.q
-saida[1] <= ffd:FF1.q
-saida[2] <= ffd:FF2.q
-saida[3] <= ffd:FF3.q
-saida[4] <= ffd:FF4.q
-saida[5] <= ffd:FF5.q
-saida[6] <= ffd:FF6.q
-saida[7] <= ffd:FF7.q
+|datapath_control|regd:d
+clock => ffd1bit:FF0.clock
+clock => ffd1bit:FF1.clock
+clock => ffd1bit:FF2.clock
+clock => ffd1bit:FF3.clock
+clock => ffd1bit:FF4.clock
+clock => ffd1bit:FF5.clock
+clock => ffd1bit:FF6.clock
+clock => ffd1bit:FF7.clock
+entrada[0] => ffd1bit:FF0.d
+entrada[1] => ffd1bit:FF1.d
+entrada[2] => ffd1bit:FF2.d
+entrada[3] => ffd1bit:FF3.d
+entrada[4] => ffd1bit:FF4.d
+entrada[5] => ffd1bit:FF5.d
+entrada[6] => ffd1bit:FF6.d
+entrada[7] => ffd1bit:FF7.d
+saida[0] <= ffd1bit:FF0.q
+saida[1] <= ffd1bit:FF1.q
+saida[2] <= ffd1bit:FF2.q
+saida[3] <= ffd1bit:FF3.q
+saida[4] <= ffd1bit:FF4.q
+saida[5] <= ffd1bit:FF5.q
+saida[6] <= ffd1bit:FF6.q
+saida[7] <= ffd1bit:FF7.q
 
 
-|datapath|regd:d|ffd:FF0
+|datapath_control|regd:d|ffd1bit:FF0
 clock => q_reg.CLK
 d => q_reg.DATAIN
 q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|regd:d|ffd:FF1
+|datapath_control|regd:d|ffd1bit:FF1
 clock => q_reg.CLK
 d => q_reg.DATAIN
 q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|regd:d|ffd:FF2
+|datapath_control|regd:d|ffd1bit:FF2
 clock => q_reg.CLK
 d => q_reg.DATAIN
 q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|regd:d|ffd:FF3
+|datapath_control|regd:d|ffd1bit:FF3
 clock => q_reg.CLK
 d => q_reg.DATAIN
 q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|regd:d|ffd:FF4
+|datapath_control|regd:d|ffd1bit:FF4
 clock => q_reg.CLK
 d => q_reg.DATAIN
 q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|regd:d|ffd:FF5
+|datapath_control|regd:d|ffd1bit:FF5
 clock => q_reg.CLK
 d => q_reg.DATAIN
 q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|regd:d|ffd:FF6
+|datapath_control|regd:d|ffd1bit:FF6
 clock => q_reg.CLK
 d => q_reg.DATAIN
 q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|regd:d|ffd:FF7
+|datapath_control|regd:d|ffd1bit:FF7
 clock => q_reg.CLK
 d => q_reg.DATAIN
 q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
