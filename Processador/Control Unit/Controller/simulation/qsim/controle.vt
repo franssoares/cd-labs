@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "07/19/2023 05:52:50"
+// Generated on "07/20/2023 16:03:36"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    controle
 // 
@@ -1185,21 +1185,32 @@ end
 initial
 begin
 	ir[3] = 1'b0;
+	ir[3] = #600000 1'b1;
 end 
 // ir[ 2 ]
 initial
 begin
 	ir[2] = 1'b0;
+	ir[2] = #200000 1'b1;
+	ir[2] = #400000 1'b0;
 end 
 // ir[ 1 ]
 initial
 begin
+	repeat(2)
+	begin
+		ir[1] = 1'b1;
+		ir[1] = #200000 1'b0;
+		# 200000;
+	end
 	ir[1] = 1'b1;
 end 
 // ir[ 0 ]
-initial
+always
 begin
 	ir[0] = 1'b0;
+	ir[0] = #100000 1'b1;
+	#100000;
 end 
 
 // rf_rp_zero

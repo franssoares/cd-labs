@@ -1,12 +1,12 @@
-Fitter Status : Successful - Wed Jul 19 00:27:30 2023
+Fitter Status : Successful - Thu Jul 20 15:59:35 2023
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : controle
 Top-level Entity Name : controle
 Family : Cyclone II
 Device : EP2C35F672C6
 Timing Models : Final
-Total logic elements : 49 / 33,216 ( < 1 % )
-    Total combinational functions : 29 / 33,216 ( < 1 % )
+Total logic elements : 48 / 33,216 ( < 1 % )
+    Total combinational functions : 28 / 33,216 ( < 1 % )
     Dedicated logic registers : 24 / 33,216 ( < 1 % )
 Total registers : 24
 Total pins : 61 / 475 ( 13 % )

@@ -23,14 +23,13 @@ begin
         elsif rising_edge(clock) then
 		  
             if (pc_ld = '1') then
-					if (pc_inc = '0') then
                  counter <= counter + 1; -- Incrementa
 					  
             elsif (pc_ld = '1') then
 					if pc_inc = '1' then
 						counter <= counter + 2; -- Pula prÃƒÂ³xima instruÃƒÂ§ÃƒÂ£o
 						
-						end if;
+				
 					end if;
             end if;
         end if;

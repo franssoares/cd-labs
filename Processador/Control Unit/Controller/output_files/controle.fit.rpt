@@ -1,5 +1,5 @@
 Fitter report for controle
-Wed Jul 19 00:27:30 2023
+Thu Jul 20 15:59:35 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -62,15 +62,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Wed Jul 19 00:27:30 2023           ;
+; Fitter Status                      ; Successful - Thu Jul 20 15:59:35 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; controle                                        ;
 ; Top-level Entity Name              ; controle                                        ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 49 / 33,216 ( < 1 % )                           ;
-;     Total combinational functions  ; 29 / 33,216 ( < 1 % )                           ;
+; Total logic elements               ; 48 / 33,216 ( < 1 % )                           ;
+;     Total combinational functions  ; 28 / 33,216 ( < 1 % )                           ;
 ;     Dedicated logic registers      ; 24 / 33,216 ( < 1 % )                           ;
 ; Total registers                    ; 24                                              ;
 ; Total pins                         ; 61 / 475 ( 13 % )                               ;
@@ -148,8 +148,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 119 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 119 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 118 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 118 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -172,7 +172,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 116     ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 115     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -188,26 +188,26 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Total logic elements                        ; 49 / 33,216 ( < 1 % ) ;
-;     -- Combinational with no register       ; 25                    ;
+; Total logic elements                        ; 48 / 33,216 ( < 1 % ) ;
+;     -- Combinational with no register       ; 24                    ;
 ;     -- Register only                        ; 20                    ;
 ;     -- Combinational with a register        ; 4                     ;
 ;                                             ;                       ;
 ; Logic element usage by number of LUT inputs ;                       ;
 ;     -- 4 input functions                    ; 20                    ;
 ;     -- 3 input functions                    ; 7                     ;
-;     -- <=2 input functions                  ; 2                     ;
+;     -- <=2 input functions                  ; 1                     ;
 ;     -- Register only                        ; 20                    ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 29                    ;
+;     -- normal mode                          ; 28                    ;
 ;     -- arithmetic mode                      ; 0                     ;
 ;                                             ;                       ;
 ; Total registers*                            ; 24 / 34,593 ( < 1 % ) ;
 ;     -- Dedicated logic registers            ; 24 / 33,216 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 1,377 ( 0 % )     ;
 ;                                             ;                       ;
-; Total LABs:  partially or completely used   ; 15 / 2,076 ( < 1 % )  ;
+; Total LABs:  partially or completely used   ; 12 / 2,076 ( < 1 % )  ;
 ; Virtual pins                                ; 0                     ;
 ; I/O pins                                    ; 61 / 475 ( 13 % )     ;
 ;     -- Clock pins                           ; 1 / 8 ( 13 % )        ;
@@ -226,8 +226,8 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 ; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%          ;
 ; Maximum fan-out                             ; 24                    ;
 ; Highest non-global fan-out                  ; 20                    ;
-; Total fan-out                               ; 215                   ;
-; Average fan-out                             ; 1.56                  ;
+; Total fan-out                               ; 213                   ;
+; Average fan-out                             ; 1.55                  ;
 +---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -240,25 +240,25 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 +---------------------------------------------+----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                  ; Low                            ;
 ;                                             ;                      ;                                ;
-; Total logic elements                        ; 49 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
-;     -- Combinational with no register       ; 25                   ; 0                              ;
+; Total logic elements                        ; 48 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
+;     -- Combinational with no register       ; 24                   ; 0                              ;
 ;     -- Register only                        ; 20                   ; 0                              ;
 ;     -- Combinational with a register        ; 4                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
 ;     -- 4 input functions                    ; 20                   ; 0                              ;
 ;     -- 3 input functions                    ; 7                    ; 0                              ;
-;     -- <=2 input functions                  ; 2                    ; 0                              ;
+;     -- <=2 input functions                  ; 1                    ; 0                              ;
 ;     -- Register only                        ; 20                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
-;     -- normal mode                          ; 29                   ; 0                              ;
+;     -- normal mode                          ; 28                   ; 0                              ;
 ;     -- arithmetic mode                      ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Total registers                             ; 24                   ; 0                              ;
 ;     -- Dedicated logic registers            ; 24 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
 ;                                             ;                      ;                                ;
-; Total LABs:  partially or completely used   ; 15 / 2076 ( < 1 % )  ; 0 / 2076 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 12 / 2076 ( < 1 % )  ; 0 / 2076 ( 0 % )               ;
 ;                                             ;                      ;                                ;
 ; Virtual pins                                ; 0                    ; 0                              ;
 ; I/O pins                                    ; 61                   ; 0                              ;
@@ -274,7 +274,7 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 215                  ; 0                              ;
+;     -- Total Connections                    ; 213                  ; 0                              ;
 ;     -- Registered Connections               ; 86                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
@@ -308,24 +308,24 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 ; Name       ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
 +------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; clock      ; P2    ; 1        ; 0            ; 18           ; 2           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; comp_ab    ; AE11  ; 8        ; 27           ; 0            ; 2           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ir[0]      ; B14   ; 4        ; 33           ; 36           ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ir[10]     ; F23   ; 5        ; 65           ; 30           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ir[11]     ; AC3   ; 1        ; 0            ; 2            ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ir[12]     ; C12   ; 3        ; 29           ; 36           ; 1           ; 5                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ir[13]     ; V14   ; 8        ; 27           ; 0            ; 1           ; 4                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ir[14]     ; B12   ; 3        ; 29           ; 36           ; 0           ; 5                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ir[15]     ; AD11  ; 8        ; 27           ; 0            ; 3           ; 5                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ir[1]      ; F15   ; 4        ; 44           ; 36           ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ir[2]      ; T7    ; 1        ; 0            ; 11           ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ir[3]      ; B15   ; 4        ; 37           ; 36           ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ir[4]      ; AC1   ; 1        ; 0            ; 5            ; 3           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ir[5]      ; A17   ; 4        ; 42           ; 36           ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ir[6]      ; C15   ; 4        ; 37           ; 36           ; 3           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ir[7]      ; T2    ; 1        ; 0            ; 15           ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ir[8]      ; F21   ; 5        ; 65           ; 34           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ir[9]      ; J24   ; 5        ; 65           ; 26           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; rf_rp_zero ; F12   ; 3        ; 27           ; 36           ; 3           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; comp_ab    ; V7    ; 1        ; 0            ; 6            ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ir[0]      ; L6    ; 2        ; 0            ; 24           ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ir[10]     ; V9    ; 8        ; 5            ; 0            ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ir[11]     ; D2    ; 2        ; 0            ; 32           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ir[12]     ; AA2   ; 1        ; 0            ; 8            ; 2           ; 5                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ir[13]     ; V5    ; 1        ; 0            ; 8            ; 0           ; 4                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ir[14]     ; AA1   ; 1        ; 0            ; 8            ; 3           ; 5                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ir[15]     ; V6    ; 1        ; 0            ; 8            ; 1           ; 5                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ir[1]      ; AF7   ; 8        ; 16           ; 0            ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ir[2]      ; AF4   ; 8        ; 1            ; 0            ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ir[3]      ; F4    ; 2        ; 0            ; 32           ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ir[4]      ; H15   ; 4        ; 42           ; 36           ; 3           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ir[5]      ; N9    ; 2        ; 0            ; 25           ; 3           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ir[6]      ; AF5   ; 8        ; 3            ; 0            ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ir[7]      ; H24   ; 5        ; 65           ; 27           ; 3           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ir[8]      ; L9    ; 2        ; 0            ; 24           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ir[9]      ; T6    ; 1        ; 0            ; 11           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; rf_rp_zero ; AC1   ; 1        ; 0            ; 5            ; 3           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 +------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
@@ -334,48 +334,48 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 +---------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 ; Name          ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
 +---------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
-; alu_s0        ; C11   ; 3        ; 29           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; alu_s1        ; G24   ; 5        ; 65           ; 28           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; d_addr[0]     ; D14   ; 4        ; 33           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; d_addr[1]     ; F16   ; 4        ; 44           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; d_addr[2]     ; V3    ; 1        ; 0            ; 11           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; d_addr[3]     ; G13   ; 4        ; 35           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; d_addr[4]     ; AA4   ; 1        ; 0            ; 5            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; d_addr[5]     ; D16   ; 4        ; 40           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; d_addr[6]     ; C16   ; 4        ; 37           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; d_addr[7]     ; T3    ; 1        ; 0            ; 15           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; d_rd          ; J14   ; 3        ; 24           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; d_wr          ; U12   ; 8        ; 29           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; i_rd          ; AE10  ; 8        ; 24           ; 0            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; ir_ld         ; AF10  ; 8        ; 24           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; pc_clr        ; J10   ; 3        ; 27           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; pc_inc        ; J13   ; 3        ; 24           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; pc_ld         ; B11   ; 3        ; 29           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; rf_rp_addr[0] ; F20   ; 5        ; 65           ; 34           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; rf_rp_addr[1] ; H26   ; 5        ; 65           ; 26           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; rf_rp_addr[2] ; F24   ; 5        ; 65           ; 30           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; rf_rp_addr[3] ; AA6   ; 1        ; 0            ; 2            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; rf_rp_rd      ; V13   ; 8        ; 27           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; rf_rq_addr[0] ; AA3   ; 1        ; 0            ; 5            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; rf_rq_addr[1] ; H16   ; 4        ; 42           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; rf_rq_addr[2] ; D15   ; 4        ; 40           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; rf_rq_addr[3] ; P7    ; 1        ; 0            ; 15           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; rf_rq_rd      ; G12   ; 3        ; 27           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; rf_s0         ; D12   ; 3        ; 24           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; rf_s1         ; V11   ; 8        ; 29           ; 0            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; rf_w_addr[0]  ; G14   ; 4        ; 35           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; rf_w_addr[1]  ; G15   ; 4        ; 44           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; rf_w_addr[2]  ; T6    ; 1        ; 0            ; 11           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; rf_w_addr[3]  ; F14   ; 4        ; 35           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; rf_w_data[0]  ; A14   ; 4        ; 33           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; rf_w_data[1]  ; G16   ; 4        ; 44           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; rf_w_data[2]  ; V4    ; 1        ; 0            ; 11           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; rf_w_data[3]  ; F13   ; 4        ; 35           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; rf_w_data[4]  ; AC2   ; 1        ; 0            ; 5            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; rf_w_data[5]  ; E15   ; 4        ; 40           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; rf_w_data[6]  ; B16   ; 4        ; 37           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; rf_w_data[7]  ; P6    ; 1        ; 0            ; 15           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; rf_w_wr       ; J11   ; 3        ; 27           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; alu_s0        ; Y3    ; 1        ; 0            ; 7            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; alu_s1        ; V11   ; 8        ; 29           ; 0            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; d_addr[0]     ; L3    ; 2        ; 0            ; 24           ; 4           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; d_addr[1]     ; AA11  ; 8        ; 14           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; d_addr[2]     ; AC6   ; 8        ; 1            ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; d_addr[3]     ; D1    ; 2        ; 0            ; 32           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; d_addr[4]     ; E15   ; 4        ; 40           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; d_addr[5]     ; P9    ; 2        ; 0            ; 25           ; 4           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; d_addr[6]     ; AD4   ; 8        ; 3            ; 0            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; d_addr[7]     ; G25   ; 5        ; 65           ; 27           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; d_rd          ; W1    ; 1        ; 0            ; 10           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; d_wr          ; Y4    ; 1        ; 0            ; 7            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; i_rd          ; W6    ; 1        ; 0            ; 6            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; ir_ld         ; AB2   ; 1        ; 0            ; 6            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; pc_clr        ; T8    ; 1        ; 0            ; 7            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; pc_inc        ; AB1   ; 1        ; 0            ; 6            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; pc_ld         ; Y1    ; 1        ; 0            ; 9            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; rf_rp_addr[0] ; H16   ; 4        ; 42           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; rf_rp_addr[1] ; L4    ; 2        ; 0            ; 25           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; rf_rp_addr[2] ; AE4   ; 8        ; 1            ; 0            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; rf_rp_addr[3] ; H23   ; 5        ; 65           ; 27           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; rf_rp_rd      ; W4    ; 1        ; 0            ; 9            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; rf_rq_addr[0] ; K1    ; 2        ; 0            ; 25           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; rf_rq_addr[1] ; AA10  ; 8        ; 14           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; rf_rq_addr[2] ; AA6   ; 1        ; 0            ; 2            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; rf_rq_addr[3] ; G6    ; 2        ; 0            ; 33           ; 4           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; rf_rq_rd      ; U5    ; 1        ; 0            ; 9            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; rf_s0         ; W2    ; 1        ; 0            ; 10           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; rf_s1         ; R8    ; 1        ; 0            ; 7            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; rf_w_addr[0]  ; L7    ; 2        ; 0            ; 24           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; rf_w_addr[1]  ; T7    ; 1        ; 0            ; 11           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; rf_w_addr[2]  ; AD6   ; 8        ; 5            ; 0            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; rf_w_addr[3]  ; F7    ; 2        ; 0            ; 32           ; 4           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; rf_w_data[0]  ; L2    ; 2        ; 0            ; 24           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; rf_w_data[1]  ; AB10  ; 8        ; 14           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; rf_w_data[2]  ; AC5   ; 8        ; 1            ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; rf_w_data[3]  ; F3    ; 2        ; 0            ; 32           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; rf_w_data[4]  ; D16   ; 4        ; 40           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; rf_w_data[5]  ; K2    ; 2        ; 0            ; 25           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; rf_w_data[6]  ; AD5   ; 8        ; 3            ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; rf_w_data[7]  ; G26   ; 5        ; 65           ; 27           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; rf_w_wr       ; W3    ; 1        ; 0            ; 9            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 +---------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 
 
@@ -384,14 +384,14 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 +----------+------------------+---------------+--------------+
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
 +----------+------------------+---------------+--------------+
-; 1        ; 15 / 64 ( 23 % ) ; 3.3V          ; --           ;
-; 2        ; 2 / 59 ( 3 % )   ; 3.3V          ; --           ;
-; 3        ; 11 / 56 ( 20 % ) ; 3.3V          ; --           ;
-; 4        ; 20 / 58 ( 34 % ) ; 3.3V          ; --           ;
-; 5        ; 7 / 65 ( 11 % )  ; 3.3V          ; --           ;
+; 1        ; 23 / 64 ( 36 % ) ; 3.3V          ; --           ;
+; 2        ; 18 / 59 ( 31 % ) ; 3.3V          ; --           ;
+; 3        ; 0 / 56 ( 0 % )   ; 3.3V          ; --           ;
+; 4        ; 4 / 58 ( 7 % )   ; 3.3V          ; --           ;
+; 5        ; 4 / 65 ( 6 % )   ; 3.3V          ; --           ;
 ; 6        ; 1 / 59 ( 2 % )   ; 3.3V          ; --           ;
 ; 7        ; 0 / 58 ( 0 % )   ; 3.3V          ; --           ;
-; 8        ; 8 / 56 ( 14 % )  ; 3.3V          ; --           ;
+; 8        ; 14 / 56 ( 25 % ) ; 3.3V          ; --           ;
 +----------+------------------+---------------+--------------+
 
 
@@ -412,10 +412,10 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 ; A11      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; A12      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; A13      ; 430        ; 4        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; A14      ; 427        ; 4        ; rf_w_data[0]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A14      ; 427        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A15      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; A16      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; A17      ; 412        ; 4        ; ir[5]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A17      ; 412        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A18      ; 406        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A19      ; 394        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A20      ; 390        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -424,17 +424,17 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 ; A23      ; 378        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A24      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; A25      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; AA1      ; 107        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; AA2      ; 106        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; AA3      ; 117        ; 1        ; rf_rq_addr[0]                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; AA4      ; 116        ; 1        ; d_addr[4]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; AA1      ; 107        ; 1        ; ir[14]                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; AA2      ; 106        ; 1        ; ir[12]                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; AA3      ; 117        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; AA4      ; 116        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AA5      ; 120        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; AA6      ; 130        ; 1        ; rf_rp_addr[3]                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; AA6      ; 130        ; 1        ; rf_rq_addr[2]                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; AA7      ; 129        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AA8      ;            ;          ; VCCA_PLL1                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; AA9      ; 152        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AA10     ; 153        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AA11     ; 155        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AA10     ; 153        ; 8        ; rf_rq_addr[1]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AA11     ; 155        ; 8        ; d_addr[1]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AA12     ; 179        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA13     ; 192        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA14     ; 194        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -450,8 +450,8 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 ; AA24     ; 255        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AA25     ; 266        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AA26     ; 267        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; AB1      ; 115        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; AB2      ; 114        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; AB1      ; 115        ; 1        ; pc_inc                                   ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; AB2      ; 114        ; 1        ; ir_ld                                    ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; AB3      ; 126        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AB4      ; 127        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AB5      ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -459,7 +459,7 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 ; AB7      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AB8      ; 147        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AB9      ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; AB10     ; 154        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AB10     ; 154        ; 8        ; rf_w_data[1]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AB11     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AB12     ; 171        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AB13     ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -476,12 +476,12 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 ; AB24     ; 257        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AB25     ; 263        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AB26     ; 262        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; AC1      ; 119        ; 1        ; ir[4]                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; AC2      ; 118        ; 1        ; rf_w_data[4]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; AC3      ; 128        ; 1        ; ir[11]                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; AC1      ; 119        ; 1        ; rf_rp_zero                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; AC2      ; 118        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; AC3      ; 128        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AC4      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; AC5      ; 133        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AC6      ; 134        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AC5      ; 133        ; 8        ; rf_w_data[2]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AC6      ; 134        ; 8        ; d_addr[2]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AC7      ; 143        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; AC8      ; 148        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC9      ; 163        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -505,14 +505,14 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 ; AD1      ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AD2      ; 122        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AD3      ; 123        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; AD4      ; 135        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AD5      ; 136        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AD6      ; 139        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AD4      ; 135        ; 8        ; d_addr[6]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AD5      ; 136        ; 8        ; rf_w_data[6]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AD6      ; 139        ; 8        ; rf_w_addr[2]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AD7      ; 140        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD8      ; 149        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD9      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AD10     ; 167        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AD11     ; 173        ; 8        ; ir[15]                                   ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AD11     ; 173        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD12     ; 181        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD13     ; 186        ; 8        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; AD14     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -531,14 +531,14 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 ; AE1      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AE2      ; 124        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AE3      ; 125        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; AE4      ; 131        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AE4      ; 131        ; 8        ; rf_rp_addr[2]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AE5      ; 137        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE6      ; 150        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE7      ; 157        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE8      ; 159        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE9      ; 165        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AE10     ; 169        ; 8        ; i_rd                                     ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; AE11     ; 174        ; 8        ; comp_ab                                  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AE10     ; 169        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AE11     ; 174        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE12     ; 182        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE13     ; 183        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE14     ; 188        ; 7        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
@@ -556,13 +556,13 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 ; AE26     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AF2      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AF3      ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; AF4      ; 132        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AF5      ; 138        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AF4      ; 132        ; 8        ; ir[2]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AF5      ; 138        ; 8        ; ir[6]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AF6      ; 151        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AF7      ; 158        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AF7      ; 158        ; 8        ; ir[1]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AF8      ; 160        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF9      ; 166        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AF10     ; 170        ; 8        ; ir_ld                                    ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AF10     ; 170        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF11     ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AF12     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AF13     ; 184        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -588,12 +588,12 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 ; B8       ; 458        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B9       ; 452        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B10      ; 448        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; B11      ; 435        ; 3        ; pc_ld                                    ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B12      ; 433        ; 3        ; ir[14]                                   ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B11      ; 435        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; B12      ; 433        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B13      ; 429        ; 4        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; B14      ; 428        ; 4        ; ir[0]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B15      ; 420        ; 4        ; ir[3]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B16      ; 419        ; 4        ; rf_w_data[6]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B14      ; 428        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; B15      ; 420        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; B16      ; 419        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B17      ; 411        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B18      ; 405        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B19      ; 393        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -614,12 +614,12 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 ; C8       ; 463        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C9       ; 459        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C10      ; 450        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; C11      ; 436        ; 3        ; alu_s0                                   ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; C12      ; 434        ; 3        ; ir[12]                                   ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C11      ; 436        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; C12      ; 434        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C13      ; 431        ; 3        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; C14      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; C15      ; 421        ; 4        ; ir[6]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; C16      ; 418        ; 4        ; d_addr[6]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C15      ; 421        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; C16      ; 418        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C17      ; 404        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C18      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; C19      ; 391        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -630,8 +630,8 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 ; C24      ; 360        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; C25      ; 361        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; C26      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; D1       ; 13         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; D2       ; 12         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; D1       ; 13         ; 2        ; d_addr[3]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; D2       ; 12         ; 2        ; ir[11]                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; D3       ; 1          ; 2        ; ~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; On           ;
 ; D4       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; D5       ; 477        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -641,11 +641,11 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 ; D9       ; 460        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D10      ; 449        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D11      ; 445        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; D12      ; 443        ; 3        ; rf_s0                                    ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D12      ; 443        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D13      ; 432        ; 3        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; D14      ; 426        ; 4        ; d_addr[0]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; D15      ; 417        ; 4        ; rf_rq_addr[2]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; D16      ; 415        ; 4        ; d_addr[5]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D14      ; 426        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; D15      ; 417        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; D16      ; 415        ; 4        ; rf_w_data[4]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D17      ; 403        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D18      ; 396        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D19      ; 392        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -670,7 +670,7 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 ; E12      ; 444        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; E13      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; E14      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; E15      ; 416        ; 4        ; rf_w_data[5]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; E15      ; 416        ; 4        ; d_addr[4]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; E16      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; E17      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; E18      ; 395        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -684,28 +684,28 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 ; E26      ; 356        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F1       ; 29         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F2       ; 28         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; F3       ; 10         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; F4       ; 11         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; F3       ; 10         ; 2        ; rf_w_data[3]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; F4       ; 11         ; 2        ; ir[3]                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; F5       ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; F6       ; 5          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; F7       ; 14         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; F7       ; 14         ; 2        ; rf_w_addr[3]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; F8       ;            ;          ; GNDA_PLL3                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F9       ; 470        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F10      ; 462        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F11      ; 454        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; F12      ; 440        ; 3        ; rf_rp_zero                               ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; F13      ; 423        ; 4        ; rf_w_data[3]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; F14      ; 425        ; 4        ; rf_w_addr[3]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; F15      ; 409        ; 4        ; ir[1]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; F16      ; 408        ; 4        ; d_addr[1]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; F12      ; 440        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; F13      ; 423        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; F14      ; 425        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; F15      ; 409        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; F16      ; 408        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F17      ; 401        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F18      ; 398        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F19      ;            ;          ; GNDA_PLL2                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; F20      ; 372        ; 5        ; rf_rp_addr[0]                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; F21      ; 371        ; 5        ; ir[8]                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; F20      ; 372        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; F21      ; 371        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F22      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; F23      ; 353        ; 5        ; ir[10]                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; F24      ; 354        ; 5        ; rf_rp_addr[2]                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; F23      ; 353        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; F24      ; 354        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F25      ; 350        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F26      ; 349        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G1       ; 30         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -713,17 +713,17 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 ; G3       ; 24         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G4       ; 23         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G5       ; 8          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; G6       ; 9          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; G6       ; 9          ; 2        ; rf_rq_addr[3]                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; G7       ;            ;          ; GND_PLL3                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; G8       ;            ;          ; VCCA_PLL3                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; G9       ; 471        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G10      ; 461        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G11      ; 446        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; G12      ; 439        ; 3        ; rf_rq_rd                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; G13      ; 422        ; 4        ; d_addr[3]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; G14      ; 424        ; 4        ; rf_w_addr[0]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; G15      ; 410        ; 4        ; rf_w_addr[1]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; G16      ; 407        ; 4        ; rf_w_data[1]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; G12      ; 439        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; G13      ; 422        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; G14      ; 424        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; G15      ; 410        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; G16      ; 407        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G17      ; 402        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G18      ; 397        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G19      ;            ;          ; VCCA_PLL2                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -731,9 +731,9 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 ; G21      ; 368        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G22      ; 367        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G23      ; 346        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; G24      ; 345        ; 5        ; alu_s1                                   ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; G25      ; 343        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; G26      ; 342        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; G24      ; 345        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; G25      ; 343        ; 5        ; d_addr[7]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; G26      ; 342        ; 5        ; rf_w_data[7]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; H1       ; 37         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; H2       ; 36         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; H3       ; 32         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -748,18 +748,18 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 ; H12      ; 455        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; H13      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; H14      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; H15      ; 414        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; H16      ; 413        ; 4        ; rf_rq_addr[1]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; H15      ; 414        ; 4        ; ir[4]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; H16      ; 413        ; 4        ; rf_rp_addr[0]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; H17      ; 400        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; H18      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; H19      ; 335        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; H20      ;            ;          ; VCCD_PLL2                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; H21      ; 366        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; H22      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; H23      ; 341        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; H24      ; 340        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; H23      ; 341        ; 5        ; rf_rp_addr[3]                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; H24      ; 340        ; 5        ; ir[7]                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; H25      ; 337        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; H26      ; 336        ; 5        ; rf_rp_addr[1]                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; H26      ; 336        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J1       ; 39         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J2       ; 38         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J3       ; 34         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -769,11 +769,11 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 ; J7       ; 17         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J8       ; 16         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J9       ; 475        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; J10      ; 438        ; 3        ; pc_clr                                   ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; J11      ; 437        ; 3        ; rf_w_wr                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; J10      ; 438        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; J11      ; 437        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; J12      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; J13      ; 442        ; 3        ; pc_inc                                   ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; J14      ; 441        ; 3        ; d_rd                                     ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; J13      ; 442        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; J14      ; 441        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; J15      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; J16      ; 385        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; J17      ; 399        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -783,11 +783,11 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 ; J21      ; 352        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J22      ; 357        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; J23      ; 339        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; J24      ; 338        ; 5        ; ir[9]                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; J24      ; 338        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J25      ; 327        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J26      ; 326        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; K1       ; 42         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; K2       ; 43         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; K1       ; 42         ; 2        ; rf_rq_addr[0]                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; K2       ; 43         ; 2        ; rf_w_data[5]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; K3       ; 41         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K4       ; 40         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K5       ; 22         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -813,14 +813,14 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 ; K25      ; 321        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K26      ; 320        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; L1       ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; L2       ; 50         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; L3       ; 51         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; L4       ; 44         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; L2       ; 50         ; 2        ; rf_w_data[0]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; L3       ; 51         ; 2        ; d_addr[0]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; L4       ; 44         ; 2        ; rf_rp_addr[1]                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; L5       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; L6       ; 48         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; L7       ; 47         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; L6       ; 48         ; 2        ; ir[0]                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; L7       ; 47         ; 2        ; rf_w_addr[0]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; L8       ; 59         ; 2        ; #TMS                                     ; input  ;              ;         ; --         ;                 ; --       ; --           ;
-; L9       ; 49         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; L9       ; 49         ; 2        ; ir[8]                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; L10      ; 52         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; L11      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; L12      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -872,7 +872,7 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 ; N6       ; 61         ; 2        ; ^DCLK                                    ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; N7       ; 66         ; 2        ; ^nCONFIG                                 ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; N8       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; N9       ; 45         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; N9       ; 45         ; 2        ; ir[5]                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; N10      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; N11      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; N12      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -895,10 +895,10 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 ; P3       ; 69         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P4       ; 70         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P5       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; P6       ; 78         ; 1        ; rf_w_data[7]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; P7       ; 77         ; 1        ; rf_rq_addr[3]                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; P6       ; 78         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; P7       ; 77         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P8       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; P9       ; 46         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; P9       ; 46         ; 2        ; d_addr[5]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; P10      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; P11      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; P12      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -923,7 +923,7 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 ; R5       ; 74         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; R6       ; 81         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; R7       ; 82         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; R8       ; 110        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; R8       ; 110        ; 1        ; rf_s1                                    ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; R9       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; R10      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; R11      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -943,13 +943,13 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 ; R25      ; 303        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; R26      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; T1       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; T2       ; 79         ; 1        ; ir[7]                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; T3       ; 80         ; 1        ; d_addr[7]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; T2       ; 79         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; T3       ; 80         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T4       ; 83         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; T5       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; T6       ; 93         ; 1        ; rf_w_addr[2]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; T7       ; 92         ; 1        ; ir[2]                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; T8       ; 111        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; T6       ; 93         ; 1        ; ir[9]                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; T7       ; 92         ; 1        ; rf_w_addr[1]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; T8       ; 111        ; 1        ; pc_clr                                   ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; T9       ; 76         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T10      ; 75         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T11      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -972,14 +972,14 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 ; U2       ; 84         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U3       ; 88         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U4       ; 89         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; U5       ; 100        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; U5       ; 100        ; 1        ; rf_rq_rd                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; U6       ; 98         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U7       ; 99         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U8       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; U9       ; 86         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U10      ; 87         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U11      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; U12      ; 178        ; 8        ; d_wr                                     ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; U12      ; 178        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; U13      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; U14      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; U15      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -996,18 +996,18 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 ; U26      ; 286        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V1       ; 90         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V2       ; 91         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; V3       ; 95         ; 1        ; d_addr[2]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; V4       ; 94         ; 1        ; rf_w_data[2]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; V5       ; 104        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; V6       ; 105        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; V7       ; 112        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; V3       ; 95         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; V4       ; 94         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; V5       ; 104        ; 1        ; ir[13]                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; V6       ; 105        ; 1        ; ir[15]                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; V7       ; 112        ; 1        ; comp_ab                                  ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; V8       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; V9       ; 142        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; V9       ; 142        ; 8        ; ir[10]                                   ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; V10      ; 141        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; V11      ; 177        ; 8        ; rf_s1                                    ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; V11      ; 177        ; 8        ; alu_s1                                   ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; V12      ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; V13      ; 176        ; 8        ; rf_rp_rd                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; V14      ; 175        ; 8        ; ir[13]                                   ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; V13      ; 176        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; V14      ; 175        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; V15      ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; V16      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; V17      ; 218        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -1020,12 +1020,12 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 ; V24      ; 276        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V25      ; 277        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V26      ; 278        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; W1       ; 97         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; W2       ; 96         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; W3       ; 102        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; W4       ; 101        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; W1       ; 97         ; 1        ; d_rd                                     ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; W2       ; 96         ; 1        ; rf_s0                                    ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; W3       ; 102        ; 1        ; rf_w_wr                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; W4       ; 101        ; 1        ; rf_rp_rd                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; W5       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; W6       ; 113        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; W6       ; 113        ; 1        ; i_rd                                     ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; W7       ;            ;          ; GND_PLL1                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; W8       ; 144        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; W9       ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -1046,10 +1046,10 @@ The pin-out file can be found in C:/altera/13.0sp1/Processador/Control Unit/Cont
 ; W24      ; 271        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W25      ; 273        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W26      ; 274        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; Y1       ; 103        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; Y1       ; 103        ; 1        ; pc_ld                                    ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; Y2       ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; Y3       ; 108        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; Y4       ; 109        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; Y3       ; 108        ; 1        ; alu_s0                                   ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; Y4       ; 109        ; 1        ; d_wr                                     ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; Y5       ; 121        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y6       ;            ;          ; GND_PLL1                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; Y7       ;            ;          ; VCCD_PLL1                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -1113,45 +1113,45 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                        ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                              ; Library Name ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------+--------------+
-; |controle                  ; 49 (0)      ; 24 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 61   ; 0            ; 25 (0)       ; 20 (0)            ; 4 (0)            ; |controle                                        ; work         ;
-;    |controlador:ctr|       ; 29 (0)      ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (0)       ; 0 (0)             ; 4 (0)            ; |controle|controlador:ctr                        ; work         ;
-;       |comb_logic:cl|      ; 29 (29)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (25)      ; 0 (0)             ; 4 (4)            ; |controle|controlador:ctr|comb_logic:cl          ; work         ;
-;       |reg_states:reg|     ; 4 (0)       ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (0)            ; |controle|controlador:ctr|reg_states:reg         ; work         ;
-;          |ffd:FF0|         ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |controle|controlador:ctr|reg_states:reg|ffd:FF0 ; work         ;
-;          |ffd:FF1|         ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |controle|controlador:ctr|reg_states:reg|ffd:FF1 ; work         ;
-;          |ffd:FF2|         ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |controle|controlador:ctr|reg_states:reg|ffd:FF2 ; work         ;
-;          |ffd:FF3|         ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |controle|controlador:ctr|reg_states:reg|ffd:FF3 ; work         ;
-;    |datapath:dp|           ; 20 (0)      ; 20 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 20 (0)            ; 0 (0)            ; |controle|datapath:dp                            ; work         ;
-;       |reg4bits:Ra|        ; 4 (0)       ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 4 (0)             ; 0 (0)            ; |controle|datapath:dp|reg4bits:Ra                ; work         ;
-;          |ffd:FF0|         ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath:dp|reg4bits:Ra|ffd:FF0        ; work         ;
-;          |ffd:FF1|         ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath:dp|reg4bits:Ra|ffd:FF1        ; work         ;
-;          |ffd:FF2|         ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath:dp|reg4bits:Ra|ffd:FF2        ; work         ;
-;          |ffd:FF3|         ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath:dp|reg4bits:Ra|ffd:FF3        ; work         ;
-;       |reg4bits:Rb|        ; 4 (0)       ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 4 (0)             ; 0 (0)            ; |controle|datapath:dp|reg4bits:Rb                ; work         ;
-;          |ffd:FF0|         ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath:dp|reg4bits:Rb|ffd:FF0        ; work         ;
-;          |ffd:FF1|         ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath:dp|reg4bits:Rb|ffd:FF1        ; work         ;
-;          |ffd:FF2|         ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath:dp|reg4bits:Rb|ffd:FF2        ; work         ;
-;          |ffd:FF3|         ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath:dp|reg4bits:Rb|ffd:FF3        ; work         ;
-;       |reg4bits:Rc|        ; 4 (0)       ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 4 (0)             ; 0 (0)            ; |controle|datapath:dp|reg4bits:Rc                ; work         ;
-;          |ffd:FF0|         ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath:dp|reg4bits:Rc|ffd:FF0        ; work         ;
-;          |ffd:FF1|         ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath:dp|reg4bits:Rc|ffd:FF1        ; work         ;
-;          |ffd:FF2|         ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath:dp|reg4bits:Rc|ffd:FF2        ; work         ;
-;          |ffd:FF3|         ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath:dp|reg4bits:Rc|ffd:FF3        ; work         ;
-;       |regd:d|             ; 8 (0)       ; 8 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 8 (0)             ; 0 (0)            ; |controle|datapath:dp|regd:d                     ; work         ;
-;          |ffd:FF0|         ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath:dp|regd:d|ffd:FF0             ; work         ;
-;          |ffd:FF1|         ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath:dp|regd:d|ffd:FF1             ; work         ;
-;          |ffd:FF2|         ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath:dp|regd:d|ffd:FF2             ; work         ;
-;          |ffd:FF3|         ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath:dp|regd:d|ffd:FF3             ; work         ;
-;          |ffd:FF4|         ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath:dp|regd:d|ffd:FF4             ; work         ;
-;          |ffd:FF5|         ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath:dp|regd:d|ffd:FF5             ; work         ;
-;          |ffd:FF6|         ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath:dp|regd:d|ffd:FF6             ; work         ;
-;          |ffd:FF7|         ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath:dp|regd:d|ffd:FF7             ; work         ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                             ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                   ; Library Name ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------+--------------+
+; |controle                  ; 48 (0)      ; 24 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 61   ; 0            ; 24 (0)       ; 20 (0)            ; 4 (0)            ; |controle                                             ; work         ;
+;    |controlador:ctr0|      ; 28 (0)      ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 24 (0)       ; 0 (0)             ; 4 (0)            ; |controle|controlador:ctr0                            ; work         ;
+;       |comb_logic:cl|      ; 28 (28)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 24 (24)      ; 0 (0)             ; 4 (4)            ; |controle|controlador:ctr0|comb_logic:cl              ; work         ;
+;       |reg_states:reg|     ; 4 (0)       ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (0)            ; |controle|controlador:ctr0|reg_states:reg             ; work         ;
+;          |ffd1bit:FF0|     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |controle|controlador:ctr0|reg_states:reg|ffd1bit:FF0 ; work         ;
+;          |ffd1bit:FF1|     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |controle|controlador:ctr0|reg_states:reg|ffd1bit:FF1 ; work         ;
+;          |ffd1bit:FF2|     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |controle|controlador:ctr0|reg_states:reg|ffd1bit:FF2 ; work         ;
+;          |ffd1bit:FF3|     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |controle|controlador:ctr0|reg_states:reg|ffd1bit:FF3 ; work         ;
+;    |datapath_control:dp|   ; 20 (0)      ; 20 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 20 (0)            ; 0 (0)            ; |controle|datapath_control:dp                         ; work         ;
+;       |reg4bits:Ra|        ; 4 (0)       ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 4 (0)             ; 0 (0)            ; |controle|datapath_control:dp|reg4bits:Ra             ; work         ;
+;          |ffd1bit:FF0|     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath_control:dp|reg4bits:Ra|ffd1bit:FF0 ; work         ;
+;          |ffd1bit:FF1|     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath_control:dp|reg4bits:Ra|ffd1bit:FF1 ; work         ;
+;          |ffd1bit:FF2|     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath_control:dp|reg4bits:Ra|ffd1bit:FF2 ; work         ;
+;          |ffd1bit:FF3|     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath_control:dp|reg4bits:Ra|ffd1bit:FF3 ; work         ;
+;       |reg4bits:Rb|        ; 4 (0)       ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 4 (0)             ; 0 (0)            ; |controle|datapath_control:dp|reg4bits:Rb             ; work         ;
+;          |ffd1bit:FF0|     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath_control:dp|reg4bits:Rb|ffd1bit:FF0 ; work         ;
+;          |ffd1bit:FF1|     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath_control:dp|reg4bits:Rb|ffd1bit:FF1 ; work         ;
+;          |ffd1bit:FF2|     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath_control:dp|reg4bits:Rb|ffd1bit:FF2 ; work         ;
+;          |ffd1bit:FF3|     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath_control:dp|reg4bits:Rb|ffd1bit:FF3 ; work         ;
+;       |reg4bits:Rc|        ; 4 (0)       ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 4 (0)             ; 0 (0)            ; |controle|datapath_control:dp|reg4bits:Rc             ; work         ;
+;          |ffd1bit:FF0|     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath_control:dp|reg4bits:Rc|ffd1bit:FF0 ; work         ;
+;          |ffd1bit:FF1|     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath_control:dp|reg4bits:Rc|ffd1bit:FF1 ; work         ;
+;          |ffd1bit:FF2|     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath_control:dp|reg4bits:Rc|ffd1bit:FF2 ; work         ;
+;          |ffd1bit:FF3|     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath_control:dp|reg4bits:Rc|ffd1bit:FF3 ; work         ;
+;       |regd:d|             ; 8 (0)       ; 8 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 8 (0)             ; 0 (0)            ; |controle|datapath_control:dp|regd:d                  ; work         ;
+;          |ffd1bit:FF0|     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath_control:dp|regd:d|ffd1bit:FF0      ; work         ;
+;          |ffd1bit:FF1|     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath_control:dp|regd:d|ffd1bit:FF1      ; work         ;
+;          |ffd1bit:FF2|     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath_control:dp|regd:d|ffd1bit:FF2      ; work         ;
+;          |ffd1bit:FF3|     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath_control:dp|regd:d|ffd1bit:FF3      ; work         ;
+;          |ffd1bit:FF4|     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath_control:dp|regd:d|ffd1bit:FF4      ; work         ;
+;          |ffd1bit:FF5|     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath_control:dp|regd:d|ffd1bit:FF5      ; work         ;
+;          |ffd1bit:FF6|     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath_control:dp|regd:d|ffd1bit:FF6      ; work         ;
+;          |ffd1bit:FF7|     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |controle|datapath_control:dp|regd:d|ffd1bit:FF7      ; work         ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -1202,97 +1202,96 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; d_addr[5]     ; Output   ; --            ; --            ; --                    ; --  ;
 ; d_addr[6]     ; Output   ; --            ; --            ; --                    ; --  ;
 ; d_addr[7]     ; Output   ; --            ; --            ; --                    ; --  ;
-; comp_ab       ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
-; ir[12]        ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
-; ir[13]        ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
-; ir[14]        ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
-; ir[15]        ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
-; rf_rp_zero    ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
+; comp_ab       ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; ir[12]        ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; ir[13]        ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; ir[14]        ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; ir[15]        ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; rf_rp_zero    ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; clock         ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; ir[0]         ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
-; ir[1]         ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
-; ir[2]         ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; ir[3]         ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
 ; ir[8]         ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; ir[9]         ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; ir[10]        ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; ir[10]        ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
 ; ir[11]        ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; ir[4]         ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; ir[5]         ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
+; ir[4]         ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
+; ir[5]         ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; ir[6]         ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
 ; ir[7]         ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; ir[0]         ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; ir[1]         ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
+; ir[2]         ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
+; ir[3]         ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 +---------------+----------+---------------+---------------+-----------------------+-----+
 
 
-+-----------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                                    ;
-+-----------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                                 ; Pad To Core Index ; Setting ;
-+-----------------------------------------------------+-------------------+---------+
-; comp_ab                                             ;                   ;         ;
-;      - controlador:ctr|comb_logic:cl|pc_inc         ; 1                 ; 6       ;
-;      - controlador:ctr|comb_logic:cl|n0~1           ; 1                 ; 6       ;
-;      - controlador:ctr|comb_logic:cl|n1~0           ; 1                 ; 6       ;
-; ir[12]                                              ;                   ;         ;
-;      - controlador:ctr|comb_logic:cl|n0~3           ; 1                 ; 6       ;
-;      - controlador:ctr|comb_logic:cl|n3~0           ; 1                 ; 6       ;
-;      - controlador:ctr|comb_logic:cl|n2~0           ; 1                 ; 6       ;
-;      - controlador:ctr|comb_logic:cl|n1~1           ; 1                 ; 6       ;
-;      - controlador:ctr|comb_logic:cl|n1~3           ; 1                 ; 6       ;
-; ir[13]                                              ;                   ;         ;
-;      - controlador:ctr|comb_logic:cl|n0~2           ; 1                 ; 6       ;
-;      - controlador:ctr|comb_logic:cl|n3~0           ; 1                 ; 6       ;
-;      - controlador:ctr|comb_logic:cl|n2~0           ; 1                 ; 6       ;
-;      - controlador:ctr|comb_logic:cl|n1~3           ; 1                 ; 6       ;
-; ir[14]                                              ;                   ;         ;
-;      - controlador:ctr|comb_logic:cl|n0~2           ; 0                 ; 6       ;
-;      - controlador:ctr|comb_logic:cl|n3~1           ; 0                 ; 6       ;
-;      - controlador:ctr|comb_logic:cl|n0~8           ; 0                 ; 6       ;
-;      - controlador:ctr|comb_logic:cl|n0~9           ; 0                 ; 6       ;
-;      - controlador:ctr|comb_logic:cl|n1~0           ; 0                 ; 6       ;
-; ir[15]                                              ;                   ;         ;
-;      - controlador:ctr|comb_logic:cl|n0~2           ; 0                 ; 6       ;
-;      - controlador:ctr|comb_logic:cl|n3~0           ; 0                 ; 6       ;
-;      - controlador:ctr|comb_logic:cl|n0~8           ; 0                 ; 6       ;
-;      - controlador:ctr|comb_logic:cl|n0~9           ; 0                 ; 6       ;
-;      - controlador:ctr|comb_logic:cl|n1~0           ; 0                 ; 6       ;
-; rf_rp_zero                                          ;                   ;         ;
-;      - controlador:ctr|comb_logic:cl|n0~4           ; 0                 ; 6       ;
-;      - controlador:ctr|comb_logic:cl|n3             ; 0                 ; 6       ;
-; clock                                               ;                   ;         ;
-; ir[0]                                               ;                   ;         ;
-;      - datapath:dp|reg4bits:Rc|ffd:FF0|q_reg~feeder ; 1                 ; 6       ;
-;      - datapath:dp|regd:d|ffd:FF0|q_reg~feeder      ; 1                 ; 6       ;
-; ir[1]                                               ;                   ;         ;
-;      - datapath:dp|reg4bits:Rc|ffd:FF1|q_reg~feeder ; 0                 ; 6       ;
-;      - datapath:dp|regd:d|ffd:FF1|q_reg~feeder      ; 0                 ; 6       ;
-; ir[2]                                               ;                   ;         ;
-;      - datapath:dp|reg4bits:Rc|ffd:FF2|q_reg~feeder ; 0                 ; 6       ;
-;      - datapath:dp|regd:d|ffd:FF2|q_reg~feeder      ; 0                 ; 6       ;
-; ir[3]                                               ;                   ;         ;
-;      - datapath:dp|reg4bits:Rc|ffd:FF3|q_reg~feeder ; 0                 ; 6       ;
-;      - datapath:dp|regd:d|ffd:FF3|q_reg~feeder      ; 0                 ; 6       ;
-; ir[8]                                               ;                   ;         ;
-;      - datapath:dp|reg4bits:Ra|ffd:FF0|q_reg~feeder ; 0                 ; 6       ;
-; ir[9]                                               ;                   ;         ;
-;      - datapath:dp|reg4bits:Ra|ffd:FF1|q_reg~feeder ; 0                 ; 6       ;
-; ir[10]                                              ;                   ;         ;
-;      - datapath:dp|reg4bits:Ra|ffd:FF2|q_reg~feeder ; 0                 ; 6       ;
-; ir[11]                                              ;                   ;         ;
-;      - datapath:dp|reg4bits:Ra|ffd:FF3|q_reg~feeder ; 0                 ; 6       ;
-; ir[4]                                               ;                   ;         ;
-;      - datapath:dp|reg4bits:Rb|ffd:FF0|q_reg~feeder ; 1                 ; 6       ;
-;      - datapath:dp|regd:d|ffd:FF4|q_reg~feeder      ; 1                 ; 6       ;
-; ir[5]                                               ;                   ;         ;
-;      - datapath:dp|reg4bits:Rb|ffd:FF1|q_reg~feeder ; 0                 ; 6       ;
-;      - datapath:dp|regd:d|ffd:FF5|q_reg~feeder      ; 0                 ; 6       ;
-; ir[6]                                               ;                   ;         ;
-;      - datapath:dp|reg4bits:Rb|ffd:FF2|q_reg~feeder ; 0                 ; 6       ;
-;      - datapath:dp|regd:d|ffd:FF6|q_reg~feeder      ; 0                 ; 6       ;
-; ir[7]                                               ;                   ;         ;
-;      - datapath:dp|reg4bits:Rb|ffd:FF3|q_reg~feeder ; 1                 ; 6       ;
-;      - datapath:dp|regd:d|ffd:FF7|q_reg~feeder      ; 1                 ; 6       ;
-+-----------------------------------------------------+-------------------+---------+
++-----------------------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                                ;
++-----------------------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                                             ; Pad To Core Index ; Setting ;
++-----------------------------------------------------------------+-------------------+---------+
+; comp_ab                                                         ;                   ;         ;
+;      - controlador:ctr0|comb_logic:cl|n0~1                      ; 0                 ; 6       ;
+;      - controlador:ctr0|comb_logic:cl|n1~0                      ; 0                 ; 6       ;
+; ir[12]                                                          ;                   ;         ;
+;      - controlador:ctr0|comb_logic:cl|n0~3                      ; 0                 ; 6       ;
+;      - controlador:ctr0|comb_logic:cl|n3~0                      ; 0                 ; 6       ;
+;      - controlador:ctr0|comb_logic:cl|n2~0                      ; 0                 ; 6       ;
+;      - controlador:ctr0|comb_logic:cl|n1~1                      ; 0                 ; 6       ;
+;      - controlador:ctr0|comb_logic:cl|n1~3                      ; 0                 ; 6       ;
+; ir[13]                                                          ;                   ;         ;
+;      - controlador:ctr0|comb_logic:cl|n0~2                      ; 0                 ; 6       ;
+;      - controlador:ctr0|comb_logic:cl|n3~0                      ; 0                 ; 6       ;
+;      - controlador:ctr0|comb_logic:cl|n2~0                      ; 0                 ; 6       ;
+;      - controlador:ctr0|comb_logic:cl|n1~3                      ; 0                 ; 6       ;
+; ir[14]                                                          ;                   ;         ;
+;      - controlador:ctr0|comb_logic:cl|n0~2                      ; 0                 ; 6       ;
+;      - controlador:ctr0|comb_logic:cl|n3~1                      ; 0                 ; 6       ;
+;      - controlador:ctr0|comb_logic:cl|n0~8                      ; 0                 ; 6       ;
+;      - controlador:ctr0|comb_logic:cl|n0~9                      ; 0                 ; 6       ;
+;      - controlador:ctr0|comb_logic:cl|n1~0                      ; 0                 ; 6       ;
+; ir[15]                                                          ;                   ;         ;
+;      - controlador:ctr0|comb_logic:cl|n0~2                      ; 1                 ; 6       ;
+;      - controlador:ctr0|comb_logic:cl|n3~0                      ; 1                 ; 6       ;
+;      - controlador:ctr0|comb_logic:cl|n0~8                      ; 0                 ; 6       ;
+;      - controlador:ctr0|comb_logic:cl|n0~9                      ; 0                 ; 6       ;
+;      - controlador:ctr0|comb_logic:cl|n1~0                      ; 0                 ; 6       ;
+; rf_rp_zero                                                      ;                   ;         ;
+;      - controlador:ctr0|comb_logic:cl|n0~4                      ; 0                 ; 6       ;
+;      - controlador:ctr0|comb_logic:cl|n3                        ; 0                 ; 6       ;
+; clock                                                           ;                   ;         ;
+; ir[8]                                                           ;                   ;         ;
+;      - datapath_control:dp|reg4bits:Ra|ffd1bit:FF0|q_reg~feeder ; 1                 ; 6       ;
+; ir[9]                                                           ;                   ;         ;
+;      - datapath_control:dp|reg4bits:Ra|ffd1bit:FF1|q_reg~feeder ; 0                 ; 6       ;
+; ir[10]                                                          ;                   ;         ;
+;      - datapath_control:dp|reg4bits:Ra|ffd1bit:FF2|q_reg~feeder ; 0                 ; 6       ;
+; ir[11]                                                          ;                   ;         ;
+;      - datapath_control:dp|reg4bits:Ra|ffd1bit:FF3|q_reg~feeder ; 1                 ; 6       ;
+; ir[4]                                                           ;                   ;         ;
+;      - datapath_control:dp|reg4bits:Rb|ffd1bit:FF0|q_reg~feeder ; 1                 ; 6       ;
+;      - datapath_control:dp|regd:d|ffd1bit:FF4|q_reg~feeder      ; 1                 ; 6       ;
+; ir[5]                                                           ;                   ;         ;
+;      - datapath_control:dp|reg4bits:Rb|ffd1bit:FF1|q_reg~feeder ; 1                 ; 6       ;
+;      - datapath_control:dp|regd:d|ffd1bit:FF5|q_reg~feeder      ; 1                 ; 6       ;
+; ir[6]                                                           ;                   ;         ;
+;      - datapath_control:dp|reg4bits:Rb|ffd1bit:FF2|q_reg~feeder ; 1                 ; 6       ;
+;      - datapath_control:dp|regd:d|ffd1bit:FF6|q_reg~feeder      ; 1                 ; 6       ;
+; ir[7]                                                           ;                   ;         ;
+;      - datapath_control:dp|reg4bits:Rb|ffd1bit:FF3|q_reg~feeder ; 1                 ; 6       ;
+;      - datapath_control:dp|regd:d|ffd1bit:FF7|q_reg~feeder      ; 1                 ; 6       ;
+; ir[0]                                                           ;                   ;         ;
+;      - datapath_control:dp|reg4bits:Rc|ffd1bit:FF0|q_reg~feeder ; 0                 ; 6       ;
+;      - datapath_control:dp|regd:d|ffd1bit:FF0|q_reg~feeder      ; 0                 ; 6       ;
+; ir[1]                                                           ;                   ;         ;
+;      - datapath_control:dp|reg4bits:Rc|ffd1bit:FF1|q_reg~feeder ; 1                 ; 6       ;
+;      - datapath_control:dp|regd:d|ffd1bit:FF1|q_reg~feeder      ; 1                 ; 6       ;
+; ir[2]                                                           ;                   ;         ;
+;      - datapath_control:dp|reg4bits:Rc|ffd1bit:FF2|q_reg~feeder ; 0                 ; 6       ;
+;      - datapath_control:dp|regd:d|ffd1bit:FF2|q_reg~feeder      ; 0                 ; 6       ;
+; ir[3]                                                           ;                   ;         ;
+;      - datapath_control:dp|reg4bits:Rc|ffd1bit:FF3|q_reg~feeder ; 0                 ; 6       ;
+;      - datapath_control:dp|regd:d|ffd1bit:FF3|q_reg~feeder      ; 0                 ; 6       ;
++-----------------------------------------------------------------+-------------------+---------+
 
 
 +-------------------------------------------------------------------------------------------------------------------+
@@ -1313,83 +1312,82 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------+----------+---------+----------------------+------------------+---------------------------+
 
 
-+--------------------------------------------------------+
-; Non-Global High Fan-Out Signals                        ;
-+----------------------------------------------+---------+
-; Name                                         ; Fan-Out ;
-+----------------------------------------------+---------+
-; controlador:ctr|reg_states:reg|ffd:FF3|q_reg ; 20      ;
-; controlador:ctr|reg_states:reg|ffd:FF2|q_reg ; 13      ;
-; controlador:ctr|reg_states:reg|ffd:FF0|q_reg ; 13      ;
-; controlador:ctr|reg_states:reg|ffd:FF1|q_reg ; 12      ;
-; controlador:ctr|comb_logic:cl|n0~0           ; 6       ;
-; ir[15]                                       ; 5       ;
-; ir[14]                                       ; 5       ;
-; ir[12]                                       ; 5       ;
-; ir[13]                                       ; 4       ;
-; controlador:ctr|comb_logic:cl|ir_ld~0        ; 4       ;
-; comp_ab                                      ; 3       ;
-; ir[7]                                        ; 2       ;
-; ir[6]                                        ; 2       ;
-; ir[5]                                        ; 2       ;
-; ir[4]                                        ; 2       ;
-; ir[3]                                        ; 2       ;
-; ir[2]                                        ; 2       ;
-; ir[1]                                        ; 2       ;
-; ir[0]                                        ; 2       ;
-; rf_rp_zero                                   ; 2       ;
-; controlador:ctr|comb_logic:cl|n0~8           ; 2       ;
-; controlador:ctr|comb_logic:cl|n0~1           ; 2       ;
-; datapath:dp|regd:d|ffd:FF7|q_reg             ; 2       ;
-; datapath:dp|regd:d|ffd:FF6|q_reg             ; 2       ;
-; datapath:dp|regd:d|ffd:FF5|q_reg             ; 2       ;
-; datapath:dp|regd:d|ffd:FF4|q_reg             ; 2       ;
-; datapath:dp|regd:d|ffd:FF3|q_reg             ; 2       ;
-; datapath:dp|regd:d|ffd:FF2|q_reg             ; 2       ;
-; datapath:dp|regd:d|ffd:FF1|q_reg             ; 2       ;
-; datapath:dp|regd:d|ffd:FF0|q_reg             ; 2       ;
-; controlador:ctr|comb_logic:cl|rf_s0~0        ; 2       ;
-; ir[11]                                       ; 1       ;
-; ir[10]                                       ; 1       ;
-; ir[9]                                        ; 1       ;
-; ir[8]                                        ; 1       ;
-; controlador:ctr|comb_logic:cl|n1~3           ; 1       ;
-; controlador:ctr|comb_logic:cl|n1~2           ; 1       ;
-; controlador:ctr|comb_logic:cl|n1~1           ; 1       ;
-; controlador:ctr|comb_logic:cl|n1~0           ; 1       ;
-; controlador:ctr|comb_logic:cl|n2~0           ; 1       ;
-; controlador:ctr|comb_logic:cl|n0~9           ; 1       ;
-; controlador:ctr|comb_logic:cl|n3             ; 1       ;
-; controlador:ctr|comb_logic:cl|n0~7           ; 1       ;
-; controlador:ctr|comb_logic:cl|n3~1           ; 1       ;
-; controlador:ctr|comb_logic:cl|n3~0           ; 1       ;
-; controlador:ctr|comb_logic:cl|n0~6           ; 1       ;
-; controlador:ctr|comb_logic:cl|n0~5           ; 1       ;
-; controlador:ctr|comb_logic:cl|n0~4           ; 1       ;
-; controlador:ctr|comb_logic:cl|n0~3           ; 1       ;
-; controlador:ctr|comb_logic:cl|n0~2           ; 1       ;
-; datapath:dp|reg4bits:Rb|ffd:FF3|q_reg        ; 1       ;
-; datapath:dp|reg4bits:Rb|ffd:FF2|q_reg        ; 1       ;
-; datapath:dp|reg4bits:Rb|ffd:FF1|q_reg        ; 1       ;
-; datapath:dp|reg4bits:Rb|ffd:FF0|q_reg        ; 1       ;
-; datapath:dp|reg4bits:Ra|ffd:FF3|q_reg        ; 1       ;
-; datapath:dp|reg4bits:Ra|ffd:FF2|q_reg        ; 1       ;
-; datapath:dp|reg4bits:Ra|ffd:FF1|q_reg        ; 1       ;
-; datapath:dp|reg4bits:Ra|ffd:FF0|q_reg        ; 1       ;
-; datapath:dp|reg4bits:Rc|ffd:FF3|q_reg        ; 1       ;
-; datapath:dp|reg4bits:Rc|ffd:FF2|q_reg        ; 1       ;
-; datapath:dp|reg4bits:Rc|ffd:FF1|q_reg        ; 1       ;
-; datapath:dp|reg4bits:Rc|ffd:FF0|q_reg        ; 1       ;
-; controlador:ctr|comb_logic:cl|alu_s0~0       ; 1       ;
-; controlador:ctr|comb_logic:cl|d_wr           ; 1       ;
-; controlador:ctr|comb_logic:cl|rf_s1~0        ; 1       ;
-; controlador:ctr|comb_logic:cl|rf_rq_rd~0     ; 1       ;
-; controlador:ctr|comb_logic:cl|rf_rp_rd~0     ; 1       ;
-; controlador:ctr|comb_logic:cl|rf_w_wr~0      ; 1       ;
-; controlador:ctr|comb_logic:cl|pc_inc         ; 1       ;
-; controlador:ctr|comb_logic:cl|pc_clr~0       ; 1       ;
-; controlador:ctr|comb_logic:cl|pc_ld~0        ; 1       ;
-+----------------------------------------------+---------+
++-------------------------------------------------------------+
+; Non-Global High Fan-Out Signals                             ;
++---------------------------------------------------+---------+
+; Name                                              ; Fan-Out ;
++---------------------------------------------------+---------+
+; controlador:ctr0|reg_states:reg|ffd1bit:FF3|q_reg ; 20      ;
+; controlador:ctr0|reg_states:reg|ffd1bit:FF2|q_reg ; 13      ;
+; controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg ; 13      ;
+; controlador:ctr0|reg_states:reg|ffd1bit:FF1|q_reg ; 12      ;
+; controlador:ctr0|comb_logic:cl|n0~0               ; 6       ;
+; ir[15]                                            ; 5       ;
+; ir[14]                                            ; 5       ;
+; ir[12]                                            ; 5       ;
+; ir[13]                                            ; 4       ;
+; controlador:ctr0|comb_logic:cl|pc_inc~0           ; 4       ;
+; ir[3]                                             ; 2       ;
+; ir[2]                                             ; 2       ;
+; ir[1]                                             ; 2       ;
+; ir[0]                                             ; 2       ;
+; ir[7]                                             ; 2       ;
+; ir[6]                                             ; 2       ;
+; ir[5]                                             ; 2       ;
+; ir[4]                                             ; 2       ;
+; rf_rp_zero                                        ; 2       ;
+; comp_ab                                           ; 2       ;
+; controlador:ctr0|comb_logic:cl|n0~8               ; 2       ;
+; controlador:ctr0|comb_logic:cl|n0~1               ; 2       ;
+; datapath_control:dp|regd:d|ffd1bit:FF7|q_reg      ; 2       ;
+; datapath_control:dp|regd:d|ffd1bit:FF6|q_reg      ; 2       ;
+; datapath_control:dp|regd:d|ffd1bit:FF5|q_reg      ; 2       ;
+; datapath_control:dp|regd:d|ffd1bit:FF4|q_reg      ; 2       ;
+; datapath_control:dp|regd:d|ffd1bit:FF3|q_reg      ; 2       ;
+; datapath_control:dp|regd:d|ffd1bit:FF2|q_reg      ; 2       ;
+; datapath_control:dp|regd:d|ffd1bit:FF1|q_reg      ; 2       ;
+; datapath_control:dp|regd:d|ffd1bit:FF0|q_reg      ; 2       ;
+; controlador:ctr0|comb_logic:cl|rf_s0~0            ; 2       ;
+; ir[11]                                            ; 1       ;
+; ir[10]                                            ; 1       ;
+; ir[9]                                             ; 1       ;
+; ir[8]                                             ; 1       ;
+; controlador:ctr0|comb_logic:cl|n1~3               ; 1       ;
+; controlador:ctr0|comb_logic:cl|n1~2               ; 1       ;
+; controlador:ctr0|comb_logic:cl|n1~1               ; 1       ;
+; controlador:ctr0|comb_logic:cl|n1~0               ; 1       ;
+; controlador:ctr0|comb_logic:cl|n2~0               ; 1       ;
+; controlador:ctr0|comb_logic:cl|n0~9               ; 1       ;
+; controlador:ctr0|comb_logic:cl|n3                 ; 1       ;
+; controlador:ctr0|comb_logic:cl|n0~7               ; 1       ;
+; controlador:ctr0|comb_logic:cl|n3~1               ; 1       ;
+; controlador:ctr0|comb_logic:cl|n3~0               ; 1       ;
+; controlador:ctr0|comb_logic:cl|n0~6               ; 1       ;
+; controlador:ctr0|comb_logic:cl|n0~5               ; 1       ;
+; controlador:ctr0|comb_logic:cl|n0~4               ; 1       ;
+; controlador:ctr0|comb_logic:cl|n0~3               ; 1       ;
+; controlador:ctr0|comb_logic:cl|n0~2               ; 1       ;
+; datapath_control:dp|reg4bits:Rc|ffd1bit:FF3|q_reg ; 1       ;
+; datapath_control:dp|reg4bits:Rc|ffd1bit:FF2|q_reg ; 1       ;
+; datapath_control:dp|reg4bits:Rc|ffd1bit:FF1|q_reg ; 1       ;
+; datapath_control:dp|reg4bits:Rc|ffd1bit:FF0|q_reg ; 1       ;
+; datapath_control:dp|reg4bits:Rb|ffd1bit:FF3|q_reg ; 1       ;
+; datapath_control:dp|reg4bits:Rb|ffd1bit:FF2|q_reg ; 1       ;
+; datapath_control:dp|reg4bits:Rb|ffd1bit:FF1|q_reg ; 1       ;
+; datapath_control:dp|reg4bits:Rb|ffd1bit:FF0|q_reg ; 1       ;
+; datapath_control:dp|reg4bits:Ra|ffd1bit:FF3|q_reg ; 1       ;
+; datapath_control:dp|reg4bits:Ra|ffd1bit:FF2|q_reg ; 1       ;
+; datapath_control:dp|reg4bits:Ra|ffd1bit:FF1|q_reg ; 1       ;
+; datapath_control:dp|reg4bits:Ra|ffd1bit:FF0|q_reg ; 1       ;
+; controlador:ctr0|comb_logic:cl|alu_s0~0           ; 1       ;
+; controlador:ctr0|comb_logic:cl|d_wr               ; 1       ;
+; controlador:ctr0|comb_logic:cl|rf_s1~0            ; 1       ;
+; controlador:ctr0|comb_logic:cl|rf_rq_rd~0         ; 1       ;
+; controlador:ctr0|comb_logic:cl|rf_rp_rd~0         ; 1       ;
+; controlador:ctr0|comb_logic:cl|rf_w_wr~0          ; 1       ;
+; controlador:ctr0|comb_logic:cl|pc_clr~0           ; 1       ;
+; controlador:ctr0|comb_logic:cl|pc_ld~0            ; 1       ;
++---------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -1398,11 +1396,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Other Routing Resource Type ; Usage                 ;
 +-----------------------------+-----------------------+
 ; Block interconnects         ; 71 / 94,460 ( < 1 % ) ;
-; C16 interconnects           ; 8 / 3,315 ( < 1 % )   ;
-; C4 interconnects            ; 77 / 60,840 ( < 1 % ) ;
-; Direct links                ; 19 / 94,460 ( < 1 % ) ;
+; C16 interconnects           ; 0 / 3,315 ( 0 % )     ;
+; C4 interconnects            ; 27 / 60,840 ( < 1 % ) ;
+; Direct links                ; 21 / 94,460 ( < 1 % ) ;
 ; Global clocks               ; 1 / 16 ( 6 % )        ;
-; Local interconnects         ; 16 / 33,216 ( < 1 % ) ;
+; Local interconnects         ; 15 / 33,216 ( < 1 % ) ;
 ; R24 interconnects           ; 0 / 3,091 ( 0 % )     ;
 ; R4 interconnects            ; 15 / 81,294 ( < 1 % ) ;
 +-----------------------------+-----------------------+
@@ -1411,11 +1409,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------+
 ; LAB Logic Elements                                                        ;
 +--------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 3.27) ; Number of LABs  (Total = 15) ;
+; Number of Logic Elements  (Average = 4.00) ; Number of LABs  (Total = 12) ;
 +--------------------------------------------+------------------------------+
-; 1                                          ; 5                            ;
-; 2                                          ; 8                            ;
-; 3                                          ; 0                            ;
+; 1                                          ; 2                            ;
+; 2                                          ; 6                            ;
+; 3                                          ; 2                            ;
 ; 4                                          ; 0                            ;
 ; 5                                          ; 0                            ;
 ; 6                                          ; 0                            ;
@@ -1435,24 +1433,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 0.87) ; Number of LABs  (Total = 15) ;
+; LAB-wide Signals  (Average = 0.92) ; Number of LABs  (Total = 12) ;
 +------------------------------------+------------------------------+
-; 1 Clock                            ; 13                           ;
+; 1 Clock                            ; 11                           ;
 +------------------------------------+------------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +---------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 4.87) ; Number of LABs  (Total = 15) ;
+; Number of Signals Sourced  (Average = 6.00) ; Number of LABs  (Total = 12) ;
 +---------------------------------------------+------------------------------+
 ; 0                                           ; 0                            ;
-; 1                                           ; 1                            ;
-; 2                                           ; 4                            ;
+; 1                                           ; 0                            ;
+; 2                                           ; 2                            ;
 ; 3                                           ; 0                            ;
-; 4                                           ; 8                            ;
+; 4                                           ; 6                            ;
 ; 5                                           ; 0                            ;
-; 6                                           ; 0                            ;
+; 6                                           ; 2                            ;
 ; 7                                           ; 0                            ;
 ; 8                                           ; 0                            ;
 ; 9                                           ; 0                            ;
@@ -1473,12 +1471,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 2.53) ; Number of LABs  (Total = 15) ;
+; Number of Signals Sourced Out  (Average = 3.08) ; Number of LABs  (Total = 12) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 5                            ;
-; 2                                               ; 8                            ;
-; 3                                               ; 0                            ;
+; 1                                               ; 2                            ;
+; 2                                               ; 6                            ;
+; 3                                               ; 2                            ;
 ; 4                                               ; 0                            ;
 ; 5                                               ; 1                            ;
 ; 6                                               ; 0                            ;
@@ -1494,12 +1492,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                        ;
 +---------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 2.93) ; Number of LABs  (Total = 15) ;
+; Number of Distinct Inputs  (Average = 3.33) ; Number of LABs  (Total = 12) ;
 +---------------------------------------------+------------------------------+
 ; 0                                           ; 0                            ;
 ; 1                                           ; 0                            ;
-; 2                                           ; 13                           ;
-; 3                                           ; 0                            ;
+; 2                                           ; 8                            ;
+; 3                                           ; 2                            ;
 ; 4                                           ; 0                            ;
 ; 5                                           ; 0                            ;
 ; 6                                           ; 0                            ;
@@ -1605,10 +1603,6 @@ Critical Warning (169085): No exact pin location assignment(s) for 61 pins of 61
     Info (169086): Pin ir[15] not assigned to an exact location on the device
     Info (169086): Pin rf_rp_zero not assigned to an exact location on the device
     Info (169086): Pin clock not assigned to an exact location on the device
-    Info (169086): Pin ir[0] not assigned to an exact location on the device
-    Info (169086): Pin ir[1] not assigned to an exact location on the device
-    Info (169086): Pin ir[2] not assigned to an exact location on the device
-    Info (169086): Pin ir[3] not assigned to an exact location on the device
     Info (169086): Pin ir[8] not assigned to an exact location on the device
     Info (169086): Pin ir[9] not assigned to an exact location on the device
     Info (169086): Pin ir[10] not assigned to an exact location on the device
@@ -1617,6 +1611,10 @@ Critical Warning (169085): No exact pin location assignment(s) for 61 pins of 61
     Info (169086): Pin ir[5] not assigned to an exact location on the device
     Info (169086): Pin ir[6] not assigned to an exact location on the device
     Info (169086): Pin ir[7] not assigned to an exact location on the device
+    Info (169086): Pin ir[0] not assigned to an exact location on the device
+    Info (169086): Pin ir[1] not assigned to an exact location on the device
+    Info (169086): Pin ir[2] not assigned to an exact location on the device
+    Info (169086): Pin ir[3] not assigned to an exact location on the device
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'controle.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
@@ -1646,11 +1644,11 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X22_Y12 to location X32_Y23
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X0_Y0 to location X10_Y11
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.11 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.17 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 42 output pins without output pin load capacitance assignment
     Info (306007): Pin "pc_ld" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -1698,13 +1696,13 @@ Warning (306006): Found 42 output pins without output pin load capacitance assig
 Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file C:/altera/13.0sp1/Processador/Control Unit/Controller/output_files/controle.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 4880 megabytes
-    Info: Processing ended: Wed Jul 19 00:27:30 2023
-    Info: Elapsed time: 00:00:03
+    Info: Processing ended: Thu Jul 20 15:59:35 2023
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 
 

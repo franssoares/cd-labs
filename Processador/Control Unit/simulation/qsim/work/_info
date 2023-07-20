@@ -8,7 +8,7 @@ Z1 !s100 ]>SP6<=hB`5Aeed<jIW=A0
 Z2 IWE3<F<53^;GMYSA7R9ZV00
 Z3 VBe=dRzW32o3D>JfnhD8U40
 Z4 dC:\altera\13.0sp1\Processador\Control Unit\simulation\qsim
-Z5 w1689877968
+Z5 w1689880451
 Z6 8unid_control.vo
 Z7 Funid_control.vo
 L0 31
@@ -19,7 +19,7 @@ Z9 !s90 -work|work|unid_control.vo|
 Z10 o-work work -O0
 !i10b 1
 !s85 0
-Z11 !s108 1689877968.968000
+Z11 !s108 1689880451.557000
 Z12 !s107 unid_control.vo|
 !s101 -O0
 vunid_control_vlg_check_tst
@@ -28,54 +28,54 @@ Z13 !s100 jH[eFRDY@=MZ[b[KgHPl11
 Z14 IQ;YobiKodUX;oR]@nU0]93
 Z15 VzhmRBVUka_CYLAX<h=<e93
 R4
-R5
-Z16 8unid_control.vt
-Z17 Funid_control.vt
+Z16 w1689880450
+Z17 8unid_control.vt
+Z18 Funid_control.vt
 L0 63
 R8
 r1
 !s85 0
 31
-Z18 !s108 1689877969.030000
-Z19 !s107 unid_control.vt|
-Z20 !s90 -work|work|unid_control.vt|
+Z19 !s108 1689880451.749000
+Z20 !s107 unid_control.vt|
+Z21 !s90 -work|work|unid_control.vt|
 !s101 -O0
 R10
 vunid_control_vlg_sample_tst
 !i10b 1
-Z21 !s100 38liS=S<diQ?7P@HUigP:3
-Z22 INC2c2;EQHeWAY?fJ:NVfZ3
-Z23 VYCPnzMndUV8>S^P:iI9dR2
+Z22 !s100 38liS=S<diQ?7P@HUigP:3
+Z23 INC2c2;EQHeWAY?fJ:NVfZ3
+Z24 VYCPnzMndUV8>S^P:iI9dR2
 R4
-R5
 R16
 R17
+R18
 L0 29
 R8
 r1
 !s85 0
 31
-R18
 R19
 R20
+R21
 !s101 -O0
 R10
 vunid_control_vlg_vec_tst
 !i10b 1
-Z24 !s100 aRnWFNen6?W[CEn6_2coh0
-Z25 IElPbegP`ME>RMJoS=DTeB0
-Z26 V>1FPQZ@9NLKK=B4J05:Ca2
+Z25 !s100 aRnWFNen6?W[CEn6_2coh0
+Z26 IElPbegP`ME>RMJoS=DTeB0
+Z27 V>1FPQZ@9NLKK=B4J05:Ca2
 R4
-R5
 R16
 R17
-Z27 L0 1025
+R18
+Z28 L0 1025
 R8
 r1
 !s85 0
 31
-R18
 R19
 R20
+R21
 !s101 -O0
 R10

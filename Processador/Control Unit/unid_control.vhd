@@ -111,7 +111,7 @@ architecture Behavioral of unid_control is
 	 end component;
 	 
 	 signal wire_pc : std_logic_vector(2 downto 0);
-	 signal wire_ir : std_logic_vector(0 downto 0);
+	 signal wire_ir : std_logic;
 	 signal wire_ir_data : std_logic_vector(15 downto 0);
 	 
 begin
@@ -128,7 +128,7 @@ begin
 	ir0 : ireader
 	port map(
 		clk => clk,
-		IR_ld => wire_ir(0),
+		IR_ld => wire_ir,
 		IR_in => data_rom,
 		IR_out => wire_ir_data
 	);
@@ -144,7 +144,7 @@ begin
 		pc_inc => wire_pc(2),
 		
 		-- registro de instrucao
-		ir_ld => wire_ir(0),
+		ir_ld => wire_ir,
 
 		-- banco de registradores do datapath
 		rf_w_wr => rf_w_wr,

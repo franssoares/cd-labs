@@ -1,5 +1,5 @@
 Analysis & Synthesis report for unid_control
-Thu Jul 20 15:32:30 2023
+Thu Jul 20 16:21:25 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -43,13 +43,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jul 20 15:32:30 2023           ;
+; Analysis & Synthesis Status        ; Successful - Thu Jul 20 16:21:25 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; unid_control                                    ;
 ; Top-level Entity Name              ; unid_control                                    ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 68                                              ;
-;     Total combinational functions  ; 32                                              ;
+; Total logic elements               ; 70                                              ;
+;     Total combinational functions  ; 34                                              ;
 ;     Dedicated logic registers      ; 44                                              ;
 ; Total registers                    ; 44                                              ;
 ; Total pins                         ; 61                                              ;
@@ -180,16 +180,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 68    ;
+; Estimated Total logic elements              ; 70    ;
 ;                                             ;       ;
-; Total combinational functions               ; 32    ;
+; Total combinational functions               ; 34    ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 23    ;
-;     -- 3 input functions                    ; 7     ;
-;     -- <=2 input functions                  ; 2     ;
+;     -- 4 input functions                    ; 26    ;
+;     -- 3 input functions                    ; 4     ;
+;     -- <=2 input functions                  ; 4     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 32    ;
+;     -- normal mode                          ; 34    ;
 ;     -- arithmetic mode                      ; 0     ;
 ;                                             ;       ;
 ; Total registers                             ; 44    ;
@@ -200,8 +200,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; clk   ;
 ; Maximum fan-out                             ; 44    ;
-; Total fan-out                               ; 266   ;
-; Average fan-out                             ; 1.94  ;
+; Total fan-out                               ; 274   ;
+; Average fan-out                             ; 1.97  ;
 +---------------------------------------------+-------+
 
 
@@ -210,11 +210,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                      ; Library Name ;
 +-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+--------------+
-; |unid_control               ; 32 (0)            ; 44 (0)       ; 0           ; 0            ; 0       ; 0         ; 61   ; 0            ; |unid_control                                                            ; work         ;
-;    |cont_program:pc0|       ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unid_control|cont_program:pc0                                           ; work         ;
-;    |controle:ctrl0|         ; 27 (0)            ; 24 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unid_control|controle:ctrl0                                             ; work         ;
-;       |controlador:ctr0|    ; 27 (0)            ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unid_control|controle:ctrl0|controlador:ctr0                            ; work         ;
-;          |comb_logic:cl|    ; 27 (27)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unid_control|controle:ctrl0|controlador:ctr0|comb_logic:cl              ; work         ;
+; |unid_control               ; 34 (0)            ; 44 (0)       ; 0           ; 0            ; 0       ; 0         ; 61   ; 0            ; |unid_control                                                            ; work         ;
+;    |cont_program:pc0|       ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unid_control|cont_program:pc0                                           ; work         ;
+;    |controle:ctrl0|         ; 28 (0)            ; 24 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unid_control|controle:ctrl0                                             ; work         ;
+;       |controlador:ctr0|    ; 28 (0)            ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unid_control|controle:ctrl0|controlador:ctr0                            ; work         ;
+;          |comb_logic:cl|    ; 28 (28)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unid_control|controle:ctrl0|controlador:ctr0|comb_logic:cl              ; work         ;
 ;          |reg_states:reg|   ; 0 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unid_control|controle:ctrl0|controlador:ctr0|reg_states:reg             ; work         ;
 ;             |ffd1bit:FF0|   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unid_control|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0 ; work         ;
 ;             |ffd1bit:FF1|   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unid_control|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1 ; work         ;
@@ -260,7 +260,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 4     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 16    ;
+; Number of registers using Clock Enable       ; 17    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -299,7 +299,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Jul 20 15:32:29 2023
+    Info: Processing started: Thu Jul 20 16:21:24 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off unid_control -c unid_control
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file controller/controller/logica combinacional/comb_logic.vhd
@@ -356,13 +356,13 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "alu_s1" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 129 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 131 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 19 input pins
     Info (21059): Implemented 42 output pins
-    Info (21061): Implemented 68 logic cells
+    Info (21061): Implemented 70 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 4636 megabytes
-    Info: Processing ended: Thu Jul 20 15:32:30 2023
+    Info: Processing ended: Thu Jul 20 16:21:25 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

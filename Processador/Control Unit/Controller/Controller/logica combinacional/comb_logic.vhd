@@ -65,9 +65,9 @@ architecture behav of comb_logic is
 -- comportamento
 begin
 
-	pc_ld <= (s3 AND NOT(s2) AND NOT(s1) AND s0) OR (s3 AND NOT(s2) AND s1 AND s0);
+	pc_ld <= NOT(s3) AND NOT(s2) AND NOT(s1) AND s0;
 	pc_clr <= NOT(s3) AND NOT(s2) AND NOT(s1) AND NOT(s0);
-	pc_inc <= (NOT(s3) AND NOT(s2) AND NOT(s1) AND s0);
+	pc_inc <= (s3 AND NOT(s2) AND NOT(s1) AND s0) OR (s3 AND NOT(s2) AND s1 AND s0);
 	--pc_sel <= s3 AND NOT(s2) AND s1 AND s0;
 	i_rd <= NOT(s3) AND NOT(s2) AND NOT(s1) AND s0;
 	ir_ld <= NOT(s3) AND NOT(s2) AND NOT(s1) AND s0;

@@ -1,5 +1,5 @@
 Assembler report for processador
-Thu Jul 20 15:46:59 2023
+Thu Jul 20 16:29:54 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Jul 20 15:46:59 2023 ;
+; Assembler Status      ; Successful - Thu Jul 20 16:29:54 2023 ;
 ; Revision Name         ; processador                           ;
 ; Top-level Entity Name ; processador                           ;
 ; Family                ; Cyclone II                            ;
@@ -94,8 +94,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                                             ;
 +----------------+---------------------------------------------------------------------+
 ; Device         ; EP2C50F672C6                                                        ;
-; JTAG usercode  ; 0x0049C57E                                                          ;
-; Checksum       ; 0x0049C57E                                                          ;
+; JTAG usercode  ; 0x00499B70                                                          ;
+; Checksum       ; 0x00499B70                                                          ;
 +----------------+---------------------------------------------------------------------+
 
 
@@ -106,7 +106,7 @@ applicable agreement for further details.
 +--------------------+-----------------------------------------------------------------+
 ; Device             ; EPCS16                                                          ;
 ; JTAG usercode      ; 0x00000000                                                      ;
-; Checksum           ; 0x1AE35413                                                      ;
+; Checksum           ; 0x1AE3AC2A                                                      ;
 ; Compression Ratio  ; 3                                                               ;
 +--------------------+-----------------------------------------------------------------+
 
@@ -117,13 +117,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Jul 20 15:46:57 2023
+    Info: Processing started: Thu Jul 20 16:29:53 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off processador -c processador
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4573 megabytes
-    Info: Processing ended: Thu Jul 20 15:46:59 2023
+    Info: Processing ended: Thu Jul 20 16:29:55 2023
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

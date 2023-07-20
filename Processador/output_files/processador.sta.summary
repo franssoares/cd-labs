@@ -2,29 +2,29 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow Model Setup 'unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg'
-Slack : -7.135
-TNS   : -54.802
-
 Type  : Slow Model Setup 'clk'
-Slack : -6.853
-TNS   : -604.348
+Slack : -7.587
+TNS   : -660.112
+
+Type  : Slow Model Setup 'unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg'
+Slack : -7.467
+TNS   : -53.128
 
 Type  : Slow Model Hold 'clk'
-Slack : -2.064
-TNS   : -46.729
+Slack : -1.229
+TNS   : -11.577
 
 Type  : Slow Model Hold 'unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg'
-Slack : -0.235
-TNS   : -0.235
+Slack : -0.807
+TNS   : -4.567
 
 Type  : Slow Model Recovery 'clk'
-Slack : -2.132
-TNS   : -8.528
+Slack : -2.337
+TNS   : -9.348
 
 Type  : Slow Model Removal 'clk'
-Slack : -0.577
-TNS   : -2.308
+Slack : -0.878
+TNS   : -3.512
 
 Type  : Slow Model Minimum Pulse Width 'clk'
 Slack : -1.627
@@ -35,28 +35,28 @@ Slack : 0.500
 TNS   : 0.000
 
 Type  : Fast Model Setup 'unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg'
-Slack : -2.843
-TNS   : -21.835
+Slack : -3.002
+TNS   : -21.053
 
 Type  : Fast Model Setup 'clk'
-Slack : -2.384
-TNS   : -202.449
+Slack : -2.683
+TNS   : -224.394
 
 Type  : Fast Model Hold 'clk'
-Slack : -1.381
-TNS   : -73.966
+Slack : -0.907
+TNS   : -35.377
 
 Type  : Fast Model Hold 'unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg'
-Slack : -0.432
-TNS   : -1.880
+Slack : -0.679
+TNS   : -4.673
 
 Type  : Fast Model Recovery 'clk'
-Slack : -0.435
-TNS   : -1.740
+Slack : -0.511
+TNS   : -2.044
 
 Type  : Fast Model Removal 'clk'
-Slack : -0.627
-TNS   : -2.508
+Slack : -0.778
+TNS   : -3.112
 
 Type  : Fast Model Minimum Pulse Width 'clk'
 Slack : -1.627

@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Wed Jul 19 00:27:26 2023
+Analysis & Synthesis Status : Successful - Thu Jul 20 15:59:31 2023
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : controle
 Top-level Entity Name : controle
 Family : Cyclone II
-Total logic elements : 49
-    Total combinational functions : 29
+Total logic elements : 48
+    Total combinational functions : 28
     Dedicated logic registers : 24
 Total registers : 24
 Total pins : 61
