@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1\Processador\Datapath\Componentes\Banco_de_registradores\Componentes\flip_flop_d\simulation\qsim
+vFFD
+Z1 !s100 :;>MVzT984>N6L`TD<m=Y0
+Z2 I]hDjniPN<26Lj=F3j8XWS0
+Z3 VQ?^mXdDz:CJH<k60E6JCm0
+Z4 dC:\altera\13.0sp1\Processador\Datapath\Componentes\Banco_de_registradores\Componentes\flip_flop_d\simulation\qsim
+Z5 w1689297426
+Z6 8ffd.vo
+Z7 Fffd.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|ffd.vo|
+Z10 o-work work -O0
+Z11 n@f@f@d
+!i10b 1
+!s85 0
+Z12 !s108 1689297426.606000
+Z13 !s107 ffd.vo|
+!s101 -O0
+vFFD_vlg_check_tst
+!i10b 1
+Z14 !s100 Q<H4ng661<^7E3<IQ1]^D1
+Z15 IL63ne1e]agFFlHaC5Ddom2
+Z16 V`Y^N8=kRPEjhO:8dZ1e252
+R4
+Z17 w1689297425
+Z18 8ffd.vt
+Z19 Fffd.vt
+L0 61
+R8
+r1
+!s85 0
+31
+Z20 !s108 1689297426.656000
+Z21 !s107 ffd.vt|
+Z22 !s90 -work|work|ffd.vt|
+!s101 -O0
+R10
+Z23 n@f@f@d_vlg_check_tst
+vFFD_vlg_sample_tst
+!i10b 1
+Z24 !s100 MNaUTYn;Z?4MFWigd94`j2
+Z25 I?j@KLPYXEBdHJoi^<<:C@3
+Z26 V3bTnzNVb3=VN:ad[ZF3[=3
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@f@f@d_vlg_sample_tst
+vFFD_vlg_vec_tst
+!i10b 1
+Z28 !s100 @iVYJm0MJXkcX>QY1G[IL1
+Z29 ID<;R4d1Ka^DmVW7Jag@QN0
+Z30 V0TkYclT>mLDlN^R`<9YGX2
+R4
+R17
+R18
+R19
+Z31 L0 425
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z32 n@f@f@d_vlg_vec_tst

@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1\Processador\Datapath\Componentes\ULA\simulation\qsim
+vula
+Z1 ICzH78lhfaKTGD7Rin>9391
+Z2 V792EH0KJCEcgV[J<Rm_`:3
+Z3 dC:\altera\13.0sp1\Processador\Datapath\Componentes\ULA\simulation\qsim
+Z4 w1689317856
+Z5 8ula.vo
+Z6 Fula.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|ula.vo|
+Z9 o-work work -O0
+!i10b 1
+Z10 !s100 k;NlU`2ONVCP9kT44QMZ_2
+!s85 0
+Z11 !s108 1689317857.059000
+Z12 !s107 ula.vo|
+!s101 -O0
+vula_vlg_check_tst
+!i10b 1
+!s100 @Sci>kPB6mGY3WXl4:kjJ2
+IRnT@L>6:GTG4:`Xmd>:N?0
+VK<@nD3<j?Q33o7T6159<n1
+R3
+R4
+Z13 8ula.vt
+Z14 Fula.vt
+L0 65
+R7
+r1
+!s85 0
+31
+Z15 !s108 1689317857.115000
+Z16 !s107 ula.vt|
+Z17 !s90 -work|work|ula.vt|
+!s101 -O0
+R9
+vula_vlg_sample_tst
+!i10b 1
+!s100 8>_5kOGd0gD93`7[a;c;>3
+I][BU]9<93iR2lGn10QgEM1
+V[J3PjN>UQNd9]7nOSLD=f2
+R3
+R4
+R13
+R14
+L0 29
+R7
+r1
+!s85 0
+31
+R15
+R16
+R17
+!s101 -O0
+R9
+vula_vlg_vec_tst
+!i10b 1
+!s100 TH?DijABS[abdWfm5FmQ61
+IDFQnglak8WJlXmn;TPF?70
+Z18 VBSK`iV7TVbh_f_eCb<4Km2
+R3
+R4
+R13
+R14
+L0 456
+R7
+r1
+!s85 0
+31
+R15
+R16
+R17
+!s101 -O0
+R9

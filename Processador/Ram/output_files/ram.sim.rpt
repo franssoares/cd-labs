@@ -1,0 +1,237 @@
+Simulator report for ram
+Sun Jul 16 12:37:51 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ALTSYNCRAM
+  6. Coverage Summary
+  7. Complete 1/0-Value Coverage
+  8. Missing 1-Value Coverage
+  9. Missing 0-Value Coverage
+ 10. Simulator INI Usage
+ 11. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 59 nodes     ;
+; Simulation Coverage         ;      55.93 % ;
+; Total Number of Transitions ; 376          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                         ;
++--------------------------------------------------------------------------------------------+-----------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                       ; Default Value ;
++--------------------------------------------------------------------------------------------+-----------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                    ; Timing        ;
+; Start time                                                                                 ; 0 ns                                          ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                           ;               ;
+; Vector input source                                                                        ; C:/altera/13.0sp1/Processador/Ram/ram_sim.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                            ; On            ;
+; Check outputs                                                                              ; Off                                           ; Off           ;
+; Report simulation coverage                                                                 ; On                                            ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                            ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                            ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                            ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                           ; Off           ;
+; Detect glitches                                                                            ; Off                                           ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                           ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                           ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                           ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                           ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                            ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                    ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                           ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                           ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                          ; Auto          ;
++--------------------------------------------------------------------------------------------+-----------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++-------------------------------------------------------------------------------------------------------+
+; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ALTSYNCRAM ;
++-------------------------------------------------------------------------------------------------------+
+Please refer to fitter text-based report (*.fit.rpt) to view logical memory report content in ASCII.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      55.93 % ;
+; Total nodes checked                                 ; 59           ;
+; Total output ports checked                          ; 59           ;
+; Total output ports with complete 1/0-value coverage ; 33           ;
+; Total output ports with no 1/0-value coverage       ; 9            ;
+; Total output ports with no 1-value coverage         ; 25           ;
+; Total output ports with no 0-value coverage         ; 10           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                                            ;
++----------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                ; Output Port Name                                                                                         ; Output Port Type ;
++----------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+------------------+
+; |RAM256x16|clk                                                                                           ; |RAM256x16|clk                                                                                           ; out              ;
+; |RAM256x16|data_r[0]                                                                                     ; |RAM256x16|data_r[0]                                                                                     ; pin_out          ;
+; |RAM256x16|data_r[1]                                                                                     ; |RAM256x16|data_r[1]                                                                                     ; pin_out          ;
+; |RAM256x16|data_r[2]                                                                                     ; |RAM256x16|data_r[2]                                                                                     ; pin_out          ;
+; |RAM256x16|data_r[3]                                                                                     ; |RAM256x16|data_r[3]                                                                                     ; pin_out          ;
+; |RAM256x16|data_r[4]                                                                                     ; |RAM256x16|data_r[4]                                                                                     ; pin_out          ;
+; |RAM256x16|data_r[5]                                                                                     ; |RAM256x16|data_r[5]                                                                                     ; pin_out          ;
+; |RAM256x16|data_r[6]                                                                                     ; |RAM256x16|data_r[6]                                                                                     ; pin_out          ;
+; |RAM256x16|data_r[7]                                                                                     ; |RAM256x16|data_r[7]                                                                                     ; pin_out          ;
+; |RAM256x16|data_r[8]                                                                                     ; |RAM256x16|data_r[8]                                                                                     ; pin_out          ;
+; |RAM256x16|data_r[9]                                                                                     ; |RAM256x16|data_r[9]                                                                                     ; pin_out          ;
+; |RAM256x16|data_r[10]                                                                                    ; |RAM256x16|data_r[10]                                                                                    ; pin_out          ;
+; |RAM256x16|data_r[11]                                                                                    ; |RAM256x16|data_r[11]                                                                                    ; pin_out          ;
+; |RAM256x16|data_r[12]                                                                                    ; |RAM256x16|data_r[12]                                                                                    ; pin_out          ;
+; |RAM256x16|data_r[13]                                                                                    ; |RAM256x16|data_r[13]                                                                                    ; pin_out          ;
+; |RAM256x16|data_r[14]                                                                                    ; |RAM256x16|data_r[14]                                                                                    ; pin_out          ;
+; |RAM256x16|data_r[15]                                                                                    ; |RAM256x16|data_r[15]                                                                                    ; pin_out          ;
+; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0  ; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a0  ; portadataout0    ;
+; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a1  ; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a1  ; portadataout0    ;
+; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a2  ; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a2  ; portadataout0    ;
+; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a3  ; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a3  ; portadataout0    ;
+; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a4  ; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a4  ; portadataout0    ;
+; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a5  ; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a5  ; portadataout0    ;
+; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a6  ; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a6  ; portadataout0    ;
+; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a7  ; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a7  ; portadataout0    ;
+; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a8  ; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a8  ; portadataout0    ;
+; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a9  ; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a9  ; portadataout0    ;
+; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a10 ; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a10 ; portadataout0    ;
+; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a11 ; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a11 ; portadataout0    ;
+; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a12 ; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a12 ; portadataout0    ;
+; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a13 ; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a13 ; portadataout0    ;
+; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a14 ; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a14 ; portadataout0    ;
+; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a15 ; |RAM256x16|altsyncram:ram_rtl_0|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ram_block2a15 ; portadataout0    ;
++----------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------+
+; Missing 1-Value Coverage                                         ;
++-----------------------+-----------------------+------------------+
+; Node Name             ; Output Port Name      ; Output Port Type ;
++-----------------------+-----------------------+------------------+
+; |RAM256x16|en_w       ; |RAM256x16|en_w       ; out              ;
+; |RAM256x16|en_r       ; |RAM256x16|en_r       ; out              ;
+; |RAM256x16|addr[1]    ; |RAM256x16|addr[1]    ; out              ;
+; |RAM256x16|addr[2]    ; |RAM256x16|addr[2]    ; out              ;
+; |RAM256x16|addr[3]    ; |RAM256x16|addr[3]    ; out              ;
+; |RAM256x16|addr[4]    ; |RAM256x16|addr[4]    ; out              ;
+; |RAM256x16|addr[5]    ; |RAM256x16|addr[5]    ; out              ;
+; |RAM256x16|addr[6]    ; |RAM256x16|addr[6]    ; out              ;
+; |RAM256x16|addr[7]    ; |RAM256x16|addr[7]    ; out              ;
+; |RAM256x16|data_w[0]  ; |RAM256x16|data_w[0]  ; out              ;
+; |RAM256x16|data_w[1]  ; |RAM256x16|data_w[1]  ; out              ;
+; |RAM256x16|data_w[2]  ; |RAM256x16|data_w[2]  ; out              ;
+; |RAM256x16|data_w[3]  ; |RAM256x16|data_w[3]  ; out              ;
+; |RAM256x16|data_w[4]  ; |RAM256x16|data_w[4]  ; out              ;
+; |RAM256x16|data_w[5]  ; |RAM256x16|data_w[5]  ; out              ;
+; |RAM256x16|data_w[6]  ; |RAM256x16|data_w[6]  ; out              ;
+; |RAM256x16|data_w[7]  ; |RAM256x16|data_w[7]  ; out              ;
+; |RAM256x16|data_w[8]  ; |RAM256x16|data_w[8]  ; out              ;
+; |RAM256x16|data_w[9]  ; |RAM256x16|data_w[9]  ; out              ;
+; |RAM256x16|data_w[10] ; |RAM256x16|data_w[10] ; out              ;
+; |RAM256x16|data_w[11] ; |RAM256x16|data_w[11] ; out              ;
+; |RAM256x16|data_w[12] ; |RAM256x16|data_w[12] ; out              ;
+; |RAM256x16|data_w[13] ; |RAM256x16|data_w[13] ; out              ;
+; |RAM256x16|data_w[14] ; |RAM256x16|data_w[14] ; out              ;
+; |RAM256x16|data_w[15] ; |RAM256x16|data_w[15] ; out              ;
++-----------------------+-----------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------+
+; Missing 0-Value Coverage                                   ;
++--------------------+--------------------+------------------+
+; Node Name          ; Output Port Name   ; Output Port Type ;
++--------------------+--------------------+------------------+
+; |RAM256x16|en_w    ; |RAM256x16|en_w    ; out              ;
+; |RAM256x16|en_r    ; |RAM256x16|en_r    ; out              ;
+; |RAM256x16|addr[0] ; |RAM256x16|addr[0] ; out              ;
+; |RAM256x16|addr[1] ; |RAM256x16|addr[1] ; out              ;
+; |RAM256x16|addr[2] ; |RAM256x16|addr[2] ; out              ;
+; |RAM256x16|addr[3] ; |RAM256x16|addr[3] ; out              ;
+; |RAM256x16|addr[4] ; |RAM256x16|addr[4] ; out              ;
+; |RAM256x16|addr[5] ; |RAM256x16|addr[5] ; out              ;
+; |RAM256x16|addr[6] ; |RAM256x16|addr[6] ; out              ;
+; |RAM256x16|addr[7] ; |RAM256x16|addr[7] ; out              ;
++--------------------+--------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Jul 16 12:37:51 2023
+Info: Command: quartus_sim --simulation_results_format=VWF ram -c ram
+Info (324025): Using vector source file "C:/altera/13.0sp1/Processador/Ram/ram_sim.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      55.93 %
+Info (328052): Number of transitions in simulation is 376
+Info (324045): Vector file ram.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4441 megabytes
+    Info: Processing ended: Sun Jul 16 12:37:51 2023
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

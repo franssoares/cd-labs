@@ -1,0 +1,1449 @@
+Analysis & Synthesis report for processador
+Thu Jul 20 16:29:45 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Registers Added for RAM Pass-Through Logic
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for RAM256x16:ram0|altsyncram:ram_rtl_0|altsyncram_mrg1:auto_generated
+ 16. Parameter Settings for User Entity Instance: ROM7x16:rom0
+ 17. Parameter Settings for User Entity Instance: unid_control:uctr0|ireader:ir0
+ 18. Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0
+ 19. Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits
+ 20. Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:inst0_fa
+ 21. Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:1:fa
+ 22. Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:2:fa
+ 23. Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:3:fa
+ 24. Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:4:fa
+ 25. Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:5:fa
+ 26. Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:6:fa
+ 27. Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:7:fa
+ 28. Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:8:fa
+ 29. Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:9:fa
+ 30. Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:10:fa
+ 31. Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:11:fa
+ 32. Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:12:fa
+ 33. Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:13:fa
+ 34. Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:14:fa
+ 35. Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:inst1_fa
+ 36. Parameter Settings for User Entity Instance: RAM256x16:ram0
+ 37. Parameter Settings for Inferred Entity Instance: RAM256x16:ram0|altsyncram:ram_rtl_0
+ 38. altsyncram Parameter Settings by Entity Instance
+ 39. Port Connectivity Checks: "datapath:dp|ula:ula_0|sum_16:sum_16_0"
+ 40. Port Connectivity Checks: "datapath:dp|ula:ula_0"
+ 41. Port Connectivity Checks: "unid_control:uctr0|cont_program:pc0"
+ 42. Elapsed Time Per Partition
+ 43. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Jul 20 16:29:45 2023           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; processador                                     ;
+; Top-level Entity Name              ; processador                                     ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 289                                             ;
+;     Total combinational functions  ; 230                                             ;
+;     Dedicated logic registers      ; 126                                             ;
+; Total registers                    ; 126                                             ;
+; Total pins                         ; 27                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 1,024                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C50F672C6       ;                    ;
+; Top-level entity name                                                      ; processador        ; processador        ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                                                           ;
++------------------------------------------------------------------------------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                                                                           ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                             ; Library ;
++------------------------------------------------------------------------------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; Control Unit/ffd1bit.vhd                                                                                   ; yes             ; User VHDL File               ; C:/altera/13.0sp1/Processador/Control Unit/ffd1bit.vhd                                                                                   ;         ;
+; Datapath/Componentes/Banco_de_registradores/Componentes/registrador_1x16/FFD_RF.vhd                        ; yes             ; User VHDL File               ; C:/altera/13.0sp1/Processador/Datapath/Componentes/Banco_de_registradores/Componentes/registrador_1x16/FFD_RF.vhd                        ;         ;
+; Datapath/comp_zero.vhd                                                                                     ; yes             ; User VHDL File               ; C:/altera/13.0sp1/Processador/Datapath/comp_zero.vhd                                                                                     ;         ;
+; Datapath/Componentes/ULA/ula.vhd                                                                           ; yes             ; User VHDL File               ; C:/altera/13.0sp1/Processador/Datapath/Componentes/ULA/ula.vhd                                                                           ;         ;
+; Datapath/Componentes/ULA/sum_16.vhd                                                                        ; yes             ; User VHDL File               ; C:/altera/13.0sp1/Processador/Datapath/Componentes/ULA/sum_16.vhd                                                                        ;         ;
+; Datapath/Componentes/ULA/full_adder_16.vhd                                                                 ; yes             ; User VHDL File               ; C:/altera/13.0sp1/Processador/Datapath/Componentes/ULA/full_adder_16.vhd                                                                 ;         ;
+; Datapath/Componentes/ULA/full_adder.vhd                                                                    ; yes             ; User VHDL File               ; C:/altera/13.0sp1/Processador/Datapath/Componentes/ULA/full_adder.vhd                                                                    ;         ;
+; Datapath/Componentes/ULA/extensor_al.vhd                                                                   ; yes             ; User VHDL File               ; C:/altera/13.0sp1/Processador/Datapath/Componentes/ULA/extensor_al.vhd                                                                   ;         ;
+; Datapath/Componentes/ULA/comp16bit.vhd                                                                     ; yes             ; User VHDL File               ; C:/altera/13.0sp1/Processador/Datapath/Componentes/ULA/comp16bit.vhd                                                                     ;         ;
+; Datapath/Componentes/ULA/cinext.vhd                                                                        ; yes             ; User VHDL File               ; C:/altera/13.0sp1/Processador/Datapath/Componentes/ULA/cinext.vhd                                                                        ;         ;
+; Datapath/Componentes/ULA/abext.vhd                                                                         ; yes             ; User VHDL File               ; C:/altera/13.0sp1/Processador/Datapath/Componentes/ULA/abext.vhd                                                                         ;         ;
+; Datapath/Componentes/Multiplexador/mux16bit.vhd                                                            ; yes             ; User VHDL File               ; C:/altera/13.0sp1/Processador/Datapath/Componentes/Multiplexador/mux16bit.vhd                                                            ;         ;
+; Datapath/Componentes/Banco_de_registradores/Componentes/driver_de_tres_estados/tri_states_driver_16bit.vhd ; yes             ; User VHDL File               ; C:/altera/13.0sp1/Processador/Datapath/Componentes/Banco_de_registradores/Componentes/driver_de_tres_estados/tri_states_driver_16bit.vhd ;         ;
+; Datapath/Componentes/Banco_de_registradores/Componentes/decodificador/dcd_4x16.vhd                         ; yes             ; User VHDL File               ; C:/altera/13.0sp1/Processador/Datapath/Componentes/Banco_de_registradores/Componentes/decodificador/dcd_4x16.vhd                         ;         ;
+; Datapath/Componentes/Banco_de_registradores/RF_16x16.vhd                                                   ; yes             ; User VHDL File               ; C:/altera/13.0sp1/Processador/Datapath/Componentes/Banco_de_registradores/RF_16x16.vhd                                                   ;         ;
+; Control Unit/PC/cont_program.vhd                                                                           ; yes             ; User VHDL File               ; C:/altera/13.0sp1/Processador/Control Unit/PC/cont_program.vhd                                                                           ;         ;
+; Control Unit/ireader.vhd                                                                                   ; yes             ; User VHDL File               ; C:/altera/13.0sp1/Processador/Control Unit/ireader.vhd                                                                                   ;         ;
+; Control Unit/Controller/controle.vhd                                                                       ; yes             ; User VHDL File               ; C:/altera/13.0sp1/Processador/Control Unit/Controller/controle.vhd                                                                       ;         ;
+; Control Unit/Controller/Datapath/register.vhd                                                              ; yes             ; User VHDL File               ; C:/altera/13.0sp1/Processador/Control Unit/Controller/Datapath/register.vhd                                                              ;         ;
+; Control Unit/Controller/Datapath/regd.vhd                                                                  ; yes             ; User VHDL File               ; C:/altera/13.0sp1/Processador/Control Unit/Controller/Datapath/regd.vhd                                                                  ;         ;
+; Control Unit/Controller/Datapath/reg4bits.vhd                                                              ; yes             ; User VHDL File               ; C:/altera/13.0sp1/Processador/Control Unit/Controller/Datapath/reg4bits.vhd                                                              ;         ;
+; Control Unit/Controller/Controller/controlador.vhd                                                         ; yes             ; User VHDL File               ; C:/altera/13.0sp1/Processador/Control Unit/Controller/Controller/controlador.vhd                                                         ;         ;
+; Control Unit/Controller/Controller/logica combinacional/comb_logic.vhd                                     ; yes             ; User VHDL File               ; C:/altera/13.0sp1/Processador/Control Unit/Controller/Controller/logica combinacional/comb_logic.vhd                                     ;         ;
+; Rom/ROM7x16.vhd                                                                                            ; yes             ; User VHDL File               ; C:/altera/13.0sp1/Processador/Rom/ROM7x16.vhd                                                                                            ;         ;
+; Ram/RAM256x16.vhd                                                                                          ; yes             ; User VHDL File               ; C:/altera/13.0sp1/Processador/Ram/RAM256x16.vhd                                                                                          ;         ;
+; Control Unit/unid_control.vhd                                                                              ; yes             ; User VHDL File               ; C:/altera/13.0sp1/Processador/Control Unit/unid_control.vhd                                                                              ;         ;
+; Datapath/Datapath.vhd                                                                                      ; yes             ; User VHDL File               ; C:/altera/13.0sp1/Processador/Datapath/Datapath.vhd                                                                                      ;         ;
+; processador.vhd                                                                                            ; yes             ; User VHDL File               ; C:/altera/13.0sp1/Processador/processador.vhd                                                                                            ;         ;
+; Rom/datapath_control.vhd                                                                                   ; yes             ; User VHDL File               ; C:/altera/13.0sp1/Processador/Rom/datapath_control.vhd                                                                                   ;         ;
+; altsyncram.tdf                                                                                             ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                                                                         ;         ;
+; stratix_ram_block.inc                                                                                      ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                                  ;         ;
+; lpm_mux.inc                                                                                                ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                                                                            ;         ;
+; lpm_decode.inc                                                                                             ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc                                                                         ;         ;
+; aglobal130.inc                                                                                             ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                                                         ;         ;
+; a_rdenreg.inc                                                                                              ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc                                                                          ;         ;
+; altrom.inc                                                                                                 ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                                                                             ;         ;
+; altram.inc                                                                                                 ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                                                                             ;         ;
+; altdpram.inc                                                                                               ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                                                                           ;         ;
+; db/altsyncram_mrg1.tdf                                                                                     ; yes             ; Auto-Generated Megafunction  ; C:/altera/13.0sp1/Processador/db/altsyncram_mrg1.tdf                                                                                     ;         ;
++------------------------------------------------------------------------------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 289   ;
+;                                             ;       ;
+; Total combinational functions               ; 230   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 148   ;
+;     -- 3 input functions                    ; 59    ;
+;     -- <=2 input functions                  ; 23    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 215   ;
+;     -- arithmetic mode                      ; 15    ;
+;                                             ;       ;
+; Total registers                             ; 126   ;
+;     -- Dedicated logic registers            ; 126   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 27    ;
+; Total memory bits                           ; 1024  ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 142   ;
+; Total fan-out                               ; 1384  ;
+; Average fan-out                             ; 3.47  ;
++---------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                ;
++-----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                               ; Library Name ;
++-----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------+--------------+
+; |processador                                        ; 230 (1)           ; 126 (0)      ; 1024        ; 0            ; 0       ; 0         ; 27   ; 0            ; |processador                                                                                                      ; work         ;
+;    |RAM256x16:ram0|                                 ; 19 (19)           ; 37 (37)      ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|RAM256x16:ram0                                                                                       ; work         ;
+;       |altsyncram:ram_rtl_0|                        ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|RAM256x16:ram0|altsyncram:ram_rtl_0                                                                  ; work         ;
+;          |altsyncram_mrg1:auto_generated|           ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|RAM256x16:ram0|altsyncram:ram_rtl_0|altsyncram_mrg1:auto_generated                                   ; work         ;
+;    |ROM7x16:rom0|                                   ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|ROM7x16:rom0                                                                                         ; work         ;
+;    |datapath:dp|                                    ; 175 (0)           ; 64 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp                                                                                          ; work         ;
+;       |RF_16x16:rf_0|                               ; 110 (105)         ; 64 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|RF_16x16:rf_0                                                                            ; work         ;
+;          |FFD_RF:\gen_registers:0:reg|              ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:0:reg                                                ; work         ;
+;          |FFD_RF:\gen_registers:1:reg|              ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:1:reg                                                ; work         ;
+;          |FFD_RF:\gen_registers:2:reg|              ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:2:reg                                                ; work         ;
+;          |FFD_RF:\gen_registers:3:reg|              ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:3:reg                                                ; work         ;
+;          |dcd_4x16:dcdw|                            ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|RF_16x16:rf_0|dcd_4x16:dcdw                                                              ; work         ;
+;       |comp_zero:comp_0|                            ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|comp_zero:comp_0                                                                         ; work         ;
+;       |mux16bit:mux0|                               ; 35 (35)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|mux16bit:mux0                                                                            ; work         ;
+;       |ula:ula_0|                                   ; 25 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|ula:ula_0                                                                                ; work         ;
+;          |comp16bit:comparator|                     ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|ula:ula_0|comp16bit:comparator                                                           ; work         ;
+;          |sum_16:sum_16_0|                          ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|ula:ula_0|sum_16:sum_16_0                                                                ; work         ;
+;             |full_adder_16:inst0_full_adder_16bits| ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits                          ; work         ;
+;                |full_adder:\gen_fa:12:fa|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:12:fa ; work         ;
+;                |full_adder:\gen_fa:3:fa|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:3:fa  ; work         ;
+;                |full_adder:\gen_fa:5:fa|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:5:fa  ; work         ;
+;                |full_adder:\gen_fa:6:fa|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:6:fa  ; work         ;
+;                |full_adder:\gen_fa:9:fa|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:9:fa  ; work         ;
+;                |full_adder:inst0_fa|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:inst0_fa      ; work         ;
+;    |unid_control:uctr0|                             ; 25 (0)            ; 25 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0                                                                                   ; work         ;
+;       |cont_program:pc0|                            ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0|cont_program:pc0                                                                  ; work         ;
+;       |controle:ctrl0|                              ; 20 (0)            ; 11 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0|controle:ctrl0                                                                    ; work         ;
+;          |controlador:ctr0|                         ; 20 (0)            ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0|controle:ctrl0|controlador:ctr0                                                   ; work         ;
+;             |comb_logic:cl|                         ; 20 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0|controle:ctrl0|controlador:ctr0|comb_logic:cl                                     ; work         ;
+;             |reg_states:reg|                        ; 0 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg                                    ; work         ;
+;                |ffd1bit:FF0|                        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0                        ; work         ;
+;                |ffd1bit:FF1|                        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF1                        ; work         ;
+;                |ffd1bit:FF2|                        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF2                        ; work         ;
+;                |ffd1bit:FF3|                        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF3                        ; work         ;
+;          |datapath_control:dp|                      ; 0 (0)             ; 7 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0|controle:ctrl0|datapath_control:dp                                                ; work         ;
+;             |reg4bits:Ra|                           ; 0 (0)             ; 3 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Ra                                    ; work         ;
+;                |ffd1bit:FF0|                        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF0                        ; work         ;
+;                |ffd1bit:FF1|                        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF1                        ; work         ;
+;                |ffd1bit:FF2|                        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF2                        ; work         ;
+;             |regd:d|                                ; 0 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d                                         ; work         ;
+;                |ffd1bit:FF0|                        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF0                             ; work         ;
+;                |ffd1bit:FF1|                        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF1                             ; work         ;
+;                |ffd1bit:FF4|                        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF4                             ; work         ;
+;                |ffd1bit:FF5|                        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF5                             ; work         ;
+;       |ireader:ir0|                                 ; 0 (0)             ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unid_control:uctr0|ireader:ir0                                                                       ; work         ;
++-----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                  ;
++-------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                          ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++-------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; RAM256x16:ram0|altsyncram:ram_rtl_0|altsyncram_mrg1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 256          ; 16           ; 256          ; 16           ; 4096 ; None ;
++-------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                                  ;
++----------------------------------------------------+------------------------------------------------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal                                                    ; Free of Timing Hazards ;
++----------------------------------------------------+------------------------------------------------------------------------+------------------------+
+; datapath:dp|mux16bit:mux0|data_o[15]               ; unid_control:uctr0|controle:ctrl0|controlador:ctr0|comb_logic:cl|rf_s1 ; yes                    ;
+; datapath:dp|mux16bit:mux0|data_o[8]                ; unid_control:uctr0|controle:ctrl0|controlador:ctr0|comb_logic:cl|rf_s1 ; yes                    ;
+; datapath:dp|mux16bit:mux0|data_o[9]                ; unid_control:uctr0|controle:ctrl0|controlador:ctr0|comb_logic:cl|rf_s1 ; yes                    ;
+; datapath:dp|mux16bit:mux0|data_o[10]               ; unid_control:uctr0|controle:ctrl0|controlador:ctr0|comb_logic:cl|rf_s1 ; yes                    ;
+; datapath:dp|mux16bit:mux0|data_o[11]               ; unid_control:uctr0|controle:ctrl0|controlador:ctr0|comb_logic:cl|rf_s1 ; yes                    ;
+; datapath:dp|mux16bit:mux0|data_o[12]               ; unid_control:uctr0|controle:ctrl0|controlador:ctr0|comb_logic:cl|rf_s1 ; yes                    ;
+; datapath:dp|mux16bit:mux0|data_o[13]               ; unid_control:uctr0|controle:ctrl0|controlador:ctr0|comb_logic:cl|rf_s1 ; yes                    ;
+; datapath:dp|mux16bit:mux0|data_o[14]               ; unid_control:uctr0|controle:ctrl0|controlador:ctr0|comb_logic:cl|rf_s1 ; yes                    ;
+; Number of user-specified and inferred latches = 8  ;                                                                        ;                        ;
++----------------------------------------------------+------------------------------------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                               ;
++-------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
+; Register name                                                                       ; Reason for Removal                                                                         ;
++-------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
+; unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF3|q_reg ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF7|q_reg ;
+; unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF2|q_reg ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF6|q_reg ;
+; unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF1|q_reg ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF5|q_reg ;
+; unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Rb|ffd1bit:FF0|q_reg ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF4|q_reg ;
+; unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF3|q_reg ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF3|q_reg ;
+; unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF2|q_reg ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF2|q_reg ;
+; unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF1|q_reg ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF1|q_reg ;
+; unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Rc|ffd1bit:FF0|q_reg ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF0|q_reg ;
+; RAM256x16:ram0|ram_rtl_0_bypass[16]                                                 ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF7|q_reg ;
+; RAM256x16:ram0|ram_rtl_0_bypass[14]                                                 ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF6|q_reg ;
+; RAM256x16:ram0|ram_rtl_0_bypass[12]                                                 ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF5|q_reg ;
+; RAM256x16:ram0|ram_rtl_0_bypass[10]                                                 ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF4|q_reg ;
+; RAM256x16:ram0|ram_rtl_0_bypass[2]                                                  ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF0|q_reg ;
+; RAM256x16:ram0|ram_rtl_0_bypass[4]                                                  ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF1|q_reg ;
+; RAM256x16:ram0|ram_rtl_0_bypass[6]                                                  ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF2|q_reg ;
+; RAM256x16:ram0|ram_rtl_0_bypass[8]                                                  ; Merged with unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF3|q_reg ;
+; unid_control:uctr0|ireader:ir0|IR_reg[2,3,6,7,11,15]                                ; Stuck at GND due to stuck port data_in                                                     ;
+; unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF3|q_reg ; Stuck at GND due to stuck port data_in                                                     ;
+; unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF6|q_reg      ; Stuck at GND due to stuck port data_in                                                     ;
+; unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF7|q_reg      ; Stuck at GND due to stuck port data_in                                                     ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[15]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[15]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[15]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[15]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[15]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[15]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[15]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[15]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[14]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[14]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[14]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[14]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[14]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[14]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[14]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[14]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[13]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[13]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[13]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[13]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[13]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[13]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[13]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[13]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[12]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[12]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[12]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[12]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[12]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[12]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[12]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[12]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[11]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[11]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[11]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[11]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[11]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[11]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[11]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[11]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[10]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[10]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[10]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[10]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[10]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[10]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[10]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[10]                    ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[9]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[9]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[9]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[9]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[9]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[9]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[9]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[9]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[8]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[8]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[8]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[8]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[8]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[8]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[8]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[8]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[7]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[7]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[7]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[7]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[7]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[7]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[7]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[7]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[6]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[6]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[6]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[6]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[6]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[6]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[6]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[6]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[5]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[5]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[5]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[5]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[5]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[5]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[5]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[5]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[4]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[4]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[4]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[4]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[4]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[4]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[4]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[4]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[3]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[3]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[3]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[3]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[3]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[3]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[3]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[3]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[2]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[2]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[2]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[2]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[2]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[2]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[2]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[2]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[1]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[1]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[1]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[1]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[1]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[1]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[1]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[1]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[0]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[0]                      ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[0]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[0]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[0]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[0]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[0]                     ; Lost fanout                                                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[0]                     ; Lost fanout                                                                                ;
+; unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF2|q_reg      ; Stuck at GND due to stuck port data_in                                                     ;
+; unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF3|q_reg      ; Stuck at GND due to stuck port data_in                                                     ;
+; RAM256x16:ram0|ram_rtl_0_bypass[5,7,13,15]                                          ; Stuck at GND due to stuck port data_in                                                     ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[2]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[2]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[2]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[2]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[4]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[4]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[4]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[4]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[5]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[5]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[5]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[5]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[15]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[15]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[15]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[15]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[6]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[6]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[6]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[6]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[7]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[7]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[7]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[7]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[8]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[8]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[8]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[8]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[9]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[9]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[9]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[9]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[10]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[10]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[10]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[10]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[11]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[11]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[11]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[11]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[12]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[12]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[12]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[12]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[13]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[13]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[13]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[13]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[14]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[14]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[14]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[14]                     ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[3]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[3]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[3]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[3]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[0]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[0]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[0]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[0]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[1]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[1]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[1]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[1]                      ; Stuck at GND due to stuck port clock_enable                                                ;
+; Total Number of Removed Registers = 223                                             ;                                                                                            ;
++-------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                  ;
++-------------------------------------------+---------------------------+--------------------------------------------------------------------------------------+
+; Register name                             ; Reason for Removal        ; Registers Removed due to This Register                                               ;
++-------------------------------------------+---------------------------+--------------------------------------------------------------------------------------+
+; unid_control:uctr0|ireader:ir0|IR_reg[11] ; Stuck at GND              ; unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Ra|ffd1bit:FF3|q_reg, ;
+;                                           ; due to stuck port data_in ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[15],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[15],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[15],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[15],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[15],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[15],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[15],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[15],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[14],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[14],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[14],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[14],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[14],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[14],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[14],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[14],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[13],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[13],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[13],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[13],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[13],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[13],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[13],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[13],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[12],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[12],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[12],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[12],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[12],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[12],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[12],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[12],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[11],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[11],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[11],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[11],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[11],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[11],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[11],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[11],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[10],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[10],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[10],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[10],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[10],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[10],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[10],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[10],                    ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[9],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[9],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[9],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[9],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[9],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[9],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[9],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[9],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[8],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[8],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[8],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[8],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[8],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[8],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[8],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[8],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[7],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[7],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[7],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[7],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[7],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[7],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[7],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[7],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[6],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[6],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[6],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[6],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[6],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[6],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[6],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[6],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[5],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[5],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[5],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[5],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[5],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[5],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[5],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[5],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[4],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[4],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[4],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[4],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[4],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[4],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[4],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[4],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[3],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[3],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[3],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[3],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[3],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[3],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[3],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[3],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[2],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[2],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[2],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[2],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[2],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[2],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[2],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[2],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[1],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[1],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[1],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[1],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[1],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[1],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[1],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[1],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:8:reg|reg16[0],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:9:reg|reg16[0],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:10:reg|reg16[0],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:11:reg|reg16[0],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:12:reg|reg16[0],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:13:reg|reg16[0],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:14:reg|reg16[0],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:15:reg|reg16[0]                      ;
+; unid_control:uctr0|ireader:ir0|IR_reg[2]  ; Stuck at GND              ; unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF2|q_reg,      ;
+;                                           ; due to stuck port data_in ; RAM256x16:ram0|ram_rtl_0_bypass[5],                                                  ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[2],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[2],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[2],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[2],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[4],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[4],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[4],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[4],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[5],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[5],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[5],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[5],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[15],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[15],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[15],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[15],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[6],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[6],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[6],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[7],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[7],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[7],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[7],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[8],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[8],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[8],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[8],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[9],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[9],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[9],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[9],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[10],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[10],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[10],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[10],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[11],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[11],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[11],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[11],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[12],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[12],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[12],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[12],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[13],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[13],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[13],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[13],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[14],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[14],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[14],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[14],                     ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[3],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[3],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[3],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[3],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[0],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[0],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[0],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[0],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[1],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:5:reg|reg16[1],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:6:reg|reg16[1],                      ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:7:reg|reg16[1]                       ;
+; unid_control:uctr0|ireader:ir0|IR_reg[6]  ; Stuck at GND              ; unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF6|q_reg,      ;
+;                                           ; due to stuck port data_in ; RAM256x16:ram0|ram_rtl_0_bypass[13],                                                 ;
+;                                           ;                           ; datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:4:reg|reg16[6]                       ;
+; unid_control:uctr0|ireader:ir0|IR_reg[7]  ; Stuck at GND              ; unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF7|q_reg,      ;
+;                                           ; due to stuck port data_in ; RAM256x16:ram0|ram_rtl_0_bypass[15]                                                  ;
+; unid_control:uctr0|ireader:ir0|IR_reg[3]  ; Stuck at GND              ; unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d|ffd1bit:FF3|q_reg,      ;
+;                                           ; due to stuck port data_in ; RAM256x16:ram0|ram_rtl_0_bypass[7]                                                   ;
++-------------------------------------------+---------------------------+--------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 126   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 4     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 91    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------+
+; Registers Added for RAM Pass-Through Logic                     ;
++-------------------------------------+--------------------------+
+; Register Name                       ; RAM Name                 ;
++-------------------------------------+--------------------------+
+; RAM256x16:ram0|ram_rtl_0_bypass[0]  ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[1]  ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[2]  ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[3]  ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[4]  ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[5]  ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[6]  ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[7]  ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[8]  ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[9]  ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[10] ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[11] ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[12] ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[13] ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[14] ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[15] ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[16] ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[17] ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[18] ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[19] ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[20] ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[21] ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[22] ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[23] ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[24] ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[25] ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[26] ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[27] ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[28] ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[29] ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[30] ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[31] ; RAM256x16:ram0|ram_rtl_0 ;
+; RAM256x16:ram0|ram_rtl_0_bypass[32] ; RAM256x16:ram0|ram_rtl_0 ;
++-------------------------------------+--------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |processador|datapath:dp|mux16bit:mux0|data_o[7]   ;
+; 48:1               ; 16 bits   ; 512 LEs       ; 160 LEs              ; 352 LEs                ; No         ; |processador|datapath:dp|RF_16x16:rf_0|Rq_data[12] ;
+; 96:1               ; 16 bits   ; 1024 LEs      ; 160 LEs              ; 864 LEs                ; No         ; |processador|datapath:dp|RF_16x16:rf_0|Rp_data[2]  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Source assignments for RAM256x16:ram0|altsyncram:ram_rtl_0|altsyncram_mrg1:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------+
+; Assignment                      ; Value              ; From ; To                          ;
++---------------------------------+--------------------+------+-----------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                           ;
++---------------------------------+--------------------+------+-----------------------------+
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ROM7x16:rom0 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; data_width     ; 16    ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: unid_control:uctr0|ireader:ir0 ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; ir_width       ; 16    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0 ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:inst0_fa ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                                      ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:1:fa ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                    ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:2:fa ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                    ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:3:fa ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                    ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:4:fa ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                    ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:5:fa ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                    ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:6:fa ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                    ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:7:fa ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                    ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:8:fa ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                    ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:9:fa ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                    ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:10:fa ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                     ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                                           ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:11:fa ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                     ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                                           ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:12:fa ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                     ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                                           ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:13:fa ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                     ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                                           ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:14:fa ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                     ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                                           ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:inst1_fa ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------+
+; tam            ; 15    ; Signed Integer                                                                                                      ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RAM256x16:ram0 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; addr_width     ; 8     ; Signed Integer                     ;
+; data_width     ; 16    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: RAM256x16:ram0|altsyncram:ram_rtl_0 ;
++------------------------------------+----------------------+--------------------------+
+; Parameter Name                     ; Value                ; Type                     ;
++------------------------------------+----------------------+--------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                  ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY               ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY             ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE             ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE           ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                  ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                  ;
+; WIDTH_A                            ; 16                   ; Untyped                  ;
+; WIDTHAD_A                          ; 8                    ; Untyped                  ;
+; NUMWORDS_A                         ; 256                  ; Untyped                  ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                  ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                  ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                  ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                  ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                  ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                  ;
+; WIDTH_B                            ; 16                   ; Untyped                  ;
+; WIDTHAD_B                          ; 8                    ; Untyped                  ;
+; NUMWORDS_B                         ; 256                  ; Untyped                  ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                  ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                  ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                  ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                  ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                  ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                  ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                  ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                  ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                  ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                  ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                  ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                  ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                  ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                  ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                  ;
+; BYTE_SIZE                          ; 8                    ; Untyped                  ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA             ; Untyped                  ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                  ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                  ;
+; INIT_FILE                          ; UNUSED               ; Untyped                  ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                  ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                  ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                  ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                  ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                  ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                  ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                  ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                  ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                  ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                  ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                  ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                  ;
+; CBXI_PARAMETER                     ; altsyncram_mrg1      ; Untyped                  ;
++------------------------------------+----------------------+--------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                ;
++-------------------------------------------+-------------------------------------+
+; Name                                      ; Value                               ;
++-------------------------------------------+-------------------------------------+
+; Number of entity instances                ; 1                                   ;
+; Entity Instance                           ; RAM256x16:ram0|altsyncram:ram_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                           ;
+;     -- WIDTH_A                            ; 16                                  ;
+;     -- NUMWORDS_A                         ; 256                                 ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                        ;
+;     -- WIDTH_B                            ; 16                                  ;
+;     -- NUMWORDS_B                         ; 256                                 ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                              ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                        ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                            ;
++-------------------------------------------+-------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:dp|ula:ula_0|sum_16:sum_16_0"                                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; co   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "datapath:dp|ula:ula_0" ;
++------+-------+----------+-------------------------+
+; Port ; Type  ; Severity ; Details                 ;
++------+-------+----------+-------------------------+
+; x    ; Input ; Info     ; Stuck at GND            ;
++------+-------+----------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "unid_control:uctr0|cont_program:pc0"                                                                                                              ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                      ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; input_data ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Jul 20 16:29:43 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off processador -c processador
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file control unit/ffd1bit.vhd
+    Info (12022): Found design unit 1: ffd1bit-Behavioral
+    Info (12023): Found entity 1: ffd1bit
+Info (12021): Found 2 design units, including 1 entities, in source file datapath/componentes/banco_de_registradores/componentes/registrador_1x16/ffd_rf.vhd
+    Info (12022): Found design unit 1: FFD_RF-Behavioral
+    Info (12023): Found entity 1: FFD_RF
+Info (12021): Found 2 design units, including 1 entities, in source file datapath/comp_zero.vhd
+    Info (12022): Found design unit 1: comp_zero-behav
+    Info (12023): Found entity 1: comp_zero
+Info (12021): Found 2 design units, including 1 entities, in source file datapath/componentes/ula/ula.vhd
+    Info (12022): Found design unit 1: ula-rtl
+    Info (12023): Found entity 1: ula
+Info (12021): Found 2 design units, including 1 entities, in source file datapath/componentes/ula/sum_16.vhd
+    Info (12022): Found design unit 1: sum_16-comp
+    Info (12023): Found entity 1: sum_16
+Info (12021): Found 2 design units, including 1 entities, in source file datapath/componentes/ula/full_adder_16.vhd
+    Info (12022): Found design unit 1: full_adder_16-comp
+    Info (12023): Found entity 1: full_adder_16
+Info (12021): Found 2 design units, including 1 entities, in source file datapath/componentes/ula/full_adder.vhd
+    Info (12022): Found design unit 1: full_adder-behav
+    Info (12023): Found entity 1: full_adder
+Info (12021): Found 2 design units, including 1 entities, in source file datapath/componentes/ula/extensor_al.vhd
+    Info (12022): Found design unit 1: extensor_al-rtl
+    Info (12023): Found entity 1: extensor_al
+Info (12021): Found 2 design units, including 1 entities, in source file datapath/componentes/ula/comp16bit.vhd
+    Info (12022): Found design unit 1: comp16bit-behav
+    Info (12023): Found entity 1: comp16bit
+Info (12021): Found 2 design units, including 1 entities, in source file datapath/componentes/ula/cinext.vhd
+    Info (12022): Found design unit 1: cinext-arc
+    Info (12023): Found entity 1: cinext
+Info (12021): Found 2 design units, including 1 entities, in source file datapath/componentes/ula/abext.vhd
+    Info (12022): Found design unit 1: abext-arc
+    Info (12023): Found entity 1: abext
+Info (12021): Found 2 design units, including 1 entities, in source file datapath/componentes/multiplexador/mux16bit.vhd
+    Info (12022): Found design unit 1: mux16bit-behav
+    Info (12023): Found entity 1: mux16bit
+Info (12021): Found 2 design units, including 1 entities, in source file datapath/componentes/banco_de_registradores/componentes/driver_de_tres_estados/tri_states_driver_16bit.vhd
+    Info (12022): Found design unit 1: tri_states_driver_16bit-behav
+    Info (12023): Found entity 1: tri_states_driver_16bit
+Info (12021): Found 2 design units, including 1 entities, in source file datapath/componentes/banco_de_registradores/componentes/decodificador/dcd_4x16.vhd
+    Info (12022): Found design unit 1: dcd_4x16-Behavioral
+    Info (12023): Found entity 1: dcd_4x16
+Info (12021): Found 2 design units, including 1 entities, in source file datapath/componentes/banco_de_registradores/rf_16x16.vhd
+    Info (12022): Found design unit 1: RF_16x16-mem
+    Info (12023): Found entity 1: RF_16x16
+Info (12021): Found 2 design units, including 1 entities, in source file control unit/pc/cont_program.vhd
+    Info (12022): Found design unit 1: cont_program-Behavioral
+    Info (12023): Found entity 1: cont_program
+Info (12021): Found 2 design units, including 1 entities, in source file control unit/ireader.vhd
+    Info (12022): Found design unit 1: ireader-Behavioral
+    Info (12023): Found entity 1: ireader
+Info (12021): Found 2 design units, including 1 entities, in source file control unit/ir/ir.vhd
+    Info (12022): Found design unit 1: ir-Behavioral
+    Info (12023): Found entity 1: ir
+Info (12021): Found 2 design units, including 1 entities, in source file control unit/controller/controle.vhd
+    Info (12022): Found design unit 1: controle-Behavioral
+    Info (12023): Found entity 1: controle
+Info (12021): Found 2 design units, including 1 entities, in source file control unit/controller/datapath/register.vhd
+    Info (12022): Found design unit 1: reg_states-Behavioral
+    Info (12023): Found entity 1: reg_states
+Info (12021): Found 2 design units, including 1 entities, in source file control unit/controller/datapath/regd.vhd
+    Info (12022): Found design unit 1: regd-Behavioral
+    Info (12023): Found entity 1: regd
+Info (12021): Found 2 design units, including 1 entities, in source file control unit/controller/datapath/reg4bits.vhd
+    Info (12022): Found design unit 1: reg4bits-Behavioral
+    Info (12023): Found entity 1: reg4bits
+Info (12021): Found 2 design units, including 1 entities, in source file control unit/controller/controller/controlador.vhd
+    Info (12022): Found design unit 1: controlador-Behavioral
+    Info (12023): Found entity 1: controlador
+Info (12021): Found 2 design units, including 1 entities, in source file control unit/controller/controller/logica combinacional/comb_logic.vhd
+    Info (12022): Found design unit 1: comb_logic-behav
+    Info (12023): Found entity 1: comb_logic
+Info (12021): Found 2 design units, including 1 entities, in source file rom/rom7x16.vhd
+    Info (12022): Found design unit 1: ROM7x16-behav
+    Info (12023): Found entity 1: ROM7x16
+Info (12021): Found 2 design units, including 1 entities, in source file ram/ram256x16.vhd
+    Info (12022): Found design unit 1: RAM256x16-behavioral
+    Info (12023): Found entity 1: RAM256x16
+Info (12021): Found 2 design units, including 1 entities, in source file control unit/unid_control.vhd
+    Info (12022): Found design unit 1: unid_control-Behavioral
+    Info (12023): Found entity 1: unid_control
+Info (12021): Found 2 design units, including 1 entities, in source file datapath/datapath.vhd
+    Info (12022): Found design unit 1: datapath-RTL
+    Info (12023): Found entity 1: datapath
+Info (12021): Found 2 design units, including 1 entities, in source file processador.vhd
+    Info (12022): Found design unit 1: processador-RTL
+    Info (12023): Found entity 1: processador
+Info (12021): Found 2 design units, including 1 entities, in source file rom/datapath_control.vhd
+    Info (12022): Found design unit 1: datapath_control-Behavioral
+    Info (12023): Found entity 1: datapath_control
+Info (12127): Elaborating entity "processador" for the top level hierarchy
+Info (12128): Elaborating entity "ROM7x16" for hierarchy "ROM7x16:rom0"
+Info (12128): Elaborating entity "unid_control" for hierarchy "unid_control:uctr0"
+Info (12128): Elaborating entity "cont_program" for hierarchy "unid_control:uctr0|cont_program:pc0"
+Info (12128): Elaborating entity "ireader" for hierarchy "unid_control:uctr0|ireader:ir0"
+Info (12128): Elaborating entity "controle" for hierarchy "unid_control:uctr0|controle:ctrl0"
+Info (12128): Elaborating entity "controlador" for hierarchy "unid_control:uctr0|controle:ctrl0|controlador:ctr0"
+Info (12128): Elaborating entity "comb_logic" for hierarchy "unid_control:uctr0|controle:ctrl0|controlador:ctr0|comb_logic:cl"
+Warning (10541): VHDL Signal Declaration warning at comb_logic.vhd(41): used implicit default value for signal "alu_s1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Info (12128): Elaborating entity "reg_states" for hierarchy "unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg"
+Info (12128): Elaborating entity "ffd1bit" for hierarchy "unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0"
+Info (12128): Elaborating entity "datapath_control" for hierarchy "unid_control:uctr0|controle:ctrl0|datapath_control:dp"
+Info (12128): Elaborating entity "reg4bits" for hierarchy "unid_control:uctr0|controle:ctrl0|datapath_control:dp|reg4bits:Ra"
+Info (12128): Elaborating entity "regd" for hierarchy "unid_control:uctr0|controle:ctrl0|datapath_control:dp|regd:d"
+Info (12128): Elaborating entity "datapath" for hierarchy "datapath:dp"
+Info (12128): Elaborating entity "mux16bit" for hierarchy "datapath:dp|mux16bit:mux0"
+Warning (10631): VHDL Process Statement warning at mux16bit.vhd(22): inferring latch(es) for signal or variable "data_o", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "data_o[8]" at mux16bit.vhd(22)
+Info (10041): Inferred latch for "data_o[9]" at mux16bit.vhd(22)
+Info (10041): Inferred latch for "data_o[10]" at mux16bit.vhd(22)
+Info (10041): Inferred latch for "data_o[11]" at mux16bit.vhd(22)
+Info (10041): Inferred latch for "data_o[12]" at mux16bit.vhd(22)
+Info (10041): Inferred latch for "data_o[13]" at mux16bit.vhd(22)
+Info (10041): Inferred latch for "data_o[14]" at mux16bit.vhd(22)
+Info (10041): Inferred latch for "data_o[15]" at mux16bit.vhd(22)
+Info (12128): Elaborating entity "RF_16x16" for hierarchy "datapath:dp|RF_16x16:rf_0"
+Info (12128): Elaborating entity "dcd_4x16" for hierarchy "datapath:dp|RF_16x16:rf_0|dcd_4x16:dcdw"
+Info (12128): Elaborating entity "FFD_RF" for hierarchy "datapath:dp|RF_16x16:rf_0|FFD_RF:\gen_registers:0:reg"
+Info (12128): Elaborating entity "tri_states_driver_16bit" for hierarchy "datapath:dp|RF_16x16:rf_0|tri_states_driver_16bit:\gen_3sdp:0:driverp"
+Warning (10492): VHDL Process Statement warning at tri_states_driver_16bit.vhd(22): signal "in_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "ula" for hierarchy "datapath:dp|ula:ula_0"
+Info (12128): Elaborating entity "extensor_al" for hierarchy "datapath:dp|ula:ula_0|extensor_al:extensor_al0"
+Info (12128): Elaborating entity "abext" for hierarchy "datapath:dp|ula:ula_0|extensor_al:extensor_al0|abext:\gen_abext:0:inst_abext"
+Info (12128): Elaborating entity "cinext" for hierarchy "datapath:dp|ula:ula_0|extensor_al:extensor_al0|cinext:inst_cinext"
+Info (12128): Elaborating entity "sum_16" for hierarchy "datapath:dp|ula:ula_0|sum_16:sum_16_0"
+Info (12128): Elaborating entity "full_adder_16" for hierarchy "datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits"
+Info (12128): Elaborating entity "full_adder" for hierarchy "datapath:dp|ula:ula_0|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:inst0_fa"
+Info (12128): Elaborating entity "comp16bit" for hierarchy "datapath:dp|ula:ula_0|comp16bit:comparator"
+Info (12128): Elaborating entity "comp_zero" for hierarchy "datapath:dp|comp_zero:comp_0"
+Info (12128): Elaborating entity "RAM256x16" for hierarchy "RAM256x16:ram0"
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13048): Converted tri-state node "datapath:dp|RF_16x16:rf_0|Rp_data[15]" into a selector
+    Warning (13048): Converted tri-state node "datapath:dp|RF_16x16:rf_0|Rp_data[14]" into a selector
+    Warning (13048): Converted tri-state node "datapath:dp|RF_16x16:rf_0|Rp_data[13]" into a selector
+    Warning (13048): Converted tri-state node "datapath:dp|RF_16x16:rf_0|Rp_data[12]" into a selector
+    Warning (13048): Converted tri-state node "datapath:dp|RF_16x16:rf_0|Rp_data[11]" into a selector
+    Warning (13048): Converted tri-state node "datapath:dp|RF_16x16:rf_0|Rp_data[10]" into a selector
+    Warning (13048): Converted tri-state node "datapath:dp|RF_16x16:rf_0|Rp_data[9]" into a selector
+    Warning (13048): Converted tri-state node "datapath:dp|RF_16x16:rf_0|Rp_data[8]" into a selector
+    Warning (13048): Converted tri-state node "datapath:dp|RF_16x16:rf_0|Rp_data[7]" into a selector
+    Warning (13048): Converted tri-state node "datapath:dp|RF_16x16:rf_0|Rp_data[6]" into a selector
+    Warning (13048): Converted tri-state node "datapath:dp|RF_16x16:rf_0|Rp_data[5]" into a selector
+    Warning (13048): Converted tri-state node "datapath:dp|RF_16x16:rf_0|Rp_data[4]" into a selector
+    Warning (13048): Converted tri-state node "datapath:dp|RF_16x16:rf_0|Rp_data[3]" into a selector
+    Warning (13048): Converted tri-state node "datapath:dp|RF_16x16:rf_0|Rp_data[2]" into a selector
+    Warning (13048): Converted tri-state node "datapath:dp|RF_16x16:rf_0|Rp_data[1]" into a selector
+    Warning (13048): Converted tri-state node "datapath:dp|RF_16x16:rf_0|Rp_data[0]" into a selector
+    Warning (13048): Converted tri-state node "datapath:dp|RF_16x16:rf_0|Rq_data[15]" into a selector
+    Warning (13048): Converted tri-state node "datapath:dp|RF_16x16:rf_0|Rq_data[14]" into a selector
+    Warning (13048): Converted tri-state node "datapath:dp|RF_16x16:rf_0|Rq_data[13]" into a selector
+    Warning (13048): Converted tri-state node "datapath:dp|RF_16x16:rf_0|Rq_data[12]" into a selector
+    Warning (13048): Converted tri-state node "datapath:dp|RF_16x16:rf_0|Rq_data[11]" into a selector
+    Warning (13048): Converted tri-state node "datapath:dp|RF_16x16:rf_0|Rq_data[10]" into a selector
+    Warning (13048): Converted tri-state node "datapath:dp|RF_16x16:rf_0|Rq_data[9]" into a selector
+    Warning (13048): Converted tri-state node "datapath:dp|RF_16x16:rf_0|Rq_data[8]" into a selector
+    Warning (13048): Converted tri-state node "datapath:dp|RF_16x16:rf_0|Rq_data[7]" into a selector
+    Warning (13048): Converted tri-state node "datapath:dp|RF_16x16:rf_0|Rq_data[6]" into a selector
+    Warning (13048): Converted tri-state node "datapath:dp|RF_16x16:rf_0|Rq_data[5]" into a selector
+    Warning (13048): Converted tri-state node "datapath:dp|RF_16x16:rf_0|Rq_data[4]" into a selector
+    Warning (13048): Converted tri-state node "datapath:dp|RF_16x16:rf_0|Rq_data[3]" into a selector
+    Warning (13048): Converted tri-state node "datapath:dp|RF_16x16:rf_0|Rq_data[2]" into a selector
+    Warning (13048): Converted tri-state node "datapath:dp|RF_16x16:rf_0|Rq_data[1]" into a selector
+    Warning (13048): Converted tri-state node "datapath:dp|RF_16x16:rf_0|Rq_data[0]" into a selector
+Warning (276020): Inferred RAM node "RAM256x16:ram0|ram_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "RAM256x16:ram0|ram_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 16
+        Info (286033): Parameter WIDTHAD_A set to 8
+        Info (286033): Parameter NUMWORDS_A set to 256
+        Info (286033): Parameter WIDTH_B set to 16
+        Info (286033): Parameter WIDTHAD_B set to 8
+        Info (286033): Parameter NUMWORDS_B set to 256
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+Info (12130): Elaborated megafunction instantiation "RAM256x16:ram0|altsyncram:ram_rtl_0"
+Info (12133): Instantiated megafunction "RAM256x16:ram0|altsyncram:ram_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "16"
+    Info (12134): Parameter "WIDTHAD_A" = "8"
+    Info (12134): Parameter "NUMWORDS_A" = "256"
+    Info (12134): Parameter "WIDTH_B" = "16"
+    Info (12134): Parameter "WIDTHAD_B" = "8"
+    Info (12134): Parameter "NUMWORDS_B" = "256"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_mrg1.tdf
+    Info (12023): Found entity 1: altsyncram_mrg1
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13050): Open-drain buffer(s) that do not directly drive top-level pin(s) are removed
+    Warning (13051): Converted the fanout from the open-drain buffer "ROM7x16:rom0|data_r[2]" to the node "unid_control:uctr0|ireader:ir0|IR_reg[2]" into a wire
+    Warning (13051): Converted the fanout from the open-drain buffer "ROM7x16:rom0|data_r[3]" to the node "unid_control:uctr0|ireader:ir0|IR_reg[3]" into a wire
+    Warning (13051): Converted the fanout from the open-drain buffer "ROM7x16:rom0|data_r[6]" to the node "unid_control:uctr0|ireader:ir0|IR_reg[6]" into a wire
+    Warning (13051): Converted the fanout from the open-drain buffer "ROM7x16:rom0|data_r[7]" to the node "unid_control:uctr0|ireader:ir0|IR_reg[7]" into a wire
+    Warning (13051): Converted the fanout from the open-drain buffer "ROM7x16:rom0|data_r[11]" to the node "unid_control:uctr0|ireader:ir0|IR_reg[11]" into a wire
+    Warning (13051): Converted the fanout from the open-drain buffer "ROM7x16:rom0|data_r[15]" to the node "unid_control:uctr0|ireader:ir0|IR_reg[15]" into a wire
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13047): Converted the fan-out from the tri-state buffer "ROM7x16:rom0|data_r[0]" to the node "unid_control:uctr0|ireader:ir0|IR_reg[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ROM7x16:rom0|data_r[1]" to the node "unid_control:uctr0|ireader:ir0|IR_reg[1]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ROM7x16:rom0|data_r[4]" to the node "unid_control:uctr0|ireader:ir0|IR_reg[4]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ROM7x16:rom0|data_r[5]" to the node "unid_control:uctr0|ireader:ir0|IR_reg[5]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ROM7x16:rom0|data_r[8]" to the node "unid_control:uctr0|ireader:ir0|IR_reg[8]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ROM7x16:rom0|data_r[9]" to the node "unid_control:uctr0|ireader:ir0|IR_reg[9]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ROM7x16:rom0|data_r[10]" to the node "unid_control:uctr0|ireader:ir0|IR_reg[10]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ROM7x16:rom0|data_r[12]" to the node "unid_control:uctr0|ireader:ir0|IR_reg[12]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ROM7x16:rom0|data_r[13]" to the node "unid_control:uctr0|ireader:ir0|IR_reg[13]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ROM7x16:rom0|data_r[14]" to the node "unid_control:uctr0|ireader:ir0|IR_reg[14]" into an OR gate
+Warning (13012): Latch datapath:dp|mux16bit:mux0|data_o[15] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg
+Warning (13012): Latch datapath:dp|mux16bit:mux0|data_o[8] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg
+Warning (13012): Latch datapath:dp|mux16bit:mux0|data_o[9] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg
+Warning (13012): Latch datapath:dp|mux16bit:mux0|data_o[10] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg
+Warning (13012): Latch datapath:dp|mux16bit:mux0|data_o[11] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg
+Warning (13012): Latch datapath:dp|mux16bit:mux0|data_o[12] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg
+Warning (13012): Latch datapath:dp|mux16bit:mux0|data_o[13] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg
+Warning (13012): Latch datapath:dp|mux16bit:mux0|data_o[14] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal unid_control:uctr0|controle:ctrl0|controlador:ctr0|reg_states:reg|ffd1bit:FF0|q_reg
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "t_rf_addr[2]" is stuck at GND
+    Warning (13410): Pin "t_rf_addr[3]" is stuck at GND
+    Warning (13410): Pin "t_rf_rp_addr[3]" is stuck at GND
+Info (17049): 128 registers lost all their fanouts during netlist optimizations.
+Info (17036): Removed 2 MSB VCC or GND address nodes from RAM block "RAM256x16:ram0|altsyncram:ram_rtl_0|altsyncram_mrg1:auto_generated|ALTSYNCRAM"
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 375 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 26 output pins
+    Info (21061): Implemented 332 logic cells
+    Info (21064): Implemented 16 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 77 warnings
+    Info: Peak virtual memory: 4658 megabytes
+    Info: Processing ended: Thu Jul 20 16:29:45 2023
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:03
+
+

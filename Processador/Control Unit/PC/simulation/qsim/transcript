@@ -1,0 +1,14 @@
+# do cont_program.do 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module cont_program
+# 
+# Top level modules:
+# 	cont_program
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module cont_program_vlg_sample_tst
+# -- Compiling module cont_program_vlg_check_tst
+# ** Error: cont_program.vt(66): near ",": syntax error, unexpected ','
+# ** Error: c:/altera/13.0sp1/modelsim_ase/win32aloem/vlog failed.
+# Executing ONERROR command at macro ./cont_program.do line 4

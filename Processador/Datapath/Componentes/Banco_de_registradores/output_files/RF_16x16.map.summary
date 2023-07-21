@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Jul 14 00:21:12 2023
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : RF_16x16
+Top-level Entity Name : RF_16x16
+Family : Cyclone II
+Total logic elements : 739
+    Total combinational functions : 483
+    Dedicated logic registers : 256
+Total registers : 256
+Total pins : 64
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

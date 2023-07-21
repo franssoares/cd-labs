@@ -1,0 +1,1110 @@
+|ula
+A[0] => extensor_al:extensor_al0.A[0]
+A[0] => comp16bit:comparator.A[0]
+A[1] => extensor_al:extensor_al0.A[1]
+A[1] => comp16bit:comparator.A[1]
+A[2] => extensor_al:extensor_al0.A[2]
+A[2] => comp16bit:comparator.A[2]
+A[3] => extensor_al:extensor_al0.A[3]
+A[3] => comp16bit:comparator.A[3]
+A[4] => extensor_al:extensor_al0.A[4]
+A[4] => comp16bit:comparator.A[4]
+A[5] => extensor_al:extensor_al0.A[5]
+A[5] => comp16bit:comparator.A[5]
+A[6] => extensor_al:extensor_al0.A[6]
+A[6] => comp16bit:comparator.A[6]
+A[7] => extensor_al:extensor_al0.A[7]
+A[7] => comp16bit:comparator.A[7]
+A[8] => extensor_al:extensor_al0.A[8]
+A[8] => comp16bit:comparator.A[8]
+A[9] => extensor_al:extensor_al0.A[9]
+A[9] => comp16bit:comparator.A[9]
+A[10] => extensor_al:extensor_al0.A[10]
+A[10] => comp16bit:comparator.A[10]
+A[11] => extensor_al:extensor_al0.A[11]
+A[11] => comp16bit:comparator.A[11]
+A[12] => extensor_al:extensor_al0.A[12]
+A[12] => comp16bit:comparator.A[12]
+A[13] => extensor_al:extensor_al0.A[13]
+A[13] => comp16bit:comparator.A[13]
+A[14] => extensor_al:extensor_al0.A[14]
+A[14] => comp16bit:comparator.A[14]
+A[15] => extensor_al:extensor_al0.A[15]
+A[15] => comp16bit:comparator.A[15]
+B[0] => extensor_al:extensor_al0.B[0]
+B[0] => comp16bit:comparator.B[0]
+B[1] => extensor_al:extensor_al0.B[1]
+B[1] => comp16bit:comparator.B[1]
+B[2] => extensor_al:extensor_al0.B[2]
+B[2] => comp16bit:comparator.B[2]
+B[3] => extensor_al:extensor_al0.B[3]
+B[3] => comp16bit:comparator.B[3]
+B[4] => extensor_al:extensor_al0.B[4]
+B[4] => comp16bit:comparator.B[4]
+B[5] => extensor_al:extensor_al0.B[5]
+B[5] => comp16bit:comparator.B[5]
+B[6] => extensor_al:extensor_al0.B[6]
+B[6] => comp16bit:comparator.B[6]
+B[7] => extensor_al:extensor_al0.B[7]
+B[7] => comp16bit:comparator.B[7]
+B[8] => extensor_al:extensor_al0.B[8]
+B[8] => comp16bit:comparator.B[8]
+B[9] => extensor_al:extensor_al0.B[9]
+B[9] => comp16bit:comparator.B[9]
+B[10] => extensor_al:extensor_al0.B[10]
+B[10] => comp16bit:comparator.B[10]
+B[11] => extensor_al:extensor_al0.B[11]
+B[11] => comp16bit:comparator.B[11]
+B[12] => extensor_al:extensor_al0.B[12]
+B[12] => comp16bit:comparator.B[12]
+B[13] => extensor_al:extensor_al0.B[13]
+B[13] => comp16bit:comparator.B[13]
+B[14] => extensor_al:extensor_al0.B[14]
+B[14] => comp16bit:comparator.B[14]
+B[15] => extensor_al:extensor_al0.B[15]
+B[15] => comp16bit:comparator.B[15]
+x => extensor_al:extensor_al0.x
+y => extensor_al:extensor_al0.y
+z => extensor_al:extensor_al0.z
+S[0] <= sum_16:sum_16_0.s[0]
+S[1] <= sum_16:sum_16_0.s[1]
+S[2] <= sum_16:sum_16_0.s[2]
+S[3] <= sum_16:sum_16_0.s[3]
+S[4] <= sum_16:sum_16_0.s[4]
+S[5] <= sum_16:sum_16_0.s[5]
+S[6] <= sum_16:sum_16_0.s[6]
+S[7] <= sum_16:sum_16_0.s[7]
+S[8] <= sum_16:sum_16_0.s[8]
+S[9] <= sum_16:sum_16_0.s[9]
+S[10] <= sum_16:sum_16_0.s[10]
+S[11] <= sum_16:sum_16_0.s[11]
+S[12] <= sum_16:sum_16_0.s[12]
+S[13] <= sum_16:sum_16_0.s[13]
+S[14] <= sum_16:sum_16_0.s[14]
+S[15] <= sum_16:sum_16_0.s[15]
+comp_gt <= comp16bit:comparator.comp_gt
+
+
+|ula|extensor_al:extensor_al0
+A[0] => abext:gen_abext:0:inst_abext.a
+A[1] => abext:gen_abext:1:inst_abext.a
+A[2] => abext:gen_abext:2:inst_abext.a
+A[3] => abext:gen_abext:3:inst_abext.a
+A[4] => abext:gen_abext:4:inst_abext.a
+A[5] => abext:gen_abext:5:inst_abext.a
+A[6] => abext:gen_abext:6:inst_abext.a
+A[7] => abext:gen_abext:7:inst_abext.a
+A[8] => abext:gen_abext:8:inst_abext.a
+A[9] => abext:gen_abext:9:inst_abext.a
+A[10] => abext:gen_abext:10:inst_abext.a
+A[11] => abext:gen_abext:11:inst_abext.a
+A[12] => abext:gen_abext:12:inst_abext.a
+A[13] => abext:gen_abext:13:inst_abext.a
+A[14] => abext:gen_abext:14:inst_abext.a
+A[15] => abext:gen_abext:15:inst_abext.a
+B[0] => abext:gen_abext:0:inst_abext.b
+B[1] => abext:gen_abext:1:inst_abext.b
+B[2] => abext:gen_abext:2:inst_abext.b
+B[3] => abext:gen_abext:3:inst_abext.b
+B[4] => abext:gen_abext:4:inst_abext.b
+B[5] => abext:gen_abext:5:inst_abext.b
+B[6] => abext:gen_abext:6:inst_abext.b
+B[7] => abext:gen_abext:7:inst_abext.b
+B[8] => abext:gen_abext:8:inst_abext.b
+B[9] => abext:gen_abext:9:inst_abext.b
+B[10] => abext:gen_abext:10:inst_abext.b
+B[11] => abext:gen_abext:11:inst_abext.b
+B[12] => abext:gen_abext:12:inst_abext.b
+B[13] => abext:gen_abext:13:inst_abext.b
+B[14] => abext:gen_abext:14:inst_abext.b
+B[15] => abext:gen_abext:15:inst_abext.b
+x => abext:gen_abext:0:inst_abext.x
+x => abext:gen_abext:1:inst_abext.x
+x => abext:gen_abext:2:inst_abext.x
+x => abext:gen_abext:3:inst_abext.x
+x => abext:gen_abext:4:inst_abext.x
+x => abext:gen_abext:5:inst_abext.x
+x => abext:gen_abext:6:inst_abext.x
+x => abext:gen_abext:7:inst_abext.x
+x => abext:gen_abext:8:inst_abext.x
+x => abext:gen_abext:9:inst_abext.x
+x => abext:gen_abext:10:inst_abext.x
+x => abext:gen_abext:11:inst_abext.x
+x => abext:gen_abext:12:inst_abext.x
+x => abext:gen_abext:13:inst_abext.x
+x => abext:gen_abext:14:inst_abext.x
+x => abext:gen_abext:15:inst_abext.x
+x => cinext:inst_cinext.x
+y => abext:gen_abext:0:inst_abext.y
+y => abext:gen_abext:1:inst_abext.y
+y => abext:gen_abext:2:inst_abext.y
+y => abext:gen_abext:3:inst_abext.y
+y => abext:gen_abext:4:inst_abext.y
+y => abext:gen_abext:5:inst_abext.y
+y => abext:gen_abext:6:inst_abext.y
+y => abext:gen_abext:7:inst_abext.y
+y => abext:gen_abext:8:inst_abext.y
+y => abext:gen_abext:9:inst_abext.y
+y => abext:gen_abext:10:inst_abext.y
+y => abext:gen_abext:11:inst_abext.y
+y => abext:gen_abext:12:inst_abext.y
+y => abext:gen_abext:13:inst_abext.y
+y => abext:gen_abext:14:inst_abext.y
+y => abext:gen_abext:15:inst_abext.y
+y => cinext:inst_cinext.y
+z => abext:gen_abext:0:inst_abext.z
+z => abext:gen_abext:1:inst_abext.z
+z => abext:gen_abext:2:inst_abext.z
+z => abext:gen_abext:3:inst_abext.z
+z => abext:gen_abext:4:inst_abext.z
+z => abext:gen_abext:5:inst_abext.z
+z => abext:gen_abext:6:inst_abext.z
+z => abext:gen_abext:7:inst_abext.z
+z => abext:gen_abext:8:inst_abext.z
+z => abext:gen_abext:9:inst_abext.z
+z => abext:gen_abext:10:inst_abext.z
+z => abext:gen_abext:11:inst_abext.z
+z => abext:gen_abext:12:inst_abext.z
+z => abext:gen_abext:13:inst_abext.z
+z => abext:gen_abext:14:inst_abext.z
+z => abext:gen_abext:15:inst_abext.z
+z => cinext:inst_cinext.z
+cin <= cinext:inst_cinext.cin
+IA[0] <= abext:gen_abext:0:inst_abext.ia
+IA[1] <= abext:gen_abext:1:inst_abext.ia
+IA[2] <= abext:gen_abext:2:inst_abext.ia
+IA[3] <= abext:gen_abext:3:inst_abext.ia
+IA[4] <= abext:gen_abext:4:inst_abext.ia
+IA[5] <= abext:gen_abext:5:inst_abext.ia
+IA[6] <= abext:gen_abext:6:inst_abext.ia
+IA[7] <= abext:gen_abext:7:inst_abext.ia
+IA[8] <= abext:gen_abext:8:inst_abext.ia
+IA[9] <= abext:gen_abext:9:inst_abext.ia
+IA[10] <= abext:gen_abext:10:inst_abext.ia
+IA[11] <= abext:gen_abext:11:inst_abext.ia
+IA[12] <= abext:gen_abext:12:inst_abext.ia
+IA[13] <= abext:gen_abext:13:inst_abext.ia
+IA[14] <= abext:gen_abext:14:inst_abext.ia
+IA[15] <= abext:gen_abext:15:inst_abext.ia
+IB[0] <= abext:gen_abext:0:inst_abext.ib
+IB[1] <= abext:gen_abext:1:inst_abext.ib
+IB[2] <= abext:gen_abext:2:inst_abext.ib
+IB[3] <= abext:gen_abext:3:inst_abext.ib
+IB[4] <= abext:gen_abext:4:inst_abext.ib
+IB[5] <= abext:gen_abext:5:inst_abext.ib
+IB[6] <= abext:gen_abext:6:inst_abext.ib
+IB[7] <= abext:gen_abext:7:inst_abext.ib
+IB[8] <= abext:gen_abext:8:inst_abext.ib
+IB[9] <= abext:gen_abext:9:inst_abext.ib
+IB[10] <= abext:gen_abext:10:inst_abext.ib
+IB[11] <= abext:gen_abext:11:inst_abext.ib
+IB[12] <= abext:gen_abext:12:inst_abext.ib
+IB[13] <= abext:gen_abext:13:inst_abext.ib
+IB[14] <= abext:gen_abext:14:inst_abext.ib
+IB[15] <= abext:gen_abext:15:inst_abext.ib
+
+
+|ula|extensor_al:extensor_al0|abext:\gen_abext:0:inst_abext
+x => ia.IN0
+x => ia.IN0
+x => ia.IN0
+x => ib.IN0
+y => ia.IN0
+y => ia.IN1
+y => ia.IN0
+y => ia.IN0
+y => ia.IN1
+y => ib.IN1
+z => ia.IN1
+z => ia.IN1
+z => ia.IN1
+z => ib.IN1
+z => ia.IN1
+z => ib.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+b => ia.IN1
+b => ia.IN1
+b => ia.IN1
+b => ib.IN1
+b => ia.IN1
+b => ib.IN1
+ia <= ia.DB_MAX_OUTPUT_PORT_TYPE
+ib <= ib.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|extensor_al:extensor_al0|abext:\gen_abext:1:inst_abext
+x => ia.IN0
+x => ia.IN0
+x => ia.IN0
+x => ib.IN0
+y => ia.IN0
+y => ia.IN1
+y => ia.IN0
+y => ia.IN0
+y => ia.IN1
+y => ib.IN1
+z => ia.IN1
+z => ia.IN1
+z => ia.IN1
+z => ib.IN1
+z => ia.IN1
+z => ib.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+b => ia.IN1
+b => ia.IN1
+b => ia.IN1
+b => ib.IN1
+b => ia.IN1
+b => ib.IN1
+ia <= ia.DB_MAX_OUTPUT_PORT_TYPE
+ib <= ib.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|extensor_al:extensor_al0|abext:\gen_abext:2:inst_abext
+x => ia.IN0
+x => ia.IN0
+x => ia.IN0
+x => ib.IN0
+y => ia.IN0
+y => ia.IN1
+y => ia.IN0
+y => ia.IN0
+y => ia.IN1
+y => ib.IN1
+z => ia.IN1
+z => ia.IN1
+z => ia.IN1
+z => ib.IN1
+z => ia.IN1
+z => ib.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+b => ia.IN1
+b => ia.IN1
+b => ia.IN1
+b => ib.IN1
+b => ia.IN1
+b => ib.IN1
+ia <= ia.DB_MAX_OUTPUT_PORT_TYPE
+ib <= ib.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|extensor_al:extensor_al0|abext:\gen_abext:3:inst_abext
+x => ia.IN0
+x => ia.IN0
+x => ia.IN0
+x => ib.IN0
+y => ia.IN0
+y => ia.IN1
+y => ia.IN0
+y => ia.IN0
+y => ia.IN1
+y => ib.IN1
+z => ia.IN1
+z => ia.IN1
+z => ia.IN1
+z => ib.IN1
+z => ia.IN1
+z => ib.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+b => ia.IN1
+b => ia.IN1
+b => ia.IN1
+b => ib.IN1
+b => ia.IN1
+b => ib.IN1
+ia <= ia.DB_MAX_OUTPUT_PORT_TYPE
+ib <= ib.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|extensor_al:extensor_al0|abext:\gen_abext:4:inst_abext
+x => ia.IN0
+x => ia.IN0
+x => ia.IN0
+x => ib.IN0
+y => ia.IN0
+y => ia.IN1
+y => ia.IN0
+y => ia.IN0
+y => ia.IN1
+y => ib.IN1
+z => ia.IN1
+z => ia.IN1
+z => ia.IN1
+z => ib.IN1
+z => ia.IN1
+z => ib.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+b => ia.IN1
+b => ia.IN1
+b => ia.IN1
+b => ib.IN1
+b => ia.IN1
+b => ib.IN1
+ia <= ia.DB_MAX_OUTPUT_PORT_TYPE
+ib <= ib.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|extensor_al:extensor_al0|abext:\gen_abext:5:inst_abext
+x => ia.IN0
+x => ia.IN0
+x => ia.IN0
+x => ib.IN0
+y => ia.IN0
+y => ia.IN1
+y => ia.IN0
+y => ia.IN0
+y => ia.IN1
+y => ib.IN1
+z => ia.IN1
+z => ia.IN1
+z => ia.IN1
+z => ib.IN1
+z => ia.IN1
+z => ib.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+b => ia.IN1
+b => ia.IN1
+b => ia.IN1
+b => ib.IN1
+b => ia.IN1
+b => ib.IN1
+ia <= ia.DB_MAX_OUTPUT_PORT_TYPE
+ib <= ib.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|extensor_al:extensor_al0|abext:\gen_abext:6:inst_abext
+x => ia.IN0
+x => ia.IN0
+x => ia.IN0
+x => ib.IN0
+y => ia.IN0
+y => ia.IN1
+y => ia.IN0
+y => ia.IN0
+y => ia.IN1
+y => ib.IN1
+z => ia.IN1
+z => ia.IN1
+z => ia.IN1
+z => ib.IN1
+z => ia.IN1
+z => ib.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+b => ia.IN1
+b => ia.IN1
+b => ia.IN1
+b => ib.IN1
+b => ia.IN1
+b => ib.IN1
+ia <= ia.DB_MAX_OUTPUT_PORT_TYPE
+ib <= ib.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|extensor_al:extensor_al0|abext:\gen_abext:7:inst_abext
+x => ia.IN0
+x => ia.IN0
+x => ia.IN0
+x => ib.IN0
+y => ia.IN0
+y => ia.IN1
+y => ia.IN0
+y => ia.IN0
+y => ia.IN1
+y => ib.IN1
+z => ia.IN1
+z => ia.IN1
+z => ia.IN1
+z => ib.IN1
+z => ia.IN1
+z => ib.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+b => ia.IN1
+b => ia.IN1
+b => ia.IN1
+b => ib.IN1
+b => ia.IN1
+b => ib.IN1
+ia <= ia.DB_MAX_OUTPUT_PORT_TYPE
+ib <= ib.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|extensor_al:extensor_al0|abext:\gen_abext:8:inst_abext
+x => ia.IN0
+x => ia.IN0
+x => ia.IN0
+x => ib.IN0
+y => ia.IN0
+y => ia.IN1
+y => ia.IN0
+y => ia.IN0
+y => ia.IN1
+y => ib.IN1
+z => ia.IN1
+z => ia.IN1
+z => ia.IN1
+z => ib.IN1
+z => ia.IN1
+z => ib.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+b => ia.IN1
+b => ia.IN1
+b => ia.IN1
+b => ib.IN1
+b => ia.IN1
+b => ib.IN1
+ia <= ia.DB_MAX_OUTPUT_PORT_TYPE
+ib <= ib.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|extensor_al:extensor_al0|abext:\gen_abext:9:inst_abext
+x => ia.IN0
+x => ia.IN0
+x => ia.IN0
+x => ib.IN0
+y => ia.IN0
+y => ia.IN1
+y => ia.IN0
+y => ia.IN0
+y => ia.IN1
+y => ib.IN1
+z => ia.IN1
+z => ia.IN1
+z => ia.IN1
+z => ib.IN1
+z => ia.IN1
+z => ib.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+b => ia.IN1
+b => ia.IN1
+b => ia.IN1
+b => ib.IN1
+b => ia.IN1
+b => ib.IN1
+ia <= ia.DB_MAX_OUTPUT_PORT_TYPE
+ib <= ib.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|extensor_al:extensor_al0|abext:\gen_abext:10:inst_abext
+x => ia.IN0
+x => ia.IN0
+x => ia.IN0
+x => ib.IN0
+y => ia.IN0
+y => ia.IN1
+y => ia.IN0
+y => ia.IN0
+y => ia.IN1
+y => ib.IN1
+z => ia.IN1
+z => ia.IN1
+z => ia.IN1
+z => ib.IN1
+z => ia.IN1
+z => ib.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+b => ia.IN1
+b => ia.IN1
+b => ia.IN1
+b => ib.IN1
+b => ia.IN1
+b => ib.IN1
+ia <= ia.DB_MAX_OUTPUT_PORT_TYPE
+ib <= ib.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|extensor_al:extensor_al0|abext:\gen_abext:11:inst_abext
+x => ia.IN0
+x => ia.IN0
+x => ia.IN0
+x => ib.IN0
+y => ia.IN0
+y => ia.IN1
+y => ia.IN0
+y => ia.IN0
+y => ia.IN1
+y => ib.IN1
+z => ia.IN1
+z => ia.IN1
+z => ia.IN1
+z => ib.IN1
+z => ia.IN1
+z => ib.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+b => ia.IN1
+b => ia.IN1
+b => ia.IN1
+b => ib.IN1
+b => ia.IN1
+b => ib.IN1
+ia <= ia.DB_MAX_OUTPUT_PORT_TYPE
+ib <= ib.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|extensor_al:extensor_al0|abext:\gen_abext:12:inst_abext
+x => ia.IN0
+x => ia.IN0
+x => ia.IN0
+x => ib.IN0
+y => ia.IN0
+y => ia.IN1
+y => ia.IN0
+y => ia.IN0
+y => ia.IN1
+y => ib.IN1
+z => ia.IN1
+z => ia.IN1
+z => ia.IN1
+z => ib.IN1
+z => ia.IN1
+z => ib.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+b => ia.IN1
+b => ia.IN1
+b => ia.IN1
+b => ib.IN1
+b => ia.IN1
+b => ib.IN1
+ia <= ia.DB_MAX_OUTPUT_PORT_TYPE
+ib <= ib.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|extensor_al:extensor_al0|abext:\gen_abext:13:inst_abext
+x => ia.IN0
+x => ia.IN0
+x => ia.IN0
+x => ib.IN0
+y => ia.IN0
+y => ia.IN1
+y => ia.IN0
+y => ia.IN0
+y => ia.IN1
+y => ib.IN1
+z => ia.IN1
+z => ia.IN1
+z => ia.IN1
+z => ib.IN1
+z => ia.IN1
+z => ib.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+b => ia.IN1
+b => ia.IN1
+b => ia.IN1
+b => ib.IN1
+b => ia.IN1
+b => ib.IN1
+ia <= ia.DB_MAX_OUTPUT_PORT_TYPE
+ib <= ib.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|extensor_al:extensor_al0|abext:\gen_abext:14:inst_abext
+x => ia.IN0
+x => ia.IN0
+x => ia.IN0
+x => ib.IN0
+y => ia.IN0
+y => ia.IN1
+y => ia.IN0
+y => ia.IN0
+y => ia.IN1
+y => ib.IN1
+z => ia.IN1
+z => ia.IN1
+z => ia.IN1
+z => ib.IN1
+z => ia.IN1
+z => ib.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+b => ia.IN1
+b => ia.IN1
+b => ia.IN1
+b => ib.IN1
+b => ia.IN1
+b => ib.IN1
+ia <= ia.DB_MAX_OUTPUT_PORT_TYPE
+ib <= ib.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|extensor_al:extensor_al0|abext:\gen_abext:15:inst_abext
+x => ia.IN0
+x => ia.IN0
+x => ia.IN0
+x => ib.IN0
+y => ia.IN0
+y => ia.IN1
+y => ia.IN0
+y => ia.IN0
+y => ia.IN1
+y => ib.IN1
+z => ia.IN1
+z => ia.IN1
+z => ia.IN1
+z => ib.IN1
+z => ia.IN1
+z => ib.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+a => ia.IN1
+b => ia.IN1
+b => ia.IN1
+b => ia.IN1
+b => ib.IN1
+b => ia.IN1
+b => ib.IN1
+ia <= ia.DB_MAX_OUTPUT_PORT_TYPE
+ib <= ib.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|extensor_al:extensor_al0|cinext:inst_cinext
+x => cin.IN0
+x => cin.IN0
+y => cin.IN1
+y => cin.IN1
+z => cin.IN1
+z => cin.IN1
+cin <= cin.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|sum_16:sum_16_0
+a[0] => full_adder_16:inst0_full_adder_16bits.a[0]
+a[1] => full_adder_16:inst0_full_adder_16bits.a[1]
+a[2] => full_adder_16:inst0_full_adder_16bits.a[2]
+a[3] => full_adder_16:inst0_full_adder_16bits.a[3]
+a[4] => full_adder_16:inst0_full_adder_16bits.a[4]
+a[5] => full_adder_16:inst0_full_adder_16bits.a[5]
+a[6] => full_adder_16:inst0_full_adder_16bits.a[6]
+a[7] => full_adder_16:inst0_full_adder_16bits.a[7]
+a[8] => full_adder_16:inst0_full_adder_16bits.a[8]
+a[9] => full_adder_16:inst0_full_adder_16bits.a[9]
+a[10] => full_adder_16:inst0_full_adder_16bits.a[10]
+a[11] => full_adder_16:inst0_full_adder_16bits.a[11]
+a[12] => full_adder_16:inst0_full_adder_16bits.a[12]
+a[13] => full_adder_16:inst0_full_adder_16bits.a[13]
+a[14] => full_adder_16:inst0_full_adder_16bits.a[14]
+a[15] => full_adder_16:inst0_full_adder_16bits.a[15]
+b[0] => full_adder_16:inst0_full_adder_16bits.b[0]
+b[1] => full_adder_16:inst0_full_adder_16bits.b[1]
+b[2] => full_adder_16:inst0_full_adder_16bits.b[2]
+b[3] => full_adder_16:inst0_full_adder_16bits.b[3]
+b[4] => full_adder_16:inst0_full_adder_16bits.b[4]
+b[5] => full_adder_16:inst0_full_adder_16bits.b[5]
+b[6] => full_adder_16:inst0_full_adder_16bits.b[6]
+b[7] => full_adder_16:inst0_full_adder_16bits.b[7]
+b[8] => full_adder_16:inst0_full_adder_16bits.b[8]
+b[9] => full_adder_16:inst0_full_adder_16bits.b[9]
+b[10] => full_adder_16:inst0_full_adder_16bits.b[10]
+b[11] => full_adder_16:inst0_full_adder_16bits.b[11]
+b[12] => full_adder_16:inst0_full_adder_16bits.b[12]
+b[13] => full_adder_16:inst0_full_adder_16bits.b[13]
+b[14] => full_adder_16:inst0_full_adder_16bits.b[14]
+b[15] => full_adder_16:inst0_full_adder_16bits.b[15]
+cin => full_adder_16:inst0_full_adder_16bits.cin
+s[0] <= full_adder_16:inst0_full_adder_16bits.s[0]
+s[1] <= full_adder_16:inst0_full_adder_16bits.s[1]
+s[2] <= full_adder_16:inst0_full_adder_16bits.s[2]
+s[3] <= full_adder_16:inst0_full_adder_16bits.s[3]
+s[4] <= full_adder_16:inst0_full_adder_16bits.s[4]
+s[5] <= full_adder_16:inst0_full_adder_16bits.s[5]
+s[6] <= full_adder_16:inst0_full_adder_16bits.s[6]
+s[7] <= full_adder_16:inst0_full_adder_16bits.s[7]
+s[8] <= full_adder_16:inst0_full_adder_16bits.s[8]
+s[9] <= full_adder_16:inst0_full_adder_16bits.s[9]
+s[10] <= full_adder_16:inst0_full_adder_16bits.s[10]
+s[11] <= full_adder_16:inst0_full_adder_16bits.s[11]
+s[12] <= full_adder_16:inst0_full_adder_16bits.s[12]
+s[13] <= full_adder_16:inst0_full_adder_16bits.s[13]
+s[14] <= full_adder_16:inst0_full_adder_16bits.s[14]
+s[15] <= full_adder_16:inst0_full_adder_16bits.s[15]
+co <= full_adder_16:inst0_full_adder_16bits.co
+
+
+|ula|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits
+a[0] => full_adder:inst0_fa.a
+a[1] => full_adder:gen_fa:1:fa.a
+a[2] => full_adder:gen_fa:2:fa.a
+a[3] => full_adder:gen_fa:3:fa.a
+a[4] => full_adder:gen_fa:4:fa.a
+a[5] => full_adder:gen_fa:5:fa.a
+a[6] => full_adder:gen_fa:6:fa.a
+a[7] => full_adder:gen_fa:7:fa.a
+a[8] => full_adder:gen_fa:8:fa.a
+a[9] => full_adder:gen_fa:9:fa.a
+a[10] => full_adder:gen_fa:10:fa.a
+a[11] => full_adder:gen_fa:11:fa.a
+a[12] => full_adder:gen_fa:12:fa.a
+a[13] => full_adder:gen_fa:13:fa.a
+a[14] => full_adder:gen_fa:14:fa.a
+a[15] => full_adder:inst1_fa.a
+b[0] => full_adder:inst0_fa.b
+b[1] => full_adder:gen_fa:1:fa.b
+b[2] => full_adder:gen_fa:2:fa.b
+b[3] => full_adder:gen_fa:3:fa.b
+b[4] => full_adder:gen_fa:4:fa.b
+b[5] => full_adder:gen_fa:5:fa.b
+b[6] => full_adder:gen_fa:6:fa.b
+b[7] => full_adder:gen_fa:7:fa.b
+b[8] => full_adder:gen_fa:8:fa.b
+b[9] => full_adder:gen_fa:9:fa.b
+b[10] => full_adder:gen_fa:10:fa.b
+b[11] => full_adder:gen_fa:11:fa.b
+b[12] => full_adder:gen_fa:12:fa.b
+b[13] => full_adder:gen_fa:13:fa.b
+b[14] => full_adder:gen_fa:14:fa.b
+b[15] => full_adder:inst1_fa.b
+cin => full_adder:inst0_fa.cin
+s[0] <= full_adder:inst0_fa.s
+s[1] <= full_adder:gen_fa:1:fa.s
+s[2] <= full_adder:gen_fa:2:fa.s
+s[3] <= full_adder:gen_fa:3:fa.s
+s[4] <= full_adder:gen_fa:4:fa.s
+s[5] <= full_adder:gen_fa:5:fa.s
+s[6] <= full_adder:gen_fa:6:fa.s
+s[7] <= full_adder:gen_fa:7:fa.s
+s[8] <= full_adder:gen_fa:8:fa.s
+s[9] <= full_adder:gen_fa:9:fa.s
+s[10] <= full_adder:gen_fa:10:fa.s
+s[11] <= full_adder:gen_fa:11:fa.s
+s[12] <= full_adder:gen_fa:12:fa.s
+s[13] <= full_adder:gen_fa:13:fa.s
+s[14] <= full_adder:gen_fa:14:fa.s
+s[15] <= full_adder:inst1_fa.s
+co <= full_adder:inst1_fa.co
+
+
+|ula|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:inst0_fa
+a => co.IN0
+a => co.IN0
+a => s.IN0
+b => co.IN0
+b => co.IN1
+b => s.IN1
+cin => co.IN1
+cin => co.IN1
+cin => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:1:fa
+a => co.IN0
+a => co.IN0
+a => s.IN0
+b => co.IN0
+b => co.IN1
+b => s.IN1
+cin => co.IN1
+cin => co.IN1
+cin => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:2:fa
+a => co.IN0
+a => co.IN0
+a => s.IN0
+b => co.IN0
+b => co.IN1
+b => s.IN1
+cin => co.IN1
+cin => co.IN1
+cin => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:3:fa
+a => co.IN0
+a => co.IN0
+a => s.IN0
+b => co.IN0
+b => co.IN1
+b => s.IN1
+cin => co.IN1
+cin => co.IN1
+cin => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:4:fa
+a => co.IN0
+a => co.IN0
+a => s.IN0
+b => co.IN0
+b => co.IN1
+b => s.IN1
+cin => co.IN1
+cin => co.IN1
+cin => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:5:fa
+a => co.IN0
+a => co.IN0
+a => s.IN0
+b => co.IN0
+b => co.IN1
+b => s.IN1
+cin => co.IN1
+cin => co.IN1
+cin => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:6:fa
+a => co.IN0
+a => co.IN0
+a => s.IN0
+b => co.IN0
+b => co.IN1
+b => s.IN1
+cin => co.IN1
+cin => co.IN1
+cin => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:7:fa
+a => co.IN0
+a => co.IN0
+a => s.IN0
+b => co.IN0
+b => co.IN1
+b => s.IN1
+cin => co.IN1
+cin => co.IN1
+cin => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:8:fa
+a => co.IN0
+a => co.IN0
+a => s.IN0
+b => co.IN0
+b => co.IN1
+b => s.IN1
+cin => co.IN1
+cin => co.IN1
+cin => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:9:fa
+a => co.IN0
+a => co.IN0
+a => s.IN0
+b => co.IN0
+b => co.IN1
+b => s.IN1
+cin => co.IN1
+cin => co.IN1
+cin => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:10:fa
+a => co.IN0
+a => co.IN0
+a => s.IN0
+b => co.IN0
+b => co.IN1
+b => s.IN1
+cin => co.IN1
+cin => co.IN1
+cin => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:11:fa
+a => co.IN0
+a => co.IN0
+a => s.IN0
+b => co.IN0
+b => co.IN1
+b => s.IN1
+cin => co.IN1
+cin => co.IN1
+cin => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:12:fa
+a => co.IN0
+a => co.IN0
+a => s.IN0
+b => co.IN0
+b => co.IN1
+b => s.IN1
+cin => co.IN1
+cin => co.IN1
+cin => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:13:fa
+a => co.IN0
+a => co.IN0
+a => s.IN0
+b => co.IN0
+b => co.IN1
+b => s.IN1
+cin => co.IN1
+cin => co.IN1
+cin => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:\gen_fa:14:fa
+a => co.IN0
+a => co.IN0
+a => s.IN0
+b => co.IN0
+b => co.IN1
+b => s.IN1
+cin => co.IN1
+cin => co.IN1
+cin => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|sum_16:sum_16_0|full_adder_16:inst0_full_adder_16bits|full_adder:inst1_fa
+a => co.IN0
+a => co.IN0
+a => s.IN0
+b => co.IN0
+b => co.IN1
+b => s.IN1
+cin => co.IN1
+cin => co.IN1
+cin => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|comp16bit:comparator
+A[0] => LessThan0.IN16
+A[1] => LessThan0.IN15
+A[2] => LessThan0.IN14
+A[3] => LessThan0.IN13
+A[4] => LessThan0.IN12
+A[5] => LessThan0.IN11
+A[6] => LessThan0.IN10
+A[7] => LessThan0.IN9
+A[8] => LessThan0.IN8
+A[9] => LessThan0.IN7
+A[10] => LessThan0.IN6
+A[11] => LessThan0.IN5
+A[12] => LessThan0.IN4
+A[13] => LessThan0.IN3
+A[14] => LessThan0.IN2
+A[15] => LessThan0.IN1
+B[0] => LessThan0.IN32
+B[1] => LessThan0.IN31
+B[2] => LessThan0.IN30
+B[3] => LessThan0.IN29
+B[4] => LessThan0.IN28
+B[5] => LessThan0.IN27
+B[6] => LessThan0.IN26
+B[7] => LessThan0.IN25
+B[8] => LessThan0.IN24
+B[9] => LessThan0.IN23
+B[10] => LessThan0.IN22
+B[11] => LessThan0.IN21
+B[12] => LessThan0.IN20
+B[13] => LessThan0.IN19
+B[14] => LessThan0.IN18
+B[15] => LessThan0.IN17
+comp_gt <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
